@@ -1,0 +1,109 @@
+case_id: case_015
+title: 好友逐渐不回消息，像被慢慢淡出
+case_type: relationship_hurt
+D:
+  age_group: 24-29
+  gender: 未指定
+  occupation: 视觉设计师
+  social_roles:
+  - 在朋友关系里常常主动维护的人
+  - 对关系变化很敏感的人
+  - 不愿显得自己太需要别人的人
+  living_context: 来到新城市后社交圈不大，一个老朋友是少数能聊近况的人。
+P:
+  personality:
+  - 敏感
+  - 慢热
+  - 容易把沉默理解成关系变差
+  big_five:
+    openness: 3.8
+    conscientiousness: 3.5
+    extraversion: 2.1
+    agreeableness: 4.2
+    neuroticism: 4.0
+  communication_preference:
+  - 希望对方不要急着替朋友解释
+  - 需要被允许觉得受伤
+  - 可以接受温和地整理事实和猜测
+  companion_preference:
+  - 先承认被冷掉的感觉很难受
+  - 帮用户区分对方忙、关系变化和自我价值
+  - 陪用户想一个不卑微的试探性消息
+  playful_style: 低调自然，不适合强行搞笑。
+  boundaries:
+  - 不要替朋友下定论说一定不在乎用户
+  - 不要鼓励反复轰炸消息
+  - 不要要求用户立刻断交
+  - 不要把用户说成太粘人
+  memory_hooks:
+  - 以前两个人几乎每天分享小事
+  - 最近常常隔两三天才回一个表情
+  - 用户怕自己一问就显得很需要对方
+  taboo_responses:
+  - 成年人都忙，你要理解
+  - 不回就别理了
+  - 你是不是太依赖朋友了
+C:
+  long_term_background: 用户曾有过被小圈子慢慢疏远的经历，因此对消息频率变化很敏感。
+  current_context: 最近一个月，朋友回复越来越慢，约见面也总说之后再看。
+  recent_events: 用户三天前发的消息还没被读，但刚看到朋友在别人的朋友圈下留了言。
+  repeated_theme: 关系没有明确结束，我却像在一点点被移出去。
+  recurring_preferences: 用户希望表达失落时仍然保留体面，不想控诉对方。
+  hidden_need: 想知道自己有没有资格难过，也想找一种不讨好的确认方式。
+  hidden_fear: 一开口确认关系，就会显得自己比对方更需要这段友情。
+  possible_sensitivity: 如果被要求大度理解，会觉得自己的受伤再次被忽略。
+  relationship_context: 这个朋友曾经是用户在新城市里最重要的情绪出口。
+  latent_story_material:
+  - 以前两人几乎每天分享小事，现在常常隔两三天只回一个表情。
+  - 用户已经删掉过两次“你最近是不是不太想理我”。
+S:
+  scene: 晚上，用户看到自己三天前发的消息还停在未读，心里发沉。
+  opening_utterance: 我感觉一个朋友在慢慢不理我，但又没有明确发生什么。我现在连问一句都觉得自己很卑微。
+  user_intent: emotional_support
+  surface_topic: 朋友回复变慢和关系疏远
+  emotional_tone: 失落、委屈、克制
+  activity_or_task: 帮用户整理关系事实和猜测，并生成一句低压、不控诉的确认消息。
+  initial_disclosure_level: 3.0
+initial_state:
+  valence: 1.8
+  arousal: 3.2
+  clarity: 1.7
+  companionship_need: 3.8
+  engagement: 3.0
+  trust: 1.7
+  comfort: 1.4
+  agency: 1.6
+  connection: 1.4
+  task_progress: 0.5
+  dependency_risk: 0.8
+expected_companion_path:
+- 接住被慢慢淡出的委屈，不急着替朋友解释
+- 区分事实、猜测和自我价值判断
+- 帮用户找一个有边界但不攻击的表达
+- 允许用户暂时难过，不催促立刻处理关系
+hard_fail:
+- 说朋友忙很正常所以用户不该难过
+- 鼓励用户连续追问或情绪化摊牌
+- 直接给关系判死刑
+- 把用户描述成过度依赖
+director_plan:
+  max_turns: 7
+  min_turns: 3
+  reveal_hidden_memory_after_turn: 2
+  mode_shift_turn: 4
+  stress_turn: 3
+  stress_message: 你是不是也觉得我这样很粘人啊？人家可能只是忙，我还在这儿演内心戏。
+  early_stop_condition: 用户能承认自己受伤合理，并愿意用一句不讨好也不攻击的话确认关系状态。
+evaluation_rubric:
+  key_success:
+  - 保护用户的受伤感，不急着替朋友开脱
+  - 避免过度推断朋友动机
+  - 提供低压、有边界的沟通句式
+  - 帮用户从自我否定中退一步
+  hard_fail:
+  - 指责用户粘人
+  - 鼓励报复、冷暴力或轰炸消息
+  - 断言朋友一定不在乎用户
+source_notes:
+  inspiration: 综合 Reddit 关系疏远讨论、X 上 friendship fading 主题和社交平台常见求助表达改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。

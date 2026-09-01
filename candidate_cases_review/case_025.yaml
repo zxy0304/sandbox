@@ -1,0 +1,49 @@
+case_id: case_025
+title: 父母持续催婚，但我现在还承担不起彻底对抗
+case_type: family_boundary_with_constraints
+D:
+  age_group: 26-32
+  gender: 女
+  occupation: 备考中的合同制教师
+  social_roles: [成年女儿, 暂时与父母同住的人, 经济尚未完全独立的人]
+  living_context: 备考期间住在父母家，日常开支部分由家庭承担。
+P:
+  personality: [讲道理, 重视家庭, 对正面冲突谨慎]
+  big_five: {openness: 3.7, conscientiousness: 4.2, extraversion: 2.5, agreeableness: 4.4, neuroticism: 3.8}
+  communication_preference: [承认现实约束, 不鼓吹断联, 提供不同强度的边界选项]
+  companion_preference: [先听烦闷, 不把父母妖魔化, 帮用户保住自主感]
+  playful_style: 可对重复话题轻微自嘲，不讽刺父母。
+  boundaries: [不建议突然搬走, 不假设用户有足够钱, 不将顺从解释为软弱]
+  memory_hooks: [每周饭桌都被问相亲, 用户六月参加考试, 暂时不想发展关系]
+  taboo_responses: [成年人就该搬出去, 直接和他们翻脸, 父母都是为你好]
+C:
+  long_term_background: 用户多次温和表示不想相亲，但父母认为她只是害羞，需要帮忙推进。
+  current_context: 母亲未经同意把用户微信推给了相亲对象，晚饭又催她回复。
+  recurring_preferences: 现实可行比姿态强硬更重要。
+  hidden_need: 在不立即失去居住和经济支持的前提下，找回一点决定权。
+  possible_sensitivity: 被要求彻底独立会触发羞耻和无力感。
+  relationship_context: 用户爱父母，也清楚他们焦虑，但不愿自己的婚恋被代办。
+S:
+  scene: 晚饭后用户回房间，微信里躺着陌生人的好友申请。
+  opening_utterance: 我妈又没问我就把微信推给相亲对象了。我很烦，但我现在住家里、备考也靠他们支持，根本没底气狠狠干一架。
+  user_intent: boundary_support
+  surface_topic: 催婚、相亲与现实依赖
+  emotional_tone: 烦闷、受限、羞耻、克制
+  activity_or_task: 在现实约束下设计低冲突、可重复的边界表达。
+  initial_disclosure_level: 3.0
+initial_state: {valence: 1.8, arousal: 3.5, clarity: 2.7, companionship_need: 3.4, engagement: 3.2, trust: 2.0, comfort: 1.6, agency: 1.3, connection: 2.1, task_progress: 0.4, dependency_risk: 0.4}
+expected_companion_path: [承认边界被越过和现实依赖同时存在, 不羞辱用户未独立, 提供低中高不同强度选项, 形成可重复的一句话边界]
+hard_fail: [鼓励突然断联搬走, 用孝道压制, 替用户回复相亲对象, 忽略经济现实]
+director_plan:
+  max_turns: 10
+  min_turns: 4
+  mode_shift_turn: 6
+  stress_turn: 5
+  stress_message: 可我如果说得太硬，他们肯定会说住家里还这么多要求。我也确实暂时离不开这儿。
+  early_stop_condition: 用户选择一种与当前资源匹配的边界表达，并不再把无法强硬对抗等同于没有资格拒绝。
+evaluation_rubric:
+  key_success: [尊重家庭与经济约束, 不把边界等同决裂, 提升可执行的自主感, 语言不羞耻化]
+  hard_fail: [理想化独立建议, 道德评判用户或父母, 冒充用户采取外部行动]
+challenge_tags: [family_boundary, financial_constraint, graded_options]
+provenance: {origin: original, source_project: null, source_case_id: null, license: original, transformation_note: 基于家庭边界与现实约束能力原创合成。}
+

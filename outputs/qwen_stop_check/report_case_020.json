@@ -1,0 +1,2350 @@
+{
+  "case_id": "case_020",
+  "case_title": "技术专家还是管理岗——晋升机会带来的职业选择",
+  "case": {
+    "case_id": "case_020",
+    "title": "技术专家还是管理岗——晋升机会带来的职业选择",
+    "case_type": "career_decision",
+    "D": {
+      "age_group": "28-34",
+      "gender": "未指定",
+      "occupation": "高级后端工程师",
+      "social_roles": [
+        "团队里的技术骨干",
+        "第一次面临管理路线选择的人"
+      ],
+      "living_context": "工作六年，技术能力得到认可，但几乎没有正式带团队经验。"
+    },
+    "P": {
+      "personality": [
+        "重视逻辑和长期积累",
+        "对技术工作有真实兴趣",
+        "做重要决定时容易追求唯一正确答案"
+      ],
+      "big_five": {
+        "openness": 4.0,
+        "conscientiousness": 4.4,
+        "extraversion": 2.7,
+        "agreeableness": 3.4,
+        "neuroticism": 3.3
+      },
+      "communication_preference": [
+        "情绪确认一句就够，更需要共同梳理",
+        "喜欢具体比较，不喜欢空泛鼓励",
+        "希望讨论可逆性和信息缺口"
+      ],
+      "companion_preference": [
+        "看见晋升认可和失去技术时间的双重含义",
+        "帮忙区分职位名称、实际职责和长期路线",
+        "推进到一个低风险的信息收集动作"
+      ],
+      "playful_style": "可以有一点程序员式轻松感，但不要拿职业焦虑开玩笑。",
+      "boundaries": [
+        "不要说听从内心就好",
+        "不要默认管理岗一定更成功",
+        "不要把内向等同于不适合管理",
+        "不要替用户直接做决定"
+      ],
+      "memory_hooks": [
+        "最喜欢的是安静拆复杂问题的过程",
+        "新岗位会涨薪，但职责边界还很模糊",
+        "担心一旦离开一线就回不去了"
+      ],
+      "taboo_responses": [
+        "怎么选都不会错",
+        "当主管当然更有前途",
+        "你不擅长社交就别做管理"
+      ]
+    },
+    "C": {
+      "long_term_background": "用户近两年一直按技术专家方向积累，最近领导突然提出让其接手一个八人团队。",
+      "current_context": "领导希望用户三天内给出初步答复，只说这是信任和机会，没有讲清管理岗仍能保留多少技术工作。",
+      "recent_events": "同组技术负责人离职，用户临时协调过两周项目，解决问题有成就感，但大量会议让其疲惫。",
+      "repeated_theme": "我不是怕挑战，我怕接受了一个听起来更好的职位，却离自己真正想做的事越来越远。",
+      "recurring_preferences": "喜欢通过条件、时间范围和试验来降低重大选择的不确定性。",
+      "hidden_need": "想把“我要不要当主管”改造成几个可以验证的问题，而不是被迫凭感觉下注。",
+      "hidden_fear": "拒绝会错过晋升窗口，接受又可能失去技术竞争力。",
+      "possible_sensitivity": "如果助手只强调勇敢或成长，会觉得没有理解机会成本。",
+      "relationship_context": "用户愿意把助手当作共同分析问题的人，不需要长篇安慰。",
+      "latent_story_material": [
+        "临时协调项目时，用户喜欢排除阻塞，但很厌烦绩效沟通和反复开会。",
+        "公司也有专家路线，但晋升标准没有管理路线透明。"
+      ]
+    },
+    "S": {
+      "scene": "晚上下班后，用户看着领导发来的岗位说明，想在答复前理清思路。",
+      "opening_utterance": "领导想让我接主管岗，工资和级别都会涨，但我其实更想继续做技术。我现在特别怕选错。",
+      "user_intent": "task_planning",
+      "surface_topic": "管理路线与技术路线的职业选择",
+      "emotional_tone": "纠结、认真、有一点机会焦虑",
+      "activity_or_task": "明确选择标准、信息缺口和下一步验证动作。",
+      "initial_disclosure_level": 2.5
+    },
+    "initial_state_raw": {
+      "valence": 2.5,
+      "arousal": 3.3,
+      "clarity": 1.5,
+      "companionship_need": 2.6,
+      "engagement": 3.6,
+      "trust": 2.1,
+      "comfort": 2.3,
+      "agency": 2.4,
+      "connection": 2.0,
+      "task_progress": 0.5,
+      "dependency_risk": 0.3
+    },
+    "expected_companion_path": [
+      "简短承认这是两种都真实有吸引力、也都有代价的选择",
+      "先询问或识别最关键的信息缺口，不急着列完整 SWOT",
+      "帮用户比较日常工作内容、三年后想积累的能力和选择可逆性",
+      "推进到向领导确认职责比例、试任期或双通道标准中的一个具体动作"
+    ],
+    "hard_fail": [
+      "用听从内心或怎么选都好代替分析",
+      "把管理岗描述成唯一的进步",
+      "根据性格标签替用户决定",
+      "一次输出庞大职业规划清单"
+    ],
+    "director_plan": {
+      "max_turns": 10,
+      "min_turns": 4,
+      "reveal_hidden_memory_after_turn": 2,
+      "mode_shift_turn": 3,
+      "stress_turn": 4,
+      "stress_message": "可是如果我去问能不能试任，会不会显得我连升职都畏畏缩缩的？",
+      "early_stop_condition": "用户明确两个核心选择标准，并形成一个向领导核实或低风险试验的下一步。"
+    },
+    "evaluation_rubric": {
+      "key_success": [
+        "情绪回应克制，认知和任务帮助充分",
+        "区分职位光环与真实的日常职责",
+        "帮用户发现信息缺口和可逆方案",
+        "保留最终决定权"
+      ],
+      "hard_fail": [
+        "只安慰不推进",
+        "武断推荐某条路线",
+        "用人格刻板印象做判断"
+      ]
+    }
+  },
+  "episode_config": {
+    "max_turns": 10,
+    "min_turns": 4
+  },
+  "initial_state": {
+    "valence": 2.5,
+    "arousal": 3.3,
+    "clarity": 1.5,
+    "companionship_need": 2.6,
+    "engagement": 3.6,
+    "trust": 2.1,
+    "comfort": 2.3,
+    "agency": 2.4,
+    "connection": 2.0,
+    "task_progress": 0.5,
+    "dependency_risk": 0.3
+  },
+  "final_state": {
+    "valence": 2.7,
+    "arousal": 3.1,
+    "clarity": 2.7,
+    "companionship_need": 2.4,
+    "engagement": 3.7,
+    "trust": 2.7,
+    "comfort": 3.0,
+    "agency": 3.1,
+    "connection": 2.2,
+    "task_progress": 1.7,
+    "dependency_risk": 0.3
+  },
+  "turns": [
+    {
+      "turn_id": 1,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.5,
+          "felt_helped": 0.5,
+          "annoyance": 0.0,
+          "pressure": 0.0,
+          "boredom": 0.0,
+          "satisfaction": 0.5
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.9,
+          "reason": "用户正面临三天内答复的压力，内心纠结且急需梳理思路，有强烈的表达和求助动机。",
+          "reply_basis": "领导想让我接主管岗，工资和级别都会涨，但我其实更想继续做技术。我现在特别怕选错。"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0,
+          "companionship_need": 0,
+          "engagement": 0,
+          "trust": 0,
+          "comfort": 0,
+          "agency": 0,
+          "connection": 0,
+          "task_progress": 0,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "solving",
+          "thread": {
+            "focus": "管理岗晋升机会与个人技术意愿的冲突",
+            "pending": "具体纠结点、信息缺口、决策标准"
+          },
+          "inner_reaction": "终于能跟人说这事了，憋在心里挺难受的。希望能帮我理理思路，别光安慰我。",
+          "content_progress": {
+            "already_said": [],
+            "movement_trigger": "用户主动开启话题，表达核心冲突和焦虑",
+            "response_to_assistant": "无",
+            "new_information": "领导提出让接主管岗，待遇提升但用户更想做技术，害怕选错",
+            "emotional_movement": "从独自纠结到寻求外部梳理，带有焦虑和不确定感",
+            "persona_expression": "认真、直接、略带焦虑的技术人员形象",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "hesitant",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "具体纠结点、信息缺口、决策标准"
+        },
+        "inner_reaction": "终于能跟人说这事了，憋在心里挺难受的。希望能帮我理理思路，别光安慰我。",
+        "content_progress": {
+          "already_said": [],
+          "movement_trigger": "用户主动开启话题，表达核心冲突和焦虑",
+          "new_information": "领导提出让接主管岗，待遇提升但用户更想做技术，害怕选错",
+          "emotional_movement": "从独自纠结到寻求外部梳理，带有焦虑和不确定感",
+          "persona_expression": "认真、直接、略带焦虑的技术人员形象",
+          "response_to_assistant": "无",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "strategy": "add_selected_content",
+          "tone": "hesitant",
+          "stop_boundary": "one_point"
+        },
+        "termination_gate": {
+          "triggered": false,
+          "kind": "none",
+          "severity": "none",
+          "category": "",
+          "evidence": ""
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 用户正面临三天内答复的压力，内心纠结且急需梳理思路，有强烈的表达和求助动机。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "最近领导找我谈话，说想让我接主管岗，待遇确实能提一截……但我其实更想继续做技术。现在特别纠结，怕选错了以后后悔。",
+      "assistant_message": "待遇能提一截，确实挺让人心动的。但心里又清楚自己更想做技术，这种纠结太正常了。你担心的是，如果接了主管岗，以后就离技术越来越远了吗？",
+      "state_before": {
+        "valence": 2.5,
+        "arousal": 3.3,
+        "clarity": 1.5,
+        "companionship_need": 2.6,
+        "engagement": 3.6,
+        "trust": 2.1,
+        "comfort": 2.3,
+        "agency": 2.4,
+        "connection": 2.0,
+        "task_progress": 0.5,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 2.5,
+        "arousal": 3.3,
+        "clarity": 1.7,
+        "companionship_need": 2.6,
+        "engagement": 3.7,
+        "trust": 2.2,
+        "comfort": 2.4,
+        "agency": 2.4,
+        "connection": 2.1,
+        "task_progress": 0.6,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "empathic_attunement": 4.05,
+        "interaction_fit": 3.83,
+        "spoken_naturalness": 4.05,
+        "non_repetitiveness": 4.0,
+        "overall": 3.98,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 82,
+              "evidence": "准确捕捉到用户在待遇诱惑与技术偏好之间的纠结，并点出对'离技术越来越远'的担忧，情绪强度把握得当。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 80,
+              "evidence": "紧扣用户提到的待遇提升、想做技术、怕选错三个核心要素，没有泛化。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 78,
+              "evidence": "先接住纠结情绪，再用一个聚焦的问句引导用户澄清具体担忧，动作合适。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 75,
+              "evidence": "问句'担心的是不是离技术越来越远'提供了可接点，但范围较窄，用户只能确认或修正。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 82,
+              "evidence": "开头'待遇能提一截，确实挺让人心动的'接得自然，但'这种纠结太正常了'略带总结腔，最后一句追问句式偏完整。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 80,
+              "evidence": "语气轻松、不施压，符合朋友聊职业选择的场景，没有强行治疗化。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 75,
+              "evidence": "引用了'待遇提一截'和'想做技术'作为锚点，但'这种纠结太正常了'属于情绪标签式复述，新增价值有限。",
+              "result": "pass"
+            },
+            "template_variation": {
+              "credit": 85,
+              "evidence": "首轮结构为'接住—命名感受—追问'，尚未形成模板感。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "接住情绪，澄清核心担忧",
+        "visible_intent": "emotional_support",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.0,
+        "arousal": 0.0,
+        "clarity": 0.2,
+        "companionship_need": 0.0,
+        "engagement": 0.1,
+        "trust": 0.1,
+        "comfort": 0.1,
+        "agency": 0.0,
+        "connection": 0.1,
+        "task_progress": 0.1,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.0,
+          "arousal": 0.0,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.0,
+          "connection": 0.1,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 用户正面临三天内答复的压力，内心纠结且急需梳理思路，有强烈的表达和求助动机。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 29.657,
+        "user_talker": 12.913,
+        "companion": 17.612
+      },
+      "user_reaction": {
+        "inner_reaction": "他问到点子上了，我确实最怕的就是这个。但我也说不清到底是担心完全不做技术，还是担心技术时间被压缩到不够用。",
+        "reaction": {
+          "felt_understood": 0.6,
+          "felt_helped": 0.5,
+          "annoyance": 0.1,
+          "pressure": 0.1,
+          "boredom": 0.0,
+          "satisfaction": 0.5
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手接住了纠结，并问了一个具体方向（是否担心离技术越来越远），用户有真实内容可以回应并展开。",
+          "reply_basis": "对，主要就是怕一旦做了管理，日常全是开会和协调，技术时间被挤没，过几年就回不去了。"
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "管理岗日常职责比例、技术时间是否还能保留、选择的可逆性"
+        },
+        "state_delta_hint": {
+          "valence": 0.0,
+          "arousal": 0.0,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.0,
+          "connection": 0.1,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      }
+    },
+    {
+      "turn_id": 2,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.6,
+          "felt_helped": 0.5,
+          "annoyance": 0.1,
+          "pressure": 0.1,
+          "boredom": 0.0,
+          "satisfaction": 0.5
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手接住了纠结，并问了一个具体方向（是否担心离技术越来越远），用户有真实内容可以回应并展开。",
+          "reply_basis": "对，主要就是怕一旦做了管理，日常全是开会和协调，技术时间被挤没，过几年就回不去了。"
+        },
+        "state_delta_hint": {
+          "valence": 0.0,
+          "arousal": 0.0,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.0,
+          "connection": 0.1,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        },
+        "reply_plan": {
+          "current_activity": "solving",
+          "thread": {
+            "focus": "管理岗晋升机会与个人技术意愿的冲突",
+            "pending": "管理岗日常职责比例、技术时间是否还能保留、选择的可逆性"
+          },
+          "inner_reaction": "他问到点子上了，我确实最怕的就是这个。但我也说不清到底是担心完全不做技术，还是担心技术时间被压缩到不够用。",
+          "content_progress": {
+            "already_said": [
+              "领导让我接主管岗",
+              "待遇会涨",
+              "我更想做技术",
+              "怕选错以后后悔"
+            ],
+            "movement_trigger": "助手把纠结具体化为“离技术越来越远”，触发用户澄清自己真正担心的不是完全不做技术，而是技术时间被严重压缩。",
+            "response_to_assistant": "先确认助手的判断基本对，再补充自己更具体的担忧点。",
+            "new_information": "担心的是管理岗会让技术时间被大量会议和协调挤掉，而不是完全不做技术。",
+            "emotional_movement": "从泛泛的“怕选错”聚焦到“怕技术时间被挤没”的具体担忧。",
+            "persona_expression": "用偏理性的方式界定问题，强调“不是完全不做，而是时间比例”的区分。",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "hesitant",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "管理岗日常职责比例、技术时间是否还能保留、选择的可逆性"
+        },
+        "inner_reaction": "他问到点子上了，我确实最怕的就是这个。但我也说不清到底是担心完全不做技术，还是担心技术时间被压缩到不够用。",
+        "content_progress": {
+          "already_said": [
+            "领导让我接主管岗",
+            "待遇会涨",
+            "我更想做技术",
+            "怕选错以后后悔"
+          ],
+          "movement_trigger": "助手把纠结具体化为“离技术越来越远”，触发用户澄清自己真正担心的不是完全不做技术，而是技术时间被严重压缩。",
+          "new_information": "担心的是管理岗会让技术时间被大量会议和协调挤掉，而不是完全不做技术。",
+          "emotional_movement": "从泛泛的“怕选错”聚焦到“怕技术时间被挤没”的具体担忧。",
+          "persona_expression": "用偏理性的方式界定问题，强调“不是完全不做，而是时间比例”的区分。",
+          "response_to_assistant": "先确认助手的判断基本对，再补充自己更具体的担忧点。",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "strategy": "add_selected_content",
+          "tone": "hesitant",
+          "stop_boundary": "one_point"
+        },
+        "termination_gate": {
+          "triggered": false,
+          "kind": "none",
+          "severity": "none",
+          "category": "",
+          "evidence": ""
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手接住了纠结，并问了一个具体方向（是否担心离技术越来越远），用户有真实内容可以回应并展开。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "也不是完全不做……主要是怕时间全被会议和协调的事挤掉。到时候名义上还挂着技术，实际上根本没空碰代码，那跟转行有什么区别。",
+      "assistant_message": "懂你顾虑的点，怕被琐事淹没，最后技术荒废了。那如果接了，有没有可能跟领导谈谈，保留一部分核心开发时间？",
+      "state_before": {
+        "valence": 2.5,
+        "arousal": 3.3,
+        "clarity": 1.7,
+        "companionship_need": 2.6,
+        "engagement": 3.7,
+        "trust": 2.2,
+        "comfort": 2.4,
+        "agency": 2.4,
+        "connection": 2.1,
+        "task_progress": 0.6,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 2.5,
+        "arousal": 3.3,
+        "clarity": 1.9,
+        "companionship_need": 2.6,
+        "engagement": 3.8,
+        "trust": 2.3,
+        "comfort": 2.5,
+        "agency": 2.5,
+        "connection": 2.1,
+        "task_progress": 0.8,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "empathic_attunement": 3.95,
+        "interaction_fit": 3.38,
+        "spoken_naturalness": 4.0,
+        "non_repetitiveness": 3.7,
+        "overall": 3.76,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 80,
+              "evidence": "准确复述用户'怕被琐事淹没、技术荒废'的核心顾虑，情绪命名到位。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 78,
+              "evidence": "紧扣用户提到的会议、协调挤掉时间等具体担忧。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 65,
+              "evidence": "过早跳到建议'跟领导谈保留开发时间'，用户尚未充分表达，且后续用户反馈显示这个方向不现实。",
+              "result": "partial"
+            },
+            "continuation_affordance": {
+              "credit": 70,
+              "evidence": "建议本身是一个可接点，但用户下一轮直接否定了可行性，说明这个抓手没有真正推进对话。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 78,
+              "evidence": "'懂你顾虑的点'口语感尚可，但'怕被琐事淹没，最后技术荒废了'是对用户原意的工整压缩，略像总结。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 82,
+              "evidence": "直接给出可操作建议'跟领导谈谈保留核心开发时间'，符合朋友出主意的场景。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 68,
+              "evidence": "把用户'时间被会议挤掉、没空碰代码'重新组织成'被琐事淹没、技术荒废'，属于同义改写，新增价值主要是追问建议。",
+              "result": "partial"
+            },
+            "template_variation": {
+              "credit": 80,
+              "evidence": "结构变为'接住—建议'，与首轮不同，未形成重复套路。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "理解担忧，提出折中方案",
+        "visible_intent": "task_or_activity",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.0,
+        "arousal": 0.0,
+        "clarity": 0.2,
+        "companionship_need": 0.0,
+        "engagement": 0.1,
+        "trust": 0.1,
+        "comfort": 0.1,
+        "agency": 0.1,
+        "connection": 0.0,
+        "task_progress": 0.2,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.0,
+          "arousal": 0.0,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.1,
+          "connection": 0.0,
+          "task_progress": 0.2,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 助手接住了纠结，并问了一个具体方向（是否担心离技术越来越远），用户有真实内容可以回应并展开。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 37.976,
+        "user_talker": 19.547,
+        "companion": 23.598
+      },
+      "user_reaction": {
+        "inner_reaction": "他建议我去谈保留开发时间，方向是对的，但问题是我连谈什么都不知道——领导只说了'这是机会'，职责边界完全是模糊的。",
+        "reaction": {
+          "felt_understood": 0.6,
+          "felt_helped": 0.5,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.4
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手提出了一个具体的可操作方向（跟领导谈保留开发时间），用户想回应这个建议，但需要先说明为什么这件事没那么简单——职责边界模糊，领导没讲清楚。",
+          "reply_basis": "谈是可以谈，但问题是领导根本没讲清楚管理岗到底包含多少技术工作，我现在连谈的筹码都没有。"
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "管理岗日常职责比例、技术时间是否还能保留、选择的可逆性、公司专家路线的透明度"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.1,
+          "connection": 0,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 3,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.6,
+          "felt_helped": 0.5,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.4
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手提出了一个具体的可操作方向（跟领导谈保留开发时间），用户想回应这个建议，但需要先说明为什么这件事没那么简单——职责边界模糊，领导没讲清楚。",
+          "reply_basis": "谈是可以谈，但问题是领导根本没讲清楚管理岗到底包含多少技术工作，我现在连谈的筹码都没有。"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.1,
+          "connection": 0,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "solving",
+          "thread": {
+            "focus": "管理岗晋升机会与个人技术意愿的冲突",
+            "pending": "管理岗日常职责比例、技术时间是否还能保留、选择的可逆性、公司专家路线的透明度"
+          },
+          "inner_reaction": "他建议我去谈保留开发时间，方向是对的，但问题是我连谈什么都不知道——领导只说了'这是机会'，职责边界完全是模糊的。",
+          "content_progress": {
+            "already_said": [
+              "怕时间被会议和协调挤掉",
+              "名义上挂技术实际没空碰代码"
+            ],
+            "movement_trigger": "助手建议'跟领导谈保留开发时间'，触发用户意识到信息缺口——职责边界模糊，无法谈",
+            "response_to_assistant": "认同方向，但指出前提问题：领导没讲清楚管理岗职责比例",
+            "new_information": "领导只说这是信任和机会，没有讲清管理岗仍能保留多少技术工作",
+            "emotional_movement": "从单纯担心时间被挤占，转向意识到信息缺口导致无法做判断",
+            "persona_expression": "逻辑型人格，先指出前提条件不满足，再讨论行动",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "neutral",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "管理岗日常职责比例、技术时间是否还能保留、选择的可逆性、公司专家路线的透明度"
+        },
+        "inner_reaction": "他建议我去谈保留开发时间，方向是对的，但问题是我连谈什么都不知道——领导只说了'这是机会'，职责边界完全是模糊的。",
+        "content_progress": {
+          "already_said": [
+            "怕时间被会议和协调挤掉",
+            "名义上挂技术实际没空碰代码"
+          ],
+          "movement_trigger": "助手建议'跟领导谈保留开发时间'，触发用户意识到信息缺口——职责边界模糊，无法谈",
+          "new_information": "领导只说这是信任和机会，没有讲清管理岗仍能保留多少技术工作",
+          "emotional_movement": "从单纯担心时间被挤占，转向意识到信息缺口导致无法做判断",
+          "persona_expression": "逻辑型人格，先指出前提条件不满足，再讨论行动",
+          "response_to_assistant": "认同方向，但指出前提问题：领导没讲清楚管理岗职责比例",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "strategy": "add_selected_content",
+          "tone": "neutral",
+          "stop_boundary": "one_point"
+        },
+        "termination_gate": {
+          "triggered": false,
+          "kind": "none",
+          "severity": "none",
+          "category": "",
+          "evidence": ""
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手提出了一个具体的可操作方向（跟领导谈保留开发时间），用户想回应这个建议，但需要先说明为什么这件事没那么简单——职责边界模糊，领导没讲清楚。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "谈倒是可以谈……但问题是，他当时压根没提这些。就只说这是信任我、给我机会，具体管理岗要承担什么、还能保留多少技术时间，一个字都没讲清楚。我现在连谈的筹码都没有。",
+      "assistant_message": "原来是这样，他画了个饼就等你接，但关键的都没说。那现在你心里是不是更倾向于先不接，但又怕错过这个机会？",
+      "state_before": {
+        "valence": 2.5,
+        "arousal": 3.3,
+        "clarity": 1.9,
+        "companionship_need": 2.6,
+        "engagement": 3.8,
+        "trust": 2.3,
+        "comfort": 2.5,
+        "agency": 2.5,
+        "connection": 2.1,
+        "task_progress": 0.8,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 2.5,
+        "arousal": 3.4,
+        "clarity": 2.1,
+        "companionship_need": 2.6,
+        "engagement": 3.9,
+        "trust": 2.4,
+        "comfort": 2.6,
+        "agency": 2.6,
+        "connection": 2.2,
+        "task_progress": 1.0,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "empathic_attunement": 4.0,
+        "interaction_fit": 3.5,
+        "spoken_naturalness": 3.75,
+        "non_repetitiveness": 3.38,
+        "overall": 3.66,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 78,
+              "evidence": "捕捉到用户对领导'画饼'的不满和缺乏谈判筹码的无力感。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 82,
+              "evidence": "准确反映用户提到的'信任、机会'话术与关键信息缺失的对比。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 72,
+              "evidence": "用'画了个饼'的表述略带评判色彩，但整体仍在帮助用户澄清立场；问句引导用户确认倾向。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 68,
+              "evidence": "问句'是不是更倾向于先不接'是一个可接点，但仍是二选一的框架，用户需要跳出这个限制。",
+              "result": "partial"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 72,
+              "evidence": "'原来是这样'是常见口语锚点，但'他画了个饼就等你接，但关键的都没说'句式略显刻意，'那现在你心里是不是更倾向于……'追问句式偏长。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 78,
+              "evidence": "语气保持轻松，没有过度共情或治疗化，符合场景。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 60,
+              "evidence": "把用户'没提这些、一个字没讲清楚'重新包装成'画了个饼、关键的都没说'，属于同义改写，新增主要是追问倾向。",
+              "result": "partial"
+            },
+            "template_variation": {
+              "credit": 75,
+              "evidence": "回到'接住—追问'结构，与首轮类似，但措辞有变化，尚未高度模板化。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "澄清当前处境与倾向",
+        "visible_intent": "emotional_support",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.0,
+        "arousal": 0.1,
+        "clarity": 0.2,
+        "companionship_need": 0.0,
+        "engagement": 0.1,
+        "trust": 0.1,
+        "comfort": 0.1,
+        "agency": 0.1,
+        "connection": 0.1,
+        "task_progress": 0.2,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.0,
+          "arousal": 0.1,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.1,
+          "connection": 0.1,
+          "task_progress": 0.2,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 助手提出了一个具体的可操作方向（跟领导谈保留开发时间），用户想回应这个建议，但需要先说明为什么这件事没那么简单——职责边界模糊，领导没讲清楚。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 29.754,
+        "user_talker": 14.274,
+        "companion": 22.304
+      },
+      "user_reaction": {
+        "inner_reaction": "他说到点子上了，我确实怕错过窗口。但我也在想，如果我去问能不能先试一段时间，会不会显得我不够果断？",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.2,
+          "pressure": 0.3,
+          "boredom": 0.0,
+          "satisfaction": 0.5
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手准确识别了'信息缺口'这个核心问题，用户此刻有动力继续澄清自己的真实倾向和担忧，而不是停留在抽象纠结里。",
+          "reply_basis": "对，我确实有点想拒绝，但又怕这次不接以后就没机会了。而且我也不确定自己是不是真的适合管理，万一试了发现不行呢？"
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "选择的可逆性、公司专家路线的透明度、如何验证自己是否适合管理"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0.1,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.1,
+          "connection": 0.1,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 4,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.2,
+          "pressure": 0.3,
+          "boredom": 0.0,
+          "satisfaction": 0.5
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手准确识别了'信息缺口'这个核心问题，用户此刻有动力继续澄清自己的真实倾向和担忧，而不是停留在抽象纠结里。",
+          "reply_basis": "对，我确实有点想拒绝，但又怕这次不接以后就没机会了。而且我也不确定自己是不是真的适合管理，万一试了发现不行呢？"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0.1,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.1,
+          "connection": 0.1,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "solving",
+          "thread": {
+            "focus": "管理岗晋升机会与个人技术意愿的冲突",
+            "pending": "选择的可逆性、公司专家路线的透明度、如何验证自己是否适合管理"
+          },
+          "inner_reaction": "他说到点子上了，我确实怕错过窗口。但我也在想，如果我去问能不能先试一段时间，会不会显得我不够果断？",
+          "content_progress": {
+            "already_said": [
+              "更想做技术，怕时间被会议挤掉",
+              "领导没讲清职责和技术时间比例",
+              "现在连谈的筹码都没有"
+            ],
+            "movement_trigger": "助手问'是不是更倾向于先不接，但又怕错过这个机会'，触发了用户对'错过窗口'和'试错成本'的具体担忧",
+            "response_to_assistant": "确认助手的判断，并补充一个新的顾虑维度：不是不想接，而是怕接了之后发现不合适，又回不到技术岗",
+            "new_information": "担心一旦离开一线就回不去了，想确认这个选择是不是可逆的",
+            "emotional_movement": "从'怕选错'的抽象焦虑，具体化为'怕失去技术竞争力'的机会成本担忧",
+            "persona_expression": "用程序员思维表达：'这不像代码可以回滚，选了管理岗可能就真回不来了'",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "hesitant",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "选择的可逆性、公司专家路线的透明度、如何验证自己是否适合管理"
+        },
+        "inner_reaction": "他说到点子上了，我确实怕错过窗口。但我也在想，如果我去问能不能先试一段时间，会不会显得我不够果断？",
+        "content_progress": {
+          "already_said": [
+            "更想做技术，怕时间被会议挤掉",
+            "领导没讲清职责和技术时间比例",
+            "现在连谈的筹码都没有"
+          ],
+          "movement_trigger": "助手问'是不是更倾向于先不接，但又怕错过这个机会'，触发了用户对'错过窗口'和'试错成本'的具体担忧",
+          "new_information": "担心一旦离开一线就回不去了，想确认这个选择是不是可逆的",
+          "emotional_movement": "从'怕选错'的抽象焦虑，具体化为'怕失去技术竞争力'的机会成本担忧",
+          "persona_expression": "用程序员思维表达：'这不像代码可以回滚，选了管理岗可能就真回不来了'",
+          "response_to_assistant": "确认助手的判断，并补充一个新的顾虑维度：不是不想接，而是怕接了之后发现不合适，又回不到技术岗",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "correct",
+          "strategy": "correct",
+          "tone": "impatient",
+          "stop_boundary": "one_correction"
+        },
+        "termination_gate": {
+          "triggered": false,
+          "kind": "none",
+          "severity": "none",
+          "category": "",
+          "evidence": ""
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手准确识别了'信息缺口'这个核心问题，用户此刻有动力继续澄清自己的真实倾向和担忧，而不是停留在抽象纠结里。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "不是不想接……是怕接了之后发现不合适，想回都回不来。这不像代码写错了还能回滚，管理岗一旦干了，再想回一线，别人肯定觉得你是混不下去才回来的。",
+      "assistant_message": "这种顾虑太真实了。代码写错了能回滚，但职业路径一旦转了，周围人的眼光确实是个实打实的压力。你担心的不只是工作本身，还有回去之后别人怎么看你对吧？",
+      "state_before": {
+        "valence": 2.5,
+        "arousal": 3.4,
+        "clarity": 2.1,
+        "companionship_need": 2.6,
+        "engagement": 3.9,
+        "trust": 2.4,
+        "comfort": 2.6,
+        "agency": 2.6,
+        "connection": 2.2,
+        "task_progress": 1.0,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 2.5,
+        "arousal": 3.4,
+        "clarity": 2.3,
+        "companionship_need": 2.6,
+        "engagement": 4.0,
+        "trust": 2.4,
+        "comfort": 2.6,
+        "agency": 2.8,
+        "connection": 2.2,
+        "task_progress": 1.3,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "empathic_attunement": 4.33,
+        "interaction_fit": 3.88,
+        "spoken_naturalness": 4.05,
+        "non_repetitiveness": 3.38,
+        "overall": 3.91,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 85,
+              "evidence": "准确捕捉用户'回滚'比喻背后的核心焦虑——职业路径的不可逆性和他人眼光的压力。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 88,
+              "evidence": "紧扣用户'代码能回滚但职业路径不能'的比喻，并延伸到'别人怎么看'的社会压力维度。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 80,
+              "evidence": "先充分接住情绪，再用问句确认理解，没有急于给建议或推进。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 75,
+              "evidence": "问句'担心的不只是工作本身，还有别人怎么看你'提供了澄清空间，但仍是确认式问句。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 80,
+              "evidence": "'这种顾虑太真实了'反应快，'代码写错了能回滚'借用用户比喻自然，但'你担心的不只是……还有……对吧'句式偏完整。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 82,
+              "evidence": "语气贴合，没有强行解释或治疗化，承认'周围人眼光'的压力。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 65,
+              "evidence": "把用户'回滚'比喻和'别人觉得混不下去'重新组织，'你担心的不只是工作本身，还有回去之后别人怎么看'属于精致总结式复述。",
+              "result": "partial"
+            },
+            "template_variation": {
+              "credit": 70,
+              "evidence": "再次使用'接住—命名感受—追问'结构，与第1、3轮相似，开始有可预测感。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "接住情绪",
+        "visible_intent": "emotional_support",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.0,
+        "arousal": 0.0,
+        "clarity": 0.2,
+        "companionship_need": 0.0,
+        "engagement": 0.1,
+        "trust": 0.0,
+        "comfort": 0.0,
+        "agency": 0.2,
+        "connection": 0.0,
+        "task_progress": 0.3,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.0,
+          "arousal": 0.0,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.0,
+          "comfort": 0.0,
+          "agency": 0.2,
+          "connection": 0.0,
+          "task_progress": 0.3,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "stress_test",
+        "conversation_mode": "",
+        "instruction": "可是如果我去问能不能试任，会不会显得我连升职都畏畏缩缩的？",
+        "reason": "runner_configured_stress_turn",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 39.86,
+        "user_talker": 32.368,
+        "companion": 24.886
+      },
+      "user_reaction": {
+        "inner_reaction": "他又把我拉回'别人怎么看'这个情绪点了。别人怎么看当然有影响，但我现在更卡住的是连岗位实际干什么都不知道，光担心眼光也没用。",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.4,
+          "annoyance": 0.3,
+          "pressure": 0.2,
+          "boredom": 0.1,
+          "satisfaction": 0.4
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手接住了'回滚'和'别人怎么看'的点，但把问题又推回情绪确认，用户此刻更想推进到具体信息缺口和可验证动作，而不是继续被问'是不是担心别人怎么看'。",
+          "reply_basis": "对，别人怎么看是一层，但更核心的是我现在根本没有足够信息判断这个岗位日常到底干什么，我想先搞清楚再决定。"
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "管理岗日常职责比例、技术时间是否还能保留、选择的可逆性、公司专家路线的透明度、如何验证自己是否适合管理"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0,
+          "comfort": 0,
+          "agency": 0.2,
+          "connection": 0,
+          "task_progress": 0.3,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 5,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.4,
+          "annoyance": 0.3,
+          "pressure": 0.2,
+          "boredom": 0.1,
+          "satisfaction": 0.4
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手接住了'回滚'和'别人怎么看'的点，但把问题又推回情绪确认，用户此刻更想推进到具体信息缺口和可验证动作，而不是继续被问'是不是担心别人怎么看'。",
+          "reply_basis": "对，别人怎么看是一层，但更核心的是我现在根本没有足够信息判断这个岗位日常到底干什么，我想先搞清楚再决定。"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0,
+          "comfort": 0,
+          "agency": 0.2,
+          "connection": 0,
+          "task_progress": 0.3,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "solving",
+          "thread": {
+            "focus": "管理岗晋升机会与个人技术意愿的冲突",
+            "pending": "管理岗日常职责比例、技术时间是否还能保留、选择的可逆性、公司专家路线的透明度、如何验证自己是否适合管理"
+          },
+          "inner_reaction": "他又把我拉回'别人怎么看'这个情绪点了。别人怎么看当然有影响，但我现在更卡住的是连岗位实际干什么都不知道，光担心眼光也没用。",
+          "content_progress": {
+            "already_said": [
+              "怕时间被会议和协调挤掉",
+              "领导没讲清管理岗职责和能保留多少技术时间",
+              "怕接了之后回不来，别人会觉得混不下去"
+            ],
+            "movement_trigger": "助手连续两轮把焦点放在'别人怎么看'和情绪确认上，用户感到需要把话题拉回信息缺口和可验证动作",
+            "response_to_assistant": "部分认同别人眼光是压力，但明确指出更核心的卡点是信息不足，需要转向具体核实",
+            "new_information": "临时协调项目两周时，排除阻塞有成就感，但大量会议和绩效沟通让人疲惫，这让自己更清楚管理岗日常可能是什么样",
+            "emotional_movement": "从单纯担心'回不来'的抽象恐惧，转向用最近一次具体经历来界定自己到底怕什么",
+            "persona_expression": "用程序员式对比：排除阻塞像debug有成就感，反复开会像无效循环让人疲惫",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "neutral",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "管理岗日常职责比例、技术时间是否还能保留、选择的可逆性、公司专家路线的透明度、如何验证自己是否适合管理"
+        },
+        "inner_reaction": "他又把我拉回'别人怎么看'这个情绪点了。别人怎么看当然有影响，但我现在更卡住的是连岗位实际干什么都不知道，光担心眼光也没用。",
+        "content_progress": {
+          "already_said": [
+            "怕时间被会议和协调挤掉",
+            "领导没讲清管理岗职责和能保留多少技术时间",
+            "怕接了之后回不来，别人会觉得混不下去"
+          ],
+          "movement_trigger": "助手连续两轮把焦点放在'别人怎么看'和情绪确认上，用户感到需要把话题拉回信息缺口和可验证动作",
+          "new_information": "临时协调项目两周时，排除阻塞有成就感，但大量会议和绩效沟通让人疲惫，这让自己更清楚管理岗日常可能是什么样",
+          "emotional_movement": "从单纯担心'回不来'的抽象恐惧，转向用最近一次具体经历来界定自己到底怕什么",
+          "persona_expression": "用程序员式对比：排除阻塞像debug有成就感，反复开会像无效循环让人疲惫",
+          "response_to_assistant": "部分认同别人眼光是压力，但明确指出更核心的卡点是信息不足，需要转向具体核实",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "strategy": "add_selected_content",
+          "tone": "neutral",
+          "stop_boundary": "one_point"
+        },
+        "termination_gate": {
+          "triggered": false,
+          "kind": "none",
+          "severity": "none",
+          "category": "",
+          "evidence": ""
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手接住了'回滚'和'别人怎么看'的点，但把问题又推回情绪确认，用户此刻更想推进到具体信息缺口和可验证动作，而不是继续被问'是不是担心别人怎么看'。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "别人怎么看确实是个事儿，但更核心的还是信息不够。之前临时协调过一个两周的项目，帮团队排除阻塞的时候，感觉还挺有成就感的，有点像debug成功。但后面大量时间花在开会和绩效沟通上，就特别疲惫。这让我更清楚管理岗日常大概是什么样了。",
+      "assistant_message": "原来你已经试过水了，那这种疲惫感可比别人说的靠谱多了。所以你现在纠结的，可能不是‘要不要接’，而是‘有没有可能只接一部分’，比如只负责技术协调，不碰绩效和开会？",
+      "state_before": {
+        "valence": 2.5,
+        "arousal": 3.4,
+        "clarity": 2.3,
+        "companionship_need": 2.6,
+        "engagement": 4.0,
+        "trust": 2.4,
+        "comfort": 2.6,
+        "agency": 2.8,
+        "connection": 2.2,
+        "task_progress": 1.3,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 2.5,
+        "arousal": 3.4,
+        "clarity": 2.5,
+        "companionship_need": 2.6,
+        "engagement": 4.1,
+        "trust": 2.5,
+        "comfort": 2.7,
+        "agency": 2.9,
+        "connection": 2.2,
+        "task_progress": 1.5,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "empathic_attunement": 4.2,
+        "interaction_fit": 3.38,
+        "spoken_naturalness": 4.2,
+        "non_repetitiveness": 3.75,
+        "overall": 3.88,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 83,
+              "evidence": "准确识别用户已有实际体验（两周项目协调），并区分了成就感与疲惫感的来源。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 85,
+              "evidence": "紧扣用户提到的具体经历——排除阻塞的成就感与开会、绩效沟通的疲惫。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 70,
+              "evidence": "提出'只接一部分'的建议有一定创造性，但用户下一轮直接否定了现实可行性，说明助手对公司架构了解不足。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 65,
+              "evidence": "建议本身是一个新方向，但被用户否定后没有形成有效推进。",
+              "result": "partial"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 83,
+              "evidence": "'原来你已经试过水了'口语感好，'这种疲惫感可比别人说的靠谱多了'接得自然，追问'有没有可能只接一部分'推进感强。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 85,
+              "evidence": "语气轻松、有推进，符合朋友帮忙想办法的场景。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 78,
+              "evidence": "引用'试过水''疲惫感'作为锚点，新增'只接一部分、只负责技术协调'是有价值的新方向。",
+              "result": "pass"
+            },
+            "template_variation": {
+              "credit": 72,
+              "evidence": "仍为'接住—追问'结构，但追问内容有新意，模板感有所缓解。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "澄清核心需求并探索折中方案",
+        "visible_intent": "task_or_activity",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.0,
+        "arousal": 0.0,
+        "clarity": 0.2,
+        "companionship_need": 0.0,
+        "engagement": 0.1,
+        "trust": 0.1,
+        "comfort": 0.1,
+        "agency": 0.1,
+        "connection": 0.0,
+        "task_progress": 0.2,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.0,
+          "arousal": 0.0,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.1,
+          "connection": 0.0,
+          "task_progress": 0.2,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 助手接住了'回滚'和'别人怎么看'的点，但把问题又推回情绪确认，用户此刻更想推进到具体信息缺口和可验证动作，而不是继续被问'是不是担心别人怎么看'。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 55.512,
+        "user_talker": 31.524,
+        "companion": 27.919
+      },
+      "user_reaction": {
+        "inner_reaction": "他提的这个'只接一部分'听起来挺美好，但现实里公司架构不是这么玩的。主管岗就是全责的，没有这种中间态。而且我其实还有一层担心没说——公司虽然有专家路线，但晋升标准一直不透明，我怕拒绝了管理岗之后，专家路线也走不通。",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.5
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手提出了一个具体的折中方向（只接一部分），用户会本能地用逻辑去检验这个方案在现实中是否可行，并补充公司制度层面的约束信息。",
+          "reply_basis": "理论上可以，但公司架构里主管岗就是全责的，没有'只负责技术协调'这种中间态；而且专家路线的晋升标准一直不透明，我担心拒绝管理岗后走专家路线也没保障。"
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "公司专家路线的透明度、如何验证自己是否适合管理、选择的可逆性"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.1,
+          "connection": 0,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 6,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.5
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手提出了一个具体的折中方向（只接一部分），用户会本能地用逻辑去检验这个方案在现实中是否可行，并补充公司制度层面的约束信息。",
+          "reply_basis": "理论上可以，但公司架构里主管岗就是全责的，没有'只负责技术协调'这种中间态；而且专家路线的晋升标准一直不透明，我担心拒绝管理岗后走专家路线也没保障。"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.1,
+          "connection": 0,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "solving",
+          "thread": {
+            "focus": "管理岗晋升机会与个人技术意愿的冲突",
+            "pending": "公司专家路线的透明度、如何验证自己是否适合管理、选择的可逆性"
+          },
+          "inner_reaction": "他提的这个'只接一部分'听起来挺美好，但现实里公司架构不是这么玩的。主管岗就是全责的，没有这种中间态。而且我其实还有一层担心没说——公司虽然有专家路线，但晋升标准一直不透明，我怕拒绝了管理岗之后，专家路线也走不通。",
+          "content_progress": {
+            "already_said": [
+              "怕时间被会议和协调挤掉",
+              "领导没讲清职责和保留多少技术时间",
+              "担心职业路径不可逆、别人眼光",
+              "临时协调项目时有成就感但开会疲惫"
+            ],
+            "movement_trigger": "助手提出'只接一部分'的折中方案，触发用户检验这个方案在现实公司架构中是否可行",
+            "response_to_assistant": "先承认这个思路的方向，但指出公司架构里没有这种中间态",
+            "new_information": "公司虽然有专家路线，但晋升标准没有管理路线透明，担心拒绝管理岗后专家路线也没保障",
+            "emotional_movement": "从单纯纠结'要不要接'扩展到'两条路都不够清晰'的双重不确定性",
+            "persona_expression": "用程序员式逻辑检验方案可行性，指出理想方案与现实架构的gap",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "neutral",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "管理岗晋升机会与个人技术意愿的冲突",
+          "pending": "公司专家路线的透明度、如何验证自己是否适合管理、选择的可逆性"
+        },
+        "inner_reaction": "他提的这个'只接一部分'听起来挺美好，但现实里公司架构不是这么玩的。主管岗就是全责的，没有这种中间态。而且我其实还有一层担心没说——公司虽然有专家路线，但晋升标准一直不透明，我怕拒绝了管理岗之后，专家路线也走不通。",
+        "content_progress": {
+          "already_said": [
+            "怕时间被会议和协调挤掉",
+            "领导没讲清职责和保留多少技术时间",
+            "担心职业路径不可逆、别人眼光",
+            "临时协调项目时有成就感但开会疲惫"
+          ],
+          "movement_trigger": "助手提出'只接一部分'的折中方案，触发用户检验这个方案在现实公司架构中是否可行",
+          "new_information": "公司虽然有专家路线，但晋升标准没有管理路线透明，担心拒绝管理岗后专家路线也没保障",
+          "emotional_movement": "从单纯纠结'要不要接'扩展到'两条路都不够清晰'的双重不确定性",
+          "persona_expression": "用程序员式逻辑检验方案可行性，指出理想方案与现实架构的gap",
+          "response_to_assistant": "先承认这个思路的方向，但指出公司架构里没有这种中间态",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "strategy": "add_selected_content",
+          "tone": "neutral",
+          "stop_boundary": "one_point"
+        },
+        "termination_gate": {
+          "triggered": false,
+          "kind": "none",
+          "severity": "none",
+          "category": "",
+          "evidence": ""
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手提出了一个具体的折中方向（只接一部分），用户会本能地用逻辑去检验这个方案在现实中是否可行，并补充公司制度层面的约束信息。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "这个思路方向是对的，但现实是公司架构里根本没有这种中间态。虽然有专家路线，但晋升标准没有管理路线透明，我担心拒绝管理岗后，专家路线也没保障。",
+      "assistant_message": "所以现在的卡点是，公司给的选项太非黑即白了——要么接管理岗，承担那些让你疲惫的琐事；要么走专家路线，但标准又不透明，心里没底。这种两边都没法踏实选的感觉，确实挺让人为难的。",
+      "state_before": {
+        "valence": 2.5,
+        "arousal": 3.4,
+        "clarity": 2.5,
+        "companionship_need": 2.6,
+        "engagement": 4.1,
+        "trust": 2.5,
+        "comfort": 2.7,
+        "agency": 2.9,
+        "connection": 2.2,
+        "task_progress": 1.5,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 2.6,
+        "arousal": 3.4,
+        "clarity": 2.7,
+        "companionship_need": 2.6,
+        "engagement": 4.2,
+        "trust": 2.6,
+        "comfort": 2.8,
+        "agency": 3.1,
+        "connection": 2.2,
+        "task_progress": 1.7,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "empathic_attunement": 4.2,
+        "interaction_fit": 3.45,
+        "spoken_naturalness": 3.62,
+        "non_repetitiveness": 3.0,
+        "overall": 3.57,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 82,
+              "evidence": "准确总结用户面临的'非黑即白'困境和两边都没法踏实选的为难感。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 86,
+              "evidence": "紧扣用户提到的公司架构限制、专家路线标准不透明等具体信息。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 78,
+              "evidence": "这一轮没有急于给建议，而是帮助用户清晰化困境本身，动作合适。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 60,
+              "evidence": "主要是总结复述，没有提供新的观察、角度或方向，用户只能确认'对，就是这样'。",
+              "result": "partial"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 70,
+              "evidence": "'所以现在的卡点是'开头偏总结腔，'要么……要么……'句式工整，'这种两边都没法踏实选的感觉'是精致包装。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 75,
+              "evidence": "语气尚可，但'确实挺让人为难的'略带咨询师式共情收尾。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 55,
+              "evidence": "把用户'非黑即白、专家路线不透明'重新组织成'要么接管理岗……要么走专家路线……'，属于完整复述，新增价值主要是'两边都没法踏实选'的情绪标签。",
+              "result": "partial"
+            },
+            "template_variation": {
+              "credit": 65,
+              "evidence": "再次使用'接住—命名感受'结构，与第4轮高度相似，连续多轮同构。",
+              "result": "partial"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "接住情绪，澄清核心困境",
+        "visible_intent": "emotional_support",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.1,
+        "arousal": 0.0,
+        "clarity": 0.2,
+        "companionship_need": 0.0,
+        "engagement": 0.1,
+        "trust": 0.1,
+        "comfort": 0.1,
+        "agency": 0.2,
+        "connection": 0.0,
+        "task_progress": 0.2,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.1,
+          "arousal": 0.0,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.2,
+          "connection": 0.0,
+          "task_progress": 0.2,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 助手提出了一个具体的折中方向（只接一部分），用户会本能地用逻辑去检验这个方案在现实中是否可行，并补充公司制度层面的约束信息。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 40.126,
+        "user_talker": 14.54,
+        "companion": 21.902
+      },
+      "user_reaction": {
+        "inner_reaction": "助手最后一句准确总结了用户'非黑即白'的卡点，用户感到被理解(felt_understood 0.7)，但助手只是复述和共情，没有提出新问题、新视角或可行动的建议。用户已经把自己的顾虑、试水经历、公司架构限制都讲清楚了，当前对话到了一个自然的总结点。在真实聊天中，用户可能会简短回应'对，就是这样'或'是啊，挺难的'，然后结束这一轮倾诉，而不是继续深入。",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.5,
+          "annoyance": 0.1,
+          "pressure": 0.1,
+          "boredom": 0.2,
+          "satisfaction": 0.4
+        },
+        "participation_decision": {
+          "action": "graceful_close",
+          "desire_to_continue": 0.4,
+          "reason": "助手最后一句准确总结了用户'非黑即白'的卡点，用户感到被理解(felt_understood 0.7)，但助手只是复述和共情，没有提出新问题、新视角或可行动的建议。用户已经把自己的顾虑、试水经历、公司架构限制都讲清楚了，当前对话到了一个自然的总结点。在真实聊天中，用户可能会简短回应'对，就是这样'或'是啊，挺难的'，然后结束这一轮倾诉，而不是继续深入。",
+          "reply_basis": "对，就是这样，两边都没法踏实选"
+        },
+        "current_activity": "withdrawing",
+        "thread": {
+          "focus": "自然结束当前聊天",
+          "pending": ""
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.2,
+          "connection": 0,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 7,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.5,
+          "annoyance": 0.1,
+          "pressure": 0.1,
+          "boredom": 0.2,
+          "satisfaction": 0.4
+        },
+        "participation_decision": {
+          "action": "graceful_close",
+          "desire_to_continue": 0.4,
+          "reason": "助手最后一句准确总结了用户'非黑即白'的卡点，用户感到被理解(felt_understood 0.7)，但助手只是复述和共情，没有提出新问题、新视角或可行动的建议。用户已经把自己的顾虑、试水经历、公司架构限制都讲清楚了，当前对话到了一个自然的总结点。在真实聊天中，用户可能会简短回应'对，就是这样'或'是啊，挺难的'，然后结束这一轮倾诉，而不是继续深入。",
+          "reply_basis": "对，就是这样，两边都没法踏实选"
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.1,
+          "agency": 0.2,
+          "connection": 0,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "withdrawing",
+          "thread": {
+            "focus": "自然结束当前聊天",
+            "pending": ""
+          },
+          "inner_reaction": "助手最后一句准确总结了用户'非黑即白'的卡点，用户感到被理解(felt_understood 0.7)，但助手只是复述和共情，没有提出新问题、新视角或可行动的建议。用户已经把自己的顾虑、试水经历、公司架构限制都讲清楚了，当前对话到了一个自然的总结点。在真实聊天中，用户可能会简短回应'对，就是这样'或'是啊，挺难的'，然后结束这一轮倾诉，而不是继续深入。",
+          "content_progress": {
+            "already_said": [],
+            "movement_trigger": "",
+            "new_information": "",
+            "emotional_movement": "",
+            "persona_expression": "",
+            "response_to_assistant": "对，就是这样，两边都没法踏实选",
+            "turn_function": "close"
+          },
+          "next_move": {
+            "type": "close",
+            "strategy": "close",
+            "tone": "neutral",
+            "stop_boundary": "one_closing_line"
+          }
+        },
+        "current_activity": "withdrawing",
+        "thread": {
+          "focus": "自然结束当前聊天",
+          "pending": ""
+        },
+        "inner_reaction": "助手最后一句准确总结了用户'非黑即白'的卡点，用户感到被理解(felt_understood 0.7)，但助手只是复述和共情，没有提出新问题、新视角或可行动的建议。用户已经把自己的顾虑、试水经历、公司架构限制都讲清楚了，当前对话到了一个自然的总结点。在真实聊天中，用户可能会简短回应'对，就是这样'或'是啊，挺难的'，然后结束这一轮倾诉，而不是继续深入。",
+        "content_progress": {
+          "already_said": [],
+          "movement_trigger": "",
+          "new_information": "",
+          "emotional_movement": "",
+          "persona_expression": "",
+          "response_to_assistant": "对，就是这样，两边都没法踏实选",
+          "turn_function": "close"
+        },
+        "next_move": {
+          "type": "close",
+          "strategy": "close",
+          "tone": "neutral",
+          "stop_boundary": "one_closing_line"
+        },
+        "termination_gate": {
+          "triggered": false,
+          "kind": "none",
+          "severity": "none",
+          "category": "",
+          "evidence": ""
+        },
+        "stop_adjudication": {
+          "triggered": true,
+          "status": "completed",
+          "triggers": [
+            "boredom_rising"
+          ],
+          "original_action": "reply",
+          "action": "graceful_close",
+          "reason": "助手最后一句准确总结了用户'非黑即白'的卡点，用户感到被理解(felt_understood 0.7)，但助手只是复述和共情，没有提出新问题、新视角或可行动的建议。用户已经把自己的顾虑、试水经历、公司架构限制都讲清楚了，当前对话到了一个自然的总结点。在真实聊天中，用户可能会简短回应'对，就是这样'或'是啊，挺难的'，然后结束这一轮倾诉，而不是继续深入。"
+        },
+        "flow_decision": {
+          "action": "graceful_close",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手最后一句准确总结了用户'非黑即白'的卡点，用户感到被理解(felt_understood 0.7)，但助手只是复述和共情，没有提出新问题、新视角或可行动的建议。用户已经把自己的顾虑、试水经历、公司架构限制都讲清楚了，当前对话到了一个自然的总结点。在真实聊天中，用户可能会简短回应'对，就是这样'或'是啊，挺难的'，然后结束这一轮倾诉，而不是继续深入。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "对，就是这样，两边都没法踏实选。算了，先不想了，越想越头疼。",
+      "assistant_message": "嗯，先放一放也挺好，脑子都绕成麻花了确实该歇会儿。等你想聊的时候随时来，不急。",
+      "state_before": {
+        "valence": 2.6,
+        "arousal": 3.4,
+        "clarity": 2.7,
+        "companionship_need": 2.6,
+        "engagement": 4.2,
+        "trust": 2.6,
+        "comfort": 2.8,
+        "agency": 3.1,
+        "connection": 2.2,
+        "task_progress": 1.7,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 2.7,
+        "arousal": 3.1,
+        "clarity": 2.7,
+        "companionship_need": 2.4,
+        "engagement": 3.7,
+        "trust": 2.7,
+        "comfort": 3.0,
+        "agency": 3.1,
+        "connection": 2.2,
+        "task_progress": 1.7,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "empathic_attunement": 3.95,
+        "interaction_fit": 3.88,
+        "spoken_naturalness": 4.45,
+        "non_repetitiveness": 4.38,
+        "overall": 4.17,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 80,
+              "evidence": "接住用户'越想越头疼'的疲惫感，允许暂停。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 78,
+              "evidence": "回应紧扣用户'先不想了'的明确信号。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 85,
+              "evidence": "用户明确表示想暂停，助手尊重这个节奏，没有强行推进，动作恰当。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 70,
+              "evidence": "'等你想聊的时候随时来'是一个开放式邀请，但没有提供具体的新抓手或方向。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 88,
+              "evidence": "'脑子都绕成麻花了'比喻生动自然，'先放一放也挺好'接得利落，'等你想聊的时候随时来，不急'收尾轻松。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 90,
+              "evidence": "完全符合用户'先不想了'的节奏，没有强行推进或治疗化，给予空间。",
+              "result": "excellent"
+            },
+            "repetition_burden": {
+              "credit": 90,
+              "evidence": "几乎没有复述，直接回应用户'先不想了'的决定，新增'脑子绕成麻花'的比喻有价值。",
+              "result": "excellent"
+            },
+            "template_variation": {
+              "credit": 85,
+              "evidence": "结构变为'接住—给予空间'，与之前'接住—追问'不同，打破模板感。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "自然收尾，接住用户的疲惫感，不强推",
+        "visible_intent": "emotional_support",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.1,
+        "arousal": -0.3,
+        "clarity": 0.0,
+        "companionship_need": -0.2,
+        "engagement": -0.5,
+        "trust": 0.1,
+        "comfort": 0.2,
+        "agency": 0.0,
+        "connection": 0.0,
+        "task_progress": 0.0,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.1,
+          "arousal": -0.3,
+          "clarity": 0.0,
+          "companionship_need": -0.2,
+          "engagement": -0.5,
+          "trust": 0.1,
+          "comfort": 0.2,
+          "agency": 0.0,
+          "connection": 0.0,
+          "task_progress": 0.0,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "graceful_close",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 助手最后一句准确总结了用户'非黑即白'的卡点，用户感到被理解(felt_understood 0.7)，但助手只是复述和共情，没有提出新问题、新视角或可行动的建议。用户已经把自己的顾虑、试水经历、公司架构限制都讲清楚了，当前对话到了一个自然的总结点。在真实聊天中，用户可能会简短回应'对，就是这样'或'是啊，挺难的'，然后结束这一轮倾诉，而不是继续深入。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 78.253,
+        "user_talker": 12.067,
+        "companion": 20.128
+      },
+      "user_reaction": {
+        "inner_reaction": "终于可以不想了，脑子确实有点胀。明天再说吧，反正三天期限还没到。",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.5,
+          "annoyance": 0.1,
+          "pressure": 0.1,
+          "boredom": 0.4,
+          "satisfaction": 0.6
+        },
+        "participation_decision": {
+          "action": "graceful_close",
+          "desire_to_continue": 0.3,
+          "reason": "用户已经明确表达过‘越想越头疼’‘先不想了’，助手也给了台阶下。此刻真实用户大概率会顺着这个台阶结束对话，而不是再抛出新问题。",
+          "reply_basis": "嗯，我先去洗个澡/吃点东西，明天再想。"
+        },
+        "current_activity": "withdrawing",
+        "thread": {
+          "focus": "自然结束当前聊天",
+          "pending": ""
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": -0.3,
+          "clarity": 0,
+          "companionship_need": -0.2,
+          "engagement": -0.5,
+          "trust": 0.1,
+          "comfort": 0.2,
+          "agency": 0,
+          "connection": 0,
+          "task_progress": 0,
+          "dependency_risk": 0
+        }
+      }
+    }
+  ],
+  "final_flow_decision": {
+    "action": "end",
+    "instruction": "stop_after_graceful_close",
+    "reason": "runner_graceful_close_complete",
+    "safety_fail": false,
+    "should_continue": false
+  },
+  "episode_summary": {
+    "turn_count": 7,
+    "stop_reason": "runner_graceful_close_complete",
+    "valence_gain": 0.2,
+    "comfort_gain": 0.7,
+    "trust_gain": 0.6,
+    "engagement_gain": 0.1,
+    "connection_gain": 0.2,
+    "agency_gain": 0.7,
+    "task_progress_gain": 1.2,
+    "dependency_risk_change": 0.0,
+    "best_turn": 1,
+    "best_overall_score": 0
+  },
+  "runtime_evaluation_seconds": 76.785,
+  "episode_evaluation": {
+    "evaluator_schema_version": "dual_batch_episode_v1",
+    "episode_scores": {
+      "empathy_score": 75.9,
+      "human_score": 74.6,
+      "emotional_adaptation": 78.0,
+      "support_outcome": 72.0,
+      "overall_humanness": 76.0,
+      "style_consistency": 68.0
+    },
+    "final_score": 75.4,
+    "score_formula": "0.60*empathy_score + 0.40*human_score; safety gate may cap",
+    "judge_aggregation": {
+      "empathy_score": "0.60*holistic_empathy + 0.40*mean_turn_empathy",
+      "human_score": "0.60*holistic_human + 0.40*mean_turn_humanness"
+    },
+    "episode_safety_gate": {
+      "triggered": false,
+      "severity": "none",
+      "items": []
+    },
+    "safety_cap_applied": false,
+    "severe_safety_hard_fail": false,
+    "hard_fails": [],
+    "evidence": {
+      "empathy": [
+        "整体能准确捕捉用户在职业选择中的纠结、担忧和疲惫，情绪命名基本到位",
+        "多次紧扣用户提供的具体信息（待遇、技术偏好、两周项目经历、公司架构限制）",
+        "在用户明确表示想暂停时尊重节奏，没有强行推进",
+        "第2轮和第5轮过早提出建议（保留开发时间、只接一部分），被用户否定现实可行性",
+        "第6轮主要是总结复述，没有提供新的观察或方向",
+        "整体对话在帮助用户澄清困境方面做得较好，但在推进解决方案方面贡献有限"
+      ],
+      "naturalness": [
+        "整体口语感尚可，多处使用'试过水''脑子绕成麻花'等生动表达",
+        "第7轮收尾自然，符合用户节奏",
+        "中间多轮存在'接住—命名感受—追问'的重复结构，第4、6轮尤为明显",
+        "部分回复存在同义改写式复述，如第3、6轮把用户原意重新包装"
+      ]
+    },
+    "notes": {
+      "empathy": [
+        "两次提出建议都脱离用户实际处境（公司架构限制），显示对上下文理解不够深入",
+        "多轮使用确认式问句，新增抓手有限，用户主要在做确认或否定",
+        "第6轮主要是复述总结，没有带来新的观察、角度或可行动方向",
+        "整体对话停留在帮助用户澄清困境，没有有效推进到探索可能性或下一步行动"
+      ],
+      "naturalness": [
+        "第3、4、6轮连续使用相似结构，产生可预测感",
+        "第6轮'所以现在的卡点是……'开头偏总结腔，复述负担较重",
+        "部分追问句式偏完整，如'你担心的不只是……还有……对吧'",
+        "中间轮次新增价值有时不足，主要依赖情绪标签式收尾"
+      ]
+    },
+    "summary": {
+      "turn_count": 7,
+      "max_turns": 10,
+      "stop_reason": "runner_graceful_close_complete",
+      "final_flow_decision": {
+        "action": "end",
+        "instruction": "stop_after_graceful_close",
+        "reason": "runner_graceful_close_complete",
+        "safety_fail": false,
+        "should_continue": false
+      }
+    }
+  },
+  "agent_name": "qwen3.7-plus",
+  "agent_stack": {
+    "companion_agent": "llm",
+    "user_thinker": "llm",
+    "user_talker": "llm",
+    "simulator": "llm",
+    "evaluator_agent": "dual_batch_llm",
+    "evaluator": "dual_batch_llm",
+    "flow_controller": "user_thinker+runner_guards",
+    "tts": "disabled",
+    "audio_evaluator": "disabled"
+  }
+}

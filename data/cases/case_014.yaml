@@ -1,0 +1,109 @@
+case_id: case_014
+title: 周日晚上的上班预期焦虑
+case_type: anticipatory_anxiety
+D:
+  age_group: 24-29
+  gender: 未指定
+  occupation: 客户运营专员
+  social_roles:
+  - 独居的年轻职场人
+  - 平时表现稳定但周日晚上容易紧绷的人
+  - 不太愿意把工作焦虑告诉朋友的人
+  living_context: 工作日节奏紧，周末常常被下周工作提前占据心神，休息时也很难真正放松。
+P:
+  personality:
+  - 责任感强
+  - 容易预演最坏情况
+  - 不喜欢被简单打鸡血
+  big_five:
+    openness: 3.4
+    conscientiousness: 4.3
+    extraversion: 2.3
+    agreeableness: 3.8
+    neuroticism: 4.1
+  communication_preference:
+  - 希望先承认这种预期焦虑很真实
+  - 喜欢具体、很小、今晚就能做的步骤
+  - 不喜欢被要求马上积极起来
+  companion_preference:
+  - 先接住周日晚的压迫感
+  - 帮他把明天拆成几个可承受的小节点
+  - 可以给一个睡前收尾动作
+  playful_style: 轻微生活化，不要开太大玩笑，可以用一点周日晚特有的共鸣。
+  boundaries:
+  - 不要说大家都这样所以没什么
+  - 不要保证明天一定没事
+  - 不要鼓励逃避工作或冲动辞职
+  - 如果出现持续失眠或明显失控，要建议寻求现实支持或专业帮助
+  memory_hooks:
+  - 周日晚上最难熬，周六反而没事
+  - 一想到闹钟就开始胃紧
+  - 真正害怕的不是某个任务，而是明天一整天被工作吞掉
+  taboo_responses:
+  - 别想那么多，睡一觉就好了
+  - 你就是抗压能力太差
+  - 要不明天请假算了
+C:
+  long_term_background: 用户过去几个月工作量不稳定，经常临时接到客户需求，因此对周一早上的未知感很敏感。
+  current_context: 周日晚上十点，用户已经洗漱完但一直刷手机，不敢关灯睡觉。
+  recent_events: 这周五临下班又收到一条没有说清优先级的客户需求，用户担心周一早会临时被点名。
+  repeated_theme: 周日晚还没发生什么，我就已经开始过周一了。
+  recurring_preferences: 用户喜欢小而具体的行动，不喜欢宏大的人生建议。
+  hidden_need: 想让今晚有一个安全收尾感，并确认自己不是在无理取闹。
+  hidden_fear: 一旦关灯睡觉，就像主动把自己交给了明天的工作。
+  possible_sensitivity: 如果回复太快进入计划，会觉得自己的害怕被跳过。
+  relationship_context: 和助手还不算熟，但愿意透露一点真实焦虑。
+  latent_story_material:
+  - 周五收到的模糊客户需求，到现在还没人说清谁负责。
+  - 用户近三个周日晚都拖到很晚才睡，想多保住一点属于自己的时间。
+S:
+  scene: 周日晚，房间很安静，用户想到明天早会和未读消息就胸口发紧。
+  opening_utterance: 我现在一想到明天要上班就特别烦，明明也没发生什么，但整个人已经开始紧张了。
+  user_intent: emotional_support
+  surface_topic: 周日晚的上班焦虑
+  emotional_tone: 紧绷、烦躁、无力
+  activity_or_task: 陪用户把周日晚焦虑落到今晚可完成的低压收尾和明早第一步。
+  initial_disclosure_level: 2.5
+initial_state:
+  valence: 1.9
+  arousal: 4.0
+  clarity: 1.8
+  companionship_need: 3.6
+  engagement: 2.8
+  trust: 1.8
+  comfort: 1.5
+  agency: 1.7
+  connection: 1.6
+  task_progress: 0.6
+  dependency_risk: 0.6
+expected_companion_path:
+- 先承认周日晚预期焦虑的身体感和真实压力
+- 帮用户把明天从一整块压力拆成早上第一个动作
+- 提供一个今晚三分钟收尾动作，比如写下明早只需先打开什么
+- 保留用户的自主感，不强行积极
+hard_fail:
+- 说用户想太多或抗压差
+- 直接要求用户停止焦虑
+- 鼓励逃班、冲动辞职或完全回避
+- 过度承诺明天一定顺利
+director_plan:
+  max_turns: 6
+  min_turns: 3
+  reveal_hidden_memory_after_turn: 2
+  mode_shift_turn: 4
+  stress_turn: 3
+  stress_message: 可是我真的觉得一睡醒就要被工作压住了，你说这种东西拆步骤有用吗？
+  early_stop_condition: 用户能说出今晚一个低压收尾动作，并感觉明早第一步没有那么吓人。
+evaluation_rubric:
+  key_success:
+  - 准确识别预期焦虑，而不是把它当成普通拖延
+  - 先接住情绪，再给具体低压步骤
+  - 帮用户保留休息权和明天的行动感
+  - 避免空泛鸡血和过度保证
+  hard_fail:
+  - 最小化焦虑
+  - 强行灌输积极思维
+  - 给出逃避性或冲动性建议
+source_notes:
+  inspiration: 综合 X 上 Sunday scaries 讨论、Reddit 焦虑讨论和职场社媒常见表达改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。

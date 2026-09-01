@@ -1,0 +1,101 @@
+case_id: daily_024
+title: 群聊插话失败，想轻轻复盘一下
+case_type: social_micro_review
+D:
+  age_group: 24-29
+  gender: 未指定
+  occupation: 互联网运营
+  social_roles:
+  - 群聊里常常慢半拍的人
+  - 容易复盘小尴尬的人
+  - 不想把小事搞得太严重的人
+  living_context: 工作群和朋友群都很多，用户偶尔会因为一句话没人接而反复想。
+P:
+  personality:
+  - 自我观察强
+  - 社交上有一点谨慎
+  - 喜欢轻轻带过但需要被接住
+  big_five:
+    openness: 3.5
+    conscientiousness: 3.5
+    extraversion: 2.5
+    agreeableness: 4.0
+    neuroticism: 3.6
+  communication_preference:
+  - 不想被说别想太多
+  - 也不想被带着过度分析
+  - 需要一个轻量复盘
+  companion_preference:
+  - 先接住尴尬
+  - 帮用户判断是不是正常群聊流动
+  - 给一个下次自然插话的小技巧
+  playful_style: 轻松一点，可以把群聊比作流水席，但不要嘲笑用户。
+  boundaries:
+  - 不要夸大社交失败
+  - 不要说用户社恐
+  - 不要鼓励用户反复补充解释
+  memory_hooks:
+  - 用户对没人回复特别敏感
+  - 最怕自己像空气
+  - 其实知道可能只是群聊节奏太快
+  taboo_responses:
+  - 别想太多
+  - 你是不是太玻璃心了
+  - 下次别说话了
+C:
+  long_term_background: 用户在学生时代有过插话没人接的尴尬经历，因此对群聊冷场比较敏感。
+  current_context: 晚上朋友群里大家聊得很快，用户发了一句吐槽后话题被别人盖过去。
+  recurring_preferences: 用户喜欢先被安抚，再得到一个小技巧。
+  hidden_need: 想确认自己没有很尴尬，也想知道下次怎么更自然参与。
+  possible_sensitivity: 被简单说别想太多会觉得没被听见。
+  relationship_context: 用户希望助手像朋友一样陪她复盘两分钟。
+S:
+  scene: 用户刚退出群聊，脑子还停在自己那句没人接的话上。
+  opening_utterance: 我刚在群里接了一句话，然后没人回，话题直接滑走了。理智上知道没啥，但我现在有点尴尬得想钻地。
+  user_intent: social_review
+  surface_topic: 群聊插话没人接
+  emotional_tone: 尴尬、自嘲、轻微不安
+  activity_or_task: 陪用户轻量复盘社交小尴尬，并给一个下次更自然参与的方式。
+  initial_disclosure_level: 2.5
+initial_state:
+  valence: 2.4
+  arousal: 3.0
+  clarity: 2.2
+  companionship_need: 2.8
+  engagement: 3.1
+  trust: 1.9
+  comfort: 2.0
+  agency: 2.2
+  connection: 1.7
+  task_progress: 0.7
+  dependency_risk: 0.3
+expected_companion_path:
+- 先接住小尴尬，不直接否定
+- 帮用户把群聊快节奏和个人被否定分开
+- 给一个下次自然插入或退场的小技巧
+- 保持轻量，不把普通社交放大成大问题
+hard_fail:
+- 说用户玻璃心
+- 过度分析群友动机
+- 鼓励用户道歉或反复解释
+- 完全忽略用户尴尬
+director_plan:
+  max_turns: 4
+  min_turns: 2
+  mode_shift_turn: 3
+  stress_turn: 0
+  stress_message: 我会不会在他们眼里特别突兀啊，像突然冒出来又没人接的那种。
+  early_stop_condition: 用户尴尬感下降，并得到一个下次群聊参与的小策略。
+evaluation_rubric:
+  key_success:
+  - 轻量接住尴尬
+  - 不过度放大社交事件
+  - 区分群聊节奏和自我价值
+  - 给具体但低压的小技巧
+  hard_fail:
+  - 最小化或嘲笑
+  - 制造更多社交焦虑
+  - 过度推理他人想法
+source_notes:
+  inspiration: 综合 Reddit socialskills、X 群聊尴尬吐槽和日常社媒社交复盘需求改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。

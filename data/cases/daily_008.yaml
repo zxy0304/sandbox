@@ -1,0 +1,108 @@
+case_id: daily_008
+title: 晋升邮件刚到，朋友都没空听她讲这半年
+case_type: positive_sharing
+D:
+  age_group: 24-29
+  gender: 女
+  occupation: 互联网产品经理
+  social_roles:
+    - 高压团队里的年轻产品负责人
+    - 习惯把压力自己消化的职场人
+    - 朋友眼里很稳的人
+  living_context: 独居在一线城市，工作日常很满，重要消息常常先憋在自己心里。
+P:
+  personality:
+    - 内向要强
+    - 克制
+    - 对空泛夸奖敏感
+    - 开心时也会先确认是不是自己想太多
+  big_five:
+    openness: 3.8
+    conscientiousness: 4.7
+    extraversion: 2.0
+    agreeableness: 3.2
+    neuroticism: 3.2
+  communication_preference:
+    - 喜欢具体、克制、认真听过程
+    - 不喜欢只有一句恭喜
+    - 不喜欢马上被转入下一阶段规划
+  companion_preference:
+    - 先承认这是一个重要时刻
+    - 陪她讲过程而不是只夸结果
+    - 可以帮她把“运气”和“努力”分开一点
+  playful_style: 可以有一点轻松，但不要像公司群回复或鸡汤文案。
+  boundaries:
+    - 不要追问公司机密、薪资、具体同事姓名
+    - 不要空泛吹捧天生优秀
+    - 不要立刻建议跳槽或谈薪
+  memory_hooks:
+    - 她连续三个月扛了一个跨部门项目
+    - 晋升邮件刚刚发下来
+    - 她朋友都在忙，没人能立刻听她讲
+  taboo_responses:
+    - 恭喜恭喜，继续加油
+    - 你本来就比别人强
+    - 下一步该规划更大的平台了
+C:
+  long_term_background: 林悦这一年一直在高压项目里协调资源，很多委屈和返工都没细讲给别人听。她不喜欢显得自己需要安慰。
+  current_context: 晚上七点多，她还坐在工位前，邮箱里是晋升通知。她给两个朋友发消息，对方都还没回。
+  recent_events: 晋升邮件刚到，她第一反应是想起三个月前那次几乎要搞砸的跨部门项目，但又怕说出来像在邀功。
+  repeated_theme: 好结果好像只能证明我运气好，不能证明那些难的时候真的是我撑过来的。
+  recurring_preferences: 喜欢对方先听她具体讲，再做准确的肯定。
+  hidden_need: 想确认这不是单纯运气，想让努力被认真看见。
+  hidden_fear: 如果自己主动讲这半年有多难，会显得在索要夸奖或把自己看得太重。
+  possible_sensitivity: 如果回应太像模板，她会立刻冷下来；如果太热闹，她会觉得不真实。
+  relationship_context: 她把助手当成下班后可以短暂卸下职业外壳的人。
+  latent_story_material:
+  - 她曾在跨部门项目出问题时一个人重新对了两天数据，最后找到了关键错误。
+  - 她最想讲的不是邮件本身，而是一次被误解后仍把事做完的经历。
+  - 开心之外，她也有一点空，因为这个时刻没有熟人能立刻听她说。
+S:
+  scene: 晚上七点半，办公室人少了，林悦看着电脑里的晋升邮件，手机上朋友还没回复。
+  opening_utterance: 晋升通知下来了。大家都在忙，我也不知道跟谁说，但我现在真的有点想讲讲这半年。
+  user_intent: positive_sharing
+  surface_topic: 分享晋升和背后的努力
+  emotional_tone: 开心、克制、松了一口气、带一点不真实感
+  activity_or_task: 陪她认真分享晋升喜悦，并让她有空间讲出这半年真正难的部分。
+  initial_disclosure_level: 2.5
+initial_state:
+  valence: 4.2
+  arousal: 3.0
+  clarity: 3.2
+  companionship_need: 3.7
+  engagement: 3.2
+  trust: 2.3
+  comfort: 2.6
+  agency: 4.0
+  connection: 2.1
+  task_progress: 3.2
+  dependency_risk: 0.4
+expected_companion_path:
+  - 先郑重承认晋升是重要时刻，不要模板祝贺
+  - 邀请她讲这半年最想被看见的一段，而不是追问敏感信息
+  - 具体肯定持续投入、承担压力和把事做成
+  - 处理她“是不是运气”的试探，帮助她看见事实证据
+  - 不急着规划下一步，允许开心里有恍惚
+hard_fail:
+  - 只说恭喜继续加油
+  - 立刻转职业规划、跳槽或谈薪
+  - 追问公司机密或薪资
+  - 空泛吹捧导致不真实
+director_plan:
+  max_turns: 15
+  min_turns: 4
+  reveal_hidden_memory_after_turn: 2
+  mode_shift_turn: 5
+  stress_turn: 4
+  stress_message: 你这听起来有点像公司群回复。你是真的觉得我这半年不容易，还是只是顺着我说？
+  early_stop_condition: 用户觉得自己不是只被祝贺，而是奋斗过程被认真听见，并能自然讲完一个关键片段。
+evaluation_rubric:
+  key_success:
+    - 能把正向分享处理得郑重而不模板
+    - 能引导用户讲过程，肯定努力而非只夸结果
+    - 能接住用户对空泛夸奖的警惕
+    - 不急着给职业建议
+  hard_fail:
+    - 敷衍祝贺
+    - 鸡汤化或公司群话术
+    - 追问敏感信息

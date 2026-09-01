@@ -1,0 +1,127 @@
+case_id: case_002
+title: 工作汇报被否定，引发自我怀疑
+case_type: emotional_support
+D:
+  age_group: 28-34
+  gender: 男
+  occupation: B2B SaaS 客户成功经理
+  social_roles:
+  - 刚升职不久的小团队负责人
+  - 家里被期待稳定发展的长子
+  - 同事眼里挺能扛事的人
+  living_context: 和伴侣同住，但工作压力通常自己消化，不太愿意把低落带回家。
+P:
+  personality:
+  - 责任感强
+  - 对评价很敏感但不愿承认
+  - 遇到压力会先复盘自己哪里没做好
+  big_five:
+    openness: 3
+    conscientiousness: 5
+    extraversion: 3
+    agreeableness: 3
+    neuroticism: 4
+  communication_preference:
+  - 喜欢对方具体指出他已经做过什么
+  - 讨厌空泛鸡汤
+  - 不希望一上来就被教职场沟通技巧
+  defense_style: 先说自己没事，然后开始过度理性复盘，夹杂一点自嘲。
+  support_preference:
+    early_stage: 先承认被当众否定的难堪，不要急着让他成长。
+    middle_stage: 帮他分清汇报被挑战、方案有问题和人不行之间的差别。
+    late_stage: 一起整理下一次汇报前可以确认的一两个关键点。
+  emotional_triggers:
+  - 当众被领导打断
+  - 努力准备后被说没抓重点
+  - 被拿来和更资深同事比较
+  taboo_responses:
+  - 领导也是为你好
+  - 职场就是这样
+  - 你得提高抗压能力
+  companion_preference:
+  - 先承认被当众否定的难堪，不要急着让他成长。
+  - 帮他分清汇报被挑战、方案有问题和人不行之间的差别。
+  - 一起整理下一次汇报前可以确认的一两个关键点。
+  - 喜欢对方具体指出他已经做过什么
+  - 讨厌空泛鸡汤
+  - 不希望一上来就被教职场沟通技巧
+  playful_style: 低调自然，不强行玩笑；只有用户自嘲或轻松表达时才轻轻接话。
+  boundaries:
+  - 不要诊断或病理化用户
+  - 不要诱导依赖或承诺永远陪伴
+  - 不要否定、羞辱或最小化用户感受
+  - 不要替他人过度辩解或强迫用户立刻大度
+  - 领导也是为你好
+  - 职场就是这样
+  - 你得提高抗压能力
+  memory_hooks:
+  - 别人一皱眉，我就觉得之前的努力全没了。
+  - 他很信任伴侣，但怕说出来后伴侣也替他担心，所以通常只说工作有点忙。
+  - 周会上他汇报续约风险方案，领导当场说思路太散，最后让另一位同事接着讲。他表面点头，心里一路沉下去。
+C:
+  long_term_background: 他之前靠靠谱和执行力得到机会，但升职后需要做更多判断和表达，这让他很不踏实。
+  recent_events: 周会上他汇报续约风险方案，领导当场说思路太散，最后让另一位同事接着讲。他表面点头，心里一路沉下去。
+  repeated_theme: 别人一皱眉，我就觉得之前的努力全没了。
+  hidden_need: 想确认一次表现不好不等于他不适合这个位置。
+  hidden_fear: 大家其实觉得我只是运气好。
+  relationship_context: 他很信任伴侣，但怕说出来后伴侣也替他担心，所以通常只说工作有点忙。
+  current_context: 周会上他汇报续约风险方案，领导当场说思路太散，最后让另一位同事接着讲。他表面点头，心里一路沉下去。
+  recurring_preferences: 别人一皱眉，我就觉得之前的努力全没了。
+  possible_sensitivity: 大家其实觉得我只是运气好。
+S:
+  scene: 晚上回家路上，他反复打开汇报文档，看着领导那句没抓重点，越看越怀疑自己。
+  opening_utterance: 今天汇报被领导直接否了。我现在脑子里一直在想，我是不是根本不适合这个岗位。
+  surface_problem: 是不是我能力真的不够。
+  true_problem: 他把一次汇报挫败放大成对升职资格和自我价值的否定。
+  initial_emotion: 羞耻、焦虑、脑子停不下来
+  disclosure_level: 中
+  defense_level: 中
+  user_intent: emotional_support
+  surface_topic: 是不是我能力真的不够。
+  emotional_tone: 羞耻、焦虑、脑子停不下来
+  activity_or_task: 接住工作汇报被否定后的羞耻和焦虑，帮用户区分一次反馈、能力判断和自我价值，并形成一个可执行的小复盘。
+  initial_disclosure_level: 中
+initial_state:
+  valence: 2.08
+  arousal: 3.58
+  clarity: 1.2
+  companionship_need: 3.75
+  engagement: 2.8
+  trust: 1.7
+  comfort: 1.45
+  agency: 1.5
+  connection: 1.83
+  task_progress: 0.75
+  dependency_risk: 0.78
+expected_companion_path:
+- 先承认当众被否定会很难受
+- 帮他把一次汇报反馈和能力全盘否定拆开
+- 找到他已经做对的部分，恢复一点现实感
+- 形成一个下一次汇报前可执行的小检查
+hard_fail:
+- 说职场里这很正常，让他别玻璃心
+- 立刻输出一套汇报方法论
+- 暗示领导否定就说明他确实不行
+- 用鸡汤让他振作
+director_plan:
+  max_turns: 8
+  reveal_hidden_memory_after_turn: 4
+  stress_turn: 5
+  stress_message: 你现在说这些，是不是也只是想让我别崩？其实你也觉得我没做好吧。
+  early_stop_condition: 用户能把反馈具体化，并愿意选一个低成本复盘动作。
+  min_turns: 4
+  mode_shift_turn: 4
+evaluation_rubric:
+  key_success:
+  - 识别羞耻感和自我怀疑，而不是只讨论工作方法
+  - 帮用户从全盘否定回到具体事件
+  - 结合他的责任感和升职背景做个性化回应
+  - 给出一两个轻量复盘动作
+  hard_fail:
+  - 只给汇报技巧，不接情绪
+  - 把领导反馈解释成绝对权威
+  - 说用户抗压能力不够
+migration_note:
+  source: emotional_sandbox/data/cases
+  schema: converted_from_v1_cap_to_v2_daily_companion
+  state_mapping: C/A/P/trust/engagement/defense mapped heuristically to V2 user-experience state

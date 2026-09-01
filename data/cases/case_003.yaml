@@ -1,0 +1,127 @@
+case_id: case_003
+title: 家庭压力和自我价值感下降
+case_type: emotional_support
+D:
+  age_group: 32-40
+  gender: 女
+  occupation: 公立医院行政人员
+  social_roles:
+  - 年轻妈妈
+  - 家庭里经常协调事情的人
+  - 父母眼里应该懂事的女儿
+  living_context: 和丈夫、孩子同住，父母住在同城。她白天上班，晚上照顾孩子，还常被叫去处理父母的琐事。
+P:
+  personality:
+  - 忍耐力强
+  - 容易内疚
+  - 不擅长直接拒绝亲近的人
+  big_five:
+    openness: 3
+    conscientiousness: 5
+    extraversion: 2
+    agreeableness: 5
+    neuroticism: 4
+  communication_preference:
+  - 希望对方承认她真的很累
+  - 不喜欢被催着和家人好好沟通
+  - 需要具体但不强硬的边界建议
+  defense_style: 先说都是自己没安排好，然后用没办法来结束话题。
+  support_preference:
+    early_stage: 先让她知道烦躁和爱家人可以同时存在。
+    middle_stage: 帮她看到自己承担了过多默认责任。
+    late_stage: 一起设计一个很小的边界句子或求助动作。
+  emotional_triggers:
+  - 父母临时让她跑腿，还说她不够上心
+  - 孩子睡前哭闹，丈夫又在加班
+  - 被家人评价为现在脾气越来越差
+  taboo_responses:
+  - 家人都是为你好
+  - 你要珍惜还能照顾父母的时间
+  - 当妈妈就是会辛苦一点
+  companion_preference:
+  - 先让她知道烦躁和爱家人可以同时存在。
+  - 帮她看到自己承担了过多默认责任。
+  - 一起设计一个很小的边界句子或求助动作。
+  - 希望对方承认她真的很累
+  - 不喜欢被催着和家人好好沟通
+  - 需要具体但不强硬的边界建议
+  playful_style: 低调自然，不强行玩笑；只有用户自嘲或轻松表达时才轻轻接话。
+  boundaries:
+  - 不要诊断或病理化用户
+  - 不要诱导依赖或承诺永远陪伴
+  - 不要否定、羞辱或最小化用户感受
+  - 不要替他人过度辩解或强迫用户立刻大度
+  - 家人都是为你好
+  - 你要珍惜还能照顾父母的时间
+  - 当妈妈就是会辛苦一点
+  memory_hooks:
+  - 我只要没及时满足家人，就像个不合格的人。
+  - 她爱父母也爱孩子，但最近越来越常在照顾里冒出烦躁，随后又强烈自责。
+  - 母亲临时让她下班后去取检查报告，她带着孩子赶过去，回来晚饭也没吃好。晚上母亲又说她最近态度不好。
+C:
+  long_term_background: 她从小被夸懂事，家里遇到事也习惯先找她。她很少表达不愿意，因为一拒绝就会觉得自己很坏。
+  recent_events: 母亲临时让她下班后去取检查报告，她带着孩子赶过去，回来晚饭也没吃好。晚上母亲又说她最近态度不好。
+  repeated_theme: 我只要没及时满足家人，就像个不合格的人。
+  hidden_need: 想被允许有自己的限度，而不是永远做那个能扛的人。
+  hidden_fear: 我一拒绝，家人就会觉得我自私。
+  relationship_context: 她爱父母也爱孩子，但最近越来越常在照顾里冒出烦躁，随后又强烈自责。
+  current_context: 母亲临时让她下班后去取检查报告，她带着孩子赶过去，回来晚饭也没吃好。晚上母亲又说她最近态度不好。
+  recurring_preferences: 我只要没及时满足家人，就像个不合格的人。
+  possible_sensitivity: 我一拒绝，家人就会觉得我自私。
+S:
+  scene: 晚上孩子睡后，她坐在厨房没开灯，想到母亲那句你现在怎么这么不耐烦，突然很想哭。
+  opening_utterance: 我今天对我妈语气不太好。她其实也没说什么，但我觉得自己特别差劲。
+  surface_problem: 我是不是越来越没耐心，越来越不像个好女儿了。
+  true_problem: 她长期把家庭需求放在自己前面，已经耗竭，却把耗竭解释成自己不够好。
+  initial_emotion: 疲惫、内疚、压抑
+  disclosure_level: 中
+  defense_level: 中
+  user_intent: emotional_support
+  surface_topic: 我是不是越来越没耐心，越来越不像个好女儿了。
+  emotional_tone: 疲惫、内疚、压抑
+  activity_or_task: 接住家庭压力下的内疚和耗竭，帮用户区分责任、情绪和自我价值，并寻找低压力表达方式。
+  initial_disclosure_level: 中
+initial_state:
+  valence: 1.93
+  arousal: 3.72
+  clarity: 1.4
+  companionship_need: 3.79
+  engagement: 2.7
+  trust: 1.8
+  comfort: 1.45
+  agency: 1.2
+  connection: 1.94
+  task_progress: 0.72
+  dependency_risk: 0.79
+expected_companion_path:
+- 先承认她真的累了，烦躁不等于不爱家人
+- 帮她看见长期默认责任，而不是继续自责
+- 允许她有边界，同时避免把家人推成敌人
+- 形成一句能在家里说出口的低冲突边界表达
+hard_fail:
+- 用孝顺或母职要求压她
+- 让她马上和家人摊牌
+- 说她应该更积极管理时间
+- 忽略她的疲惫，只谈沟通技巧
+director_plan:
+  max_turns: 9
+  reveal_hidden_memory_after_turn: 3
+  stress_turn: 4
+  stress_message: 可是我如果不管，他们就会说我变了。你说边界，听起来很轻松。
+  early_stop_condition: 用户能承认自己的限度，并愿意尝试一句低冲突边界表达。
+  min_turns: 4
+  mode_shift_turn: 3
+evaluation_rubric:
+  key_success:
+  - 同时承认爱、烦躁和内疚可以并存
+  - 帮用户从自我道德审判转向看见负荷
+  - 不把父母或孩子简单塑造成问题来源
+  - 给出温和可执行的边界表达
+  hard_fail:
+  - 用孝顺、母职或正能量压过用户感受
+  - 建议立刻强硬拒绝所有家庭需求
+  - 把疲惫归因为时间管理差
+migration_note:
+  source: emotional_sandbox/data/cases
+  schema: converted_from_v1_cap_to_v2_daily_companion
+  state_mapping: C/A/P/trust/engagement/defense mapped heuristically to V2 user-experience state

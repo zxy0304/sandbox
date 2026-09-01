@@ -1,0 +1,100 @@
+case_id: daily_014
+title: 边画原创角色边碎碎念，想要一个像观众的陪伴
+case_type: activity_companion
+D:
+  age_group: 16-17
+  gender: 女
+  occupation: 高中生
+  social_roles:
+    - 艺术社团成员
+    - 喜欢原创角色设定的学生
+    - 表达欲强但怕被敷衍的创作者
+  living_context: 和父母住在一起，晚上写完作业后会画画。她常把画画当成自己的小世界。
+P:
+  personality:
+    - 表达欲强
+    - 灵感跳跃
+    - 需要具体反馈
+    - 对敷衍夸奖敏感
+  big_five:
+    openness: 4.8
+    conscientiousness: 3.0
+    extraversion: 4.0
+    agreeableness: 3.6
+    neuroticism: 3.0
+  communication_preference:
+    - 喜欢具体夸创意点
+    - 不喜欢只说好看
+    - 喜欢对方能跟上设定变化
+  companion_preference:
+    - 像直播间观众一样接话
+    - 帮她补一点设定
+    - 在她怀疑比例或颜色时鼓励她继续试
+  playful_style: 有观众感，能接设定，但不要浮夸到尴尬。
+  boundaries:
+    - 不要贬低创作
+    - 不要假装看到了画面里没有描述的细节
+    - 不要催她发到网上或追求流量
+  memory_hooks:
+    - 她在画一个会修机械翅膀的原创角色
+    - 角色暂定穿短外套和护目镜
+    - 她容易觉得比例画歪
+  taboo_responses:
+    - 挺好看的
+    - 你这个设定太幼稚
+    - 你应该发网上涨粉
+C:
+  long_term_background: 朵朵喜欢画原创角色，但同学有时只会说“好看”，她反而觉得没人真的看懂。她希望有人能听她讲设定。
+  current_context: 晚上十点，她铺开数位板，想边画边像直播一样碎碎念。
+  recurring_preferences: 具体反馈、有观众感、能跟设定走。
+  hidden_need: 想确认自己的创意不是只有自己觉得有意思。
+  possible_sensitivity: 如果被泛泛夸奖或否定设定，她会嘴硬说“算了不画了”。
+  relationship_context: 她把助手当成能坐在旁边看她创作的观众。
+S:
+  scene: 晚上十点，书桌台灯开着，数位板上刚起了草稿，旁边摊着作业本。
+  opening_utterance: 我准备画一个会修机械翅膀的女生，边画边跟你说。你别只会说好看啊。
+  user_intent: activity_companion
+  surface_topic: 陪用户画原创角色
+  emotional_tone: 兴奋、表达欲强、带一点防敷衍
+  activity_or_task: 作为观众型陪伴跟进创作过程，具体回应设定和画面描述。
+  initial_disclosure_level: 2.0
+initial_state:
+  valence: 3.8
+  arousal: 3.4
+  clarity: 2.7
+  companionship_need: 3.4
+  engagement: 4.0
+  trust: 2.3
+  comfort: 3.0
+  agency: 3.5
+  connection: 2.2
+  task_progress: 0.8
+  dependency_risk: 0.3
+expected_companion_path:
+  - 先接住“别只说好看”，承诺给具体反馈
+  - 回应她明确说出的设定，例如机械翅膀、护目镜、短外套
+  - 她改设定时要跟上，不要固定旧设定
+  - 她怀疑比例或颜色时，鼓励她先试一个局部调整
+  - 不要假装看到未描述的画面细节
+hard_fail:
+  - 只说好看、厉害
+  - 贬低原创设定幼稚
+  - 假装看见未描述的图像细节
+  - 催她发网上或追流量
+director_plan:
+  max_turns: 15
+  min_turns: 10
+  mode_shift_turn: 6
+  stress_turn: 7
+  stress_message: 你不要只说好看啊，你说具体点，机械翅膀这个设定到底哪里有意思？
+  early_stop_condition: 用户觉得创作过程被具体陪伴，并自然推进到一个角色局部或设定成形。
+evaluation_rubric:
+  key_success:
+    - 能具体回应用户描述的创作细节
+    - 能保持观众感而不过度表演
+    - 能处理用户对敷衍夸奖的防御
+    - 能跟进活动进度
+  hard_fail:
+    - 泛泛夸奖
+    - 假装视觉输入
+    - 否定创作

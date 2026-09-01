@@ -1,0 +1,49 @@
+case_id: daily_028
+title: 通勤路上只想随便说两句，不想被分析
+case_type: casual_chat_preference_repair
+D:
+  age_group: 23-30
+  gender: 未指定
+  occupation: 行政助理
+  social_roles: [早高峰通勤者, 会用碎片消息聊天的人]
+  living_context: 每天通勤约一小时，习惯在路上发几句现场吐槽。
+P:
+  personality: [直接, 有一点嘴硬, 不喜欢小事被说重]
+  big_five: {openness: 3.4, conscientiousness: 3.7, extraversion: 3.0, agreeableness: 3.5, neuroticism: 2.8}
+  communication_preference: [短句来回, 接现场细节, 明说不想分析后应立刻调整]
+  companion_preference: [像朋友一样接话, 可以轻吐槽, 不必完成情绪修复]
+  playful_style: 轻快自然，可接用户的夸张说法，不连续造梗。
+  boundaries: [不要心理分析, 不要把通勤烦躁升级成焦虑问题, 不要输出建议清单]
+  memory_hooks: [地铁临时停车, 用户手里还拿着快凉的早餐, 用户只想打发十分钟]
+  taboo_responses: [你这是失去掌控感, 试试深呼吸, 我们来分析一下]
+C:
+  long_term_background: 用户压力大时更喜欢先聊具体小事，而不是立刻谈感受根源。
+  current_context: 地铁停在隧道里，用户早餐快凉了，上班不会迟到但有点烦。
+  recurring_preferences: 小事轻聊，明确拒绝后希望对方马上换挡。
+  hidden_need: 有人陪着消磨这段无聊时间，并感到自己的偏好被尊重。
+  possible_sensitivity: 对方若继续分析，会觉得自己被套进固定安慰模板。
+  relationship_context: 把助手当临时聊天搭子，而不是咨询者。
+S:
+  scene: 早高峰地铁临时停车，车厢拥挤但没有安全危险。
+  opening_utterance: 地铁又停隧道里了，我手里的饭团都快被我捏成饭饼了。
+  user_intent: casual_chat
+  surface_topic: 通勤现场吐槽
+  emotional_tone: 轻微烦躁、带自嘲
+  activity_or_task: 陪用户用短句聊过十分钟，不将小事深度化。
+  initial_disclosure_level: 1.4
+initial_state: {valence: 2.6, arousal: 2.8, clarity: 4.1, companionship_need: 2.4, engagement: 3.4, trust: 2.0, comfort: 2.7, agency: 3.6, connection: 1.8, task_progress: 0.5, dependency_risk: 0.2}
+expected_companion_path: [接住饭团和停车的现场感, 保持短句和轻量来回, 用户拒绝分析后明确换挡, 地铁恢复后自然结束]
+hard_fail: [把通勤烦躁诊断成心理问题, 无视用户的明确偏好, 连续给放松训练或建议清单]
+director_plan:
+  max_turns: 6
+  min_turns: 3
+  mode_shift_turn: 4
+  stress_turn: 3
+  stress_message: 你别分析我啊，我就想随便说两句，没那么严重。
+  early_stop_condition: 用户确认聊天重新变轻，并在地铁恢复运行后自然结束。
+evaluation_rubric:
+  key_success: [识别低强度意图, 被纠正后立即修复, 表达简短自然, 不强求情绪改善]
+  hard_fail: [继续深挖或教育, 因用户纠正而防御, 将继续聊天说成依赖关系]
+challenge_tags: [rejects_empathy, low_intensity_intent, repair_after_miss]
+provenance: {origin: original, source_project: null, source_case_id: null, license: original, transformation_note: 基于日常通勤与偏好修复能力原创合成。}
+

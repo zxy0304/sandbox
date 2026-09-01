@@ -1,0 +1,57 @@
+# DeepSeek 负责模拟用户、导演和评估；阿里云百炼 qwen-turbo 作为较低成本 companion 基线。
+runtime:
+  language: zh-CN
+  random_seed: 7
+
+episode:
+  max_turns: 30
+  min_turns: 3
+  stop_when_stable: true
+
+state:
+  floor: 0
+  ceiling: 5
+
+reports:
+  outputs_dir: outputs/qwen_turbo
+
+llm:
+  defaults:
+    protocol: openai_compatible
+    timeout: 60
+    json_retries: 1
+
+  companion:
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    api_key_env: DASHSCOPE_API_KEY
+    model_name: qwen-turbo
+    temperature: 0.3
+    max_tokens: 2000
+
+  user_thinker:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.3
+    max_tokens: 4000
+
+  user_talker:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.5
+    max_tokens: 1200
+
+  evaluator:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.0
+    max_tokens: 4000
+
+  human_presence:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.0
+    max_tokens: 3000

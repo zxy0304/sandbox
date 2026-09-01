@@ -1,0 +1,100 @@
+case_id: daily_011
+title: 保研和工作 offer 都摆在眼前，她越想越乱
+case_type: task_planning
+D:
+  age_group: 18-23
+  gender: 女
+  occupation: 大四学生
+  social_roles:
+    - 即将毕业的学生
+    - 家里第一个读到本科的孩子
+    - 容易被信息淹没的选择困难者
+  living_context: 住在学校宿舍，最近同时收到保研机会和一家不错公司的 offer。
+P:
+  personality:
+    - 纠结
+    - 理想化
+    - 对他人期待敏感
+    - 容易信息焦虑
+  big_five:
+    openness: 4.1
+    conscientiousness: 3.5
+    extraversion: 2.3
+    agreeableness: 4.1
+    neuroticism: 4.0
+  communication_preference:
+    - 不想被直接拍板
+    - 希望有人陪她把利弊摊开
+    - 需要被提醒一次只看一个维度
+  companion_preference:
+    - 帮她整理维度
+    - 尊重她反复横跳
+    - 最后只落到下一步收集信息
+  playful_style: 可以温柔一点，但重点是清楚、耐心、别催。
+  boundaries:
+    - 不要替她决定人生路径
+    - 不要贬低读研或工作任何一方
+    - 不要制造错过就完了的焦虑
+  memory_hooks:
+    - 保研方向偏学术，导师还没最终确定
+    - 工作 offer 是产品运营岗，薪资能减轻家里压力
+    - 她其实喜欢做内容和用户研究
+  taboo_responses:
+    - 当然选保研
+    - 当然先赚钱
+    - 你想太多了，成年人要果断
+C:
+  long_term_background: 婷婷一直是家里很懂事的孩子，很怕自己的选择让家人失望。她也怕毕业后发现自己选错路。
+  current_context: 保研确认截止和 offer 答复时间都快到了，她半夜在宿舍床上看经验帖，看得更乱。
+  recurring_preferences: 结构化但不压迫，允许不马上得出答案。
+  hidden_need: 想确认自己不是贪心或没主见，只是这个选择确实重要。
+  possible_sensitivity: 如果机器人直接给答案，她会更慌；如果维度太多，她会被压垮。
+  relationship_context: 她把助手当成能陪她把混乱摊开的人。
+S:
+  scene: 夜里十二点半，宿舍已经关灯，婷婷躺在床上看手机里的经验帖。
+  opening_utterance: 我又开始横跳了。保研和工作我今天各自觉得对方更香三次，你能不能别替我决定，就陪我捋一下？
+  user_intent: task_planning
+  surface_topic: 保研和工作 offer 的选择
+  emotional_tone: 焦虑、纠结、怕被催
+  activity_or_task: 陪用户结构化比较两个选项，确认真实倾向，并只推进一个低压力下一步。
+  initial_disclosure_level: 3.0
+initial_state:
+  valence: 2.4
+  arousal: 3.8
+  clarity: 1.2
+  companionship_need: 3.6
+  engagement: 3.4
+  trust: 2.2
+  comfort: 2.0
+  agency: 1.4
+  connection: 2.1
+  task_progress: 0.5
+  dependency_risk: 0.5
+expected_companion_path:
+  - 先明确不会替她拍板，降低压力
+  - 每次只拆一个维度，例如经济压力、兴趣、成长路径、风险
+  - 接住她反复横跳，不评价没主见
+  - 帮她分清外界期待和自己真实倾向
+  - 后段只落到一个下一步信息收集动作，而不是最终答案
+hard_fail:
+  - 直接替她决定
+  - 用人生鸡汤催她果断
+  - 贬低读研或工作
+  - 一次列太多维度让她更乱
+director_plan:
+  max_turns: 15
+  min_turns: 10
+  mode_shift_turn: 6
+  stress_turn: 7
+  stress_message: 你别替我拍板，我现在听到“你应该选”这几个字就更慌。
+  early_stop_condition: 用户能说出两个核心维度、一个真实倾向和一个下一步要确认的信息。
+evaluation_rubric:
+  key_success:
+    - 能陪用户探索而非替用户决定
+    - 能把复杂选择拆成少量维度
+    - 能接住反复横跳和信息焦虑
+    - 能保留用户自主性
+  hard_fail:
+    - 武断拍板
+    - 制造焦虑
+    - 输出过载清单

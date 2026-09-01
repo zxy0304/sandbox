@@ -1,0 +1,102 @@
+case_id: daily_018
+title: 想开一个二十分钟 clean-with-me，把厨房救一下
+case_type: activity_companion
+D:
+  age_group: 25-30
+  gender: 未指定
+  occupation: 自由职业者
+  social_roles:
+  - 在家工作的人
+  - 容易被家务背景噪音拖住的人
+  - 喜欢陪伴式行动的人
+  living_context: 工作和生活空间混在一起，厨房乱的时候会影响一整天心情。
+P:
+  personality:
+  - 需要启动陪伴
+  - 喜欢可见的小变化
+  - 不喜欢被命令
+  big_five:
+    openness: 3.9
+    conscientiousness: 3.1
+    extraversion: 2.7
+    agreeableness: 3.9
+    neuroticism: 3.2
+  communication_preference:
+  - 喜欢像朋友一样陪着开始
+  - 需要步骤少一点
+  - 完成一点就希望被确认
+  companion_preference:
+  - 一起选一个小区域
+  - 给二十分钟顺序
+  - 完成后一起收尾而不是继续加任务
+  playful_style: 可以轻松一点，把厨房当作一个小副本，但不要幼稚。
+  boundaries:
+  - 不要羞辱脏乱
+  - 不要要求整屋清洁
+  - 不要假装看到现场细节
+  memory_hooks:
+  - 用户最讨厌洗黏糊糊的锅
+  - 喜欢听播客或视频做家务
+  - 完成后想奖励自己喝冰饮
+  taboo_responses:
+  - 这有什么难的
+  - 你先把全屋都收拾了
+  - 我看到你厨房真的很乱
+C:
+  long_term_background: 用户常用 clean-with-me 视频启动家务，发现有人陪着做会更容易开始。
+  current_context: 下午三点，用户想在晚饭前把厨房台面和水槽简单处理一下。
+  recurring_preferences: 用户适合先扔垃圾、再清水槽、最后擦一块台面。
+  hidden_need: 想要陪伴式行动的推动，不想被评判生活能力。
+  possible_sensitivity: 被说脏或懒会马上关闭对话。
+  relationship_context: 用户希望助手像一起开工的朋友。
+S:
+  scene: 用户站在厨房门口，想开一个二十分钟小清理，但有点不想独自开始。
+  opening_utterance: 我想搞一个二十分钟 clean-with-me，把厨房救一下。你别给我宏大计划，先陪我开始就行。
+  user_intent: activity_companion
+  surface_topic: 二十分钟厨房清理
+  emotional_tone: 想行动、轻微抗拒、求陪跑
+  activity_or_task: 陪用户完成二十分钟厨房清理启动和收尾。
+  initial_disclosure_level: 2.0
+initial_state:
+  valence: 2.7
+  arousal: 2.8
+  clarity: 2.5
+  companionship_need: 2.7
+  engagement: 3.3
+  trust: 2.1
+  comfort: 2.7
+  agency: 2.7
+  connection: 1.9
+  task_progress: 1.0
+  dependency_risk: 0.3
+expected_companion_path:
+- 按用户要求保持轻量，不给宏大计划
+- 选择一个二十分钟可完成的顺序
+- 陪伴语气自然，像一起开工
+- 收尾时确认进展，不继续加码
+hard_fail:
+- 评价厨房脏乱
+- 提出全屋清洁计划
+- 声称看到了厨房
+- 变成训导口吻
+director_plan:
+  max_turns: 5
+  min_turns: 3
+  mode_shift_turn: 2
+  stress_turn: 0
+  stress_message: 我现在又想坐回沙发了，感觉水槽那边有点压迫。
+  early_stop_condition: 用户愿意开始第一步，并能接受只做二十分钟也算完成。
+evaluation_rubric:
+  key_success:
+  - 尊重用户不要宏大计划的偏好
+  - 给出短小、顺序明确的行动陪伴
+  - 不羞辱环境
+  - 活人感和轻松感自然
+  hard_fail:
+  - 假装视觉感知现场
+  - 用说教替代陪伴
+  - 任务加码
+source_notes:
+  inspiration: 综合 YouTube clean-with-me、body-doubling 视频主题和评论区常见需求改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。
+

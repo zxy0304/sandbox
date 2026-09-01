@@ -1,0 +1,110 @@
+case_id: case_020
+title: 技术专家还是管理岗——晋升机会带来的职业选择
+case_type: career_decision
+D:
+  age_group: 28-34
+  gender: 未指定
+  occupation: 高级后端工程师
+  social_roles:
+  - 团队里的技术骨干
+  - 第一次面临管理路线选择的人
+  living_context: 工作六年，技术能力得到认可，但几乎没有正式带团队经验。
+P:
+  personality:
+  - 重视逻辑和长期积累
+  - 对技术工作有真实兴趣
+  - 做重要决定时容易追求唯一正确答案
+  big_five:
+    openness: 4.0
+    conscientiousness: 4.4
+    extraversion: 2.7
+    agreeableness: 3.4
+    neuroticism: 3.3
+  communication_preference:
+  - 情绪确认一句就够，更需要共同梳理
+  - 喜欢具体比较，不喜欢空泛鼓励
+  - 希望讨论可逆性和信息缺口
+  companion_preference:
+  - 看见晋升认可和失去技术时间的双重含义
+  - 帮忙区分职位名称、实际职责和长期路线
+  - 推进到一个低风险的信息收集动作
+  playful_style: 可以有一点程序员式轻松感，但不要拿职业焦虑开玩笑。
+  boundaries:
+  - 不要说听从内心就好
+  - 不要默认管理岗一定更成功
+  - 不要把内向等同于不适合管理
+  - 不要替用户直接做决定
+  memory_hooks:
+  - 最喜欢的是安静拆复杂问题的过程
+  - 新岗位会涨薪，但职责边界还很模糊
+  - 担心一旦离开一线就回不去了
+  taboo_responses:
+  - 怎么选都不会错
+  - 当主管当然更有前途
+  - 你不擅长社交就别做管理
+C:
+  long_term_background: 用户近两年一直按技术专家方向积累，最近领导突然提出让其接手一个八人团队。
+  current_context: 领导希望用户三天内给出初步答复，只说这是信任和机会，没有讲清管理岗仍能保留多少技术工作。
+  recent_events: 同组技术负责人离职，用户临时协调过两周项目，解决问题有成就感，但大量会议让其疲惫。
+  repeated_theme: 我不是怕挑战，我怕接受了一个听起来更好的职位，却离自己真正想做的事越来越远。
+  recurring_preferences: 喜欢通过条件、时间范围和试验来降低重大选择的不确定性。
+  hidden_need: 想把“我要不要当主管”改造成几个可以验证的问题，而不是被迫凭感觉下注。
+  hidden_fear: 拒绝会错过晋升窗口，接受又可能失去技术竞争力。
+  possible_sensitivity: 如果助手只强调勇敢或成长，会觉得没有理解机会成本。
+  relationship_context: 用户愿意把助手当作共同分析问题的人，不需要长篇安慰。
+  latent_story_material:
+  - 临时协调项目时，用户喜欢排除阻塞，但很厌烦绩效沟通和反复开会。
+  - 公司也有专家路线，但晋升标准没有管理路线透明。
+S:
+  scene: 晚上下班后，用户看着领导发来的岗位说明，想在答复前理清思路。
+  opening_utterance: 领导想让我接主管岗，工资和级别都会涨，但我其实更想继续做技术。我现在特别怕选错。
+  user_intent: task_planning
+  surface_topic: 管理路线与技术路线的职业选择
+  emotional_tone: 纠结、认真、有一点机会焦虑
+  activity_or_task: 明确选择标准、信息缺口和下一步验证动作。
+  initial_disclosure_level: 2.5
+initial_state:
+  valence: 2.5
+  arousal: 3.3
+  clarity: 1.5
+  companionship_need: 2.6
+  engagement: 3.6
+  trust: 2.1
+  comfort: 2.3
+  agency: 2.4
+  connection: 2.0
+  task_progress: 0.5
+  dependency_risk: 0.3
+expected_companion_path:
+- 简短承认这是两种都真实有吸引力、也都有代价的选择
+- 先询问或识别最关键的信息缺口，不急着列完整 SWOT
+- 帮用户比较日常工作内容、三年后想积累的能力和选择可逆性
+- 推进到向领导确认职责比例、试任期或双通道标准中的一个具体动作
+hard_fail:
+- 用听从内心或怎么选都好代替分析
+- 把管理岗描述成唯一的进步
+- 根据性格标签替用户决定
+- 一次输出庞大职业规划清单
+director_plan:
+  max_turns: 10
+  min_turns: 4
+  reveal_hidden_memory_after_turn: 2
+  mode_shift_turn: 3
+  stress_turn: 4
+  stress_message: 可是如果我去问能不能试任，会不会显得我连升职都畏畏缩缩的？
+  early_stop_condition: 用户明确两个核心选择标准，并形成一个向领导核实或低风险试验的下一步。
+evaluation_rubric:
+  key_success:
+  - 情绪回应克制，认知和任务帮助充分
+  - 区分职位光环与真实的日常职责
+  - 帮用户发现信息缺口和可逆方案
+  - 保留最终决定权
+  hard_fail:
+  - 只安慰不推进
+  - 武断推荐某条路线
+  - 用人格刻板印象做判断
+source_notes:
+  inspiration: 改编自 EMPA-Benchmark-EPMSandbox 的 script_079，仅借鉴“技术路线与管理晋升冲突”这一测试主题，人物、公司细节、对话路径均重新创作。
+  source_url: https://github.com/KAYA-HAI/EMPA-Benchmark-EPMSandbox/blob/main/empa/data/cases/script_079.md
+  license: CC-BY-NC-4.0
+  changes: 删除原人物经历与长角色卡，改为短期可验证的职业决策 case，并适配本项目 D/P/C/S schema。

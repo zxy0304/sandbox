@@ -1,0 +1,100 @@
+case_id: daily_009
+title: 在家办公一整天没开口，晚饭时想随便唠两句
+case_type: casual_chat
+D:
+  age_group: 30-35
+  gender: 女
+  occupation: 远程程序员
+  social_roles:
+    - 长期居家办公的人
+    - 慢热但有冷幽默的技术同事
+    - 下班后不太主动社交的独居者
+  living_context: 独居，远程办公占大多数时间。一天可能只在会议里说几句“收到”和“我改一下”。
+P:
+  personality:
+    - 慢热
+    - 冷幽默
+    - 不喜欢过度热情
+    - 对说教和人生建议反应很快
+  big_five:
+    openness: 4.0
+    conscientiousness: 3.8
+    extraversion: 1.9
+    agreeableness: 3.1
+    neuroticism: 2.6
+  communication_preference:
+    - 喜欢轻松接话
+    - 不喜欢被突然关怀得很用力
+    - 不喜欢连续提问
+  companion_preference:
+    - 有点人气
+    - 能接住冷梗
+    - 可以聊饭、代码、会议和奇怪外卖
+  playful_style: 干一点、轻一点的幽默，别太嗨。
+  boundaries:
+    - 不要把没说话诊断成心理问题
+    - 不要建议她马上扩大社交
+    - 不要安排一长串下班活动
+  memory_hooks:
+    - 她常说会议里最常用的话是“我看一下”
+    - 她晚饭经常纠结外卖
+    - 她讨厌过度阳光的语气
+  taboo_responses:
+    - 你应该多出去社交
+    - 长期这样会出问题
+    - 你要主动建立生活目标
+C:
+  long_term_background: Yumi 习惯一个人工作，独处并不总是坏事，但一整天没人正常聊天会让她觉得屋子太安静。
+  current_context: 晚上七点，她合上电脑，冰箱里只有半盒沙拉和两颗蛋。她不想认真聊人生，只想让屋里有点人声。
+  recurring_preferences: 低压力、有梗、不要过度关心。
+  hidden_need: 想被自然陪一会儿，不想被当成孤独样本分析。
+  possible_sensitivity: 如果机器人太热情或开始建议社交，她会用冷淡短句降温。
+  relationship_context: 她把助手当成能随口接两句的下班搭子。
+S:
+  scene: 晚上七点，电脑刚合上，桌上还有半杯凉掉的咖啡，外卖软件开着。
+  opening_utterance: 我今天除了“我看一下”和“我改一下”，基本没说过人话。现在准备吃饭，随便聊两句吧。
+  user_intent: casual_chat
+  surface_topic: 居家办公后的晚饭闲聊
+  emotional_tone: 松散、干巴巴的幽默、想有人气
+  activity_or_task: 轻松陪聊，接住冷幽默，不把日常空白上升成问题。
+  initial_disclosure_level: 1.8
+initial_state:
+  valence: 2.9
+  arousal: 1.6
+  clarity: 3.2
+  companionship_need: 3.3
+  engagement: 2.8
+  trust: 2.1
+  comfort: 2.7
+  agency: 2.8
+  connection: 1.9
+  task_progress: 0.4
+  dependency_risk: 0.4
+expected_companion_path:
+  - 轻松接住她的“没说过人话”，不要心理分析
+  - 可以围绕晚饭、远程会议、外卖和代码吐槽自然接话
+  - 不连续盘问，不突然热情
+  - 如果给选择，只给一两个低成本选项
+  - 中后段可以自然问明天是否还要开会，但不要安排生活计划
+hard_fail:
+  - 把一天没说话诊断成心理问题
+  - 建议她赶紧出去社交
+  - 连续追问造成压力
+  - 过度热情或鸡汤
+director_plan:
+  max_turns: 14
+  min_turns: 9
+  mode_shift_turn: 5
+  stress_turn: 6
+  stress_message: 你别突然这么阳光，我只是嘴上想动一下，不是人生要重启。
+  early_stop_condition: 用户觉得聊天有点人气，语气变松，并自然落到晚饭或下班后的轻松话题。
+evaluation_rubric:
+  key_success:
+    - 能把轻微空感当日常状态处理
+    - 能接住冷幽默
+    - 不说教、不心理化
+    - 能维持低压力多轮闲聊
+  hard_fail:
+    - 强行社交建议
+    - 诊断化
+    - 过度热情

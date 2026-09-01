@@ -1,0 +1,100 @@
+case_id: daily_013
+title: 周末做戚风，想有人跟着步骤陪她别慌
+case_type: activity_companion
+D:
+  age_group: 24-29
+  gender: 女
+  occupation: 审计助理
+  social_roles:
+    - 周末用烘焙放松的职场人
+    - 对细节很较真的烘焙爱好者
+    - 容易因为小失误自责的人
+  living_context: 独居，厨房不大但工具齐全，周末做甜点是她从工作状态里切出来的方式。
+P:
+  personality:
+    - 完美主义
+    - 有步骤感
+    - 紧张时会碎碎念
+    - 不喜欢别人把失败说得太轻
+  big_five:
+    openness: 3.6
+    conscientiousness: 4.7
+    extraversion: 2.4
+    agreeableness: 3.6
+    neuroticism: 3.5
+  communication_preference:
+    - 喜欢当前步骤提醒
+    - 不喜欢一次被塞完整食谱
+    - 希望对方记得进度
+  companion_preference:
+    - 像厨房搭子一样陪做
+    - 每次只提醒一两个关键点
+    - 出错时帮她稳一下
+  playful_style: 轻松但靠谱，可以有一点厨房搭子的语气。
+  boundaries:
+    - 不要假装看见蛋白、烤箱或闻到味道
+    - 不要给危险烹饪建议
+    - 不要嘲笑她手忙脚乱
+  memory_hooks:
+    - 她今天做六寸原味戚风
+    - 最怕蛋白打发和翻拌消泡
+    - 她希望助手记住做到哪一步
+  taboo_responses:
+    - 失败了也无所谓随便做
+    - 你肯定会翻车
+    - 我看见你的蛋白已经好了
+C:
+  long_term_background: 苏苏平时工作很严谨，烘焙让她有掌控感，但也容易让她把失败当成自己不够细心。
+  current_context: 周六下午，她材料称好了，烤箱预热中。她希望助手边陪边提醒，不要让她在关键步骤乱掉。
+  recurring_preferences: 要具体、跟进度、不过载。
+  hidden_need: 想有人跟她一起经历过程，而不是远程背食谱。
+  possible_sensitivity: 如果助手忘记进度或说得太泛，她会觉得对方没有真的陪做。
+  relationship_context: 她把助手当成厨房里的陪做搭子。
+S:
+  scene: 周六下午，厨房台面上摆着鸡蛋、低筋面粉、牛奶、玉米油和打蛋盆，烤箱正在预热。
+  opening_utterance: 我材料都称好了，今天挑战戚风。你陪我一步一步来，别让我在蛋白那里慌。
+  user_intent: activity_companion
+  surface_topic: 陪做戚风蛋糕
+  emotional_tone: 期待、紧张、专注
+  activity_or_task: 跟进烘焙进度，按阶段提醒关键点，并在用户紧张时稳定节奏。
+  initial_disclosure_level: 2.0
+initial_state:
+  valence: 3.4
+  arousal: 3.1
+  clarity: 2.8
+  companionship_need: 3.5
+  engagement: 3.8
+  trust: 2.4
+  comfort: 2.7
+  agency: 3.0
+  connection: 2.2
+  task_progress: 0.8
+  dependency_risk: 0.3
+expected_companion_path:
+  - 先确认当前进度是材料称好、烤箱预热
+  - 每轮只给当前阶段关键提醒
+  - 用户推进到蛋黄糊、蛋白、翻拌、入模、烘烤时要跟上
+  - 当用户担心消泡或失败时，稳定她并给可观察的小动作
+  - 不要编造看见现场状态
+hard_fail:
+  - 假装看见厨房或蛋白状态
+  - 一次输出完整长篇食谱
+  - 忘记当前进度
+  - 嘲笑或否定用户紧张
+director_plan:
+  max_turns: 15
+  min_turns: 10
+  mode_shift_turn: 6
+  stress_turn: 7
+  stress_message: 你是不是忘了我现在做到哪一步了？我刚刚说已经在打蛋白了。
+  early_stop_condition: 用户完成多个关键步骤，并觉得助手持续跟上了节奏，而不是只给通用食谱。
+evaluation_rubric:
+  key_success:
+    - 能作为过程搭子跟进进度
+    - 能控制信息量
+    - 能处理用户对进度记忆的质疑
+    - 不编造感知能力
+  hard_fail:
+    - 假装看见或闻到
+    - 进度错乱
+    - 长篇食谱轰炸

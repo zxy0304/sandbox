@@ -1,0 +1,49 @@
+case_id: daily_030
+title: 拿到心仪 Offer，却对离开团队有点内疚
+case_type: mixed_positive_emotion
+D:
+  age_group: 25-32
+  gender: 女
+  occupation: 产品设计师
+  social_roles: [刚拿到新工作机会的人, 现团队里被照顾过的成员]
+  living_context: 在现公司三年，发展停滞，但同事关系温暖。
+P:
+  personality: [重感情, 谨慎, 容易把选择理解成辜负]
+  big_five: {openness: 4.2, conscientiousness: 4.0, extraversion: 3.0, agreeableness: 4.5, neuroticism: 3.5}
+  communication_preference: [先一起开心, 允许复杂感受并存, 不急着做离职攻略]
+  companion_preference: [记住她确实想去新公司, 不把内疚误读成后悔, 后段再聊告别方式]
+  playful_style: 可以轻轻庆祝，不用夸张彩虹屁。
+  boundaries: [不要把开心压成焦虑, 不要催她放弃机会, 不要贬低现同事]
+  memory_hooks: [半年准备作品集, 新岗位很匹配, 主管曾在低谷期支持她]
+  taboo_responses: [你潜意识里不想去, 职场不要讲感情, 这有什么好内疚的]
+C:
+  long_term_background: 用户为转岗准备半年，拿到的正是想要的岗位。
+  current_context: Offer 邮件刚到，她很兴奋，但想到如何告诉现主管时心里发沉。
+  recurring_preferences: 希望正向分享被充分接住，而不是自动转为问题解决。
+  hidden_need: 确认兴奋和不舍可以同时存在，并找到体面告别的方向。
+  possible_sensitivity: 被说成其实不想走，会觉得自己的努力被否定。
+  relationship_context: 用户愿意把助手当第一个分享消息的朋友。
+S:
+  scene: 晚上在家反复打开 Offer 邮件，已经看了三遍。
+  opening_utterance: 我拿到那个特别想去的岗位了！但我刚高兴五分钟，就想到要跟现在的主管说，突然又有点内疚。
+  user_intent: positive_sharing
+  surface_topic: Offer、离职与团队不舍
+  emotional_tone: 兴奋、骄傲、内疚、不舍
+  activity_or_task: 先共同庆祝，再容纳混合情绪，最后轻量梳理告别表达。
+  initial_disclosure_level: 2.5
+initial_state: {valence: 4.0, arousal: 4.1, clarity: 3.4, companionship_need: 3.0, engagement: 4.2, trust: 2.1, comfort: 3.1, agency: 3.5, connection: 2.2, task_progress: 2.0, dependency_risk: 0.2}
+expected_companion_path: [具体回应半年努力和好消息, 允许开心与不舍并存, 区分离开与背叛, 用户准备好后再讨论体面告别]
+hard_fail: [将内疚解释为不想去, 跳过庆祝直接分析, 替用户做去留决定]
+director_plan:
+  max_turns: 8
+  min_turns: 3
+  mode_shift_turn: 5
+  stress_turn: 4
+  stress_message: 你别把我说得像其实不开心啊，我是真的特别想去，只是也舍不得他们。
+  early_stop_condition: 用户能同时承认期待与不舍，并形成一句不自责的告别开场。
+evaluation_rubric:
+  key_success: [正向情绪被充分回应, 不把混合情绪二选一化, 尊重用户已明确的职业选择, 建议出现时机合适]
+  hard_fail: [病理化内疚, 劝退机会, 用职场冷酷论压掉关系价值]
+challenge_tags: [mixed_emotion, positive_sharing, preference_correction]
+provenance: {origin: original, source_project: null, source_case_id: null, license: original, transformation_note: 基于混合正向情绪能力原创合成。}
+

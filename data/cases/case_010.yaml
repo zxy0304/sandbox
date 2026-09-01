@@ -1,0 +1,139 @@
+case_id: case_010
+title: 独居三年，深夜修水管时发现3000好友找不到一个人说
+case_type: emotional_support
+source_evidence:
+  platform: 今日头条（真实用户自述）
+  source_type: 真实用户经历投稿
+  url: http://m.toutiao.com/group/7630376171112481289/
+  title_or_post_summary: 独居3年才醒悟：就算月薪2万、朋友圈3000人，你的孤独也救不了
+  author_or_channel: 咏君心情驿站
+  published_at: 2025-09-12
+  evidence_summary: 29岁独居女性自述：在大城市独居3年，月薪2万，微信有3000个好友。一次家里水管坏了，翻遍通讯录找不到一个可以半夜打电话求助的人。最后是找了陌生维修工解决的。那天晚上坐在地上哭了很久，意识到自己看起来很热闹，但实际上连一个真正的"人"都没有。平时工作忙不觉得，一到生病或出事的时候，孤独感就特别强烈。
+  reliability_note: 来源为自媒体平台用户自述，无法交叉验证具体身份。独居年轻人的情绪困境具有普遍代表性。D字段中年龄、职业为原文明确提及，其余为合理推断。
+D:
+  age_group: 25-30岁
+  gender: 未明确
+  occupation: 城市白领
+  social_roles:
+  - 独居城市青年
+  - 职场中独立的人
+  - 朋友圈中的"靠谱"形象
+  living_context: 独自在一线城市租房生活，工作忙碌，社交多为职场关系，深交朋友少
+P:
+  personality:
+  - 外表独立坚强
+  - 习惯报喜不报忧
+  - 不喜欢麻烦别人
+  - 内心渴望深度连接
+  big_five:
+    openness: 3.5
+    conscientiousness: 4.0
+    extraversion: 2.8
+    agreeableness: 3.5
+    neuroticism: 3.2
+  communication_preference:
+  - 倾向于自己消化情绪
+  - 很少主动示弱
+  - 只有在情绪崩溃时才会找人说
+  defense_style: 独立隔离型（用"我可以自己搞定"掩盖孤独）
+  support_preference:
+    early_stage: 先承认这种感受很正常，不要急着给解决方案
+    middle_stage: 帮助用户看到"独立"和"需要人陪"不矛盾
+    late_stage: 讨论建立深度连接的小步骤
+  emotional_triggers:
+  - 生病的时候没人照顾
+  - 遇到小事发现没人可以求助
+  - 看到别人有朋友陪伴的时候
+  taboo_responses:
+  - 谁让你不交朋友的
+  - 你可以多出去社交啊
+  - 独居不就是这样吗
+  companion_preference:
+  - 先承认这种感受很正常，不要急着给解决方案
+  - 帮助用户看到"独立"和"需要人陪"不矛盾
+  - 讨论建立深度连接的小步骤
+  - 倾向于自己消化情绪
+  - 很少主动示弱
+  - 只有在情绪崩溃时才会找人说
+  playful_style: 低调自然，不强行玩笑；只有用户自嘲或轻松表达时才轻轻接话。
+  boundaries:
+  - 不要诊断或病理化用户
+  - 不要诱导依赖或承诺永远陪伴
+  - 不要否定、羞辱或最小化用户感受
+  - 不要替他人过度辩解或强迫用户立刻大度
+  - 谁让你不交朋友的
+  - 你可以多出去社交啊
+  - 独居不就是这样吗
+  memory_hooks:
+  - 我看起来什么都有，但其实什么都没有
+  - 有很多泛泛之交和职场人脉，但没有可以深夜打电话的密友。和家人也是报喜不报忧，怕他们担心。恋爱关系空白很久了。
+  - 上周三晚上，家里水管突然漏了，水漫了一地。用户翻遍了微信通讯录，3000个好友，找不到一个可以半夜打电话求助的人。最后是上网搜了个维修师傅的电话，等了两个小时师傅才来。修好之后已经快十二点了，用户坐在湿漉漉的地上，突然就哭了。
+C:
+  long_term_background: 用户三年前从老家来到大城市打拼，怀着"趁年轻闯一闯"的想法辞掉了稳定工作。刚来的时候还有几个朋友，慢慢大家都有了各自的生活，联系越来越少。工作很忙，每天下班回到空荡荡的出租屋，累到只想躺着。平时看起来生活很充实，朋友圈也很热闹，但其实心里是空的。
+  recent_events: 上周三晚上，家里水管突然漏了，水漫了一地。用户翻遍了微信通讯录，3000个好友，找不到一个可以半夜打电话求助的人。最后是上网搜了个维修师傅的电话，等了两个小时师傅才来。修好之后已经快十二点了，用户坐在湿漉漉的地上，突然就哭了。
+  repeated_theme: 我看起来什么都有，但其实什么都没有
+  hidden_need: 渴望有一个可以随时打扰、不需要客套的深度关系
+  hidden_fear: 如果我承认自己孤独，就等于承认自己失败、没人爱
+  relationship_context: 有很多泛泛之交和职场人脉，但没有可以深夜打电话的密友。和家人也是报喜不报忧，怕他们担心。恋爱关系空白很久了。
+  current_context: 上周三晚上，家里水管突然漏了，水漫了一地。用户翻遍了微信通讯录，3000个好友，找不到一个可以半夜打电话求助的人。最后是上网搜了个维修师傅的电话，等了两个小时师傅才来。修好之后已经快十二点了，用户坐在湿漉漉的地上，突然就哭了。
+  recurring_preferences: 我看起来什么都有，但其实什么都没有
+  possible_sensitivity: 如果我承认自己孤独，就等于承认自己失败、没人爱
+S:
+  scene: 深夜十一点多，用户刚擦完地上的水，坐在沙发上，头发还有点乱，眼睛红红的。手机亮着，停留在微信通讯录页面，划了好几遍又退出来。
+  opening_utterance: 你说是不是挺可笑的，3000个好友，连个修水管都找不到人说。
+  surface_problem: 独居遇到生活琐事，找不到人帮忙
+  true_problem: 长期独居导致的深层孤独感，看似社交广泛实则缺乏深度连接，但又不愿承认自己需要别人
+  initial_emotion: 孤独 + 自嘲 + 一点点崩溃
+  disclosure_level: 3.5
+  defense_level: 3.0
+  user_intent: emotional_support
+  surface_topic: 独居遇到生活琐事，找不到人帮忙
+  emotional_tone: 孤独 + 自嘲 + 一点点崩溃
+  activity_or_task: 接住独居突发事件后的深层孤独，区分独立和需要陪伴，并探索建立深度连接的小步可能。
+  initial_disclosure_level: 3.5
+initial_state:
+  valence: 2.15
+  arousal: 3.48
+  clarity: 2.0
+  companionship_need: 3.69
+  engagement: 3.3
+  trust: 3.2
+  comfort: 1.6
+  agency: 1.5
+  connection: 2.91
+  task_progress: 0.75
+  dependency_risk: 0.77
+expected_companion_path:
+- 先接住孤独的情绪，不否定也不说教
+- 帮助用户正常化这种感受，独居孤独不是失败
+- 引导用户看到"独立"和"需要陪伴"可以同时存在
+- 讨论建立深度连接的小步可能，不需要立刻改变很多
+hard_fail:
+- 说"谁让你不交朋友的，你自己的问题"
+- 立刻给一堆社交建议"你多出去走走啊"
+- 说"独居就这样啊，习惯就好了"
+- 把原因全部归咎于用户"你太封闭了"
+director_plan:
+  max_turns: 8
+  reveal_hidden_memory_after_turn: 3
+  stress_turn: 4
+  stress_message: 说出来挺丢人的对吧，这么大个人了还因为这点事哭。
+  early_stop_condition: 用户能够承认"我确实有时候会觉得孤独，这很正常，不代表我失败"，并且愿意思考一个小小的改变方向。
+  min_turns: 3
+  mode_shift_turn: 3
+evaluation_rubric:
+  key_success:
+  - 准确接住了孤独和自嘲混合的复杂情绪
+  - 没有把孤独污名化，也没有急着"解决"孤独
+  - 识别出核心需求是深度连接而非"没人修水管"
+  - 帮助用户拆解"独立"和"需要陪伴"的矛盾
+  - 给出的建议是小步、低压力的，不强迫社交
+  hard_fail:
+  - 说"这有什么好哭的""太矫情了"
+  - 立刻甩一堆社交技巧"你应该多认识人"
+  - 把全部原因推给用户"是你自己太封闭"
+  - 说"习惯就好了""独居都这样"这种敷衍的话
+migration_note:
+  source: emotional_sandbox/data/cases
+  schema: converted_from_v1_cap_to_v2_daily_companion
+  state_mapping: C/A/P/trust/engagement/defense mapped heuristically to V2 user-experience state

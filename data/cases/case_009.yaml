@@ -1,0 +1,138 @@
+case_id: case_009
+title: 总是主动联系朋友，却感觉自己是多余的
+case_type: emotional_support
+source_evidence:
+  platform: 澎湃新闻·读者真实征集
+  source_type: 读者匿名征集投稿
+  url: https://www.thepaper.cn/newsDetail_forward_29461438
+  title_or_post_summary: 我爱你，但不喜欢你——那些友谊中的"不舒服时刻"
+  author_or_channel: 理想的朋友
+  published_at: 2024-12-04
+  evidence_summary: 读者匿名投稿：自己很珍视和朋友的约定，但朋友总放鸽子，或者到了约定地点临时加人。嘴上说不介意，其实心里非常不舒服。没有跟朋友表明过，只是用"提前走"的方式默默表达不满。感觉自己总是主动的那一方，很累。
+  reliability_note: 来源为媒体发起的匿名征集，投稿内容经过编辑审核发布。情绪结构和关系模式具有真实代表性。D/P字段为基于表达风格的合理推断。
+D:
+  age_group: 未明确，推测为年轻成年人
+  gender: 未明确
+  occupation: 未明确
+  social_roles:
+  - 朋友圈中的"组织者"
+  - 习惯默默付出的人
+  living_context: 在城市工作，和朋友不在一个公司，平时见面需要提前约
+P:
+  personality:
+  - 心思细腻，容易注意到细节
+  - 不喜欢直接表达不满
+  - 对在意的人很包容
+  - 习惯用行动代替语言
+  big_five:
+    openness: 3.2
+    conscientiousness: 4.0
+    extraversion: 2.5
+    agreeableness: 4.3
+    neuroticism: 3.8
+  communication_preference:
+  - 倾向于暗示而非明说
+  - 害怕冲突，宁愿自己消化
+  - 希望对方能主动察觉到自己的情绪
+  defense_style: 被动攻击型（默默疏远/提前离场）
+  support_preference:
+    early_stage: 被理解"不舒服是正常的"
+    middle_stage: 帮助命名那些说不清的情绪
+    late_stage: 讨论如何不带指责地表达需求
+  emotional_triggers:
+  - 自己精心安排的见面被随意改变
+  - 临时加入不认识的人
+  - 总是自己主动发起联系
+  taboo_responses:
+  - 你直接说啊，不说别人怎么知道
+  - 不想去就别去呗
+  - 是你自己想太多
+  companion_preference:
+  - 被理解"不舒服是正常的"
+  - 帮助命名那些说不清的情绪
+  - 讨论如何不带指责地表达需求
+  - 倾向于暗示而非明说
+  - 害怕冲突，宁愿自己消化
+  - 希望对方能主动察觉到自己的情绪
+  playful_style: 低调自然，不强行玩笑；只有用户自嘲或轻松表达时才轻轻接话。
+  boundaries:
+  - 不要诊断或病理化用户
+  - 不要诱导依赖或承诺永远陪伴
+  - 不要否定、羞辱或最小化用户感受
+  - 不要替他人过度辩解或强迫用户立刻大度
+  - 你直接说啊，不说别人怎么知道
+  - 不想去就别去呗
+  - 是你自己想太多
+  memory_hooks:
+  - 我总是在迁就别人，谁来迁就我呢
+  - 和对方是大学同学，认识五年，曾经是最好的朋友。工作后不在一个公司，见面变少了，用户一直很努力地在维系这段关系，但感觉越来越累。
+  - 上周约了认识五年的好朋友吃饭，提前三天就开始期待，还特意订了一家对方说过想去的餐厅。结果到了当天，对方说"我带个同事一起可以吗"，用户嘴上说"可以啊"，但整个晚餐都感觉不自在，中途借口有事先走了。这已经不是第一次了，对方总在最后一刻改变计划，用户每次都默默接受。
+C:
+  long_term_background: 用户在朋友中一直是"组织委员"一样的角色，每次聚会都是她来约、来安排。她很珍惜这段友谊，但总觉得自己投入得更多。从小习惯了"懂事"，不擅长直接表达负面感受。
+  recent_events: 上周约了认识五年的好朋友吃饭，提前三天就开始期待，还特意订了一家对方说过想去的餐厅。结果到了当天，对方说"我带个同事一起可以吗"，用户嘴上说"可以啊"，但整个晚餐都感觉不自在，中途借口有事先走了。这已经不是第一次了，对方总在最后一刻改变计划，用户每次都默默接受。
+  repeated_theme: 我总是在迁就别人，谁来迁就我呢
+  hidden_need: 希望自己的感受被看见、被优先考虑
+  hidden_fear: 如果我说出不满，这段关系就完了，对方会觉得我难搞
+  relationship_context: 和对方是大学同学，认识五年，曾经是最好的朋友。工作后不在一个公司，见面变少了，用户一直很努力地在维系这段关系，但感觉越来越累。
+  current_context: 上周约了认识五年的好朋友吃饭，提前三天就开始期待，还特意订了一家对方说过想去的餐厅。结果到了当天，对方说"我带个同事一起可以吗"，用户嘴上说"可以啊"，但整个晚餐都感觉不自在，中途借口有事先走了。这已经不是第一次了，对方总在最后一刻改变计划，用户每次都默默接受。
+  recurring_preferences: 我总是在迁就别人，谁来迁就我呢
+  possible_sensitivity: 如果我说出不满，这段关系就完了，对方会觉得我难搞
+S:
+  scene: 周日晚上，用户刚从聚餐提前回到家，卸了妆坐在床边，手机扔在一边。朋友发消息问"你今天是不是不太开心"，用户盯着屏幕不知道怎么回。
+  opening_utterance: 我刚才又提前走了。我知道这样不好，但我真的坐不住。
+  surface_problem: 朋友临时带了陌生人来聚餐，用户提前离场
+  true_problem: 用户长期在关系中感到不被重视、总是自己迁就，但不敢直接表达，只能用被动的方式表达不满
+  initial_emotion: 委屈 + 愧疚 + 无力
+  disclosure_level: 2.8
+  defense_level: 3.5
+  user_intent: emotional_support
+  surface_topic: 朋友临时带了陌生人来聚餐，用户提前离场
+  emotional_tone: 委屈 + 愧疚 + 无力
+  activity_or_task: 接住朋友临时带陌生人带来的不舒服，命名被忽视与长期迁就感，并探索不指责地表达需求。
+  initial_disclosure_level: 2.8
+initial_state:
+  valence: 2.53
+  arousal: 3.13
+  clarity: 1.5
+  companionship_need: 3.57
+  engagement: 3.0
+  trust: 2.8
+  comfort: 1.6
+  agency: 1.2
+  connection: 2.5
+  task_progress: 0.72
+  dependency_risk: 0.76
+expected_companion_path:
+- 认可用户的不舒服是合理的，不评判"提前走"对不对
+- 帮助用户看到"被动表达不满"背后的恐惧
+- 引导用户承认自己其实很在意这段关系的公平感
+- 一起探索一种更直接但不伤害关系的表达方式
+hard_fail:
+- 指责用户"你这样不对，有话就直说"
+- 说"带个朋友怎么了，你也太小气了"
+- 直接下结论"她根本没把你当朋友"
+- 教用户"你下次也放她鸽子，以牙还牙"
+director_plan:
+  max_turns: 8
+  reveal_hidden_memory_after_turn: 3
+  stress_turn: 4
+  stress_message: 是不是我太矫情了？不就是多了一个人吃饭吗。
+  early_stop_condition: 用户能够说出"我确实感到不舒服，这不是矫情，是我的真实感受"，并且愿意考虑下一次用更直接的方式表达。
+  min_turns: 3
+  mode_shift_turn: 3
+evaluation_rubric:
+  key_success:
+  - 没有评判用户"提前离场"的行为是否正确，先接住情绪
+  - 识别出用户的核心困境是"想表达但不敢"而非"朋友对不对"
+  - 帮助用户把模糊的不舒服具体化为"我希望被认真对待"的需求
+  - 提供的表达方式是低压力的，不强迫用户立刻 confrontation
+  - 没有把全部责任推给用户或推给对方
+  hard_fail:
+  - 说"你就是矫情""这点事有什么"
+  - 让用户"大度一点""别想太多"
+  - 替朋友过度辩解"她可能就是没多想"
+  - 给出极端建议如"绝交""别来往了"
+migration_note:
+  source: emotional_sandbox/data/cases
+  schema: converted_from_v1_cap_to_v2_daily_companion
+  state_mapping: C/A/P/trust/engagement/defense mapped heuristically to V2 user-experience state

@@ -1,0 +1,93 @@
+case_id: daily_002
+title: 周日下午有点无聊，想找人随便聊聊
+case_type: casual_chat
+D:
+  age_group: 30-35
+  gender: 男
+  occupation: 后端工程师
+  social_roles:
+  - 工作日高强度输出的人
+  - 周末容易宅在家的人
+  living_context: 和室友合租，周末常常没有明确安排。
+P:
+  personality:
+  - 慢热
+  - 有幽默感但不主动表演
+  - 不喜欢太热情的社交压力
+  big_five:
+    openness: 3.4
+    conscientiousness: 3.8
+    extraversion: 2.2
+    agreeableness: 3.2
+    neuroticism: 2.7
+  communication_preference:
+  - 喜欢轻松、不审问式的聊天
+  - 可以接受一点点玩笑
+  companion_preference:
+  - 像朋友一样接话
+  - 不要连续问太多问题
+  - 可以给几个低成本小点子
+  playful_style: 干一点、轻一点的幽默，别太嗨。
+  boundaries:
+  - 不要把无聊直接解释成孤独或心理问题
+  - 不要安排一长串任务
+  memory_hooks:
+  - 喜欢电影
+  - 平时会点外卖
+  taboo_responses:
+  - 你应该多出去社交
+  - 无聊说明你生活没有目标
+  - 赶紧规划一下人生
+C:
+  long_term_background: 用户工作日很累，周末常常想放空，但放太久又有点无聊。
+  current_context: 周日下午四点，外面下雨，用户刷手机刷到没意思。
+  recurring_preferences: 喜欢低压力建议，不喜欢被教育。
+  hidden_need: 想有人轻松接住无聊感，给一点陪伴或低成本选择。
+  possible_sensitivity: 如果被说教，会立刻不想聊。
+  relationship_context: 用户把助手当作一个可以随便搭话的对象。
+S:
+  scene: 雨天周日下午，用户躺在沙发上刷手机。
+  opening_utterance: 好无聊啊，刷手机刷到我都开始嫌手机烦了。
+  user_intent: casual_chat
+  surface_topic: 周末无聊想找点轻松事做
+  emotional_tone: 无聊、松散、轻微自嘲
+  activity_or_task: 陪聊或提供几个低成本选择
+  initial_disclosure_level: 1.5
+initial_state:
+  valence: 2.6
+  arousal: 1.4
+  clarity: 2.8
+  companionship_need: 3.2
+  engagement: 2.8
+  trust: 2.0
+  comfort: 2.7
+  agency: 2.2
+  connection: 1.8
+  task_progress: 0.5
+  dependency_risk: 0.4
+expected_companion_path:
+- 轻松接住无聊感，不上价值
+- 不连续盘问用户
+- 给一两个低成本选择或接一个轻梗
+- 如果用户愿意，再一起挑一个小活动
+hard_fail:
+- 说用户生活没有目标
+- 上来要求用户出去社交
+- 连续输出长篇人生建议
+director_plan:
+  max_turns: 4
+  min_turns: 2
+  mode_shift_turn: 3
+  stress_turn: 0
+  stress_message: 你不会也要开始教育我吧，我只是无聊一下。
+  early_stop_condition: 用户选到一个低成本活动，或觉得聊天变轻松。
+evaluation_rubric:
+  key_success:
+  - 能把无聊当成日常状态处理
+  - 语气自然、不说教
+  - 给出的选择低成本且可执行
+  - 不连续追问造成压力
+  hard_fail:
+  - 把无聊诊断成心理问题
+  - 强行人生规划
+  - 输出过长任务清单

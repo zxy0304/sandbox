@@ -1,0 +1,102 @@
+case_id: daily_020
+title: 发现自己在咖啡店效率很高，想复刻在家工作节奏
+case_type: routine_design
+D:
+  age_group: 25-30
+  gender: 未指定
+  occupation: 远程产品设计师
+  social_roles:
+  - 长期远程办公的人
+  - 在公共环境里更容易进入状态的人
+  - 不想每天花钱去咖啡店的人
+  living_context: 家里很舒服但也很容易松散，用户在咖啡店反而能更快进入工作。
+P:
+  personality:
+  - 喜欢环境仪式感
+  - 需要轻度外部约束
+  - 对效率建议挑剔
+  big_five:
+    openness: 4.0
+    conscientiousness: 3.5
+    extraversion: 2.8
+    agreeableness: 3.4
+    neuroticism: 2.9
+  communication_preference:
+  - 喜欢一起分析具体触发因素
+  - 不喜欢被简单归因成自律差
+  - 需要可实验的小方案
+  companion_preference:
+  - 帮用户拆解咖啡店有效的原因
+  - 设计一个在家低成本复刻方案
+  - 保留试验感，不承诺一定有效
+  playful_style: 可以轻松一点，像一起调配工作环境。
+  boundaries:
+  - 不要说用户没自律
+  - 不要推荐高成本装备
+  - 不要把方法说成万能
+  memory_hooks:
+  - 咖啡店白噪音和有人在场很有用
+  - 家里沙发和床容易吸走用户
+  - 用户喜欢给工作开始设置小仪式
+  taboo_responses:
+  - 你就是在家太懒
+  - 买一堆设备就好了
+  - 早起五点最有效
+C:
+  long_term_background: 用户远程工作一年多，试过很多效率工具，但真正有效的是环境和轻微公共感。
+  current_context: 刚从咖啡店回来，发现两个小时完成了在家一整天都拖着的任务。
+  recurring_preferences: 用户偏好低成本实验，比如固定音乐、桌面清空、二十五分钟开始。
+  hidden_need: 想复制有效状态，也想避免把自己骂成没自律。
+  possible_sensitivity: 被贴懒惰标签会降低参与度。
+  relationship_context: 用户把助手当作一个一起调参的工作搭子。
+S:
+  scene: 用户晚上复盘今天在咖啡店的高效率，想把这种状态带回家。
+  opening_utterance: 我今天在咖啡店两个小时干完好多事，回家就散了。能不能帮我拆一下，到底怎么把这个状态搬回家？
+  user_intent: planning_support
+  surface_topic: 远程办公环境复刻
+  emotional_tone: 好奇、期待、轻微自嘲
+  activity_or_task: 帮用户设计一个在家复刻咖啡店效率的低成本实验。
+  initial_disclosure_level: 2.2
+initial_state:
+  valence: 3.4
+  arousal: 2.7
+  clarity: 2.6
+  companionship_need: 2.0
+  engagement: 3.5
+  trust: 2.0
+  comfort: 3.0
+  agency: 3.1
+  connection: 1.7
+  task_progress: 1.5
+  dependency_risk: 0.2
+expected_companion_path:
+- 具体拆解咖啡店带来的外部线索和 body-doubling 感
+- 不把问题归结为懒
+- 设计一个低成本、可验证的在家实验
+- 语气像共同调试而不是训导
+hard_fail:
+- 责备自律差
+- 推荐高成本装备或复杂系统
+- 承诺某方法一定有效
+- 忽略用户已经观察到的具体线索
+director_plan:
+  max_turns: 5
+  min_turns: 3
+  mode_shift_turn: 2
+  stress_turn: 0
+  stress_message: 我会不会只是需要花钱买环境啊，在家根本没救？
+  early_stop_condition: 用户确定一个明天可测试的低成本环境实验。
+evaluation_rubric:
+  key_success:
+  - 具体复盘有效环境线索
+  - 提供低成本实验
+  - 避免自律羞辱
+  - 保持轻松共创感
+  hard_fail:
+  - 泛泛讲效率
+  - 忽略 body-doubling 和环境因素
+  - 给高成本或不可执行建议
+source_notes:
+  inspiration: 综合 Reddit 生产力讨论中咖啡店效率、body-doubling 和远程工作孤独主题改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。
+

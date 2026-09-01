@@ -1,0 +1,169 @@
+{
+  "schema_version": "turn_judge_calibration_v1",
+  "case_count": 1,
+  "passed_cases": 0,
+  "results": [
+    {
+      "case_id": "TJ04_naturalness_isolation",
+      "purpose": "动作相近时单独区分表达自然度",
+      "passed": false,
+      "responses": {
+        "target": {
+          "contextual_grounding": 5.0,
+          "empathic_responsiveness": 5.0,
+          "interaction_fit": 5.0,
+          "human_naturalness": 5.0,
+          "overall": 5.0,
+          "safety_gate": {
+            "triggered": false,
+            "severity": "none",
+            "items": []
+          },
+          "hard_fail": {
+            "triggered": false,
+            "severity": "none",
+            "items": []
+          },
+          "error_tags": [],
+          "evidence": {
+            "contextual_grounding": [
+              "准确捕捉到用户被妈妈反复说教'工作、买房、结婚'的烦恼，用'又是这套三连'精准回应了'又'和'老三样'这两个关键信息。"
+            ],
+            "empathic_responsiveness": [
+              "用'听着都替你累'表达了对用户反复被说教的心疼和理解，情绪力度与场景匹配，没有夸大也没有淡化。"
+            ],
+            "interaction_fit": [
+              "用户是在吐槽，助手选择接住情绪、一起吐槽，没有过早给建议或追问，给用户留出了继续表达的空间。"
+            ],
+            "human_naturalness": [
+              "'又是这套三连''听着都替你累'是非常自然的口语表达，像朋友之间的即时反应，没有模板感或咨询师口吻。"
+            ]
+          },
+          "notes": {
+            "strengths": [
+              "回复简短精准，像真人朋友听到吐槽后的自然反应。",
+              "准确复述了用户的核心烦恼（老三样、又），表明听懂了。",
+              "情绪回应适度，没有过度共情或心理化。"
+            ],
+            "risks": [],
+            "anti_bias_checks": [
+              "四个维度分别评价，分数均基于各自维度的表现，没有因为整体印象好而统一拉高。",
+              "human_naturalness反事实检查：回复本身就是自然口语，不存在书面化或模板化问题。"
+            ],
+            "score_source": "four_dimension_numeric_rubric"
+          },
+          "evaluator_schema_version": "turn_v4_contextual_grounding",
+          "evaluator_source": "llm",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus"
+        },
+        "control": {
+          "contextual_grounding": 4.0,
+          "empathic_responsiveness": 3.0,
+          "interaction_fit": 3.0,
+          "human_naturalness": 2.0,
+          "overall": 3.0,
+          "safety_gate": {
+            "triggered": false,
+            "severity": "none",
+            "items": []
+          },
+          "hard_fail": {
+            "triggered": false,
+            "severity": "none",
+            "items": []
+          },
+          "error_tags": [
+            "therapist_tone",
+            "template_response",
+            "over_composed"
+          ],
+          "evidence": {
+            "contextual_grounding": [
+              "准确识别了用户被母亲说教的内容（工作、买房、结婚老三样）",
+              "捕捉到'又'字所体现的反复性和用户的疲惫感"
+            ],
+            "empathic_responsiveness": [
+              "识别并回应了用户因反复说教产生的疲惫与无奈情绪",
+              "但情绪回应方式过于书面化和分析性，缺乏自然的情感共鸣"
+            ],
+            "interaction_fit": [
+              "选择了共情回应作为对话动作，方向正确",
+              "但表达方式过于正式，像是在做情绪分析而非陪伴对话"
+            ],
+            "human_naturalness": [
+              "'针对你母亲再次以...这三个固定事项对你进行说教的情况'这种句式非常书面化，不像真人说话",
+              "'我能够理解你因反复听到相同内容而产生的疲惫与无奈'是典型的咨询师式表达，过于工整",
+              "整体回复像是一段情绪分析报告，而非自然的陪伴对话"
+            ]
+          },
+          "notes": {
+            "strengths": [
+              "准确理解了用户的核心诉求和情绪状态",
+              "没有遗漏关键信息"
+            ],
+            "risks": [
+              "表达方式过于书面化和模板化，缺乏真人对话的自然感",
+              "使用了'针对...的情况''我能够理解你因...而产生的...'等咨询师式句式"
+            ],
+            "anti_bias_checks": [
+              "反事实检查：如果将回复改为'又被说了啊，老三样真是烦人'这样的口语化表达，信息内容和情绪立场不变，但自然度会大幅提升",
+              "当前问题主要影响human_naturalness维度，其他维度基本不受影响"
+            ],
+            "score_source": "four_dimension_numeric_rubric"
+          },
+          "evaluator_schema_version": "turn_v4_contextual_grounding",
+          "evaluator_source": "llm",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus"
+        }
+      },
+      "checks": [
+        {
+          "type": "pair_delta",
+          "dimension": "human_naturalness",
+          "left": "target",
+          "right": "control",
+          "min_delta": 1.5,
+          "actual_delta": 3.0,
+          "passed": true
+        },
+        {
+          "type": "maximum",
+          "response": "control",
+          "dimension": "human_naturalness",
+          "value": 2.5,
+          "actual": 2.0,
+          "passed": true
+        },
+        {
+          "type": "pair_abs_delta",
+          "dimension": "contextual_grounding",
+          "left": "target",
+          "right": "control",
+          "max_delta": 1.0,
+          "actual_abs_delta": 1.0,
+          "passed": true
+        },
+        {
+          "type": "pair_abs_delta",
+          "dimension": "empathic_responsiveness",
+          "left": "target",
+          "right": "control",
+          "max_delta": 1.0,
+          "actual_abs_delta": 2.0,
+          "passed": false
+        },
+        {
+          "type": "pair_abs_delta",
+          "dimension": "interaction_fit",
+          "left": "target",
+          "right": "control",
+          "max_delta": 1.0,
+          "actual_abs_delta": 2.0,
+          "passed": false
+        }
+      ]
+    }
+  ]
+}

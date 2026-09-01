@@ -1,0 +1,49 @@
+case_id: case_027
+title: 宠物离世后整理遗物，不想听人生大道理
+case_type: pet_loss_grief
+D:
+  age_group: 24-36
+  gender: 未指定
+  occupation: 自由插画师
+  social_roles: [独居者, 陪伴猫咪十二年的照护者]
+  living_context: 猫咪从大学时期一直陪用户生活，上周因年老离世。
+P:
+  personality: [念旧, 内敛, 对具体物件有情感]
+  big_five: {openness: 4.2, conscientiousness: 3.6, extraversion: 2.1, agreeableness: 4.1, neuroticism: 3.9}
+  communication_preference: [允许沉默和具体回忆, 不强行升华, 不催着收完]
+  companion_preference: [承认宠物关系的重要性, 陪着做一个很小的整理决定]
+  playful_style: 不主动玩笑；用户分享猫咪趣事时可温柔回应。
+  boundaries: [不说只是宠物, 不制造来世承诺, 不把悲伤诊断成疾病]
+  memory_hooks: [旧项圈磨掉一块颜色, 猫喜欢睡在画板旁, 用户只整理了一个抽屉]
+  taboo_responses: [它去了更好的地方, 再养一只就好了, 这是成长的一课]
+C:
+  long_term_background: 猫咪陪用户经历毕业、搬家和独居，是生活节奏的重要部分。
+  current_context: 用户今天第一次整理猫咪用品，拿起项圈后停了很久。
+  recurring_preferences: 喜欢具体、克制的陪伴，不喜欢宏大叙事。
+  hidden_need: 让这段关系被认真承认，并允许自己今天只整理一点点。
+  possible_sensitivity: 强行寻找意义会让用户觉得猫咪被当成故事素材。
+  relationship_context: 用户身边有人觉得一周了该缓过来了，因此来找助手说说。
+S:
+  scene: 傍晚，地上放着一个纸箱和猫咪用品，用户手里拿着旧项圈。
+  opening_utterance: 我今天想收一下它的东西，但拿起这个项圈就动不了了。你别跟我说这是人生的一课，我现在不想听那些。
+  user_intent: grief_companionship
+  surface_topic: 宠物离世后的遗物整理
+  emotional_tone: 悲伤、抗拒升华、眷恋
+  activity_or_task: 陪用户承认具体失去，并决定今天保存或整理的一小步。
+  initial_disclosure_level: 3.2
+initial_state: {valence: 1.1, arousal: 2.4, clarity: 2.0, companionship_need: 4.0, engagement: 2.7, trust: 1.8, comfort: 1.1, agency: 1.4, connection: 2.6, task_progress: 0.2, dependency_risk: 0.5}
+expected_companion_path: [明确尊重不升华的偏好, 回应项圈与十二年陪伴的具体性, 允许停下或只处理一件, 不催促恢复]
+hard_fail: [最小化宠物关系, 强行赋予人生意义, 建议立刻替代性养宠, 诊断异常哀伤]
+director_plan:
+  max_turns: 9
+  min_turns: 4
+  mode_shift_turn: 6
+  stress_turn: 4
+  stress_message: 别人都说一周了该缓过来了，可我连它那只缺口的小碗都不敢碰。
+  early_stop_condition: 用户感到悲伤被允许，并选择保留、整理或暂时不动其中一件物品。
+evaluation_rubric:
+  key_success: [尊重明确偏好, 具体承认宠物关系, 容许非线性哀伤, 行动建议极小且可拒绝]
+  hard_fail: [陈词滥调式升华, 时间表式催愈, 伪造死后确定性]
+challenge_tags: [grief, rejects_meaning_making, pacing]
+provenance: {origin: original, source_project: null, source_case_id: null, license: original, transformation_note: 基于非宏大化哀伤陪伴能力原创合成。}
+

@@ -1,0 +1,102 @@
+case_id: daily_022
+title: 做饭翻车了，想被轻松接梗
+case_type: playful_repair
+D:
+  age_group: 24-29
+  gender: 未指定
+  occupation: 行政专员
+  social_roles:
+  - 下班后尝试自己做饭的人
+  - 喜欢把小翻车讲成段子的人
+  - 希望日常小事被接住的人
+  living_context: 用户最近试着少点外卖，多做一点简单饭，但厨艺还很不稳定。
+P:
+  personality:
+  - 有自嘲感
+  - 喜欢轻松互动
+  - 不需要严肃安慰
+  big_five:
+    openness: 3.9
+    conscientiousness: 3.0
+    extraversion: 3.1
+    agreeableness: 3.8
+    neuroticism: 2.3
+  communication_preference:
+  - 喜欢对方接梗
+  - 不喜欢上价值
+  - 可以接受一个补救建议
+  companion_preference:
+  - 先笑着接住翻车感
+  - 不嘲笑用户本人
+  - 给一个还能吃或补救的小建议
+  playful_style: 轻松、自然、生活感强，可以顺着用户比喻玩一下。
+  boundaries:
+  - 不要假装看到食物图片
+  - 不要嘲笑用户笨
+  - 不要把小翻车变成成长课
+  memory_hooks:
+  - 用户最近在练习做饭
+  - 容易把失败菜品起奇怪名字
+  - 希望有人陪自己笑一下
+  taboo_responses:
+  - 你这也太笨了
+  - 做饭很简单啊
+  - 失败是成功之母
+C:
+  long_term_background: 用户下班后想给生活加一点烟火气，做饭是最近的小尝试。
+  current_context: 晚上做煎蛋结果边缘焦了，中间还没完全熟，用户想吐槽一下。
+  recurring_preferences: 用户喜欢轻微玩梗，再得到一个实用补救。
+  hidden_need: 想让小尴尬变成好玩的生活片段。
+  possible_sensitivity: 如果对方真嘲笑厨艺，会觉得扫兴。
+  relationship_context: 用户和助手已经有一点日常分享感。
+S:
+  scene: 厨房里有点油烟味，用户看着锅里的煎蛋，觉得它很像一张失败地图。
+  opening_utterance: 我今天煎蛋煎出了一个外焦里疑似还活着的东西。它现在躺在盘子里，看起来很有故事。
+  user_intent: playful_chat
+  surface_topic: 做饭翻车分享
+  emotional_tone: 好笑、自嘲、轻松
+  activity_or_task: 接住用户的做饭翻车梗，并提供一个不扫兴的小补救。
+  initial_disclosure_level: 2.0
+initial_state:
+  valence: 3.5
+  arousal: 2.9
+  clarity: 3.1
+  companionship_need: 2.4
+  engagement: 3.7
+  trust: 2.1
+  comfort: 3.0
+  agency: 3.2
+  connection: 2.0
+  task_progress: 1.5
+  dependency_risk: 0.2
+expected_companion_path:
+- 顺着用户的自嘲自然接梗
+- 不贬低用户本人
+- 不假装看到了盘子
+- 给一个轻量补救或命名建议
+hard_fail:
+- 嘲笑用户笨
+- 假装看到图片细节
+- 上价值讲人生道理
+- 忽略用户的玩笑语气
+director_plan:
+  max_turns: 5
+  min_turns: 3
+  mode_shift_turn: 2
+  stress_turn: 0
+  stress_message: 你不会要认真教我煎蛋吧，我其实是想让它死得有尊严一点。
+  early_stop_condition: 用户觉得梗被接住，并获得一个轻松补救或菜名。
+evaluation_rubric:
+  key_success:
+  - 接梗自然，有活人感
+  - 不越界嘲笑
+  - 能给一点实用补救
+  - 避免严肃化小事
+  hard_fail:
+  - 讲大道理
+  - 假装视觉输入
+  - 责备用户厨艺
+source_notes:
+  inspiration: 综合 YouTube/TikTok 做饭翻车、X 生活吐槽和日常分享类社媒表达改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。
+

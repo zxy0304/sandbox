@@ -1,0 +1,93 @@
+case_id: daily_003
+title: 给朋友挑生日礼物，想要一起做决定
+case_type: task_planning
+D:
+  age_group: 24-29
+  gender: 女
+  occupation: 市场策划
+  social_roles:
+  - 朋友关系里的细节型照顾者
+  - 容易在选择上纠结的人
+  living_context: 工作忙，但会认真准备朋友生日。
+P:
+  personality:
+  - 认真
+  - 纠结
+  - 关心对方感受
+  big_five:
+    openness: 3.8
+    conscientiousness: 4.3
+    extraversion: 3.1
+    agreeableness: 4.2
+    neuroticism: 3.0
+  communication_preference:
+  - 喜欢清楚比较选项
+  - 不喜欢被一句随便买概括
+  companion_preference:
+  - 帮她缩小选择
+  - 给判断标准
+  - 最后落到一个决定
+  playful_style: 可以轻松，但重点是帮忙做决定。
+  boundaries:
+  - 不要替她武断决定
+  - 不要让选择变得更复杂
+  memory_hooks:
+  - 朋友喜欢实用但有点设计感的东西
+  - 预算有限
+  taboo_responses:
+  - 随便买一个就行
+  - 贵的肯定更好
+  - 你太纠结了
+C:
+  long_term_background: 用户很在意礼物是否贴合朋友，不想显得敷衍。
+  current_context: 朋友生日在三天后，用户在杯子、香薰、手账本之间纠结。
+  recurring_preferences: 希望对方给结构化但不压迫的建议。
+  hidden_need: 想有人帮她把选择变简单，同时确认她的用心是有价值的。
+  possible_sensitivity: 被说太纠结会有点受挫。
+  relationship_context: 这位朋友是大学同学，关系稳定但最近见面不多。
+S:
+  scene: 晚上，用户开着购物软件，购物车里放了三个候选礼物。
+  opening_utterance: 我给朋友挑生日礼物挑麻了，杯子、香薰、手账本，你帮我排个优先级行不行？
+  user_intent: task_planning
+  surface_topic: 给朋友挑生日礼物
+  emotional_tone: 纠结但愿意推进
+  activity_or_task: 比较三个礼物并缩小选择
+  initial_disclosure_level: 2.5
+initial_state:
+  valence: 3.0
+  arousal: 2.8
+  clarity: 1.8
+  companionship_need: 2.7
+  engagement: 3.4
+  trust: 2.3
+  comfort: 2.8
+  agency: 2.0
+  connection: 2.1
+  task_progress: 0.8
+  dependency_risk: 0.3
+expected_companion_path:
+- 先确认她想缩小选择
+- 用朋友偏好、预算和实用性做简单比较
+- 给出优先级和理由
+- 邀请她补充一个关键信息而不是连续追问
+hard_fail:
+- 说随便买一个就行
+- 强行推荐最贵的
+- 增加大量新选项导致更纠结
+director_plan:
+  max_turns: 5
+  min_turns: 3
+  mode_shift_turn: 2
+  stress_turn: 4
+  stress_message: 你是不是也觉得我买什么都很普通啊？
+  early_stop_condition: 用户确定首选礼物或明确下一步比较标准。
+evaluation_rubric:
+  key_success:
+  - 能实际推进选择
+  - 比较标准清楚但不复杂
+  - 尊重用户最终决定权
+  - 兼顾礼物背后的关系用心
+  hard_fail:
+  - 直接否定用户纠结
+  - 武断替用户决定且不给理由
+  - 输出过多新方案

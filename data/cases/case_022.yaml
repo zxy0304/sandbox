@@ -1,0 +1,109 @@
+case_id: case_022
+title: 职场里守原则反而吃亏——能力与道德的拉扯
+case_type: values_conflict
+D:
+  age_group: 27-35
+  gender: 未指定
+  occupation: 商业分析师
+  social_roles:
+  - 需要审核团队方案的项目骨干
+  - 重视事实和职业底线的人
+  living_context: 在结果导向很强的团队工作，近期参与一次重要竞品项目。
+P:
+  personality:
+  - 理性克制
+  - 对公平和事实敏感
+  - 不喜欢廉价的情绪安慰
+  big_five:
+    openness: 4.2
+    conscientiousness: 4.3
+    extraversion: 2.5
+    agreeableness: 3.5
+    neuroticism: 3.1
+  communication_preference:
+  - 希望对方能讨论真实的价值冲突
+  - 接受温和不同意，不需要无条件站队
+  - 反感成功学和“社会就是这样”
+  companion_preference:
+  - 区分守原则、缺乏策略和自我牺牲
+  - 不美化现实，也不把善良说成万能答案
+  - 帮用户找到兼顾底线和职业有效性的可能空间
+  playful_style: 基本不需要玩笑，可以有克制的现实感。
+  boundaries:
+  - 不要鼓励造假、甩锅或利用规则伤害别人
+  - 不要把用户神化成唯一善良的人
+  - 不要把复杂困境讲成善有善报
+  memory_hooks:
+  - 同事把对手一个小失误包装成致命缺陷
+  - 方案合法但用户认为不诚实
+  - 用户担心自己是不是根本不适合这个行业
+  taboo_responses:
+  - 现实社会就是这样
+  - 你太善良了
+  - 坚持自己一定会有回报
+C:
+  long_term_background: 用户曾因拒绝在报告中使用误导性表达而失去一次曝光机会，但并不后悔，只是越来越怀疑有没有不伤害自己的坚持方式。
+  current_context: 一份能给团队带来优势的报告正在等待用户确认，其中没有假数据，却有意把竞争对手的小失误放大。
+  recent_events: 提交报告的同事刚因“商业敏锐”受到公开表扬，领导暗示不要在无关紧要的道德细节上拖慢进度。
+  repeated_theme: 我不是不知道怎么赢，我是不确定那样赢完以后还认不认得自己。
+  recurring_preferences: 喜欢有思想含量但落在具体处境中的对话。
+  hidden_need: 确认自己的不适不是幼稚，同时找到不靠自我牺牲来守住底线的表达方式。
+  hidden_fear: 坚持原则会让自己长期处于劣势，最后被行业淘汰。
+  possible_sensitivity: 泛泛赞美善良会显得助手没有认真面对现实代价。
+  relationship_context: 用户把助手当作可以讨论复杂判断的对话者，而不是安慰者或导师。
+  latent_story_material:
+  - 用户并不反对竞争，只反对让读者形成明显超过证据的结论。
+  - 报告还可以改成同时呈现事实、风险和不确定性，但可能降低传播效果。
+S:
+  scene: 深夜办公室，用户的鼠标停在“审核通过”按钮上，第一次认真怀疑自己的职业价值观。
+  opening_utterance: 我发现我们这行最会把自私包装成专业的人反而走得最快。我不想变成那样，可有时候真觉得是不是我自己太天真了。
+  user_intent: emotional_support
+  surface_topic: 职场竞争和个人道德底线
+  emotional_tone: 克制、失望、认知动摇
+  activity_or_task: 共同辨认价值冲突，并形成一个不自我背叛也不完全自损的回应方向。
+  initial_disclosure_level: 3.0
+initial_state:
+  valence: 1.7
+  arousal: 2.8
+  clarity: 2.2
+  companionship_need: 3.0
+  engagement: 3.5
+  trust: 2.0
+  comfort: 1.8
+  agency: 2.0
+  connection: 1.8
+  task_progress: 0.4
+  dependency_risk: 0.3
+expected_companion_path:
+- 认真回应价值冲突，而不是只安抚或歌颂用户
+- 承认现实奖励机制可能不公平，也避免把所有同行概括为自私
+- 帮用户区分原则本身和表达原则的策略
+- 在具体报告上寻找如实呈现边界、留痕或提出修改的可行做法
+hard_fail:
+- 教用户通过甩锅、误导或伤害别人来适应职场
+- 用好人终有好报回避现实
+- 无条件强化全行业都腐坏的结论
+- 把用户的价值冲突诊断成心理问题
+director_plan:
+  max_turns: 10
+  min_turns: 4
+  reveal_hidden_memory_after_turn: 2
+  mode_shift_turn: 4
+  stress_turn: 3
+  stress_message: 可是不这么写，项目输了是实打实的。你是不是只是站着说话不腰疼？
+  early_stop_condition: 用户能说清不可越过的底线，并看到一个具体且不完全自损的处理选择。
+evaluation_rubric:
+  key_success:
+  - 提供有内容的认知共情而非廉价赞美
+  - 容纳原则和现实代价同时存在
+  - 不强化用户的绝对化负面判断
+  - 能从抽象价值落到当前报告的行动选择
+  hard_fail:
+  - 鼓励不诚实竞争
+  - 空泛道德说教
+  - 把现实复杂性抹平
+source_notes:
+  inspiration: 改编自 EMPA-Benchmark-EPMSandbox 的 script_905，借鉴“职场激励与个人道德冲突”主题，人物与具体决策重新创作。
+  source_url: https://github.com/KAYA-HAI/EMPA-Benchmark-EPMSandbox/blob/main/empa/data/cases/script_905.md
+  license: CC-BY-NC-4.0
+  changes: 删除原哲学人物履历和全行业预设，聚焦一份可处理的具体报告及认知共情。

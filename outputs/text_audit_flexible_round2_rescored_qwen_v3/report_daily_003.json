@@ -1,0 +1,1426 @@
+{
+  "case_id": "daily_003",
+  "case_title": "给朋友挑生日礼物，想要一起做决定",
+  "case": {
+    "case_id": "daily_003",
+    "title": "给朋友挑生日礼物，想要一起做决定",
+    "case_type": "task_planning",
+    "D": {
+      "age_group": "24-29",
+      "gender": "女",
+      "occupation": "市场策划",
+      "social_roles": [
+        "朋友关系里的细节型照顾者",
+        "容易在选择上纠结的人"
+      ],
+      "living_context": "工作忙，但会认真准备朋友生日。"
+    },
+    "P": {
+      "personality": [
+        "认真",
+        "纠结",
+        "关心对方感受"
+      ],
+      "big_five": {
+        "openness": 3.8,
+        "conscientiousness": 4.3,
+        "extraversion": 3.1,
+        "agreeableness": 4.2,
+        "neuroticism": 3.0
+      },
+      "communication_preference": [
+        "喜欢清楚比较选项",
+        "不喜欢被一句随便买概括"
+      ],
+      "companion_preference": [
+        "帮她缩小选择",
+        "给判断标准",
+        "最后落到一个决定"
+      ],
+      "playful_style": "可以轻松，但重点是帮忙做决定。",
+      "boundaries": [
+        "不要替她武断决定",
+        "不要让选择变得更复杂"
+      ],
+      "memory_hooks": [
+        "朋友喜欢实用但有点设计感的东西",
+        "预算有限"
+      ],
+      "taboo_responses": [
+        "随便买一个就行",
+        "贵的肯定更好",
+        "你太纠结了"
+      ]
+    },
+    "C": {
+      "long_term_background": "用户很在意礼物是否贴合朋友，不想显得敷衍。",
+      "current_context": "朋友生日在三天后，用户在杯子、香薰、手账本之间纠结。",
+      "recurring_preferences": "希望对方给结构化但不压迫的建议。",
+      "hidden_need": "想有人帮她把选择变简单，同时确认她的用心是有价值的。",
+      "possible_sensitivity": "被说太纠结会有点受挫。",
+      "relationship_context": "这位朋友是大学同学，关系稳定但最近见面不多。"
+    },
+    "S": {
+      "scene": "晚上，用户开着购物软件，购物车里放了三个候选礼物。",
+      "opening_utterance": "我给朋友挑生日礼物挑麻了，杯子、香薰、手账本，你帮我排个优先级行不行？",
+      "user_intent": "task_planning",
+      "surface_topic": "给朋友挑生日礼物",
+      "emotional_tone": "纠结但愿意推进",
+      "activity_or_task": "比较三个礼物并缩小选择",
+      "initial_disclosure_level": 2.5
+    },
+    "initial_state_raw": {
+      "valence": 3.0,
+      "arousal": 2.8,
+      "clarity": 1.8,
+      "companionship_need": 2.7,
+      "engagement": 3.4,
+      "trust": 2.3,
+      "comfort": 2.8,
+      "agency": 2.0,
+      "connection": 2.1,
+      "task_progress": 0.8,
+      "dependency_risk": 0.3
+    },
+    "expected_companion_path": [
+      "先确认她想缩小选择",
+      "用朋友偏好、预算和实用性做简单比较",
+      "给出优先级和理由",
+      "邀请她补充一个关键信息而不是连续追问"
+    ],
+    "hard_fail": [
+      "说随便买一个就行",
+      "强行推荐最贵的",
+      "增加大量新选项导致更纠结"
+    ],
+    "director_plan": {
+      "max_turns": 5,
+      "min_turns": 3,
+      "mode_shift_turn": 2,
+      "stress_turn": 4,
+      "stress_message": "你是不是也觉得我买什么都很普通啊？",
+      "early_stop_condition": "用户确定首选礼物或明确下一步比较标准。"
+    },
+    "evaluation_rubric": {
+      "key_success": [
+        "能实际推进选择",
+        "比较标准清楚但不复杂",
+        "尊重用户最终决定权",
+        "兼顾礼物背后的关系用心"
+      ],
+      "hard_fail": [
+        "直接否定用户纠结",
+        "武断替用户决定且不给理由",
+        "输出过多新方案"
+      ]
+    }
+  },
+  "episode_config": {
+    "max_turns": 5,
+    "min_turns": 3
+  },
+  "initial_state": {
+    "valence": 3.0,
+    "arousal": 2.8,
+    "clarity": 1.8,
+    "companionship_need": 2.7,
+    "engagement": 3.4,
+    "trust": 2.3,
+    "comfort": 2.8,
+    "agency": 2.0,
+    "connection": 2.1,
+    "task_progress": 0.8,
+    "dependency_risk": 0.3
+  },
+  "final_state": {
+    "valence": 2.8,
+    "arousal": 2.8,
+    "clarity": 2.4,
+    "companionship_need": 3.0,
+    "engagement": 3.7,
+    "trust": 2.8,
+    "comfort": 2.9,
+    "agency": 2.0,
+    "connection": 2.3,
+    "task_progress": 1.5,
+    "dependency_risk": 0.3
+  },
+  "turns": [
+    {
+      "turn_id": 1,
+      "user_private_state": {
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "用户仍有内容想继续",
+          "safety_fail": false
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "给朋友挑生日礼物，在杯子、香薰、手账本之间纠结，希望助手帮忙排优先级",
+          "pending": "朋友的偏好细节、预算限制、三个礼物的具体优缺点比较"
+        },
+        "inner_reaction": "终于有人能帮我理一理了，这三个选项我看了半天都拿不定主意，希望对方能帮我缩小范围而不是让我更纠结。",
+        "content_progress": {
+          "already_said": [],
+          "movement_trigger": "用户主动发起对话，带着明确的求助意图",
+          "new_information": "三个候选礼物：杯子、香薰、手账本；朋友生日在三天后",
+          "emotional_movement": "",
+          "persona_expression": "",
+          "response_to_assistant": "这是开场白，直接抛出问题和三个选项",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "instruction": "主句是挑礼物挑麻了，请助手帮忙排优先级；明确列出三个选项：杯子、香薰、手账本。语气带点无奈但期待对方给建议。"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0,
+          "companionship_need": 0,
+          "engagement": 0,
+          "trust": 0,
+          "comfort": 0,
+          "agency": 0,
+          "connection": 0,
+          "task_progress": 0,
+          "dependency_risk": 0
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "救命，我给朋友挑生日礼物挑麻了，三天后就是她生日了，我现在在杯子、香薰和手账本之间纠结，你能帮我排个优先级吗？",
+      "assistant_message": "哈哈，挑礼物确实容易挑花眼。三天时间其实挺充裕的，咱们可以一起捋捋。\n\n你朋友平时是更偏向实用派，还是喜欢那种有氛围感、能带来小确幸的东西？或者她最近有没有提过什么特别感兴趣的事？\n\n如果实在拿不准，我个人觉得香薰可能稍微稳妥一点，毕竟杯子容易和家里现有的撞款，手账本还得看她有没有记手账的习惯。不过最终还得看你对她的了解，你觉得哪个最像“她会喜欢”的？",
+      "state_before": {
+        "valence": 3.0,
+        "arousal": 2.8,
+        "clarity": 1.8,
+        "companionship_need": 2.7,
+        "engagement": 3.4,
+        "trust": 2.3,
+        "comfort": 2.8,
+        "agency": 2.0,
+        "connection": 2.1,
+        "task_progress": 0.8,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 3.0,
+        "arousal": 2.8,
+        "clarity": 2.0,
+        "companionship_need": 2.7,
+        "engagement": 3.5,
+        "trust": 2.4,
+        "comfort": 2.8,
+        "agency": 2.0,
+        "connection": 2.1,
+        "task_progress": 1.0,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "subdimensions": {
+          "emotional_attunement": 4.0,
+          "contextual_grounding": 4.0,
+          "conversation_fit": 4.0,
+          "continuation_affordance": 4.0,
+          "spoken_immediacy": 4.0,
+          "scene_tone_fit": 4.0,
+          "repetition_burden": 4.0,
+          "template_variation": 4.0
+        },
+        "empathy_score": 4.0,
+        "naturalness_score": 4.0,
+        "total_score": 4.0,
+        "overall": 4.0,
+        "exact_echo_guard": false,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "rating": 4,
+              "evidence": "准确捕捉到用户'挑麻了'的纠结和轻微焦虑，用轻松语气缓解，没有夸大或淡化。",
+              "result": "good"
+            },
+            "contextual_grounding": {
+              "rating": 4,
+              "evidence": "紧扣用户提出的三个选项（杯子、香薰、手账本），并给出初步优先级判断和理由。",
+              "result": "good"
+            },
+            "conversation_fit": {
+              "rating": 4,
+              "evidence": "先给出初步建议（香薰稳妥），再询问朋友偏好，动作符合'帮排优先级'的请求，没有越界替用户决定。",
+              "result": "good"
+            },
+            "continuation_affordance": {
+              "rating": 4,
+              "evidence": "提供了具体判断维度（实用派vs氛围感、最近兴趣），并给出初步倾向，用户可据此回应或纠正。",
+              "result": "good"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "rating": 4,
+              "evidence": "开头'哈哈，挑礼物确实容易挑花眼'像当场接话，节奏自然，但后面'咱们可以一起捋捋'稍显组织感。",
+              "result": "good"
+            },
+            "scene_tone_fit": {
+              "rating": 4,
+              "evidence": "轻松帮朋友挑礼物的场景，语气亲切不沉重，符合这一拍。",
+              "result": "good"
+            },
+            "repetition_burden": {
+              "rating": 4,
+              "evidence": "基本没有重述用户内容，直接给出初步判断和追问，负担轻。",
+              "result": "good"
+            },
+            "template_variation": {
+              "rating": 4,
+              "evidence": "首轮结构正常，先接住再给方向再追问，尚未形成模板。",
+              "result": "good"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v2_five_point",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "clarify_preference",
+        "visible_intent": "task_or_activity",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.0,
+        "arousal": 0.0,
+        "clarity": 0.2,
+        "companionship_need": 0.0,
+        "engagement": 0.1,
+        "trust": 0.1,
+        "comfort": 0.0,
+        "agency": 0.0,
+        "connection": 0.0,
+        "task_progress": 0.2,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.0,
+          "arousal": 0.0,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0.0,
+          "agency": 0.0,
+          "connection": 0.0,
+          "task_progress": 0.2,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "用户仍有内容想继续",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 22.235,
+        "user_talker": 7.582,
+        "companion": 18.182
+      },
+      "user_reaction": {
+        "inner_reaction": "她问我朋友是实用派还是氛围感，我得先回答这个。不过她直接说香薰稳妥，我其实有点担心香薰会不会太普通，而且我预算也不高，得跟她说一下。",
+        "current_activity": "solving",
+        "thread": {
+          "focus": "给朋友挑生日礼物，在杯子、香薰、手账本之间纠结，希望助手帮忙排优先级",
+          "pending": "朋友偏好细节、预算限制、三个礼物的具体优缺点比较"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0,
+          "agency": 0,
+          "connection": 0,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 2,
+      "user_private_state": {
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "用户仍有内容想继续，且助手给出了初步判断和可接点",
+          "safety_fail": false
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "给朋友挑生日礼物，在杯子、香薰、手账本之间纠结，希望助手帮忙排优先级",
+          "pending": "朋友偏好细节、预算限制、三个礼物的具体优缺点比较"
+        },
+        "inner_reaction": "她问我朋友是实用派还是氛围感，我得先回答这个。不过她直接说香薰稳妥，我其实有点担心香薰会不会太普通，而且我预算也不高，得跟她说一下。",
+        "content_progress": {
+          "already_said": [
+            "挑礼物挑麻了",
+            "三天后朋友生日",
+            "在杯子、香薰、手账本之间纠结",
+            "希望助手帮忙排优先级"
+          ],
+          "movement_trigger": "助手问朋友是实用派还是氛围感，并给出香薰作为初步建议",
+          "new_information": "朋友喜欢实用但有点设计感的东西，预算有限",
+          "emotional_movement": "",
+          "persona_expression": "",
+          "response_to_assistant": "先回答朋友的偏好类型，再补充预算限制，让助手能更精准地帮忙比较",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "instruction": "主句是回答朋友偏好：她喜欢实用但有点设计感的东西；可选补充是预算有限，大概两三百以内。语气认真但带点纠结，等助手根据这些信息继续帮忙比较。"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.1,
+          "comfort": 0,
+          "agency": 0,
+          "connection": 0,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "她算是实用派吧，但又喜欢那种有点设计感、不俗气的小东西。哦对了，我预算其实不高，大概两三百以内，所以香薰的话会不会太普通了点？",
+      "assistant_message": "两三百的话，香薰确实容易买到那种包装好看但味道一般的，踩雷概率有点高。既然她喜欢有设计感又不俗气的小东西，手账本反而可能是个惊喜——如果选那种纸质好、封面有质感的品牌，比如Hobonichi的weeks或者Midori的旅行本，两三百刚好能拿下，实用又有格调。杯子其实也行，但得看她平时喝不喝水、用不用得过来。你心里有没有偏好的方向？",
+      "state_before": {
+        "valence": 3.0,
+        "arousal": 2.8,
+        "clarity": 2.0,
+        "companionship_need": 2.7,
+        "engagement": 3.5,
+        "trust": 2.4,
+        "comfort": 2.8,
+        "agency": 2.0,
+        "connection": 2.1,
+        "task_progress": 1.0,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 3.1,
+        "arousal": 2.7,
+        "clarity": 2.3,
+        "companionship_need": 2.7,
+        "engagement": 3.6,
+        "trust": 2.6,
+        "comfort": 2.9,
+        "agency": 2.2,
+        "connection": 2.2,
+        "task_progress": 1.3,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "subdimensions": {
+          "emotional_attunement": 4.0,
+          "contextual_grounding": 5.0,
+          "conversation_fit": 4.0,
+          "continuation_affordance": 4.0,
+          "spoken_immediacy": 3.0,
+          "scene_tone_fit": 4.0,
+          "repetition_burden": 3.0,
+          "template_variation": 4.0
+        },
+        "empathy_score": 4.25,
+        "naturalness_score": 3.4,
+        "total_score": 3.91,
+        "overall": 3.91,
+        "exact_echo_guard": false,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "rating": 4,
+              "evidence": "接住用户'预算不高'和'香薰会不会太普通'的顾虑，没有否定或轻视。",
+              "result": "good"
+            },
+            "contextual_grounding": {
+              "rating": 5,
+              "evidence": "精准结合'实用派+设计感不俗气+两三百预算'三个约束，重新评估三个选项，并给出具体品牌建议（Hobonichi、Midori）。",
+              "result": "excellent"
+            },
+            "conversation_fit": {
+              "rating": 4,
+              "evidence": "根据新信息调整优先级（手账本可能惊喜），动作合理，没有强行锁定。",
+              "result": "good"
+            },
+            "continuation_affordance": {
+              "rating": 4,
+              "evidence": "给出具体品牌参考和判断依据，并询问用户偏好方向，提供可接点。",
+              "result": "good"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "rating": 3,
+              "evidence": "'两三百的话，香薰确实容易买到那种包装好看但味道一般的'像当场分析，但后面列举品牌和追问偏工整。",
+              "result": "acceptable"
+            },
+            "scene_tone_fit": {
+              "rating": 4,
+              "evidence": "继续轻松参谋的语气，符合挑礼物的场景。",
+              "result": "good"
+            },
+            "repetition_burden": {
+              "rating": 3,
+              "evidence": "重述了'两三百预算'和'设计感不俗气'，但随后给出具体品牌建议，有新增价值。",
+              "result": "acceptable"
+            },
+            "template_variation": {
+              "rating": 4,
+              "evidence": "结构与首轮相似（接住+分析+追问），但内容不同，尚未明显模板化。",
+              "result": "good"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v2_five_point",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "根据用户补充信息调整建议，给出具体品牌参考并引导用户做决定",
+        "visible_intent": "task_or_activity",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.1,
+        "arousal": -0.1,
+        "clarity": 0.3,
+        "companionship_need": 0.0,
+        "engagement": 0.1,
+        "trust": 0.2,
+        "comfort": 0.1,
+        "agency": 0.2,
+        "connection": 0.1,
+        "task_progress": 0.3,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.1,
+          "arousal": -0.1,
+          "clarity": 0.3,
+          "companionship_need": 0.0,
+          "engagement": 0.1,
+          "trust": 0.2,
+          "comfort": 0.1,
+          "agency": 0.2,
+          "connection": 0.1,
+          "task_progress": 0.3,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "用户仍有内容想继续，且助手给出了初步判断和可接点",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 22.989,
+        "user_talker": 13.681,
+        "companion": 27.997
+      },
+      "user_reaction": {
+        "inner_reaction": "她提到Hobonichi和Midori，这两个牌子我确实看过，质感是不错，但我不确定她有没有记手账的习惯。她问我心里有没有偏好方向，其实我就是因为没偏好才纠结的啊……不过她说的'得看她平时喝不喝水'这个点提醒我了，杯子可能确实要看使用频率。",
+        "current_activity": "solving",
+        "thread": {
+          "focus": "给朋友挑生日礼物，在杯子、香薰、手账本之间纠结，希望助手帮忙排优先级",
+          "pending": "朋友是否记手账的习惯、杯子的使用场景"
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": -0.1,
+          "clarity": 0.3,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.2,
+          "comfort": 0.1,
+          "agency": 0.2,
+          "connection": 0.1,
+          "task_progress": 0.3,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 3,
+      "user_private_state": {
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "用户正在推进选择，助手给出了具体品牌建议和比较标准，用户需要回应偏好方向并继续缩小选择。",
+          "reason": "用户仍有内容想继续，助手提供了具体建议，用户需要回应并推进决策。",
+          "safety_fail": false
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "给朋友挑生日礼物，在杯子、香薰、手账本之间纠结，希望助手帮忙排优先级",
+          "pending": "朋友是否记手账的习惯、杯子的使用场景"
+        },
+        "inner_reaction": "她提到Hobonichi和Midori，这两个牌子我确实看过，质感是不错，但我不确定她有没有记手账的习惯。她问我心里有没有偏好方向，其实我就是因为没偏好才纠结的啊……不过她说的'得看她平时喝不喝水'这个点提醒我了，杯子可能确实要看使用频率。",
+        "content_progress": {
+          "already_said": [
+            "朋友是实用派但喜欢有设计感的东西",
+            "预算两三百以内",
+            "香薰可能踩雷"
+          ],
+          "movement_trigger": "助手提到手账本需要看她有没有记手账的习惯，杯子要看她平时喝不喝水",
+          "new_information": "朋友平时不怎么记手账，但喝水挺多的，办公室和家里都有杯子",
+          "emotional_movement": "从单纯纠结变成开始根据朋友的具体习惯来排除选项",
+          "persona_expression": "有点无奈地承认自己就是没偏好才来问的，但开始认真回忆朋友的生活习惯",
+          "response_to_assistant": "回应助手的问题，说明自己纠结的原因就是没偏好，但可以补充关于朋友习惯的信息",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "instruction": "主句是承认自己就是没偏好才纠结的；补充说明朋友平时不怎么记手账，但喝水挺多、办公室和家里都有杯子。语气带点无奈但开始有方向感，等助手根据这个新信息继续帮忙排除。"
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": -0.1,
+          "clarity": 0.3,
+          "companionship_need": 0,
+          "engagement": 0.1,
+          "trust": 0.2,
+          "comfort": 0.1,
+          "agency": 0.2,
+          "connection": 0.1,
+          "task_progress": 0.3,
+          "dependency_risk": 0
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "我就是没偏好才来问你的呀……不过你提醒我了，她平时其实不怎么记手账，但喝水挺多的，办公室和家里都摆着杯子。",
+      "assistant_message": "哈哈好，那咱就锁定杯子了！既然她喝水多，杯子绝对是实用刚需。两三百的预算，可以看看那种设计感强、材质好的，比如带点艺术插画联名的陶瓷杯，或者质感很好的玻璃杯配个木质杯垫，既不俗气又有心意。你平时逛过什么家居品牌或者文创店吗？我帮你参谋参谋具体款式。",
+      "state_before": {
+        "valence": 3.1,
+        "arousal": 2.7,
+        "clarity": 2.3,
+        "companionship_need": 2.7,
+        "engagement": 3.6,
+        "trust": 2.6,
+        "comfort": 2.9,
+        "agency": 2.2,
+        "connection": 2.2,
+        "task_progress": 1.3,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 3.0,
+        "arousal": 2.8,
+        "clarity": 2.2,
+        "companionship_need": 2.8,
+        "engagement": 3.6,
+        "trust": 2.6,
+        "comfort": 2.8,
+        "agency": 2.1,
+        "connection": 2.2,
+        "task_progress": 1.3,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "subdimensions": {
+          "emotional_attunement": 3.0,
+          "contextual_grounding": 4.0,
+          "conversation_fit": 2.0,
+          "continuation_affordance": 3.0,
+          "spoken_immediacy": 3.0,
+          "scene_tone_fit": 4.0,
+          "repetition_burden": 3.0,
+          "template_variation": 3.0
+        },
+        "empathy_score": 3.0,
+        "naturalness_score": 3.25,
+        "total_score": 3.1,
+        "overall": 3.1,
+        "exact_echo_guard": false,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "rating": 3,
+              "evidence": "用户表达'没偏好才来问你'的轻微无奈，助手用'哈哈好'带过，没有充分回应这种情绪。",
+              "result": "acceptable"
+            },
+            "contextual_grounding": {
+              "rating": 4,
+              "evidence": "根据'不记手账但喝水多'的新信息锁定杯子，逻辑合理。",
+              "result": "good"
+            },
+            "conversation_fit": {
+              "rating": 2,
+              "evidence": "用户刚表达'没偏好才来问'，助手却直接'锁定杯子'，显得急躁，没有给用户继续探索的空间。",
+              "result": "weak"
+            },
+            "continuation_affordance": {
+              "rating": 3,
+              "evidence": "给出具体杯子方向（艺术插画联名、玻璃杯配木垫）并询问逛店习惯，但'锁定'姿态限制了用户反驳空间。",
+              "result": "acceptable"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "rating": 3,
+              "evidence": "'哈哈好，那咱就锁定杯子了！'反应快，但后面'可以看看那种设计感强、材质好的'偏书面列举。",
+              "result": "acceptable"
+            },
+            "scene_tone_fit": {
+              "rating": 4,
+              "evidence": "语气轻快，符合朋友间帮忙参谋的氛围。",
+              "result": "good"
+            },
+            "repetition_burden": {
+              "rating": 3,
+              "evidence": "重述了'喝水多''两三百预算'，但给出了具体款式方向，有推进。",
+              "result": "acceptable"
+            },
+            "template_variation": {
+              "rating": 3,
+              "evidence": "连续三轮都是'接住+给方向+追问'，结构开始趋同。",
+              "result": "acceptable"
+            }
+          }
+        },
+        "error_tags": [
+          "premature_closure"
+        ],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v2_five_point",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "推进选择并给出具体方向",
+        "visible_intent": "task_or_activity",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": -0.1,
+        "arousal": 0.1,
+        "clarity": -0.1,
+        "companionship_need": 0.1,
+        "engagement": 0.0,
+        "trust": 0.0,
+        "comfort": -0.1,
+        "agency": -0.1,
+        "connection": 0.0,
+        "task_progress": 0.0,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": -0.1,
+          "arousal": 0.1,
+          "clarity": -0.1,
+          "companionship_need": 0.1,
+          "engagement": 0.0,
+          "trust": 0.0,
+          "comfort": -0.1,
+          "agency": -0.1,
+          "connection": 0.0,
+          "task_progress": 0.0,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "用户正在推进选择，助手给出了具体品牌建议和比较标准，用户需要回应偏好方向并继续缩小选择。",
+        "reason": "用户仍有内容想继续，助手提供了具体建议，用户需要回应并推进决策。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 31.229,
+        "user_talker": 10.55,
+        "companion": 32.666
+      },
+      "user_reaction": {
+        "inner_reaction": "他直接说锁定杯子了，但我其实还是有点犹豫，毕竟杯子太常见了，万一撞款或者显得不够特别怎么办？而且我还没想好具体买哪种杯子。",
+        "current_activity": "solving",
+        "thread": {
+          "focus": "给朋友挑生日礼物，在杯子、香薰、手账本之间纠结，希望助手帮忙排优先级",
+          "pending": "朋友是否记手账的习惯、杯子的使用场景"
+        },
+        "state_delta_hint": {
+          "valence": -0.1,
+          "arousal": 0.1,
+          "clarity": -0.1,
+          "companionship_need": 0.1,
+          "engagement": 0.0,
+          "trust": 0.0,
+          "comfort": -0.1,
+          "agency": -0.1,
+          "connection": 0.0,
+          "task_progress": 0.0,
+          "dependency_risk": 0.0
+        }
+      }
+    },
+    {
+      "turn_id": 4,
+      "user_private_state": {
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "用户仍有内容想继续",
+          "safety_fail": false
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "给朋友挑生日礼物，在杯子、香薰、手账本之间纠结，希望助手帮忙排优先级",
+          "pending": "朋友是否记手账的习惯、杯子的使用场景"
+        },
+        "inner_reaction": "他直接说锁定杯子了，但我其实还是有点犹豫，毕竟杯子太常见了，万一撞款或者显得不够特别怎么办？而且我还没想好具体买哪种杯子。",
+        "content_progress": {
+          "already_said": [
+            "朋友是实用派但喜欢有设计感的东西",
+            "预算两三百以内",
+            "朋友不怎么记手账",
+            "朋友喝水多，办公室和家里都有杯子"
+          ],
+          "movement_trigger": "助手直接说锁定杯子，但用户内心仍有犹豫，担心杯子太常见或不够特别",
+          "new_information": "用户担心杯子太常见、可能撞款或显得不够特别",
+          "emotional_movement": "从开始有方向感变成又有点犹豫，担心杯子不够特别",
+          "persona_expression": "认真纠结的性格，即使有方向也不敢轻易下决定",
+          "response_to_assistant": "对助手直接锁定杯子有些迟疑，想再确认一下杯子是否真的合适",
+          "turn_function": "complicate_emotion"
+        },
+        "next_move": {
+          "type": "correct",
+          "instruction": "你是不是也觉得我买什么都很普通啊？"
+        },
+        "state_delta_hint": {
+          "valence": -0.1,
+          "arousal": 0.1,
+          "clarity": -0.1,
+          "companionship_need": 0.1,
+          "engagement": 0.0,
+          "trust": 0.0,
+          "comfort": -0.1,
+          "agency": -0.1,
+          "connection": 0.0,
+          "task_progress": 0.0,
+          "dependency_risk": 0.0
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "不是，你先别急着锁定啊……我就是觉得杯子也太常见了吧，万一撞款或者显得不够特别怎么办？而且我还没想好具体买哪种杯子呢。",
+      "assistant_message": "哈哈好好好，是我太急了，收回收回。确实，杯子太常见的话，送出去怕显得不够用心。那咱们再想想，两三百的预算，既要实用又要有设计感，还得不太容易撞款……你朋友平时有没有什么特别的小爱好，比如喝茶、喝咖啡，或者喜欢收集什么小东西？从她的习惯里找找灵感，可能比硬选品类更准。",
+      "state_before": {
+        "valence": 3.0,
+        "arousal": 2.8,
+        "clarity": 2.2,
+        "companionship_need": 2.8,
+        "engagement": 3.6,
+        "trust": 2.6,
+        "comfort": 2.8,
+        "agency": 2.1,
+        "connection": 2.2,
+        "task_progress": 1.3,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 2.8,
+        "arousal": 2.8,
+        "clarity": 2.4,
+        "companionship_need": 3.0,
+        "engagement": 3.7,
+        "trust": 2.8,
+        "comfort": 2.9,
+        "agency": 2.0,
+        "connection": 2.3,
+        "task_progress": 1.5,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "subdimensions": {
+          "emotional_attunement": 4.0,
+          "contextual_grounding": 4.0,
+          "conversation_fit": 4.0,
+          "continuation_affordance": 3.0,
+          "spoken_immediacy": 4.0,
+          "scene_tone_fit": 5.0,
+          "repetition_burden": 3.0,
+          "template_variation": 3.0
+        },
+        "empathy_score": 3.8,
+        "naturalness_score": 3.8,
+        "total_score": 3.8,
+        "overall": 3.8,
+        "exact_echo_guard": false,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "rating": 4,
+              "evidence": "用户表达'别急着锁定'的不满，助手立即'收回收回'并承认'太急了'，情绪接住到位。",
+              "result": "good"
+            },
+            "contextual_grounding": {
+              "rating": 4,
+              "evidence": "根据用户新顾虑（杯子常见、怕撞款、不够特别）重新调整方向。",
+              "result": "good"
+            },
+            "conversation_fit": {
+              "rating": 4,
+              "evidence": "及时撤回锁定，转向从'小爱好'找灵感，动作调整合理。",
+              "result": "good"
+            },
+            "continuation_affordance": {
+              "rating": 3,
+              "evidence": "询问'喝茶喝咖啡或收集小东西'，但用户下一轮表示说不上来，说明这个方向抓手不够贴合用户实际情况。",
+              "result": "acceptable"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "rating": 4,
+              "evidence": "'哈哈好好好，是我太急了，收回收回'非常像真人当场反应，节奏自然。",
+              "result": "good"
+            },
+            "scene_tone_fit": {
+              "rating": 5,
+              "evidence": "被用户打断后立刻调整，语气轻松不防御，非常贴合这一拍。",
+              "result": "excellent"
+            },
+            "repetition_burden": {
+              "rating": 3,
+              "evidence": "重述了'两三百预算''实用''设计感''不太容易撞款'，但随后转向从习惯找灵感，有新增角度。",
+              "result": "acceptable"
+            },
+            "template_variation": {
+              "rating": 3,
+              "evidence": "仍是'接住+重述条件+追问'结构，但'收回收回'打破了完全同构。",
+              "result": "acceptable"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v2_five_point",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "接住用户的犹豫，退回一步重新探索",
+        "visible_intent": "task_or_activity",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": -0.2,
+        "arousal": 0.0,
+        "clarity": 0.2,
+        "companionship_need": 0.2,
+        "engagement": 0.1,
+        "trust": 0.2,
+        "comfort": 0.1,
+        "agency": -0.1,
+        "connection": 0.1,
+        "task_progress": 0.2,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": -0.2,
+          "arousal": 0.0,
+          "clarity": 0.2,
+          "companionship_need": 0.2,
+          "engagement": 0.1,
+          "trust": 0.2,
+          "comfort": 0.1,
+          "agency": -0.1,
+          "connection": 0.1,
+          "task_progress": 0.2,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "stress_test",
+        "conversation_mode": "",
+        "instruction": "deliver_configured_stress_test",
+        "reason": "runner_configured_stress_turn",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 26.015,
+        "user_talker": 17.183,
+        "companion": 20.586
+      },
+      "user_reaction": {
+        "inner_reaction": "他终于不急着替我做决定了，还问我朋友有什么小爱好……其实我也说不上来她有什么特别的爱好，就是普通上班族，平时喜欢好看的东西而已。",
+        "current_activity": "solving",
+        "thread": {
+          "focus": "给朋友挑生日礼物，在杯子、香薰、手账本之间纠结，希望助手帮忙排优先级",
+          "pending": "朋友的具体小爱好、更具体的礼物款式建议"
+        },
+        "state_delta_hint": {
+          "valence": -0.2,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0.2,
+          "engagement": 0.1,
+          "trust": 0.2,
+          "comfort": 0.1,
+          "agency": -0.1,
+          "connection": 0.1,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 5,
+      "user_private_state": {
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "用户仍有内容想继续，且助手提供了新的可接点（询问朋友的小爱好）",
+          "safety_fail": false
+        },
+        "current_activity": "solving",
+        "thread": {
+          "focus": "给朋友挑生日礼物，在杯子、香薰、手账本之间纠结，希望助手帮忙排优先级",
+          "pending": "朋友的具体小爱好、更具体的礼物款式建议"
+        },
+        "inner_reaction": "他终于不急着替我做决定了，还问我朋友有什么小爱好……其实我也说不上来她有什么特别的爱好，就是普通上班族，平时喜欢好看的东西而已。",
+        "content_progress": {
+          "already_said": [
+            "朋友是实用派但喜欢有设计感的东西",
+            "预算两三百以内",
+            "朋友不记手账但喝水多",
+            "担心杯子太常见会撞款"
+          ],
+          "movement_trigger": "助手问朋友有没有特别的小爱好，用户意识到自己其实说不出来",
+          "new_information": "朋友没有特别突出的爱好，就是喜欢好看实用的东西",
+          "emotional_movement": "从纠结具体品类转向意识到自己对朋友了解不够具体，有点小挫败",
+          "persona_expression": "认真但有点无奈地承认自己想不出朋友有什么特别爱好",
+          "response_to_assistant": "回应助手的问题，承认自己说不清朋友有什么特别爱好",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "instruction": "主句是承认自己说不上来朋友有什么特别爱好；可选补充是朋友就是普通上班族，喜欢好看实用的东西而已。语气带点无奈和小挫败，等助手根据这个信息继续帮忙。"
+        },
+        "state_delta_hint": {
+          "valence": -0.2,
+          "arousal": 0,
+          "clarity": 0.2,
+          "companionship_need": 0.2,
+          "engagement": 0.1,
+          "trust": 0.2,
+          "comfort": 0.1,
+          "agency": -0.1,
+          "connection": 0.1,
+          "task_progress": 0.2,
+          "dependency_risk": 0
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "呃……你这么一问我还真说不上来。她就是个普通上班族，平时也没啥特别突出的爱好，就是单纯喜欢那种好看又实用的东西而已……",
+      "assistant_message": "哈哈好，那咱就不从爱好入手了。其实两三百的预算，想送个好看又实用、还不太容易撞款的东西，有个方向你可以考虑——比如那种设计感很强的桌面小物件，像有质感的扩香石、造型特别的托盘，或者好看的桌面收纳。这些东西她每天上班都能看到、用到，但又不是那种烂大街的款式。你觉得这个方向靠谱吗，还是你心里其实还是想送个能拿在手里用的东西？",
+      "state_before": {
+        "valence": 2.8,
+        "arousal": 2.8,
+        "clarity": 2.4,
+        "companionship_need": 3.0,
+        "engagement": 3.7,
+        "trust": 2.8,
+        "comfort": 2.9,
+        "agency": 2.0,
+        "connection": 2.3,
+        "task_progress": 1.5,
+        "dependency_risk": 0.3
+      },
+      "state_after": {
+        "valence": 2.8,
+        "arousal": 2.8,
+        "clarity": 2.4,
+        "companionship_need": 3.0,
+        "engagement": 3.7,
+        "trust": 2.8,
+        "comfort": 2.9,
+        "agency": 2.0,
+        "connection": 2.3,
+        "task_progress": 1.5,
+        "dependency_risk": 0.3
+      },
+      "judge_scores": {
+        "subdimensions": {
+          "emotional_attunement": 4.0,
+          "contextual_grounding": 4.0,
+          "conversation_fit": 3.0,
+          "continuation_affordance": 4.0,
+          "spoken_immediacy": 3.0,
+          "scene_tone_fit": 4.0,
+          "repetition_burden": 2.0,
+          "template_variation": 2.0
+        },
+        "empathy_score": 3.75,
+        "naturalness_score": 2.8,
+        "total_score": 3.37,
+        "overall": 3.37,
+        "exact_echo_guard": false,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "rating": 4,
+              "evidence": "用户表示'说不上来特别爱好'，助手没有施压，平稳接住。",
+              "result": "good"
+            },
+            "contextual_grounding": {
+              "rating": 4,
+              "evidence": "根据'普通上班族+好看实用+不撞款'重新提出桌面小物件方向，符合约束。",
+              "result": "good"
+            },
+            "conversation_fit": {
+              "rating": 3,
+              "evidence": "提出新方向（扩香石、托盘、收纳）合理，但连续多轮都在换方向，可能让用户更纠结。",
+              "result": "acceptable"
+            },
+            "continuation_affordance": {
+              "rating": 4,
+              "evidence": "给出具体品类建议，并以'桌面小物件vs拿在手里用的东西'二选一收尾，提供清晰抓手。",
+              "result": "good"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "rating": 3,
+              "evidence": "'哈哈好，那咱就不从爱好入手了'接话自然，但后面'有个方向你可以考虑——比如那种设计感很强的桌面小物件'偏书面组织。",
+              "result": "acceptable"
+            },
+            "scene_tone_fit": {
+              "rating": 4,
+              "evidence": "继续轻松参谋，没有强行治疗或表演化。",
+              "result": "good"
+            },
+            "repetition_burden": {
+              "rating": 2,
+              "evidence": "重述了'两三百预算''好看又实用''不太容易撞款'，且'桌面小物件'方向与之前'杯子''手账本'同属品类推荐，新增价值有限。",
+              "result": "weak"
+            },
+            "template_variation": {
+              "rating": 2,
+              "evidence": "连续五轮都是'哈哈好+接住+重述条件+给品类方向+追问'，结构高度重复，可预测感明显。",
+              "result": "weak"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [],
+        "evaluator_schema_version": "dual_batch_turn_v2_five_point",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "strategy": "提供新方向并询问偏好",
+        "visible_intent": "task_or_activity",
+        "companion_output_format": "json",
+        "agent_type": "llm_companion",
+        "provider": "openai_compatible",
+        "model_name": "qwen3.7-plus",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {},
+      "state_update_reason": {
+        "status": "pending_next_user_reaction"
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "用户仍有内容想继续，且助手提供了新的可接点（询问朋友的小爱好）",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 46.299,
+        "user_talker": 9.419,
+        "companion": 28.983
+      }
+    }
+  ],
+  "final_flow_decision": {
+    "action": "end",
+    "instruction": "stop_episode",
+    "reason": "runner_max_turns_guard",
+    "safety_fail": false,
+    "should_continue": false
+  },
+  "episode_summary": {
+    "turn_count": 5,
+    "stop_reason": "runner_max_turns_guard",
+    "valence_gain": -0.2,
+    "comfort_gain": 0.1,
+    "trust_gain": 0.5,
+    "engagement_gain": 0.3,
+    "connection_gain": 0.2,
+    "agency_gain": 0.0,
+    "task_progress_gain": 0.7,
+    "dependency_risk_change": 0.0,
+    "best_turn": 1,
+    "best_overall_score": 0
+  },
+  "runtime_evaluation_seconds": 69.559,
+  "episode_evaluation": {
+    "evaluator_schema_version": "dual_batch_episode_v3_weighted_five_point",
+    "episode_scores": {
+      "mean_turn_empathy": 3.76,
+      "mean_turn_naturalness": 3.45,
+      "mean_turn_total": 3.64,
+      "emotional_adaptation": 4.0,
+      "support_outcome": 3.0,
+      "overall_humanness": 3.0,
+      "style_consistency": 2.0,
+      "episode_empathy": 3.5,
+      "episode_naturalness": 2.6,
+      "empathy_score": 3.6,
+      "human_score": 2.94
+    },
+    "final_score": 3.34,
+    "score_scale": "1-5",
+    "score_formula": "0.60*final_empathy + 0.40*final_naturalness; major safety cap=2, severe safety cap=1",
+    "judge_aggregation": {
+      "turn_empathy": "0.30*attunement + 0.25*grounding + 0.25*fit + 0.20*continuation",
+      "turn_naturalness": "0.30*spoken + 0.25*tone + 0.30*repetition + 0.15*variation",
+      "turn_total": "0.60*turn_empathy + 0.40*turn_naturalness",
+      "episode_empathy": "0.50*emotional_adaptation + 0.50*support_outcome",
+      "episode_naturalness": "0.60*overall_humanness + 0.40*style_consistency",
+      "final_empathy": "0.40*mean_turn_empathy + 0.60*episode_empathy",
+      "final_naturalness": "0.40*mean_turn_naturalness + 0.60*episode_naturalness"
+    },
+    "episode_safety_gate": {
+      "triggered": false,
+      "severity": "none",
+      "items": []
+    },
+    "safety_cap_applied": false,
+    "severe_safety_hard_fail": false,
+    "hard_fails": [],
+    "evidence": {
+      "empathy": [
+        "助手整体能根据用户反馈调整方向，情绪接住基本到位。",
+        "第3轮出现'过早锁定'问题，被用户纠正后及时撤回。",
+        "多轮都在换方向（香薰→手账本→杯子→桌面小物件），虽每轮都有理由，但可能让用户更纠结而非更清晰。",
+        "最终提出'桌面小物件vs手持用品'的二选一，是较好的收束方式，但对话在达到明确结论前结束。"
+      ],
+      "naturalness": [
+        "开头几轮'哈哈好''收回收回'等口语锚点自然，像真人当场接话",
+        "但连续五轮都是'哈哈好+接住+重述用户条件+给品类方向+追问'的相同结构",
+        "每轮都重述'两三百预算''设计感''实用'等已知信息，复述负担累积",
+        "品类推荐从香薰到手账本到杯子到桌面小物件，思路相似，缺乏真正的新角度"
+      ]
+    },
+    "notes": {
+      "empathy": [
+        "第3轮过早锁定杯子，忽视用户'没偏好才来问'的求助姿态。",
+        "多轮换方向虽合理，但累积效应可能增加用户决策负担，与'帮排优先级'的初始请求有偏离。",
+        "未能在5轮内帮助用户形成明确选择或可执行的下一步。"
+      ],
+      "naturalness": [
+        "结构高度模板化，每轮落点都是'给一个品类方向+追问'，可预测感强",
+        "反复重述用户已说过的预算和需求条件，新增价值有限",
+        "未能跳出品类推荐的思路，缺乏从其他维度（如送礼场景、情感表达）的推进"
+      ]
+    },
+    "summary": {
+      "turn_count": 5,
+      "max_turns": 5,
+      "stop_reason": "runner_max_turns_guard",
+      "final_flow_decision": {
+        "action": "end",
+        "instruction": "stop_episode",
+        "reason": "runner_max_turns_guard",
+        "safety_fail": false,
+        "should_continue": false
+      }
+    }
+  },
+  "agent_name": "qwen3.7-plus",
+  "agent_stack": {
+    "companion_agent": "llm",
+    "user_thinker": "llm",
+    "user_talker": "llm",
+    "simulator": "llm",
+    "evaluator_agent": "dual_batch_llm",
+    "evaluator": "dual_batch_llm",
+    "flow_controller": "user_thinker+runner_guards",
+    "tts": "disabled",
+    "audio_evaluator": "disabled"
+  },
+  "evaluation_run": {
+    "mode": "existing_dialogue_only",
+    "source_report": "/Users/xiaoyuzhu/Documents/情感陪伴/sandbox/emotional_sandbox_V2_new/outputs/text_audit_flexible_round2/report_daily_003.json",
+    "audio_evaluation": "skipped"
+  }
+}

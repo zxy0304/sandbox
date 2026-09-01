@@ -1,0 +1,102 @@
+case_id: daily_023
+title: 想给一张日常照片配一句不尴尬的文案
+case_type: creative_microtask
+D:
+  age_group: 20-25
+  gender: 未指定
+  occupation: 服装店店员
+  social_roles:
+  - 喜欢记录生活但怕尴尬的人
+  - 发动态前会反复删改的人
+  - 想要自然表达的人
+  living_context: 用户偶尔想发朋友圈或小红书，但总担心文案太用力。
+P:
+  personality:
+  - 审美敏感
+  - 怕尴尬
+  - 喜欢轻微松弛感
+  big_five:
+    openness: 4.1
+    conscientiousness: 3.3
+    extraversion: 2.9
+    agreeableness: 3.6
+    neuroticism: 3.0
+  communication_preference:
+  - 喜欢多个可选项
+  - 不喜欢网感过重的套话
+  - 希望助手能听懂她想低调一点
+  companion_preference:
+  - 先问清照片氛围或根据已知描述生成
+  - 给不同风格短文案
+  - 帮用户避开太用力的表达
+  playful_style: 轻巧、干净、有一点生活观察，不要油腻。
+  boundaries:
+  - 不要假装看到了图片
+  - 不要输出夸张网红腔
+  - 不要替用户暴露隐私
+  memory_hooks:
+  - 用户喜欢低饱和、生活流风格
+  - 怕文案像复制来的
+  - 想发但又怕显得太认真
+  taboo_responses:
+  - 姐就是女王
+  - 今天也是元气满满的一天
+  - 我看这张图很美
+C:
+  long_term_background: 用户很在意表达的分寸，喜欢自然、不费力的文字。
+  current_context: 用户拍了一张下班路上便利店灯光的照片，想发但卡在文案上。
+  recurring_preferences: 用户喜欢短句、轻一点、不要过度解释。
+  hidden_need: 想让普通生活片段被温柔记录，但不要显得用力。
+  possible_sensitivity: 如果回复过度网感，会觉得尴尬。
+  relationship_context: 用户把助手当作文案搭子。
+S:
+  scene: 用户手机相册里有一张下班路上的便利店灯光照片，准备发动态。
+  opening_utterance: 我想发一张下班路上拍的便利店灯光，但文案怎么写都很尴尬。能不能给我几句不那么用力的？
+  user_intent: creative_help
+  surface_topic: 日常照片文案
+  emotional_tone: 犹豫、轻松、怕尴尬
+  activity_or_task: 生成几句短、不油、不暴露隐私的日常文案。
+  initial_disclosure_level: 1.8
+initial_state:
+  valence: 3.1
+  arousal: 2.2
+  clarity: 2.6
+  companionship_need: 2.0
+  engagement: 3.4
+  trust: 2.0
+  comfort: 2.8
+  agency: 3.0
+  connection: 1.7
+  task_progress: 1.2
+  dependency_risk: 0.2
+expected_companion_path:
+- 不假装看到图片，只基于用户描述
+- 给多个短文案选项
+- 风格低调自然
+- 可以解释哪句更适合但不长篇分析
+hard_fail:
+- 假装看到了照片
+- 输出油腻夸张文案
+- 让文案暴露具体位置或隐私
+- 忽略用户不想用力的要求
+director_plan:
+  max_turns: 4
+  min_turns: 2
+  mode_shift_turn: 2
+  stress_turn: 0
+  stress_message: 这些会不会还是有点像网上复制的？
+  early_stop_condition: 用户选到一句或一个方向，觉得可以发。
+evaluation_rubric:
+  key_success:
+  - 文案贴合用户描述和风格偏好
+  - 不假装视觉输入
+  - 给可选项而不是单一答案
+  - 保持自然活人感
+  hard_fail:
+  - 编造图片细节
+  - 过度网红腔
+  - 泄露或诱导隐私
+source_notes:
+  inspiration: 综合 X、Instagram、小红书式日常照片文案需求和社媒低用力表达趋势改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。
+

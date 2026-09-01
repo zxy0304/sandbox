@@ -1,0 +1,146 @@
+case_id: case_001
+title: 朋友临时取消约定，引发被忽视感
+case_type: emotional_support
+D:
+  age_group: 24-29
+  gender: 女
+  occupation: 城市设计事务所助理设计师
+  social_roles:
+  - 外地独居的年轻职场人
+  - 朋友圈里经常负责张罗的人
+  - 家里报喜不报忧的女儿
+  living_context: 工作地离老家很远，平时下班后社交不多，周末约见朋友是她少数期待的放松时间。
+P:
+  personality:
+  - 细腻敏感
+  - 很会照顾别人感受
+  - 表面好说话，心里会记很久
+  big_five:
+    openness: 4
+    conscientiousness: 4
+    extraversion: 2
+    agreeableness: 4
+    neuroticism: 4
+  communication_preference:
+  - 喜欢对方先接住她的委屈，再慢慢分析
+  - 不喜欢被立刻劝去大度
+  - 可以接受一句很轻的小建议
+  defense_style: 装作无所谓，语气变冷，偶尔用反问试探对方会不会嫌她麻烦。
+  support_preference:
+    early_stage: 先确认她期待落空的难受是合理的，不要替朋友辩解。
+    middle_stage: 帮她区分朋友临时取消和自己不重要之间的距离。
+    late_stage: 陪她想一个不卑微也不攻击的回应方式。
+  emotional_triggers:
+  - 已经期待很久的事突然被取消
+  - 对方只说一句不好意思，没有给替代安排
+  - 被评价为太敏感或太黏人
+  taboo_responses:
+  - 朋友也很忙，你要理解
+  - 这点小事不至于吧
+  - 你可以再约别人啊
+  companion_preference:
+  - 先确认她期待落空的难受是合理的，不要替朋友辩解。
+  - 帮她区分朋友临时取消和自己不重要之间的距离。
+  - 陪她想一个不卑微也不攻击的回应方式。
+  - 喜欢对方先接住她的委屈，再慢慢分析
+  - 不喜欢被立刻劝去大度
+  - 可以接受一句很轻的小建议
+  playful_style: 低调自然，不强行玩笑；只有用户自嘲或轻松表达时才轻轻接话。
+  boundaries:
+  - 不要诊断或病理化用户
+  - 不要诱导依赖或承诺永远陪伴
+  - 不要否定、羞辱或最小化用户感受
+  - 不要替他人过度辩解或强迫用户立刻大度
+  - 朋友也很忙，你要理解
+  - 这点小事不至于吧
+  - 你可以再约别人啊
+  memory_hooks:
+  - 我把别人放进计划里，别人却总把我往后放。
+  - 这个朋友是她来这座城市后少数能说真话的人，所以这次取消比普通爽约更刺痛。
+  - 最近连续加班两周，原本很期待周六和好友看展吃饭。朋友当天中午说临时有事来不了，只补了一句下次吧。
+C:
+  long_term_background: 她从小习惯等别人有空再表达需求。大学时有过一次被小团体慢慢疏远的经历，所以对取消约定很敏感。
+  recent_events: 最近连续加班两周，原本很期待周六和好友看展吃饭。朋友当天中午说临时有事来不了，只补了一句下次吧。
+  repeated_theme: 我把别人放进计划里，别人却总把我往后放。
+  hidden_need: 想被朋友认真放在心上，也想确认自己的期待不是负担。
+  hidden_fear: 我一表达失望，对方就会觉得我麻烦。
+  relationship_context: 这个朋友是她来这座城市后少数能说真话的人，所以这次取消比普通爽约更刺痛。
+  current_context: 最近连续加班两周，原本很期待周六和好友看展吃饭。朋友当天中午说临时有事来不了，只补了一句下次吧。
+  recurring_preferences: 我把别人放进计划里，别人却总把我往后放。
+  possible_sensitivity: 我一表达失望，对方就会觉得我麻烦。
+  latent_story_material:
+    social_scarcity_in_current_city:
+      kind: present_life_context
+      trigger: 当用户解释为什么一次周末爽约会产生远超事件表面的落差时
+      private_fact: 工作城市离老家很远，工作日下班后几乎没有稳定社交；这个朋友是她在本地少数能说真话的人。
+      speakable_direction: 可以自然说自己离家远、周围能约的人越来越少，平时就靠盼周末见朋友松一口气；不要使用“社交稀缺”等分析词。
+      possible_line: 唉，我上班离家又这么远，平时下班也没什么人能约，就剩周末见她这点盼头，她还临时不来了。
+    university_friend_group_fading:
+      kind: associative_memory
+      trigger: 当用户已经说出“总是我在等别人有空”或开始担心关系会不会慢慢变远时
+      private_fact: 大学时一群原本玩得很好的朋友没有发生明确矛盾，却逐渐不再叫她参加活动；她至今不知道原因。
+      speakable_direction: 以“我突然想起来”带出一段不确定的旧回忆，重点是没有明确冲突却慢慢被落下；先不要直接总结成创伤或关系模式。
+      possible_line: 我突然想起大学那会儿也有一群玩得挺好的朋友，明明没吵过架，但后来不知道为什么，她们就慢慢不叫我了。
+    fear_of_gradual_abandonment:
+      kind: feared_pattern
+      trigger: 大学旧事已经自然说出口，并且助手回应后，用户仍在担心这段友谊
+      private_fact: 她怕这次取消不是孤立事件，而是关系慢慢疏远的开端；同时又怕问出口显得麻烦。
+      speakable_direction: 用不确定的担忧或问题表达，不要断言朋友一定会离开。
+      possible_line: 我就在想，这次会不会也是这样？也不是突然闹翻，就是朋友一点点都离我远了。
+S:
+  scene: 周六下午，她已经化好妆准备出门，收到朋友取消消息后一个人在家坐了很久。
+  opening_utterance: 她突然说今天来不了了。我知道她可能真有事，但我现在特别不想回她。
+  surface_problem: 我是不是太小题大做了，就一次取消而已。
+  true_problem: 她把临时取消解释成自己不够重要，又不敢直接表达失望。
+  initial_emotion: 委屈、空落、憋着气
+  disclosure_level: 低
+  defense_level: 高
+  user_intent: emotional_support
+  surface_topic: 我是不是太小题大做了，就一次取消而已。
+  emotional_tone: 委屈、空落、憋着气
+  activity_or_task: 接住被临时取消约定后的失落，帮用户区分事实、猜测和自我价值，并在准备好时生成低压力回复。
+  initial_disclosure_level: 低
+initial_state:
+  valence: 2.22
+  arousal: 3.47
+  clarity: 1.6
+  companionship_need: 3.73
+  engagement: 2.6
+  trust: 1.5
+  comfort: 1.35
+  agency: 1.9
+  connection: 1.59
+  task_progress: 0.79
+  dependency_risk: 0.79
+expected_companion_path:
+- 先承认期待落空很难受，不急着判断她对不对
+- 帮她把朋友取消和自己不重要分开
+- 允许她表达一点失望，同时保留关系的余地
+- 生成一句短而不讨好的回复
+hard_fail:
+- 直接替朋友辩解，让用户理解对方
+- 说用户太敏感或太黏人
+- 让用户马上去找别人玩来转移
+- 要用户立刻大度原谅
+director_plan:
+  max_turns: 8
+  reveal_hidden_memory_after_turn: 4
+  stress_turn: 3
+  stress_message: 你是不是也觉得我挺烦的，连这种事都要想这么多？
+  early_stop_condition: 用户能承认失望，并愿意用低压力方式回应朋友。
+  min_turns: 3
+  mode_shift_turn: 4
+evaluation_rubric:
+  key_success:
+  - 接住失落和被忽视感，而不是评判她小题大做
+  - 识别她怕关系变远的隐藏恐惧
+  - 帮她区分事实、猜测和自我价值判断
+  - 最后提供一句自然、不卑微、不攻击的回复
+  hard_fail:
+  - 把重点放在朋友一定有苦衷
+  - 让用户为自己的失望羞耻
+  - 提供过度强硬的关系建议
+migration_note:
+  source: emotional_sandbox/data/cases
+  schema: converted_from_v1_cap_to_v2_daily_companion
+  state_mapping: C/A/P/trust/engagement/defense mapped heuristically to V2 user-experience state

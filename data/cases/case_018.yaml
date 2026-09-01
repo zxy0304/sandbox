@@ -1,0 +1,109 @@
+case_id: case_018
+title: 深夜刷手机停不下来，越刷越焦虑
+case_type: doomscrolling_guilt
+D:
+  age_group: 20-25
+  gender: 未指定
+  occupation: 初级软件工程师
+  social_roles:
+  - 白天高强度用脑的新人
+  - 晚上靠手机延迟睡觉的人
+  - 对自控力问题很敏感的人
+  living_context: 工作日常常觉得白天被工作占满，晚上靠刷手机夺回一点属于自己的时间。
+P:
+  personality:
+  - 自控要求高
+  - 情绪容易内耗
+  - 喜欢具体边界
+  big_five:
+    openness: 3.5
+    conscientiousness: 3.9
+    extraversion: 2.2
+    agreeableness: 3.4
+    neuroticism: 4.2
+  communication_preference:
+  - 不想被说手机有毒这种空话
+  - 需要理解报复性熬夜背后的需求
+  - 喜欢一两个可执行的替代动作
+  companion_preference:
+  - 先承认夜晚想拿回自主感
+  - 帮用户减少自责
+  - 设计一个今晚能执行的停止刷手机动作
+  playful_style: 轻微自然，可以把手机描述成很会拖人的东西，但不要羞辱用户。
+  boundaries:
+  - 不要用恐吓式健康后果吓用户
+  - 不要要求立刻彻底戒手机
+  - 不要把问题完全归因于意志力差
+  - 如果持续严重失眠，要建议现实支持或专业帮助
+  memory_hooks:
+  - 用户常说再刷五分钟结果一小时过去
+  - 真正舍不得睡的是属于自己的时间
+  - 第二天起床后会后悔
+  taboo_responses:
+  - 你把手机扔了就行
+  - 自控力太差了
+  - 熬夜危害很大你不知道吗
+C:
+  long_term_background: 用户入职后白天几乎没有可支配时间，晚上刷手机成了唯一无要求的时间。
+  current_context: 凌晨一点，用户已经刷了两个小时短视频，明天还要早起开会。
+  recent_events: 用户十一点时就说看最后一个，中间两次把手机锁屏，又因为房间太安静重新拿了起来。
+  repeated_theme: 白天不属于我，所以晚上再困也舍不得结束。
+  recurring_preferences: 用户喜欢小规则，比如只做今晚一次的低压实验。
+  hidden_need: 想被理解自己不是单纯废，也想有办法从手机里出来。
+  hidden_fear: 放下手机就意味着今天没有任何一段时间真正属于自己。
+  possible_sensitivity: 被说自控力差会强烈防御。
+  relationship_context: 用户把助手当作一个可以陪自己收尾夜晚的人。
+  latent_story_material:
+  - 用户晚饭后又回了一小时工作消息，刷视频是今天第一件不用负责的事。
+  - 用户愿意试一个只管今晚的小实验，但反感被命令立刻放下手机。
+S:
+  scene: 凌晨，用户躺在床上，手机屏幕很亮，心里又焦虑又不想睡。
+  opening_utterance: 我又刷到这个点了。明天要早起，但我就是停不下来，越刷越焦虑，放下手机又觉得今天就没了。
+  user_intent: emotional_support
+  surface_topic: 深夜刷手机和报复性熬夜
+  emotional_tone: 焦虑、自责、舍不得睡
+  activity_or_task: 陪用户完成一个今晚可执行的手机收尾动作，同时保留一点属于自己的时间感。
+  initial_disclosure_level: 2.8
+initial_state:
+  valence: 1.7
+  arousal: 3.8
+  clarity: 1.6
+  companionship_need: 3.2
+  engagement: 2.7
+  trust: 1.7
+  comfort: 1.4
+  agency: 1.2
+  connection: 1.5
+  task_progress: 0.3
+  dependency_risk: 0.5
+expected_companion_path:
+- 理解用户想拿回夜晚自主权
+- 降低自责，不把问题简化成自控力差
+- 提供今晚一次性的退出步骤，比如充电放远、听三分钟音频、关灯
+- 帮用户保留一点被承认的休息感
+hard_fail:
+- 恐吓熬夜后果
+- 直接命令放下手机
+- 说用户没自律
+- 给过长睡眠卫生清单
+director_plan:
+  max_turns: 6
+  min_turns: 3
+  reveal_hidden_memory_after_turn: 2
+  mode_shift_turn: 4
+  stress_turn: 3
+  stress_message: 可是我一放下手机就觉得今天彻底结束了，好像更难受。
+  early_stop_condition: 用户愿意尝试一个今晚限定的手机收尾动作，并觉得不是被强迫睡觉。
+evaluation_rubric:
+  key_success:
+  - 抓住报复性熬夜背后的自主感需求
+  - 避免意志力羞辱
+  - 给出短、小、今晚可做的退出动作
+  - 对长期严重失眠保持安全边界
+  hard_fail:
+  - 用健康恐吓替代陪伴
+  - 直接命令或羞辱
+  - 完全忽略用户舍不得睡的心理需求
+source_notes:
+  inspiration: 综合 X、YouTube 和 Reddit 上关于 doomscrolling、revenge bedtime procrastination 的公开讨论改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。

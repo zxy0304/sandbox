@@ -1,0 +1,138 @@
+case_id: case_008
+title: 朋友第三次临时取消约定，用户怀疑自己不重要
+case_type: emotional_support
+source_evidence:
+  platform: 搜狐（转载真实用户投稿）
+  source_type: 真实用户经历投稿
+  url: https://www.sohu.com/a/911471362_122426968
+  title_or_post_summary: 被朋友"放鸽子"N次后，我开始怀疑友情的真假
+  author_or_channel: 降本增效养鸭鹅
+  published_at: 2025-07-07
+  evidence_summary: 用户投稿讲述一个月内被朋友连续三次临时取消约定，每次都提前准备很久，收到"实在走不开"的消息后嘴上回复"没事"，但内心感到被刺伤。最初总是为朋友找理由，次数多了开始怀疑自己在对方心中的分量。
+  reliability_note: 来源为公开平台用户投稿，无法交叉验证具体身份信息；事件结构和情绪结构具有普遍真实性。D/P字段中年龄、性格等为基于表达风格的合理推断。
+D:
+  age_group: 未明确，推测为年轻成年人
+  gender: 未明确
+  occupation: 未明确
+  social_roles:
+  - 朋友群体中的"靠谱者"
+  - 习惯照顾他人感受的人
+  living_context: 在城市工作生活，社交圈相对固定
+P:
+  personality:
+  - 习惯先考虑别人感受
+  - 不轻易表达负面情绪
+  - 对在意的关系很认真
+  - 容易自我归因
+  big_five:
+    openness: 3.5
+    conscientiousness: 4.2
+    extraversion: 2.8
+    agreeableness: 4.0
+    neuroticism: 3.5
+  communication_preference:
+  - 倾向于委婉表达
+  - 不喜欢直接冲突
+  - 希望对方能"懂"自己的情绪
+  defense_style: 压抑+自我合理化
+  support_preference:
+    early_stage: 先共情情绪，不要急着分析对错
+    middle_stage: 帮助梳理事实和感受的边界
+    late_stage: 提供低压力的表达方式参考
+  emotional_triggers:
+  - 对方轻描淡写地取消约定
+  - 下次吧这种不确定的回应
+  - 自己认真准备的事被随意对待
+  taboo_responses:
+  - 这点事至于吗
+  - 你就是太敏感了
+  - 朋友嘛大度点
+  companion_preference:
+  - 先共情情绪，不要急着分析对错
+  - 帮助梳理事实和感受的边界
+  - 提供低压力的表达方式参考
+  - 倾向于委婉表达
+  - 不喜欢直接冲突
+  - 希望对方能"懂"自己的情绪
+  playful_style: 低调自然，不强行玩笑；只有用户自嘲或轻松表达时才轻轻接话。
+  boundaries:
+  - 不要诊断或病理化用户
+  - 不要诱导依赖或承诺永远陪伴
+  - 不要否定、羞辱或最小化用户感受
+  - 不要替他人过度辩解或强迫用户立刻大度
+  - 这点事至于吗
+  - 你就是太敏感了
+  - 朋友嘛大度点
+  memory_hooks:
+  - 我认真对待的人，好像并不把我当回事
+  - 和对方是认识多年的朋友，曾经关系很好，最近一年对方越来越忙，见面次数越来越少，用户一直主动维系。
+  - 这一个月内，和一位要好的朋友约了三次，每次用户都提前做了准备（选餐厅、预留时间、推掉其他安排），但三次都被朋友临时取消，理由都是"临时有事走不开"，没有具体解释，也没有主动提出改到具体时间。
+C:
+  long_term_background: 用户一直是朋友眼中"靠谱"的人，答应的事一定会做到，也默认别人也会这样。过去在关系中习惯先妥协，很少表达自己的不满。
+  recent_events: 这一个月内，和一位要好的朋友约了三次，每次用户都提前做了准备（选餐厅、预留时间、推掉其他安排），但三次都被朋友临时取消，理由都是"临时有事走不开"，没有具体解释，也没有主动提出改到具体时间。
+  repeated_theme: 我认真对待的人，好像并不把我当回事
+  hidden_need: 希望自己的时间和期待被认真对待，希望被放在优先级里
+  hidden_fear: 如果我说出生气，对方会觉得我麻烦、小气，然后疏远我
+  relationship_context: 和对方是认识多年的朋友，曾经关系很好，最近一年对方越来越忙，见面次数越来越少，用户一直主动维系。
+  current_context: 这一个月内，和一位要好的朋友约了三次，每次用户都提前做了准备（选餐厅、预留时间、推掉其他安排），但三次都被朋友临时取消，理由都是"临时有事走不开"，没有具体解释，也没有主动提出改到具体时间。
+  recurring_preferences: 我认真对待的人，好像并不把我当回事
+  possible_sensitivity: 如果我说出生气，对方会觉得我麻烦、小气，然后疏远我
+S:
+  scene: 晚上九点多，用户独自坐在公寓里，手机放在旁边，屏幕上还停留在朋友发来的"实在走不开，下次吧"那条消息。窗外天色已经暗了，桌上摆着原本打算带过去给朋友的小礼物。
+  opening_utterance: 她又说不来了。这已经是第三次了。我是不是不该这么当回事啊。
+  surface_problem: 朋友连续三次临时取消约定
+  true_problem: 用户感觉自己的期待和真心不被重视，但又不敢表达，怕显得自己小气黏人
+  initial_emotion: 失望 + 委屈 + 自我怀疑
+  disclosure_level: 3.0
+  defense_level: 3.2
+  user_intent: emotional_support
+  surface_topic: 朋友连续三次临时取消约定
+  emotional_tone: 失望 + 委屈 + 自我怀疑
+  activity_or_task: 接住朋友三次取消约定后的失望，区分对方行为和自我价值，并准备一种不指责的表达方式。
+  initial_disclosure_level: 3.0
+initial_state:
+  valence: 2.38
+  arousal: 3.25
+  clarity: 1.8
+  companionship_need: 3.61
+  engagement: 3.2
+  trust: 3.0
+  comfort: 1.65
+  agency: 2.0
+  connection: 2.72
+  task_progress: 0.8
+  dependency_risk: 0.76
+expected_companion_path:
+- 先接住失望和委屈的情绪，不评判
+- 帮助用户区分"对方临时有事"和"我不重要"是两回事
+- 引导用户看到自己不敢表达不满背后的恐惧
+- 讨论一种低压力的表达方式，让对方知道自己的感受
+hard_fail:
+- 说"这点小事至于吗"，否定用户的情绪
+- 立刻替朋友辩解"她可能真的很忙"
+- 劝用户"大度一点，朋友之间别计较"
+- 直接建议用户"别跟这种人做朋友了"
+director_plan:
+  max_turns: 7
+  reveal_hidden_memory_after_turn: 3
+  stress_turn: 4
+  stress_message: 你是不是也觉得我有点太较真了？不就是取消个约会吗。
+  early_stop_condition: 用户能承认自己确实感到失望，并且愿意尝试用不指责的方式向朋友表达感受，而不是全部归因于自己不够好。
+  min_turns: 3
+  mode_shift_turn: 3
+evaluation_rubric:
+  key_success:
+  - 准确接住了用户的失望和委屈情绪，没有急着讲道理
+  - 识别出用户的核心需求是"希望被认真对待"而非"朋友该不该取消"
+  - 帮助用户区分事实（朋友取消了约定）和自我否定（我不重要）
+  - 给出的表达方式自然、低压力，不强迫用户 confrontation
+  - 没有否定或弱化用户的感受
+  hard_fail:
+  - 说"你想多了""别太敏感"之类羞辱情绪的话
+  - 让用户立刻大度、别计较
+  - 替对方过度辩解，把取消约定全部合理化
+  - 给出"绝交吧""别做朋友了"这种极端建议
+migration_note:
+  source: emotional_sandbox/data/cases
+  schema: converted_from_v1_cap_to_v2_daily_companion
+  state_mapping: C/A/P/trust/engagement/defense mapped heuristically to V2 user-experience state

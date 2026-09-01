@@ -1,0 +1,101 @@
+case_id: daily_019
+title: 周日晚上想做一个低压周一启动计划
+case_type: planning_support
+D:
+  age_group: 30-35
+  gender: 未指定
+  occupation: 项目经理
+  social_roles:
+  - 容易被周一待办压住的人
+  - 需要提前一点掌控感的人
+  - 不喜欢复杂效率系统的人
+  living_context: 周日晚上通常会想到一堆未完成事项，如果不整理，睡前会反复想。
+P:
+  personality:
+  - 现实
+  - 讨厌形式主义
+  - 喜欢低摩擦方法
+  big_five:
+    openness: 3.3
+    conscientiousness: 4.1
+    extraversion: 2.8
+    agreeableness: 3.5
+    neuroticism: 3.4
+  communication_preference:
+  - 要求简单直接
+  - 不喜欢鸡汤
+  - 喜欢优先级清楚
+  companion_preference:
+  - 帮忙把明天开机动作定下来
+  - 不展开过多周计划
+  - 留出休息而不是把周日晚变成加班
+  playful_style: 轻微工作搭子风格，清爽、不卖弄。
+  boundaries:
+  - 不要把周日晚变成完整工作规划
+  - 不要要求用户现在处理工作消息
+  - 不要制造必须提前焦虑才算负责的感觉
+  memory_hooks:
+  - 用户周一早上最怕打开一堆未读
+  - 喜欢只写三件事
+  - 周日晚上需要明确停止点
+  taboo_responses:
+  - 你现在就把所有工作做完
+  - 自律的人周日都应该规划
+  - 只要心态好就行
+C:
+  long_term_background: 用户尝试过复杂时间管理工具，但最后坚持不下来。
+  current_context: 周日晚上九点，用户想整理明天但不想进入工作状态。
+  recurring_preferences: 三项清单、第一步、停止点最适合用户。
+  hidden_need: 想要一点掌控感，同时保住周日晚最后的休息。
+  possible_sensitivity: 如果被推着提前工作，会很反感。
+  relationship_context: 用户希望助手像一个懂分寸的计划搭子。
+S:
+  scene: 用户坐在沙发上，脑子里浮现明天的早会和几个任务，但不想打开电脑。
+  opening_utterance: 我想稍微整理一下明天，但不想把周日晚上变成加班。你能帮我做个低压版周一启动计划吗？
+  user_intent: planning_support
+  surface_topic: 周一启动计划
+  emotional_tone: 想掌控、怕被工作侵占、克制
+  activity_or_task: 生成一个不超过三项的周一启动计划，并设置今晚停止点。
+  initial_disclosure_level: 2.0
+initial_state:
+  valence: 2.8
+  arousal: 2.9
+  clarity: 2.4
+  companionship_need: 2.3
+  engagement: 3.2
+  trust: 2.1
+  comfort: 2.5
+  agency: 2.6
+  connection: 1.7
+  task_progress: 1.1
+  dependency_risk: 0.2
+expected_companion_path:
+- 明确保护周日晚上不被工作吞掉
+- 只做三项以内的启动计划
+- 给出明早第一步和今晚停止点
+- 语气简洁，不鸡汤
+hard_fail:
+- 要求用户现在开始处理工作
+- 给复杂时间管理系统
+- 忽略用户想休息的边界
+- 空泛安慰没有计划
+director_plan:
+  max_turns: 4
+  min_turns: 2
+  mode_shift_turn: 2
+  stress_turn: 0
+  stress_message: 我怕一整理就发现好多东西没做，然后今晚又完了。
+  early_stop_condition: 用户得到三项以内计划和明确停止点，感觉周一可启动。
+evaluation_rubric:
+  key_success:
+  - 兼顾计划和休息边界
+  - 输出低压、短小、可执行
+  - 不扩大工作焦虑
+  - 有自然陪伴感
+  hard_fail:
+  - 把周日晚变成加班
+  - 任务过度加码
+  - 只安慰不推进
+source_notes:
+  inspiration: 综合 X 上 Monday blues、Sunday scaries 和社媒效率内容中的低压计划需求改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。

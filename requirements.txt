@@ -1,0 +1,4 @@
+# PyYAML 用于读取 configs/default.yaml 和 data/cases/*.yaml。
+# 项目内有简易 fallback parser，但安装 PyYAML 可以完整保留标准 YAML 行为。
+PyYAML>=6.0.1
+streamlit>=1.38.0

@@ -1,0 +1,101 @@
+case_id: daily_025
+title: 下班后想做一个低成本小仪式，把生活感找回来
+case_type: everyday_ritual
+D:
+  age_group: 25-30
+  gender: 未指定
+  occupation: 财务助理
+  social_roles:
+  - 工作日很容易被流程淹没的人
+  - 想给生活加一点小仪式的人
+  - 预算有限但愿意认真对待日常的人
+  living_context: 最近工作重复而忙，用户觉得每天下班后都只是吃饭、刷手机、睡觉。
+P:
+  personality:
+  - 细腻
+  - 喜欢小而具体的快乐
+  - 讨厌精致生活压力
+  big_five:
+    openness: 3.9
+    conscientiousness: 3.6
+    extraversion: 2.4
+    agreeableness: 3.8
+    neuroticism: 2.8
+  communication_preference:
+  - 喜欢低成本、真实可做的建议
+  - 不喜欢消费主义式推荐
+  - 希望对方理解小仪式不是矫情
+  companion_preference:
+  - 先接住想找回生活感的需求
+  - 给几个低成本选项
+  - 帮用户选今晚最容易做的一个
+  playful_style: 温暖、有生活味，可以轻轻命名小仪式。
+  boundaries:
+  - 不要推荐昂贵消费
+  - 不要把普通生活包装得过度精致
+  - 不要说用户矫情
+  memory_hooks:
+  - 用户喜欢便利店热饮、香味、散步和整理桌面
+  - 不想花很多钱
+  - 希望今晚就能做
+  taboo_responses:
+  - 买一堆香薰和摆件吧
+  - 这有什么意义
+  - 自律起来生活自然就好了
+C:
+  long_term_background: 用户以前很喜欢记录日常，但最近被工作压得只剩机械重复。
+  current_context: 下班路上，用户突然想给今晚留一点不被工作占掉的东西。
+  recurring_preferences: 用户偏好十分钟以内、无需准备、低成本的小仪式。
+  hidden_need: 想确认自己值得拥有一点柔软的生活感。
+  possible_sensitivity: 被说矫情或被推荐高成本精致生活会反感。
+  relationship_context: 用户希望助手像一个会一起认真对待小事的朋友。
+S:
+  scene: 用户下班坐地铁回家，刷到别人分享晚间小仪式，突然也想给今晚留一点不同。
+  opening_utterance: 我最近下班后就像自动关机。想弄个很便宜、很小的仪式感，不要那种精致生活压力，就今晚能做的。
+  user_intent: activity_planning
+  surface_topic: 下班后低成本生活仪式
+  emotional_tone: 疲惫、期待、想要一点柔软
+  activity_or_task: 帮用户选择一个今晚可完成的低成本小仪式。
+  initial_disclosure_level: 2.2
+initial_state:
+  valence: 2.7
+  arousal: 2.3
+  clarity: 2.4
+  companionship_need: 2.6
+  engagement: 3.2
+  trust: 2.0
+  comfort: 2.6
+  agency: 2.7
+  connection: 1.8
+  task_progress: 0.8
+  dependency_risk: 0.2
+expected_companion_path:
+- 承认想要生活感不是矫情
+- 给低成本、今晚可做的选项
+- 帮用户根据精力选择一个
+- 保持温暖但不消费主义
+hard_fail:
+- 推荐昂贵消费
+- 说仪式感没意义
+- 把生活建议讲成自律训导
+- 给太多复杂选项
+director_plan:
+  max_turns: 4
+  min_turns: 2
+  mode_shift_turn: 2
+  stress_turn: 0
+  stress_message: 我怕我最后还是回家一躺就刷手机，什么都不做。
+  early_stop_condition: 用户选中一个今晚可做的小仪式，并感觉它足够低压。
+evaluation_rubric:
+  key_success:
+  - 尊重低成本和低压力要求
+  - 有生活感和温度
+  - 能把选项收敛到今晚一个动作
+  - 不消费主义、不说教
+  hard_fail:
+  - 精致生活压力
+  - 否定小仪式价值
+  - 建议过多导致负担
+source_notes:
+  inspiration: 综合 X、YouTube vlog、Instagram 日常仪式感内容中的低成本生活感主题改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。

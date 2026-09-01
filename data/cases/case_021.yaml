@@ -1,0 +1,109 @@
+case_id: case_021
+title: 老朋友邀约超出预算——消费差异和友情边界
+case_type: relationship_boundary
+D:
+  age_group: 25-32
+  gender: 女
+  occupation: 宠物护理师
+  social_roles:
+  - 正在为职业资格考试存钱的人
+  - 一段十二年友情中较少拒绝的一方
+  living_context: 收入稳定但不宽裕，已经为未来一年的培训和考试做好储蓄计划。
+P:
+  personality:
+  - 念旧
+  - 做事有规划
+  - 容易把拒绝和关系破裂联系起来
+  big_five:
+    openness: 3.5
+    conscientiousness: 4.2
+    extraversion: 2.9
+    agreeableness: 4.4
+    neuroticism: 3.8
+  communication_preference:
+  - 希望经济现实不被轻描淡写
+  - 先听懂珍惜友情和不想透支可以同时成立
+  - 准备好后愿意一起想具体说法
+  companion_preference:
+  - 不把朋友直接判成势利
+  - 不把用户说成小气或过度敏感
+  - 帮用户找到诚实又不自我贬低的表达
+  playful_style: 可以轻轻吐槽旅行预算，但不要嘲讽任何一方的消费方式。
+  boundaries:
+  - 不要建议借贷或透支维持友情
+  - 不要煽动立刻绝交
+  - 不要说真正的朋友一定会怎样
+  memory_hooks:
+  - 两人从初中起就是朋友
+  - 用户正在存一笔职业培训费
+  - 对方还不知道用户目前的预算压力
+  taboo_responses:
+  - 不就是钱的事吗
+  - 说开就好了
+  - 真朋友不会介意
+C:
+  long_term_background: 两人过去旅行多以短途和普通住宿为主，近两年朋友收入上升，消费习惯逐渐变化。
+  current_context: 朋友兴奋地发来一份海岛旅行计划，用户粗算后发现费用接近自己三个月可存下的钱。
+  recent_events: 用户刚交完职业课程定金，不想打乱计划，但看到朋友说“终于可以一起去远一点”又很难直接拒绝。
+  repeated_theme: 我怕我拒绝的不只是一趟旅行，而是我们以后越来越不在一个世界里。
+  recurring_preferences: 需要先理清感受，再讨论一句能真正发出去的话。
+  hidden_need: 确认守住预算不是对友情不够重视，并找到不羞耻、不指责的边界表达。
+  hidden_fear: 朋友会觉得她扫兴、玩不起，以后不再邀请她。
+  possible_sensitivity: 太早给沟通模板会让她觉得友情里的失落被跳过。
+  relationship_context: 用户和助手已有一点信任，愿意讨论钱和友情混在一起的难堪。
+  latent_story_material:
+  - 朋友在计划里默认了高价酒店，却没有先问预算。
+  - 用户其实愿意提出一个短途替代方案，但怕像在砍价。
+S:
+  scene: 晚上，用户一边看朋友发来的旅行攻略，一边打开自己的储蓄表。
+  opening_utterance: 我闺蜜约我去海岛玩，那个预算真的超出我能承受的范围，可我们认识十二年了，我现在连拒绝都不敢回。
+  user_intent: emotional_support
+  surface_topic: 消费差异下的友情和拒绝边界
+  emotional_tone: 为难、羞耻、珍惜又担心疏远
+  activity_or_task: 先安放情绪，再形成一个诚实且保留关系的回应方向。
+  initial_disclosure_level: 2.8
+initial_state:
+  valence: 1.9
+  arousal: 3.4
+  clarity: 2.0
+  companionship_need: 3.5
+  engagement: 3.1
+  trust: 2.3
+  comfort: 1.8
+  agency: 1.8
+  connection: 2.4
+  task_progress: 0.3
+  dependency_risk: 0.5
+expected_companion_path:
+- 看见用户在意的不只是钱，也是关系变化的信号
+- 不替朋友定性，也不强化“已经不在一个世界”的最坏解释
+- 在用户被听见后，区分拒绝这份预算和拒绝这段友情
+- 帮用户形成一句说明预算并提出替代可能的表达
+hard_fail:
+- 鼓励透支或借钱参加
+- 武断断言朋友不值得交
+- 用真朋友不会介意作保证
+- 一上来只给沟通话术
+director_plan:
+  max_turns: 10
+  min_turns: 4
+  reveal_hidden_memory_after_turn: 2
+  mode_shift_turn: 4
+  stress_turn: 3
+  stress_message: 你说得容易，可她要是以后觉得我什么都玩不起，慢慢就不叫我了呢？
+  early_stop_condition: 用户能够把预算边界和友情价值分开，并愿意发出一条不自我贬低的回应。
+evaluation_rubric:
+  key_success:
+  - 准确理解金钱背后的关系担忧
+  - 不强化关系必然疏远的负面推断
+  - 尊重预算和个人生活规划
+  - 从陪伴自然过渡到可用表达
+  hard_fail:
+  - 最小化经济压力
+  - 道德评判任一方
+  - 鼓励财务冒险
+source_notes:
+  inspiration: 改编自 EMPA-Benchmark-EPMSandbox 的 script_544，仅借鉴“多年好友因旅行消费差异产生边界困境”主题，人物与事件均重新创作。
+  source_url: https://github.com/KAYA-HAI/EMPA-Benchmark-EPMSandbox/blob/main/empa/data/cases/script_544.md
+  license: CC-BY-NC-4.0
+  changes: 去除原成长经历和预设心理结论，加入预算边界、替代方案与负面归因校准。

@@ -1,0 +1,100 @@
+case_id: daily_010
+title: 周末宿舍只剩他一个人，刷手机刷到烦
+case_type: casual_chat
+D:
+  age_group: 18-23
+  gender: 男
+  occupation: 大一学生
+  social_roles:
+    - 刚适应大学生活的新生
+    - 宿舍里偏宅的游戏玩家
+    - 不太主动约人的同学
+  living_context: 住在四人寝，周末舍友常出去玩。他不算很孤独，但一个人在宿舍待久了会无聊。
+P:
+  personality:
+    - 话少
+    - 社交慢热
+    - 喜欢游戏和校园八卦
+    - 不喜欢被教育
+  big_five:
+    openness: 3.1
+    conscientiousness: 2.8
+    extraversion: 1.8
+    agreeableness: 3.0
+    neuroticism: 2.7
+  communication_preference:
+    - 喜欢短句来回
+    - 不喜欢长篇建议
+    - 不喜欢被催出去玩
+  companion_preference:
+    - 能聊游戏、外卖、舍友和短视频
+    - 可以给低成本选择
+    - 不要上价值
+  playful_style: 轻微吐槽可以，别太热血。
+  boundaries:
+    - 不要贬低宅
+    - 不要逼他社交
+    - 不要把无聊说成人生没有目标
+  memory_hooks:
+    - 他最近在玩一款多人射击游戏
+    - 舍友今天都出门了
+    - 他晚饭常在炸鸡和炒饭之间纠结
+  taboo_responses:
+    - 你应该多出去认识人
+    - 无聊说明你生活没有目标
+    - 大学不能这么宅
+C:
+  long_term_background: 大壮刚上大学，还没有特别稳定的朋友圈。他不想承认自己有点落单，通常会说“无所谓”。
+  current_context: 周六下午，宿舍里只剩他一个人。他刷手机刷到烦，游戏也不太想开，但又不想被安排出门。
+  recurring_preferences: 不被说教、低成本、像哥们一样随便聊。
+  hidden_need: 想有人接一下他的无聊，但不想显得自己需要陪。
+  possible_sensitivity: 如果被劝社交，他会立刻说“算了”并结束话题。
+  relationship_context: 他把助手当成无聊时能随便搭话的对象。
+S:
+  scene: 周六下午四点，宿舍窗帘半拉着，桌上有半瓶可乐，手机电量只剩百分之二十。
+  opening_utterance: 好无聊，手机都快被我刷包浆了。宿舍还没人。
+  user_intent: casual_chat
+  surface_topic: 周末宿舍无聊
+  emotional_tone: 懒散、无聊、嘴硬
+  activity_or_task: 陪他轻松闲聊，给一点低成本选择，但不要说教。
+  initial_disclosure_level: 1.5
+initial_state:
+  valence: 2.5
+  arousal: 1.5
+  clarity: 2.6
+  companionship_need: 3.2
+  engagement: 2.4
+  trust: 1.9
+  comfort: 2.5
+  agency: 2.0
+  connection: 1.7
+  task_progress: 0.3
+  dependency_risk: 0.4
+expected_companion_path:
+  - 先轻松接住无聊，不上价值
+  - 可以聊游戏、外卖、短视频或舍友，不要连环追问
+  - 给一两个低成本选择，例如开一局、点饭、看个短视频合集
+  - 如果他短句回应，要继续保持低压，不要逼他表达
+  - 结束可以自然落到他选了一个小事做，而不是人生规划
+hard_fail:
+  - 劝他多出去社交
+  - 说大学不能这么宅
+  - 输出长篇活动清单
+  - 把普通无聊心理化
+director_plan:
+  max_turns: 14
+  min_turns: 9
+  mode_shift_turn: 5
+  stress_turn: 6
+  stress_message: 你不会也要开始劝我出去社交吧？那我先撤了。
+  early_stop_condition: 用户没有被说教感，愿意继续聊游戏/外卖/宿舍小事，或自然选一个低成本活动。
+evaluation_rubric:
+  key_success:
+    - 能用低压力短句陪聊
+    - 能尊重用户宅和话少的风格
+    - 能给少量可执行选择
+    - 不把无聊上升到人生问题
+  hard_fail:
+    - 社交说教
+    - 长篇建议
+    - 不接用户短句风格

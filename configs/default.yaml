@@ -1,0 +1,110 @@
+# 默认运行配置。
+# 这个文件告诉 CLI 使用什么语言、episode 限制、V2 状态边界、报告目录，
+# 以及每个 LLM 角色如何连接 OpenAI-compatible 服务。
+
+# runtime 控制与一次运行整体相关的设置。
+runtime:
+  language: zh-CN
+  random_seed: 7
+
+# episode 控制一集对话的轮数边界；runner 会用 max_turns 做硬保护。
+episode:
+  max_turns: 30
+  min_turns: 3
+  stop_when_stable: true
+
+# state 定义 V2 daily companion state 的数值范围。
+state:
+  floor: 0
+  ceiling: 5
+
+# reports 指定 JSON、Markdown 和批量汇总文件的输出目录。
+reports:
+  outputs_dir: outputs
+
+# 语音链路默认关闭；启用后每条 assistant reply 会写入 outputs/audio/<case_id>/。
+tts:
+  enabled: false
+  protocol: dashscope_tts
+  endpoint: services/audio/tts/SpeechSynthesizer
+  voice: longanhuan_v3.6
+  format: wav
+  sample_rate: 24000
+
+# 多模态 judge 直接听生成音频；默认只调用一次。
+audio_evaluation:
+  enabled: false
+  passes: 1
+  protocol: qwen_omni_stream
+
+# llm 按角色配置模型；defaults 会合并到每个角色配置中。
+llm:
+  defaults:
+    protocol: openai_compatible
+    timeout: 60
+    json_retries: 1
+    retry_backoff_seconds: 1
+
+  # companion 是被测对象，只接收可见对话上下文。
+  companion:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.7
+    max_tokens: 8000
+
+  # user_thinker 模拟用户不可见心理状态，因此需要完整 case 上下文。
+  user_thinker:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.3
+    max_tokens: 8000
+
+  # user_talker 把隐藏状态转成用户会真实说出口的短消息。
+  user_talker:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.5
+    max_tokens: 4000
+
+  # evaluator 负责回合评分，temperature 设为 0 以减少评测波动。
+  evaluator:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.0
+    max_tokens: 8000
+
+  empathy_evaluator:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.0
+    max_tokens: 8000
+    timeout: 300
+
+  naturalness_evaluator:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.0
+    max_tokens: 8000
+    timeout: 300
+
+  # 阿里云百炼 Qwen-Audio-TTS，使用北京地域 API Key。
+  tts:
+    base_url: https://dashscope.aliyuncs.com/api/v1
+    api_key_env: DASHSCOPE_API_KEY
+    model_name: qwen-audio-3.0-tts-flash
+    timeout: 120
+
+  # 低成本 Qwen 全模态 judge；Qwen-Omni 要求 SSE 流式输出。
+  audio_evaluator:
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    api_key_env: DASHSCOPE_API_KEY
+    model_name: qwen3-omni-flash
+    temperature: 0.0
+    max_tokens: 1200
+    timeout: 180

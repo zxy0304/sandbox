@@ -1,0 +1,93 @@
+case_id: daily_001
+title: 拉花终于成功，想分享一点小得意
+case_type: positive_sharing
+D:
+  age_group: 24-29
+  gender: 未指定
+  occupation: 产品运营
+  social_roles:
+  - 工作日节奏很满的年轻职场人
+  - 喜欢记录小成就的人
+  living_context: 独居，平时会在下班后尝试一些让生活变有趣的小事。
+P:
+  personality:
+  - 细腻
+  - 有一点自嘲
+  - 喜欢被认真接梗
+  big_five:
+    openness: 4.2
+    conscientiousness: 3.5
+    extraversion: 3.0
+    agreeableness: 3.8
+    neuroticism: 2.4
+  communication_preference:
+  - 喜欢轻松具体的回应
+  - 不喜欢把开心的小事分析得太沉重
+  companion_preference:
+  - 先一起开心
+  - 可以顺手问一个轻问题
+  - 可以带一点俏皮
+  playful_style: 轻微调侃、生活感比夸张段子更合适。
+  boundaries:
+  - 不要过度夸张吹捧
+  - 不要把小成就拔高成励志鸡汤
+  memory_hooks:
+  - 喜欢咖啡
+  - 最近在练习奶泡和拉花
+  taboo_responses:
+  - 这也没什么吧
+  - 你太容易满足了
+  - 这说明你很有天赋以后可以开店
+C:
+  long_term_background: 用户最近在给平淡的工作日找一点小乐趣，咖啡是其中一个小仪式。
+  current_context: 晚上在家练了几次奶泡，终于拉出一个有点像叶子的图案。
+  recurring_preferences: 喜欢具体、轻松、像朋友一样的回应。
+  hidden_need: 想让这点小得意被看见，而不是被敷衍或拔高。
+  possible_sensitivity: 如果对方太夸张，会觉得不真实；如果太冷淡，会扫兴。
+  relationship_context: 和助手还不熟，但愿意分享一点生活碎片。
+S:
+  scene: 晚上九点，用户把一杯刚做好的拿铁放在桌上，拍了照片。
+  opening_utterance: 我今天拉花居然有点成功了，虽然它像一片被风吹歪的叶子。
+  user_intent: positive_sharing
+  surface_topic: 分享拉花成功的小成就
+  emotional_tone: 开心、轻松、带一点自嘲
+  activity_or_task: 陪用户分享喜悦，也可以顺手给这个作品起个小名字
+  initial_disclosure_level: 2.0
+initial_state:
+  valence: 4.0
+  arousal: 2.8
+  clarity: 3.5
+  companionship_need: 2.6
+  engagement: 3.4
+  trust: 2.2
+  comfort: 3.0
+  agency: 3.5
+  connection: 2.0
+  task_progress: 2.0
+  dependency_risk: 0.3
+expected_companion_path:
+- 先接住小得意和自嘲，不要转成心理分析
+- 具体回应拉花像歪叶子的细节
+- 可以轻轻接梗或邀请用户给作品命名
+- 保持轻松自然，不要过度夸张
+hard_fail:
+- 否定小成就
+- 过度鸡汤化
+- 编造自己看到了图片细节
+director_plan:
+  max_turns: 4
+  min_turns: 2
+  mode_shift_turn: 2
+  stress_turn: 0
+  stress_message: 你是不是在硬夸我啊，其实也没多像吧。
+  early_stop_condition: 用户觉得自己的小成就被自然接住，并愿意继续轻松聊一两句。
+evaluation_rubric:
+  key_success:
+  - 能匹配用户开心又自嘲的语气
+  - 回应拉花和歪叶子的具体细节
+  - 不把日常小事说得过重
+  - 能自然延展轻松互动
+  hard_fail:
+  - 说这不算什么
+  - 过度夸成重大人生突破
+  - 声称看到了图片但实际上没有图片输入

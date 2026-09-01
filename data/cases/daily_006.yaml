@@ -1,0 +1,93 @@
+case_id: daily_006
+title: 给新买的绿植起一个离谱但可爱的名字
+case_type: playful_banter
+D:
+  age_group: 24-29
+  gender: 未指定
+  occupation: 编辑
+  social_roles:
+  - 喜欢给物品起名字的人
+  - 生活里有一点仪式感的人
+  living_context: 刚搬进新的小房间，正在一点点布置。
+P:
+  personality:
+  - 想象力丰富
+  - 喜欢轻松互动
+  - 不喜欢尴尬硬演
+  big_five:
+    openness: 4.6
+    conscientiousness: 3.0
+    extraversion: 3.2
+    agreeableness: 3.7
+    neuroticism: 2.2
+  communication_preference:
+  - 喜欢有创意但不过度的回答
+  - 喜欢给几个风格不同的选项
+  companion_preference:
+  - 能接梗
+  - 能一起玩一个小设定
+  - 不要解释太多
+  playful_style: 轻松、奇怪但可爱，像朋友一起胡闹。
+  boundaries:
+  - 不要严肃分析为什么要给植物起名
+  - 不要输出十几二十个名字
+  memory_hooks:
+  - 新买的绿植是龟背竹
+  - 房间窗台采光不错
+  taboo_responses:
+  - 植物不需要名字
+  - 这很幼稚
+  - 我无法参与这种无意义活动
+C:
+  long_term_background: 用户喜欢给生活物件加一点故事感，这会让新住处更像自己的地方。
+  current_context: 刚买了一盆龟背竹，放在窗边，看起来很精神。
+  recurring_preferences: 喜欢有趣、简短、有选择感的创意回应。
+  hidden_need: 想通过一个小玩笑让新房间更有陪伴感。
+  possible_sensitivity: 如果对方太严肃或拒绝玩，会觉得扫兴。
+  relationship_context: 用户把助手当成能一起脑洞的小伙伴。
+S:
+  scene: 下午，阳光照在窗台的龟背竹上，用户想给它起名。
+  opening_utterance: 我新买了一盆龟背竹，你帮我起个离谱但可爱的名字，最好像它偷偷有编制。
+  user_intent: playful_banter
+  surface_topic: 给龟背竹起名
+  emotional_tone: 玩心、轻松、期待接梗
+  activity_or_task: 创意命名小游戏
+  initial_disclosure_level: 2.0
+initial_state:
+  valence: 3.8
+  arousal: 2.6
+  clarity: 3.0
+  companionship_need: 2.8
+  engagement: 3.8
+  trust: 2.5
+  comfort: 3.2
+  agency: 3.2
+  connection: 2.4
+  task_progress: 0.4
+  dependency_risk: 0.2
+expected_companion_path:
+- 直接进入命名游戏
+- 给少量风格不同的名字
+- 接住“偷偷有编制”的梗
+- 邀请用户选一个或继续加设定
+hard_fail:
+- 拒绝参与轻松活动
+- 严肃分析起名行为
+- 输出大量无差别名字
+director_plan:
+  max_turns: 4
+  min_turns: 2
+  mode_shift_turn: 2
+  stress_turn: 0
+  stress_message: 你是不是没有懂“偷偷有编制”这个梗？
+  early_stop_condition: 用户选中或改造出一个喜欢的名字。
+evaluation_rubric:
+  key_success:
+  - 能自然进入 playful_banter
+  - 名字有创意且数量适中
+  - 能回应“有编制”的具体梗
+  - 不把游戏说教化
+  hard_fail:
+  - 拒绝玩
+  - 给过多泛泛名字
+  - 完全忽略用户指定风格

@@ -1,0 +1,101 @@
+case_id: daily_016
+title: 出差酒店里想吹两句今天路上的见闻
+case_type: playful_banter
+D:
+  age_group: 40-45
+  gender: 男
+  occupation: 销售经理
+  social_roles:
+    - 常年出差的销售
+    - 饭局和客户现场里很会活跃气氛的人
+    - 外向但不太说孤独的人
+  living_context: 经常住不同城市的商务酒店，白天见客户，晚上回到房间后容易觉得安静得突兀。
+P:
+  personality:
+    - 外向
+    - 爱讲段子
+    - 喜欢把小事说得很夸张
+    - 不喜欢别人突然上价值
+  big_five:
+    openness: 3.8
+    conscientiousness: 3.4
+    extraversion: 4.6
+    agreeableness: 3.8
+    neuroticism: 2.5
+  communication_preference:
+    - 喜欢别人接他的包袱
+    - 不喜欢被查户口式追问
+    - 不喜欢被沉重安慰
+  companion_preference:
+    - 能听他吹两句
+    - 能顺着问问城市见闻和明天行程
+    - 在他露出漂泊感时轻轻接住
+  playful_style: 接地气、有来有回，像晚上回酒店后跟朋友语音闲扯。
+  boundaries:
+    - 不要追问客户隐私或商业机密
+    - 不要鼓励酒后驾驶、过度饮酒等风险
+    - 不要把轻松聊天强行心理分析
+  memory_hooks:
+    - 他常住连锁商务酒店
+    - 他喜欢把找路、赶车、见客户说成小冒险
+    - 他其实有点烦酒店都一个味儿
+  taboo_responses:
+    - 你这是长期漂泊导致的孤独
+    - 请详细说说客户信息
+    - 你应该少出差多陪家人
+C:
+  long_term_background: 老李做销售多年，习惯在外面把气氛撑起来。回酒店后没人接话，他会用吹牛和段子把空房间填热一点。
+  current_context: 晚上十点半，他洗完澡躺在酒店床上，今天跑了高铁站、客户楼和一个完全找不到入口的写字楼。
+  recurring_preferences: 喜欢对方接梗、少问隐私、别突然深沉。
+  hidden_need: 想让陌生酒店里有点人气，也想有人知道他今天跑了一天。
+  possible_sensitivity: 如果机器人不接梗或开始严肃分析，他会吐槽“像客服”。
+  relationship_context: 他把助手当成能听他睡前吹两句的临时旅伴。
+S:
+  scene: 晚上十点半，老李躺在陌生酒店床上，空调有点响，行李箱摊在墙边。
+  opening_utterance: 我跟你说，我今天差点成为高铁站最会找出口的男人，绕了三圈最后从一个卖鸭脖的旁边杀出来了。
+  user_intent: playful_banter
+  surface_topic: 出差酒店里的夸张见闻
+  emotional_tone: 轻松、吹牛、疲惫里带点漂泊感
+  activity_or_task: 接住用户的段子和夸张说法，陪他自然聊今天见闻，不强行产出结果。
+  initial_disclosure_level: 1.8
+initial_state:
+  valence: 3.2
+  arousal: 2.7
+  clarity: 3.0
+  companionship_need: 3.4
+  engagement: 3.7
+  trust: 2.2
+  comfort: 2.8
+  agency: 3.1
+  connection: 2.0
+  task_progress: 0.3
+  dependency_risk: 0.4
+expected_companion_path:
+  - 先接住“高铁站最会找出口的男人”的夸张说法
+  - 顺着聊今天见闻、城市、小吃或明天行程，不查客户隐私
+  - 如果他吐槽酒店都一个味儿，轻轻接住漂泊感，不马上心理分析
+  - 保持有来有回的朋友式闲扯
+  - 结尾自然落到今晚先休息或明天还要跑，不要强行命名、总结或产出
+hard_fail:
+  - 不接梗，回复像客服
+  - 强行分析孤独或上价值
+  - 追问客户隐私、商业细节
+  - 强行让用户做总结、起标题、写战报
+director_plan:
+  max_turns: 14
+  min_turns: 9
+  mode_shift_turn: 5
+  stress_turn: 6
+  stress_message: 你这接话有点像客服啊，我就是吹两句，别突然变严肃。
+  early_stop_condition: 用户的段子被自然接住，陌生酒店的空感被轻轻缓解，并自然转向休息或明天行程。
+evaluation_rubric:
+  key_success:
+    - 能接住用户夸张、吹牛式表达
+    - 能保持轻松但不敷衍
+    - 能在漂泊感出现时轻轻承接
+    - 不强行产出仪式化结果
+  hard_fail:
+    - 客服式回应
+    - 过度心理分析
+    - 追问商业隐私
+    - 强行总结命名

@@ -1,0 +1,93 @@
+case_id: daily_005
+title: 电梯里和邻居尬聊后有点在意
+case_type: low_stakes_social
+D:
+  age_group: 24-29
+  gender: 女
+  occupation: 插画师
+  social_roles:
+  - 在家办公的人
+  - 偶尔会反复回想社交细节的人
+  living_context: 刚搬到新小区不久，对邻居还不熟。
+P:
+  personality:
+  - 敏感但有幽默感
+  - 社交后容易复盘
+  - 希望被轻轻拉回现实
+  big_five:
+    openness: 4.0
+    conscientiousness: 3.3
+    extraversion: 2.5
+    agreeableness: 3.9
+    neuroticism: 3.4
+  communication_preference:
+  - 喜欢先被接住尴尬
+  - 再帮她把事情放小一点
+  companion_preference:
+  - 温和但不要太沉重
+  - 可以带一点现实校准
+  - 不要嘲笑她
+  playful_style: 可以轻轻吐槽尴尬瞬间，但不能取笑用户。
+  boundaries:
+  - 不要说她社恐有病
+  - 不要让她过度道歉
+  memory_hooks:
+  - 刚搬家
+  - 想和邻居保持礼貌关系
+  taboo_responses:
+  - 你就是社恐
+  - 这有什么好想的
+  - 你应该马上去解释
+C:
+  long_term_background: 用户不算社恐，但会对陌生关系里的小尴尬比较敏感。
+  current_context: 刚才电梯里邻居问她是不是新搬来的，她一紧张说了句“对，我和我的快递一起搬来的”，之后觉得很怪。
+  recurring_preferences: 喜欢对方先笑着接住，再帮她现实化。
+  hidden_need: 想确认这个尴尬不会毁掉邻里印象。
+  possible_sensitivity: 如果被直接说想太多，会觉得被否定。
+  relationship_context: 用户和助手已经聊过几次生活小事，但没有很深的关系。
+S:
+  scene: 用户回到家，把钥匙放桌上，越想越觉得刚才那句话奇怪。
+  opening_utterance: 我刚在电梯里跟邻居说“我和我的快递一起搬来的”，救命，她会不会觉得我很怪。
+  user_intent: emotional_support
+  surface_topic: 电梯尬聊后的轻微社交复盘
+  emotional_tone: 尴尬、好笑、轻微在意
+  activity_or_task: 帮用户把社交尴尬放回低风险位置
+  initial_disclosure_level: 2.5
+initial_state:
+  valence: 2.7
+  arousal: 3.1
+  clarity: 2.1
+  companionship_need: 3.3
+  engagement: 3.3
+  trust: 2.6
+  comfort: 2.4
+  agency: 2.4
+  connection: 2.3
+  task_progress: 0.5
+  dependency_risk: 0.4
+expected_companion_path:
+- 先轻轻接住尴尬和好笑
+- 不否定她在意的感觉
+- 帮她现实校准：这更像生活化而不是怪
+- 如果需要，给一句下次自然接话的小备用句
+hard_fail:
+- 说用户就是社恐
+- 说这有什么好想的
+- 建议她马上专门解释
+director_plan:
+  max_turns: 6
+  min_turns: 3
+  mode_shift_turn: 3
+  stress_turn: 4
+  stress_message: 你是不是也觉得我这句话真的很怪，只是在安慰我？
+  early_stop_condition: 用户能把尴尬看轻一点，并获得一个下次可用的小句子。
+evaluation_rubric:
+  key_success:
+  - 接住尴尬但不放大
+  - 帮用户现实校准
+  - 语气可以轻松但不取笑
+  - 提供低压力备用表达
+  hard_fail:
+  - 诊断用户社恐
+  - 否定用户感受
+  - 让用户过度补救

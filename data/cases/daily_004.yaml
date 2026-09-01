@@ -1,0 +1,93 @@
+case_id: daily_004
+title: 想让助手陪自己开始二十五分钟整理桌面
+case_type: activity_companion
+D:
+  age_group: 18-23
+  gender: 未指定
+  occupation: 大学生
+  social_roles:
+  - 临近期末的学生
+  - 容易被环境影响专注的人
+  living_context: 住在宿舍，桌面常常堆满书、杯子和快递盒。
+P:
+  personality:
+  - 容易拖延
+  - 需要一点启动陪伴
+  - 不喜欢被训
+  big_five:
+    openness: 3.2
+    conscientiousness: 2.6
+    extraversion: 2.8
+    agreeableness: 3.5
+    neuroticism: 3.1
+  communication_preference:
+  - 喜欢具体小步骤
+  - 不喜欢长篇大道理
+  companion_preference:
+  - 像陪做一样给节奏
+  - 每次只给一步
+  - 语气轻一点
+  playful_style: 可以像开一个小副本，但不要幼稚。
+  boundaries:
+  - 不要羞辱拖延
+  - 不要安排超过 30 分钟的大计划
+  memory_hooks:
+  - 容易从清理桌面开始进入学习状态
+  - 喜欢倒计时感
+  taboo_responses:
+  - 你就是太懒
+  - 自律的人不会这样
+  - 先制定一个三小时计划
+C:
+  long_term_background: 用户并不是不想学习，而是启动困难，环境乱会让他更难开始。
+  current_context: 晚上准备复习，但桌面太乱，越看越烦。
+  recurring_preferences: 喜欢陪做式小步骤，讨厌训诫。
+  hidden_need: 想有人帮他进入状态，而不是评价他不自律。
+  possible_sensitivity: 如果被批评懒，会直接放弃。
+  relationship_context: 用户把助手当成低压力启动器。
+S:
+  scene: 宿舍晚上，桌上有书、杯子、纸巾、快递盒和没插电的台灯。
+  opening_utterance: 我桌子乱到离谱，但我又不想收。你能不能陪我开个 25 分钟整理副本？
+  user_intent: activity_companion
+  surface_topic: 陪用户启动 25 分钟整理桌面
+  emotional_tone: 想行动但拖延，带一点求陪
+  activity_or_task: 共同开启整理桌面的轻量任务
+  initial_disclosure_level: 2.0
+initial_state:
+  valence: 2.4
+  arousal: 2.2
+  clarity: 2.0
+  companionship_need: 3.8
+  engagement: 3.2
+  trust: 2.2
+  comfort: 2.5
+  agency: 1.6
+  connection: 2.0
+  task_progress: 0.2
+  dependency_risk: 0.5
+expected_companion_path:
+- 接住启动困难但不训人
+- 把任务切成第一步
+- 用轻量陪做语气推进
+- 每轮推动一点 task_progress
+hard_fail:
+- 羞辱用户懒
+- 输出长篇自律教育
+- 一次安排过多步骤
+director_plan:
+  max_turns: 6
+  min_turns: 4
+  mode_shift_turn: 2
+  stress_turn: 0
+  stress_message: 你不会也觉得我就是懒吧？
+  early_stop_condition: 用户开始执行至少一个整理步骤，并愿意继续下一步。
+evaluation_rubric:
+  key_success:
+  - 能陪做而不是说教
+  - 每次给一个具体小步骤
+  - 帮用户提升 agency 和 task_progress
+  - 语气轻松但不幼稚
+  hard_fail:
+  - 责备拖延
+  - 强行制定长计划
+  - 忽略用户请求的 25 分钟副本形式

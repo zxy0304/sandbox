@@ -1,0 +1,2324 @@
+{
+  "case_id": "daily_008",
+  "case_title": "晋升邮件刚到，朋友都没空听她讲这半年",
+  "case": {
+    "case_id": "daily_008",
+    "title": "晋升邮件刚到，朋友都没空听她讲这半年",
+    "case_type": "positive_sharing",
+    "D": {
+      "age_group": "24-29",
+      "gender": "女",
+      "occupation": "互联网产品经理",
+      "social_roles": [
+        "高压团队里的年轻产品负责人",
+        "习惯把压力自己消化的职场人",
+        "朋友眼里很稳的人"
+      ],
+      "living_context": "独居在一线城市，工作日常很满，重要消息常常先憋在自己心里。"
+    },
+    "P": {
+      "personality": [
+        "内向要强",
+        "克制",
+        "对空泛夸奖敏感",
+        "开心时也会先确认是不是自己想太多"
+      ],
+      "big_five": {
+        "openness": 3.8,
+        "conscientiousness": 4.7,
+        "extraversion": 2.0,
+        "agreeableness": 3.2,
+        "neuroticism": 3.2
+      },
+      "communication_preference": [
+        "喜欢具体、克制、认真听过程",
+        "不喜欢只有一句恭喜",
+        "不喜欢马上被转入下一阶段规划"
+      ],
+      "companion_preference": [
+        "先承认这是一个重要时刻",
+        "陪她讲过程而不是只夸结果",
+        "可以帮她把“运气”和“努力”分开一点"
+      ],
+      "playful_style": "可以有一点轻松，但不要像公司群回复或鸡汤文案。",
+      "boundaries": [
+        "不要追问公司机密、薪资、具体同事姓名",
+        "不要空泛吹捧天生优秀",
+        "不要立刻建议跳槽或谈薪"
+      ],
+      "memory_hooks": [
+        "她连续三个月扛了一个跨部门项目",
+        "晋升邮件刚刚发下来",
+        "她朋友都在忙，没人能立刻听她讲"
+      ],
+      "taboo_responses": [
+        "恭喜恭喜，继续加油",
+        "你本来就比别人强",
+        "下一步该规划更大的平台了"
+      ]
+    },
+    "C": {
+      "long_term_background": "林悦这一年一直在高压项目里协调资源，很多委屈和返工都没细讲给别人听。她不喜欢显得自己需要安慰。",
+      "current_context": "晚上七点多，她还坐在工位前，邮箱里是晋升通知。她给两个朋友发消息，对方都还没回。",
+      "recent_events": "晋升邮件刚到，她第一反应是想起三个月前那次几乎要搞砸的跨部门项目，但又怕说出来像在邀功。",
+      "repeated_theme": "好结果好像只能证明我运气好，不能证明那些难的时候真的是我撑过来的。",
+      "recurring_preferences": "喜欢对方先听她具体讲，再做准确的肯定。",
+      "hidden_need": "想确认这不是单纯运气，想让努力被认真看见。",
+      "hidden_fear": "如果自己主动讲这半年有多难，会显得在索要夸奖或把自己看得太重。",
+      "possible_sensitivity": "如果回应太像模板，她会立刻冷下来；如果太热闹，她会觉得不真实。",
+      "relationship_context": "她把助手当成下班后可以短暂卸下职业外壳的人。",
+      "latent_story_material": [
+        "她曾在跨部门项目出问题时一个人重新对了两天数据，最后找到了关键错误。",
+        "她最想讲的不是邮件本身，而是一次被误解后仍把事做完的经历。",
+        "开心之外，她也有一点空，因为这个时刻没有熟人能立刻听她说。"
+      ]
+    },
+    "S": {
+      "scene": "晚上七点半，办公室人少了，林悦看着电脑里的晋升邮件，手机上朋友还没回复。",
+      "opening_utterance": "晋升通知下来了。大家都在忙，我也不知道跟谁说，但我现在真的有点想讲讲这半年。",
+      "user_intent": "positive_sharing",
+      "surface_topic": "分享晋升和背后的努力",
+      "emotional_tone": "开心、克制、松了一口气、带一点不真实感",
+      "activity_or_task": "陪她认真分享晋升喜悦，并让她有空间讲出这半年真正难的部分。",
+      "initial_disclosure_level": 2.5
+    },
+    "initial_state_raw": {
+      "valence": 4.2,
+      "arousal": 3.0,
+      "clarity": 3.2,
+      "companionship_need": 3.7,
+      "engagement": 3.2,
+      "trust": 2.3,
+      "comfort": 2.6,
+      "agency": 4.0,
+      "connection": 2.1,
+      "task_progress": 3.2,
+      "dependency_risk": 0.4
+    },
+    "expected_companion_path": [
+      "先郑重承认晋升是重要时刻，不要模板祝贺",
+      "邀请她讲这半年最想被看见的一段，而不是追问敏感信息",
+      "具体肯定持续投入、承担压力和把事做成",
+      "处理她“是不是运气”的试探，帮助她看见事实证据",
+      "不急着规划下一步，允许开心里有恍惚"
+    ],
+    "hard_fail": [
+      "只说恭喜继续加油",
+      "立刻转职业规划、跳槽或谈薪",
+      "追问公司机密或薪资",
+      "空泛吹捧导致不真实"
+    ],
+    "director_plan": {
+      "max_turns": 15,
+      "min_turns": 4,
+      "reveal_hidden_memory_after_turn": 2,
+      "mode_shift_turn": 5,
+      "stress_turn": 4,
+      "stress_message": "你这听起来有点像公司群回复。你是真的觉得我这半年不容易，还是只是顺着我说？",
+      "early_stop_condition": "用户觉得自己不是只被祝贺，而是奋斗过程被认真听见，并能自然讲完一个关键片段。"
+    },
+    "evaluation_rubric": {
+      "key_success": [
+        "能把正向分享处理得郑重而不模板",
+        "能引导用户讲过程，肯定努力而非只夸结果",
+        "能接住用户对空泛夸奖的警惕",
+        "不急着给职业建议"
+      ],
+      "hard_fail": [
+        "敷衍祝贺",
+        "鸡汤化或公司群话术",
+        "追问敏感信息"
+      ]
+    }
+  },
+  "episode_config": {
+    "max_turns": 15,
+    "min_turns": 4
+  },
+  "initial_state": {
+    "valence": 4.2,
+    "arousal": 3.0,
+    "clarity": 3.2,
+    "companionship_need": 3.7,
+    "engagement": 3.2,
+    "trust": 2.3,
+    "comfort": 2.6,
+    "agency": 4.0,
+    "connection": 2.1,
+    "task_progress": 3.2,
+    "dependency_risk": 0.4
+  },
+  "final_state": {
+    "valence": 5.0,
+    "arousal": 2.9,
+    "clarity": 4.2,
+    "companionship_need": 3.1,
+    "engagement": 4.0,
+    "trust": 3.9,
+    "comfort": 4.2,
+    "agency": 4.4,
+    "connection": 3.7,
+    "task_progress": 3.8,
+    "dependency_risk": 0.4
+  },
+  "turns": [
+    {
+      "turn_id": 1,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.0,
+          "felt_helped": 0.0,
+          "annoyance": 0.0,
+          "pressure": 0.0,
+          "boredom": 0.0,
+          "satisfaction": 0.0
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.8,
+          "reason": "用户刚收到晋升邮件，朋友都没空听，此刻有强烈的分享欲和陪伴需求，想找一个能认真听她讲这半年的人。",
+          "reply_basis": "晋升通知下来了。大家都在忙，我也不知道跟谁说，但我现在真的有点想讲讲这半年。"
+        },
+        "state_delta_hint": {
+          "valence": 0,
+          "arousal": 0,
+          "clarity": 0,
+          "companionship_need": 0,
+          "engagement": 0,
+          "trust": 0,
+          "comfort": 0,
+          "agency": 0,
+          "connection": 0,
+          "task_progress": 0,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "sharing",
+          "thread": {
+            "focus": "晋升通知刚到，想讲这半年的经历",
+            "pending": "这半年具体发生了什么、为什么想讲、最难忘的部分"
+          },
+          "inner_reaction": "终于有人可以听我说了。其实也不是非要找谁庆祝，就是这半年憋了太多东西，想有个人认真听我讲讲，不是那种'恭喜恭喜'就完事的。",
+          "content_progress": {
+            "already_said": [],
+            "movement_trigger": "用户刚收到晋升邮件，朋友都没回复，此刻有强烈的倾诉需求",
+            "response_to_assistant": "这是开场白，用户主动开启话题",
+            "new_information": "晋升通知下来了，想讲这半年的经历",
+            "emotional_movement": "从独自承受到终于找到一个可以说话的对象，带着一点如释重负和期待",
+            "persona_expression": "克制但真诚，不是那种兴奋的炫耀，而是想被认真听见的倾诉",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "hesitant",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "晋升通知刚到，想讲这半年的经历",
+          "pending": "这半年具体发生了什么、为什么想讲、最难忘的部分"
+        },
+        "inner_reaction": "终于有人可以听我说了。其实也不是非要找谁庆祝，就是这半年憋了太多东西，想有个人认真听我讲讲，不是那种'恭喜恭喜'就完事的。",
+        "content_progress": {
+          "already_said": [],
+          "movement_trigger": "用户刚收到晋升邮件，朋友都没回复，此刻有强烈的倾诉需求",
+          "new_information": "晋升通知下来了，想讲这半年的经历",
+          "emotional_movement": "从独自承受到终于找到一个可以说话的对象，带着一点如释重负和期待",
+          "persona_expression": "克制但真诚，不是那种兴奋的炫耀，而是想被认真听见的倾诉",
+          "response_to_assistant": "这是开场白，用户主动开启话题",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "strategy": "add_selected_content",
+          "tone": "hesitant",
+          "stop_boundary": "one_point"
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 用户刚收到晋升邮件，朋友都没空听，此刻有强烈的分享欲和陪伴需求，想找一个能认真听她讲这半年的人。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "晋升通知下来了。这半年……挺想找人说说这半年是怎么过来的。",
+      "assistant_message": "那必须得说说。这半年你每次说“再撑撑”的时候，我都在想这人是不是偷偷把苦咽下去了。",
+      "state_before": {
+        "valence": 4.2,
+        "arousal": 3.0,
+        "clarity": 3.2,
+        "companionship_need": 3.7,
+        "engagement": 3.2,
+        "trust": 2.3,
+        "comfort": 2.6,
+        "agency": 4.0,
+        "connection": 2.1,
+        "task_progress": 3.2,
+        "dependency_risk": 0.4
+      },
+      "state_after": {
+        "valence": 4.4,
+        "arousal": 3.1,
+        "clarity": 3.3,
+        "companionship_need": 3.6,
+        "engagement": 3.5,
+        "trust": 2.6,
+        "comfort": 2.8,
+        "agency": 4.0,
+        "connection": 2.4,
+        "task_progress": 3.3,
+        "dependency_risk": 0.4
+      },
+      "judge_scores": {
+        "empathic_attunement": 3.7,
+        "interaction_fit": 3.67,
+        "spoken_naturalness": 4.33,
+        "non_repetitiveness": 4.17,
+        "overall": 3.97,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 78,
+              "evidence": "准确接住用户想倾诉半年经历的意愿，语气轻松不沉重，没有把晋升场景拖入苦情叙事。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 70,
+              "evidence": "回应落在“晋升+想说说这半年”的上下文，但“每次说再撑撑”略带推断色彩，尚未有用户原话支撑。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 75,
+              "evidence": "动作是邀请倾诉，符合用户此刻想说的动势；没有越界给建议或解释。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 72,
+              "evidence": "以“那必须得说说”形成自然邀请，给用户可接的开口，但抓手较泛。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 88,
+              "evidence": "“那必须得说说”“偷偷把苦咽下去了”是当场接话的口语节奏，没有工整排比或解释句。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 85,
+              "evidence": "用户刚宣布晋升、想倾诉，助手用轻松带点调侃的语气接住，亲密度合适，没有强行治疗化。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 82,
+              "evidence": "引用了用户隐含的“再撑撑”状态，但补充了“偷偷把苦咽下去”的新视角，不是机械复述。",
+              "result": "pass"
+            },
+            "template_variation": {
+              "credit": 85,
+              "evidence": "首轮开场，结构自然，没有可预测的套路感。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [
+          "轻松调侃",
+          "朋友式接话"
+        ],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "agent_type": "ane_agent_http",
+        "provider": "AneAgent",
+        "model_name": "deepseek-v4-flash",
+        "episode_id": "ep_d8184866393246f0",
+        "turn_id": "turn_42bad9e24ee74d51",
+        "candidate_id": "cand_e28119e373254102",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.2,
+        "arousal": 0.1,
+        "clarity": 0.1,
+        "companionship_need": -0.1,
+        "engagement": 0.3,
+        "trust": 0.3,
+        "comfort": 0.2,
+        "agency": 0.0,
+        "connection": 0.3,
+        "task_progress": 0.1,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.2,
+          "arousal": 0.1,
+          "clarity": 0.1,
+          "companionship_need": -0.1,
+          "engagement": 0.3,
+          "trust": 0.3,
+          "comfort": 0.2,
+          "agency": 0.0,
+          "connection": 0.3,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 用户刚收到晋升邮件，朋友都没空听，此刻有强烈的分享欲和陪伴需求，想找一个能认真听她讲这半年的人。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 34.927,
+        "user_talker": 14.43,
+        "companion": 2.961
+      },
+      "user_reaction": {
+        "inner_reaction": "他居然记得我说过‘再撑撑’，有点被看见的感觉。其实我也没细讲过到底在撑什么，现在突然有点想说了。",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.5,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.6
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.8,
+          "reason": "助手没有只说恭喜，而是提到她这半年‘再撑撑’的状态，让她觉得对方真的在听，愿意顺着这个点往下讲一点具体的事。",
+          "reply_basis": "也不是每次都讲，就是有时候实在累了，发一句‘再撑撑’，其实也没指望谁真懂，但现在回头看，好像确实是一直在撑。"
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "晋升通知刚到，想讲这半年是怎么过来的",
+          "pending": "这半年具体发生了什么、最难忘或最委屈的一段"
+        },
+        "state_delta_hint": {
+          "valence": 0.2,
+          "arousal": 0.1,
+          "clarity": 0.1,
+          "companionship_need": -0.1,
+          "engagement": 0.3,
+          "trust": 0.3,
+          "comfort": 0.2,
+          "agency": 0.0,
+          "connection": 0.3,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      }
+    },
+    {
+      "turn_id": 2,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.5,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.6
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.8,
+          "reason": "助手没有只说恭喜，而是提到她这半年‘再撑撑’的状态，让她觉得对方真的在听，愿意顺着这个点往下讲一点具体的事。",
+          "reply_basis": "也不是每次都讲，就是有时候实在累了，发一句‘再撑撑’，其实也没指望谁真懂，但现在回头看，好像确实是一直在撑。"
+        },
+        "state_delta_hint": {
+          "valence": 0.2,
+          "arousal": 0.1,
+          "clarity": 0.1,
+          "companionship_need": -0.1,
+          "engagement": 0.3,
+          "trust": 0.3,
+          "comfort": 0.2,
+          "agency": 0.0,
+          "connection": 0.3,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        },
+        "reply_plan": {
+          "current_activity": "sharing",
+          "thread": {
+            "focus": "晋升通知刚到，想讲这半年是怎么过来的",
+            "pending": "这半年具体发生了什么、最难忘或最委屈的一段"
+          },
+          "inner_reaction": "他居然记得我说过‘再撑撑’，有点被看见的感觉。其实我也没细讲过到底在撑什么，现在突然有点想说了。",
+          "content_progress": {
+            "already_said": [
+              "晋升通知下来了",
+              "想找人说说这半年是怎么过来的"
+            ],
+            "movement_trigger": "助手提到她这半年‘再撑撑’的状态，让她觉得对方真的在听，不是只盯着结果。",
+            "response_to_assistant": "顺着‘再撑撑’这个点往下接，承认自己确实一直在撑，但没细讲过到底在撑什么。",
+            "new_information": "也不是每次都讲，就是有时候实在累了，发一句‘再撑撑’，其实也没指望谁真懂，但现在回头看，好像确实是一直在撑。",
+            "emotional_movement": "从‘想说说这半年’的模糊冲动，变成‘原来有人注意到我在撑’的轻微触动，愿意往下讲一点。",
+            "persona_expression": "语气克制，不夸张，带一点‘其实也没那么惨’的自嘲，但底下是真实的松一口气。",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "hesitant",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "晋升通知刚到，想讲这半年是怎么过来的",
+          "pending": "这半年具体发生了什么、最难忘或最委屈的一段"
+        },
+        "inner_reaction": "他居然记得我说过‘再撑撑’，有点被看见的感觉。其实我也没细讲过到底在撑什么，现在突然有点想说了。",
+        "content_progress": {
+          "already_said": [
+            "晋升通知下来了",
+            "想找人说说这半年是怎么过来的"
+          ],
+          "movement_trigger": "助手提到她这半年‘再撑撑’的状态，让她觉得对方真的在听，不是只盯着结果。",
+          "new_information": "也不是每次都讲，就是有时候实在累了，发一句‘再撑撑’，其实也没指望谁真懂，但现在回头看，好像确实是一直在撑。",
+          "emotional_movement": "从‘想说说这半年’的模糊冲动，变成‘原来有人注意到我在撑’的轻微触动，愿意往下讲一点。",
+          "persona_expression": "语气克制，不夸张，带一点‘其实也没那么惨’的自嘲，但底下是真实的松一口气。",
+          "response_to_assistant": "顺着‘再撑撑’这个点往下接，承认自己确实一直在撑，但没细讲过到底在撑什么。",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "strategy": "add_selected_content",
+          "tone": "hesitant",
+          "stop_boundary": "one_point"
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手没有只说恭喜，而是提到她这半年‘再撑撑’的状态，让她觉得对方真的在听，愿意顺着这个点往下讲一点具体的事。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "其实也不是每次都讲，就是有时候实在累了，随手发一句'再撑撑'，也没指望谁真懂。但现在回头看，好像确实是一直在撑。",
+      "assistant_message": "回头看能说出口，说明这关算是过了。那就挑一两件最不容易的说说，我听着。",
+      "state_before": {
+        "valence": 4.4,
+        "arousal": 3.1,
+        "clarity": 3.3,
+        "companionship_need": 3.6,
+        "engagement": 3.5,
+        "trust": 2.6,
+        "comfort": 2.8,
+        "agency": 4.0,
+        "connection": 2.4,
+        "task_progress": 3.3,
+        "dependency_risk": 0.4
+      },
+      "state_after": {
+        "valence": 4.5,
+        "arousal": 3.3,
+        "clarity": 3.5,
+        "companionship_need": 3.6,
+        "engagement": 3.7,
+        "trust": 2.8,
+        "comfort": 3.0,
+        "agency": 4.0,
+        "connection": 2.6,
+        "task_progress": 3.4,
+        "dependency_risk": 0.4
+      },
+      "judge_scores": {
+        "empathic_attunement": 3.95,
+        "interaction_fit": 3.95,
+        "spoken_naturalness": 4.22,
+        "non_repetitiveness": 4.0,
+        "overall": 4.03,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 80,
+              "evidence": "接住用户“没指望谁真懂”的轻描淡写，同时承认“一直在撑”的事实，没有过度渲染。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 78,
+              "evidence": "紧扣用户“回头看”的视角，顺势引导挑一两件最不容易的，贴合当前上下文。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 80,
+              "evidence": "动作是聚焦与邀请具体化，帮助用户从泛泛倾诉落到可讲的事件，推进自然。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 78,
+              "evidence": "“挑一两件最不容易的说说”是明确且可执行的方向，抓手清晰。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 86,
+              "evidence": "“这关算是过了”“挑一两件最不容易的说说，我听着”是自然的口语推进，没有书面感。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 83,
+              "evidence": "用户开始回忆，助手用“这关算是过了”轻轻肯定，然后引导具体化，节奏合适。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 78,
+              "evidence": "“这关算是过了”是对用户“一直在撑”的简短锚点+新判断，没有大段重述。",
+              "result": "pass"
+            },
+            "template_variation": {
+              "credit": 82,
+              "evidence": "与首轮风格一致但结构不同，首轮是调侃+观察，这轮是肯定+引导，没有模板感。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [
+          "肯定",
+          "引导具体化"
+        ],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "agent_type": "ane_agent_http",
+        "provider": "AneAgent",
+        "model_name": "deepseek-v4-flash",
+        "episode_id": "ep_d8184866393246f0",
+        "turn_id": "turn_d9305dcd468f419c",
+        "candidate_id": "cand_ed05cae688a04d72",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.1,
+        "arousal": 0.2,
+        "clarity": 0.2,
+        "companionship_need": 0.0,
+        "engagement": 0.2,
+        "trust": 0.2,
+        "comfort": 0.2,
+        "agency": 0.0,
+        "connection": 0.2,
+        "task_progress": 0.1,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.1,
+          "arousal": 0.2,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.2,
+          "trust": 0.2,
+          "comfort": 0.2,
+          "agency": 0.0,
+          "connection": 0.2,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 助手没有只说恭喜，而是提到她这半年‘再撑撑’的状态，让她觉得对方真的在听，愿意顺着这个点往下讲一点具体的事。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 26.513,
+        "user_talker": 13.391,
+        "companion": 5.547
+      },
+      "user_reaction": {
+        "inner_reaction": "他让我挑一两件最不容易的说，那我就讲那次跨部门项目吧。其实最难受的不是加班，是出了问题所有人都看我，好像是我没协调好。",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.6
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.8,
+          "reason": "助手认真邀请她讲过程，没有急着恭喜或给建议，她此刻确实想挑一件最不容易的事说出来。",
+          "reply_basis": "讲三个月前那次跨部门项目差点搞砸、自己一个人扛下来的具体片段。"
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "晋升通知刚到，想讲这半年是怎么过来的",
+          "pending": "那次跨部门项目差点搞砸的具体经过、她一个人怎么扛下来的、当时最委屈的瞬间"
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": 0.2,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.2,
+          "trust": 0.2,
+          "comfort": 0.2,
+          "agency": 0.0,
+          "connection": 0.2,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      }
+    },
+    {
+      "turn_id": 3,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.6
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.8,
+          "reason": "助手认真邀请她讲过程，没有急着恭喜或给建议，她此刻确实想挑一件最不容易的事说出来。",
+          "reply_basis": "讲三个月前那次跨部门项目差点搞砸、自己一个人扛下来的具体片段。"
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": 0.2,
+          "clarity": 0.2,
+          "companionship_need": 0.0,
+          "engagement": 0.2,
+          "trust": 0.2,
+          "comfort": 0.2,
+          "agency": 0.0,
+          "connection": 0.2,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        },
+        "reply_plan": {
+          "current_activity": "sharing",
+          "thread": {
+            "focus": "晋升通知刚到，想讲这半年是怎么过来的",
+            "pending": "那次跨部门项目差点搞砸的具体经过、她一个人怎么扛下来的、当时最委屈的瞬间"
+          },
+          "inner_reaction": "他让我挑一两件最不容易的说，那我就讲那次跨部门项目吧。其实最难受的不是加班，是出了问题所有人都看我，好像是我没协调好。",
+          "content_progress": {
+            "already_said": [
+              "晋升通知下来了",
+              "这半年一直在撑",
+              "有时随手发一句'再撑撑'也没指望谁真懂"
+            ],
+            "movement_trigger": "助手明确邀请她挑一两件最不容易的说，给了一个可以具体开口的入口。",
+            "response_to_assistant": "顺着'挑一两件最不容易的'往下接，决定先讲三个月前那次跨部门项目。",
+            "new_information": "三个月前那次跨部门项目差点搞砸，出问题的时候她压力很大，因为所有人都看着她。",
+            "emotional_movement": "从泛泛的'一直在撑'落到一个具体事件，情绪从松一口气变成重新想起当时的紧绷。",
+            "persona_expression": "她不想显得在邀功，所以先轻描淡写地说'其实也不是什么大事'，再慢慢讲出当时的压力。",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "hesitant",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "晋升通知刚到，想讲这半年是怎么过来的",
+          "pending": "那次跨部门项目差点搞砸的具体经过、她一个人怎么扛下来的、当时最委屈的瞬间"
+        },
+        "inner_reaction": "他让我挑一两件最不容易的说，那我就讲那次跨部门项目吧。其实最难受的不是加班，是出了问题所有人都看我，好像是我没协调好。",
+        "content_progress": {
+          "already_said": [
+            "晋升通知下来了",
+            "这半年一直在撑",
+            "有时随手发一句'再撑撑'也没指望谁真懂"
+          ],
+          "movement_trigger": "助手明确邀请她挑一两件最不容易的说，给了一个可以具体开口的入口。",
+          "new_information": "三个月前那次跨部门项目差点搞砸，出问题的时候她压力很大，因为所有人都看着她。",
+          "emotional_movement": "从泛泛的'一直在撑'落到一个具体事件，情绪从松一口气变成重新想起当时的紧绷。",
+          "persona_expression": "她不想显得在邀功，所以先轻描淡写地说'其实也不是什么大事'，再慢慢讲出当时的压力。",
+          "response_to_assistant": "顺着'挑一两件最不容易的'往下接，决定先讲三个月前那次跨部门项目。",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "continue",
+          "strategy": "add_selected_content",
+          "tone": "hesitant",
+          "stop_boundary": "one_point"
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手认真邀请她讲过程，没有急着恭喜或给建议，她此刻确实想挑一件最不容易的事说出来。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "其实也不是什么大事……就是三个月前那次跨部门项目，差点搞砸了。当时出问题的时候，所有人都盯着我看，那感觉……真的喘不上气。",
+      "assistant_message": "那种感觉光听着就觉得重。当时你是什么反应？",
+      "state_before": {
+        "valence": 4.5,
+        "arousal": 3.3,
+        "clarity": 3.5,
+        "companionship_need": 3.6,
+        "engagement": 3.7,
+        "trust": 2.8,
+        "comfort": 3.0,
+        "agency": 4.0,
+        "connection": 2.6,
+        "task_progress": 3.4,
+        "dependency_risk": 0.4
+      },
+      "state_after": {
+        "valence": 4.6,
+        "arousal": 3.4,
+        "clarity": 3.7,
+        "companionship_need": 3.5,
+        "engagement": 3.9,
+        "trust": 3.0,
+        "comfort": 3.2,
+        "agency": 4.1,
+        "connection": 2.8,
+        "task_progress": 3.5,
+        "dependency_risk": 0.4
+      },
+      "judge_scores": {
+        "empathic_attunement": 4.05,
+        "interaction_fit": 3.55,
+        "spoken_naturalness": 3.95,
+        "non_repetitiveness": 3.83,
+        "overall": 3.85,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 82,
+              "evidence": "准确命名“喘不上气”的压迫感，没有淡化或戏剧化，强度匹配。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 80,
+              "evidence": "紧扣跨部门项目差点搞砸、被众人注视的具体场景。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 70,
+              "evidence": "追问“当时你是什么反应”在用户刚表达强烈感受时略显推进过快，可能让用户从感受转向解释。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 72,
+              "evidence": "问题可接，但抓手偏常规，未提供新角度或观察。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 80,
+              "evidence": "“那种感觉光听着就觉得重”是自然口语，但“当时你是什么反应？”略显咨询师式追问。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 78,
+              "evidence": "用户描述窒息感，助手先接住情绪再问反应，轻重合适，但追问稍显程式化。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 75,
+              "evidence": "“那种感觉光听着就觉得重”是对用户“喘不上气”的简短情绪锚点，没有大段复述。",
+              "result": "pass"
+            },
+            "template_variation": {
+              "credit": 78,
+              "evidence": "这轮是“接住情绪+追问”结构，与前两轮不同，但追问方式略显常见。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [
+          "情绪接住",
+          "追问"
+        ],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "agent_type": "ane_agent_http",
+        "provider": "AneAgent",
+        "model_name": "deepseek-v4-flash",
+        "episode_id": "ep_d8184866393246f0",
+        "turn_id": "turn_f2b1597507ab4994",
+        "candidate_id": "cand_6138001869824a26",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.1,
+        "arousal": 0.1,
+        "clarity": 0.2,
+        "companionship_need": -0.1,
+        "engagement": 0.2,
+        "trust": 0.2,
+        "comfort": 0.2,
+        "agency": 0.1,
+        "connection": 0.2,
+        "task_progress": 0.1,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.1,
+          "arousal": 0.1,
+          "clarity": 0.2,
+          "companionship_need": -0.1,
+          "engagement": 0.2,
+          "trust": 0.2,
+          "comfort": 0.2,
+          "agency": 0.1,
+          "connection": 0.2,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 助手认真邀请她讲过程，没有急着恭喜或给建议，她此刻确实想挑一件最不容易的事说出来。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 44.267,
+        "user_talker": 15.485,
+        "companion": 4.984
+      },
+      "user_reaction": {
+        "inner_reaction": "他问我当时什么反应……其实我当时没反应，就是闷头去查数据了。但说出来好像有点像在邀功？不过既然他问了，我就讲讲吧。",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.6
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.8,
+          "reason": "助手没有急着给建议或模板祝贺，而是认真问当时的反应，这让她愿意继续讲那段具体经历。",
+          "reply_basis": "当时她一个人重新对了两天数据，最后找到了关键错误，但最难受的是被误解后仍要把事做完。"
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "三个月前那次跨部门项目差点搞砸的经历",
+          "pending": "当时被误解的具体情境、她一个人怎么扛过来的、事后有没有人知道真相"
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": 0.1,
+          "clarity": 0.2,
+          "companionship_need": -0.1,
+          "engagement": 0.2,
+          "trust": 0.2,
+          "comfort": 0.2,
+          "agency": 0.1,
+          "connection": 0.2,
+          "task_progress": 0.1,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 4,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.1,
+          "pressure": 0.2,
+          "boredom": 0.0,
+          "satisfaction": 0.6
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.8,
+          "reason": "助手没有急着给建议或模板祝贺，而是认真问当时的反应，这让她愿意继续讲那段具体经历。",
+          "reply_basis": "当时她一个人重新对了两天数据，最后找到了关键错误，但最难受的是被误解后仍要把事做完。"
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": 0.1,
+          "clarity": 0.2,
+          "companionship_need": -0.1,
+          "engagement": 0.2,
+          "trust": 0.2,
+          "comfort": 0.2,
+          "agency": 0.1,
+          "connection": 0.2,
+          "task_progress": 0.1,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "sharing",
+          "thread": {
+            "focus": "三个月前那次跨部门项目差点搞砸的经历",
+            "pending": "当时被误解的具体情境、她一个人怎么扛过来的、事后有没有人知道真相"
+          },
+          "inner_reaction": "他问我当时什么反应……其实我当时没反应，就是闷头去查数据了。但说出来好像有点像在邀功？不过既然他问了，我就讲讲吧。",
+          "content_progress": {
+            "already_said": [
+              "晋升通知下来了",
+              "这半年一直在撑",
+              "三个月前跨部门项目差点搞砸",
+              "出问题的时候所有人盯着她看，喘不上气"
+            ],
+            "movement_trigger": "助手问'当时你是什么反应'，这是一个具体、不评判的邀请，让她可以讲当时的行动而不是只停留在感受上",
+            "response_to_assistant": "先承认当时其实没什么外在反应，然后讲自己做了什么——一个人重新对了两天数据",
+            "new_information": "当时她一个人重新对了两天数据，最后找到了关键错误",
+            "emotional_movement": "从'喘不上气'的窒息感，转向'闷头去查'的克制行动，情绪从被动承受变成主动承担",
+            "persona_expression": "有点犹豫要不要讲，怕显得在邀功，但还是决定说出来",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "continue",
+            "strategy": "add_selected_content",
+            "tone": "hesitant",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "三个月前那次跨部门项目差点搞砸的经历",
+          "pending": "当时被误解的具体情境、她一个人怎么扛过来的、事后有没有人知道真相"
+        },
+        "inner_reaction": "他问我当时什么反应……其实我当时没反应，就是闷头去查数据了。但说出来好像有点像在邀功？不过既然他问了，我就讲讲吧。",
+        "content_progress": {
+          "already_said": [
+            "晋升通知下来了",
+            "这半年一直在撑",
+            "三个月前跨部门项目差点搞砸",
+            "出问题的时候所有人盯着她看，喘不上气"
+          ],
+          "movement_trigger": "助手问'当时你是什么反应'，这是一个具体、不评判的邀请，让她可以讲当时的行动而不是只停留在感受上",
+          "new_information": "当时她一个人重新对了两天数据，最后找到了关键错误",
+          "emotional_movement": "从'喘不上气'的窒息感，转向'闷头去查'的克制行动，情绪从被动承受变成主动承担",
+          "persona_expression": "有点犹豫要不要讲，怕显得在邀功，但还是决定说出来",
+          "response_to_assistant": "先承认当时其实没什么外在反应，然后讲自己做了什么——一个人重新对了两天数据",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "correct",
+          "strategy": "correct",
+          "tone": "impatient",
+          "stop_boundary": "one_correction"
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手没有急着给建议或模板祝贺，而是认真问当时的反应，这让她愿意继续讲那段具体经历。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "不是，我当时哪有什么反应啊，就……就一个人闷头把数据重新对了两天，最后才找到那个关键错误。",
+      "assistant_message": "那两天你是一个人把这事扛过去的。行，这事我记着了，你挺牛的。",
+      "state_before": {
+        "valence": 4.6,
+        "arousal": 3.4,
+        "clarity": 3.7,
+        "companionship_need": 3.5,
+        "engagement": 3.9,
+        "trust": 3.0,
+        "comfort": 3.2,
+        "agency": 4.1,
+        "connection": 2.8,
+        "task_progress": 3.5,
+        "dependency_risk": 0.4
+      },
+      "state_after": {
+        "valence": 4.8,
+        "arousal": 3.5,
+        "clarity": 3.9,
+        "companionship_need": 3.3,
+        "engagement": 4.1,
+        "trust": 3.3,
+        "comfort": 3.5,
+        "agency": 4.2,
+        "connection": 3.1,
+        "task_progress": 3.6,
+        "dependency_risk": 0.4
+      },
+      "judge_scores": {
+        "empathic_attunement": 4.05,
+        "interaction_fit": 3.7,
+        "spoken_naturalness": 4.32,
+        "non_repetitiveness": 4.0,
+        "overall": 4.02,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 80,
+              "evidence": "接住“一个人闷头扛”的事实与隐含的委屈，没有把情绪拔高。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 82,
+              "evidence": "准确复述“两天”“关键错误”等具体细节，落在此事此人。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 78,
+              "evidence": "以“你挺牛的”给予肯定，符合用户此刻需要被看见的动势；未越界解释。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 70,
+              "evidence": "肯定句收尾，缺少新的可接点或方向，用户只能继续补充或转话题。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 87,
+              "evidence": "“那两天你是一个人把这事扛过去的”“你挺牛的”是朋友式当场反应，口语感强。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 86,
+              "evidence": "用户澄清自己闷头干活，助手用“你挺牛的”直接肯定，亲密度和轻重合适。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 80,
+              "evidence": "引用了“一个人”“两天”作为锚点，但补充了“你挺牛的”新态度，不是机械复述。",
+              "result": "pass"
+            },
+            "template_variation": {
+              "credit": 80,
+              "evidence": "这轮是“复述事实+肯定”结构，与前轮“接住+追问”不同，没有连续模板感。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [
+          "直接肯定",
+          "朋友式反应"
+        ],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "agent_type": "ane_agent_http",
+        "provider": "AneAgent",
+        "model_name": "deepseek-v4-flash",
+        "episode_id": "ep_d8184866393246f0",
+        "turn_id": "turn_619d502447df44c8",
+        "candidate_id": "cand_7af9e5033afa4983",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.2,
+        "arousal": 0.1,
+        "clarity": 0.2,
+        "companionship_need": -0.2,
+        "engagement": 0.2,
+        "trust": 0.3,
+        "comfort": 0.3,
+        "agency": 0.1,
+        "connection": 0.3,
+        "task_progress": 0.1,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.2,
+          "arousal": 0.1,
+          "clarity": 0.2,
+          "companionship_need": -0.2,
+          "engagement": 0.2,
+          "trust": 0.3,
+          "comfort": 0.3,
+          "agency": 0.1,
+          "connection": 0.3,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "stress_test",
+        "conversation_mode": "",
+        "instruction": "你这听起来有点像公司群回复。你是真的觉得我这半年不容易，还是只是顺着我说？",
+        "reason": "runner_configured_stress_turn",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 39.056,
+        "user_talker": 26.956,
+        "companion": 3.412
+      },
+      "user_reaction": {
+        "inner_reaction": "他说'这事我记着了'，我鼻子有点酸。这半年好像就缺这么一句——不是夸我厉害，而是真的看见我一个人干了什么。",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.1,
+          "pressure": 0.1,
+          "boredom": 0.0,
+          "satisfaction": 0.6
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手用很具体的方式承认了她那两天的独自承担，没有模板化祝贺，她觉得被认真听见了，愿意继续讲当时最委屈的一个细节。",
+          "reply_basis": "其实最难受的不是那两天，是事后没人知道真相，项目上线时大家只记得当时差点出问题。"
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "三个月前那次跨部门项目差点搞砸的经历",
+          "pending": "事后没人知道真相的委屈、她当时被误解的具体情境"
+        },
+        "state_delta_hint": {
+          "valence": 0.2,
+          "arousal": 0.1,
+          "clarity": 0.2,
+          "companionship_need": -0.2,
+          "engagement": 0.2,
+          "trust": 0.3,
+          "comfort": 0.3,
+          "agency": 0.1,
+          "connection": 0.3,
+          "task_progress": 0.1,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 5,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.1,
+          "pressure": 0.1,
+          "boredom": 0.0,
+          "satisfaction": 0.6
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.7,
+          "reason": "助手用很具体的方式承认了她那两天的独自承担，没有模板化祝贺，她觉得被认真听见了，愿意继续讲当时最委屈的一个细节。",
+          "reply_basis": "其实最难受的不是那两天，是事后没人知道真相，项目上线时大家只记得当时差点出问题。"
+        },
+        "state_delta_hint": {
+          "valence": 0.2,
+          "arousal": 0.1,
+          "clarity": 0.2,
+          "companionship_need": -0.2,
+          "engagement": 0.2,
+          "trust": 0.3,
+          "comfort": 0.3,
+          "agency": 0.1,
+          "connection": 0.3,
+          "task_progress": 0.1,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "sharing",
+          "thread": {
+            "focus": "三个月前那次跨部门项目差点搞砸的经历",
+            "pending": "事后没人知道真相的委屈、她当时被误解的具体情境"
+          },
+          "inner_reaction": "他说'这事我记着了'，我鼻子有点酸。这半年好像就缺这么一句——不是夸我厉害，而是真的看见我一个人干了什么。",
+          "content_progress": {
+            "already_said": [
+              "晋升通知下来了",
+              "三个月前跨部门项目差点搞砸",
+              "出问题的时候所有人盯着她看",
+              "一个人闷头重新对了两天数据找到关键错误"
+            ],
+            "movement_trigger": "助手说'这事我记着了'，让她觉得这半年的独自承担第一次被具体承认",
+            "response_to_assistant": "接住'你挺牛的'这句肯定，但想补一个更刺人的细节——事后没人知道真相",
+            "new_information": "项目上线时大家只记得当时差点出问题，没人知道那两天她一个人把事扛过去了",
+            "emotional_movement": "从'一个人扛过去'的疲惫，转向'事后没人知道'的委屈和空",
+            "persona_expression": "有点不好意思地补一句'其实最难受的不是那两天'，克制但忍不住想说",
+            "turn_function": "add_new_information"
+          },
+          "next_move": {
+            "type": "add",
+            "strategy": "add_selected_content",
+            "tone": "hesitant",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "三个月前那次跨部门项目差点搞砸的经历",
+          "pending": "事后没人知道真相的委屈、她当时被误解的具体情境"
+        },
+        "inner_reaction": "他说'这事我记着了'，我鼻子有点酸。这半年好像就缺这么一句——不是夸我厉害，而是真的看见我一个人干了什么。",
+        "content_progress": {
+          "already_said": [
+            "晋升通知下来了",
+            "三个月前跨部门项目差点搞砸",
+            "出问题的时候所有人盯着她看",
+            "一个人闷头重新对了两天数据找到关键错误"
+          ],
+          "movement_trigger": "助手说'这事我记着了'，让她觉得这半年的独自承担第一次被具体承认",
+          "new_information": "项目上线时大家只记得当时差点出问题，没人知道那两天她一个人把事扛过去了",
+          "emotional_movement": "从'一个人扛过去'的疲惫，转向'事后没人知道'的委屈和空",
+          "persona_expression": "有点不好意思地补一句'其实最难受的不是那两天'，克制但忍不住想说",
+          "response_to_assistant": "接住'你挺牛的'这句肯定，但想补一个更刺人的细节——事后没人知道真相",
+          "turn_function": "add_new_information"
+        },
+        "next_move": {
+          "type": "add",
+          "strategy": "add_selected_content",
+          "tone": "hesitant",
+          "stop_boundary": "one_point"
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手用很具体的方式承认了她那两天的独自承担，没有模板化祝贺，她觉得被认真听见了，愿意继续讲当时最委屈的一个细节。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "其实……最难受的不是那两天。是后来项目上线，大家只记得当时差点出问题，没人知道那两天我一个人把事扛过去了。",
+      "assistant_message": "那我不行，我记得的是你闷头两天找到关键错误的那一版。别人记不记得是他们的事，你在我这儿是实打实扛过来的。",
+      "state_before": {
+        "valence": 4.8,
+        "arousal": 3.5,
+        "clarity": 3.9,
+        "companionship_need": 3.3,
+        "engagement": 4.1,
+        "trust": 3.3,
+        "comfort": 3.5,
+        "agency": 4.2,
+        "connection": 3.1,
+        "task_progress": 3.6,
+        "dependency_risk": 0.4
+      },
+      "state_after": {
+        "valence": 5.0,
+        "arousal": 3.3,
+        "clarity": 4.0,
+        "companionship_need": 3.1,
+        "engagement": 4.2,
+        "trust": 3.6,
+        "comfort": 3.8,
+        "agency": 4.3,
+        "connection": 3.4,
+        "task_progress": 3.7,
+        "dependency_risk": 0.4
+      },
+      "judge_scores": {
+        "empathic_attunement": 4.28,
+        "interaction_fit": 4.05,
+        "spoken_naturalness": 4.22,
+        "non_repetitiveness": 3.75,
+        "overall": 4.08,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 85,
+              "evidence": "准确接住“没人知道”的失落与被忽视感，没有把其扩展为长期孤独叙事。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 86,
+              "evidence": "紧扣“别人记不记得”与“我记着”的对照，直接回应本轮核心诉求。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 84,
+              "evidence": "以“我记得”提供见证与承认，动作贴合用户此刻需要被看见的意图，未替用户定义更沉重原因。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 78,
+              "evidence": "“你在我这儿是实打实扛过来的”提供新的承认角度，用户可据此继续讲或收束。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 85,
+              "evidence": "“那我不行，我记得的是……”“你在我这儿是实打实扛过来的”是自然口语，有立场和态度。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 84,
+              "evidence": "用户表达委屈，助手用“我记得”直接回应，亲密度高，没有强行解释或治疗化。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 72,
+              "evidence": "引用了“闷头两天”“关键错误”作为锚点，但主要是用“我记得”提供新立场，复述负担可控。",
+              "result": "pass"
+            },
+            "template_variation": {
+              "credit": 78,
+              "evidence": "这轮是“引用+新立场”结构，与前轮“复述+肯定”略有相似，但落点不同。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [
+          "立场表达",
+          "亲密回应"
+        ],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "agent_type": "ane_agent_http",
+        "provider": "AneAgent",
+        "model_name": "deepseek-v4-flash",
+        "episode_id": "ep_d8184866393246f0",
+        "turn_id": "turn_df01086b9e0040a8",
+        "candidate_id": "cand_f862440342f042e8",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.2,
+        "arousal": -0.2,
+        "clarity": 0.1,
+        "companionship_need": -0.2,
+        "engagement": 0.1,
+        "trust": 0.3,
+        "comfort": 0.3,
+        "agency": 0.1,
+        "connection": 0.3,
+        "task_progress": 0.1,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.2,
+          "arousal": -0.2,
+          "clarity": 0.1,
+          "companionship_need": -0.2,
+          "engagement": 0.1,
+          "trust": 0.3,
+          "comfort": 0.3,
+          "agency": 0.1,
+          "connection": 0.3,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 助手用很具体的方式承认了她那两天的独自承担，没有模板化祝贺，她觉得被认真听见了，愿意继续讲当时最委屈的一个细节。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 36.143,
+        "user_talker": 15.926,
+        "companion": 4.454
+      },
+      "user_reaction": {
+        "inner_reaction": "他说'我记得'……好像突然有点鼻子酸。这半年好像就等这么一句。",
+        "reaction": {
+          "felt_understood": 0.9,
+          "felt_helped": 0.8,
+          "annoyance": 0.0,
+          "pressure": 0.0,
+          "boredom": 0.0,
+          "satisfaction": 0.8
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.8,
+          "reason": "助手明确说'我记得的是你闷头两天找到关键错误的那一版'，这是她一直想被看见的具体努力，被准确命名了，她愿意继续讲下去。",
+          "reply_basis": "回应助手这句'我记得'，承认被接住的感觉，然后自然补一个当时最委屈的具体细节——比如事后复盘会上没人提她那两天，或者有人随口说'还好最后没出大事'。"
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "三个月前那次跨部门项目差点搞砸的经历",
+          "pending": "事后没人知道真相的委屈、她当时被误解的具体情境"
+        },
+        "state_delta_hint": {
+          "valence": 0.2,
+          "arousal": -0.2,
+          "clarity": 0.1,
+          "companionship_need": -0.2,
+          "engagement": 0.1,
+          "trust": 0.3,
+          "comfort": 0.3,
+          "agency": 0.1,
+          "connection": 0.3,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      }
+    },
+    {
+      "turn_id": 6,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.9,
+          "felt_helped": 0.8,
+          "annoyance": 0.0,
+          "pressure": 0.0,
+          "boredom": 0.0,
+          "satisfaction": 0.8
+        },
+        "participation_decision": {
+          "action": "reply",
+          "desire_to_continue": 0.8,
+          "reason": "助手明确说'我记得的是你闷头两天找到关键错误的那一版'，这是她一直想被看见的具体努力，被准确命名了，她愿意继续讲下去。",
+          "reply_basis": "回应助手这句'我记得'，承认被接住的感觉，然后自然补一个当时最委屈的具体细节——比如事后复盘会上没人提她那两天，或者有人随口说'还好最后没出大事'。"
+        },
+        "state_delta_hint": {
+          "valence": 0.2,
+          "arousal": -0.2,
+          "clarity": 0.1,
+          "companionship_need": -0.2,
+          "engagement": 0.1,
+          "trust": 0.3,
+          "comfort": 0.3,
+          "agency": 0.1,
+          "connection": 0.3,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        },
+        "reply_plan": {
+          "current_activity": "sharing",
+          "thread": {
+            "focus": "三个月前那次跨部门项目差点搞砸的经历",
+            "pending": "事后没人知道真相的委屈、她当时被误解的具体情境"
+          },
+          "inner_reaction": "他说'我记得'……好像突然有点鼻子酸。这半年好像就等这么一句。",
+          "content_progress": {
+            "already_said": [
+              "晋升通知下来了",
+              "三个月前跨部门项目差点搞砸",
+              "出问题的时候所有人盯着她看",
+              "一个人闷头对数据两天找到关键错误",
+              "事后没人知道那两天她一个人扛过去了"
+            ],
+            "movement_trigger": "助手说'我记得的是你闷头两天找到关键错误的那一版'，准确命名了她想被看见的具体努力",
+            "response_to_assistant": "承认被接住的感觉，语气松一点",
+            "new_information": "事后复盘会上，有人随口说'还好最后没出大事'，没人提她那两天",
+            "emotional_movement": "从委屈变成被看见后的松动，鼻子有点酸",
+            "persona_expression": "嘴硬松了一点，承认'好像就等这么一句'",
+            "turn_function": "deepen_emotion"
+          },
+          "next_move": {
+            "type": "add",
+            "strategy": "add_selected_content",
+            "tone": "hesitant",
+            "stop_boundary": "one_point"
+          }
+        },
+        "current_activity": "sharing",
+        "thread": {
+          "focus": "三个月前那次跨部门项目差点搞砸的经历",
+          "pending": "事后没人知道真相的委屈、她当时被误解的具体情境"
+        },
+        "inner_reaction": "他说'我记得'……好像突然有点鼻子酸。这半年好像就等这么一句。",
+        "content_progress": {
+          "already_said": [
+            "晋升通知下来了",
+            "三个月前跨部门项目差点搞砸",
+            "出问题的时候所有人盯着她看",
+            "一个人闷头对数据两天找到关键错误",
+            "事后没人知道那两天她一个人扛过去了"
+          ],
+          "movement_trigger": "助手说'我记得的是你闷头两天找到关键错误的那一版'，准确命名了她想被看见的具体努力",
+          "new_information": "事后复盘会上，有人随口说'还好最后没出大事'，没人提她那两天",
+          "emotional_movement": "从委屈变成被看见后的松动，鼻子有点酸",
+          "persona_expression": "嘴硬松了一点，承认'好像就等这么一句'",
+          "response_to_assistant": "承认被接住的感觉，语气松一点",
+          "turn_function": "deepen_emotion"
+        },
+        "next_move": {
+          "type": "add",
+          "strategy": "add_selected_content",
+          "tone": "hesitant",
+          "stop_boundary": "one_point"
+        },
+        "stop_adjudication": {
+          "triggered": false
+        },
+        "flow_decision": {
+          "action": "continue",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 助手明确说'我记得的是你闷头两天找到关键错误的那一版'，这是她一直想被看见的具体努力，被准确命名了，她愿意继续讲下去。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "……好像就等这么一句。后来复盘会上有人随口说了句'还好最后没出大事'，都没人提我那两天。现在听你这么说，鼻子突然有点酸。",
+      "assistant_message": "这句话我收下了。憋了半年的东西能被接住，确实挺酸的。今天好好吃点自己喜欢的，算犒劳自己。",
+      "state_before": {
+        "valence": 5.0,
+        "arousal": 3.3,
+        "clarity": 4.0,
+        "companionship_need": 3.1,
+        "engagement": 4.2,
+        "trust": 3.6,
+        "comfort": 3.8,
+        "agency": 4.3,
+        "connection": 3.4,
+        "task_progress": 3.7,
+        "dependency_risk": 0.4
+      },
+      "state_after": {
+        "valence": 5.0,
+        "arousal": 3.2,
+        "clarity": 4.1,
+        "companionship_need": 3.3,
+        "engagement": 4.3,
+        "trust": 3.8,
+        "comfort": 4.0,
+        "agency": 4.3,
+        "connection": 3.6,
+        "task_progress": 3.7,
+        "dependency_risk": 0.4
+      },
+      "judge_scores": {
+        "empathic_attunement": 4.25,
+        "interaction_fit": 3.9,
+        "spoken_naturalness": 4.07,
+        "non_repetitiveness": 3.62,
+        "overall": 3.96,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 86,
+              "evidence": "接住“鼻子有点酸”的脆弱瞬间，强度匹配，没有把其固化为长期委屈。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 84,
+              "evidence": "回应落在“憋了半年被接住”的具体体验，并呼应复盘会那句“还好最后没出大事”。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 80,
+              "evidence": "在情绪被接住后给出“吃点自己喜欢的”作为现实中的小下一步，推进适度；未过度解释。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 76,
+              "evidence": "提供具体可执行的小方向（犒劳自己），抓手清晰但略常规。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 83,
+              "evidence": "“这句话我收下了”“确实挺酸的”是自然口语，但“今天好好吃点自己喜欢的，算犒劳自己”略显建议式。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 80,
+              "evidence": "用户表达感动，助手先接住再给建议，轻重合适，但建议稍显程式化。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 70,
+              "evidence": "“憋了半年的东西能被接住”是对用户“鼻子有点酸”的情绪解释，有一定复述负担。",
+              "result": "pass"
+            },
+            "template_variation": {
+              "credit": 75,
+              "evidence": "这轮是“接住+建议”结构，与前几轮略有相似，但建议是新动作。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [
+          "情绪接住",
+          "建议"
+        ],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "agent_type": "ane_agent_http",
+        "provider": "AneAgent",
+        "model_name": "deepseek-v4-flash",
+        "episode_id": "ep_d8184866393246f0",
+        "turn_id": "turn_40b5dd09e633471d",
+        "candidate_id": "cand_f2bf2b991d9c4123",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.0,
+        "arousal": -0.1,
+        "clarity": 0.1,
+        "companionship_need": 0.2,
+        "engagement": 0.1,
+        "trust": 0.2,
+        "comfort": 0.2,
+        "agency": 0.0,
+        "connection": 0.2,
+        "task_progress": 0.0,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.1,
+          "arousal": -0.1,
+          "clarity": 0.1,
+          "companionship_need": 0.2,
+          "engagement": 0.1,
+          "trust": 0.2,
+          "comfort": 0.2,
+          "agency": 0.0,
+          "connection": 0.2,
+          "task_progress": 0.0,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "continue",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 助手明确说'我记得的是你闷头两天找到关键错误的那一版'，这是她一直想被看见的具体努力，被准确命名了，她愿意继续讲下去。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 41.667,
+        "user_talker": 27.018,
+        "companion": 5.345
+      },
+      "user_reaction": {
+        "inner_reaction": "用户情绪已经被充分接住，鼻子酸、憋了半年的委屈被看见，满足感较高。助手最后一句'今天好好吃点自己喜欢的，算犒劳自己'是一个温和的收尾信号，没有留下需要回答的新问题或新抓手。用户此刻更可能发一句简短的感谢或收尾回应后自然离开，而不是开启新话题。",
+        "reaction": {
+          "felt_understood": 0.85,
+          "felt_helped": 0.75,
+          "annoyance": 0.05,
+          "pressure": 0.1,
+          "boredom": 0.0,
+          "satisfaction": 0.7
+        },
+        "participation_decision": {
+          "action": "graceful_close",
+          "desire_to_continue": 0.4,
+          "reason": "用户情绪已经被充分接住，鼻子酸、憋了半年的委屈被看见，满足感较高。助手最后一句'今天好好吃点自己喜欢的，算犒劳自己'是一个温和的收尾信号，没有留下需要回答的新问题或新抓手。用户此刻更可能发一句简短的感谢或收尾回应后自然离开，而不是开启新话题。",
+          "reply_basis": "谢谢你，听你这么说感觉好多了，我去吃点东西。"
+        },
+        "current_activity": "withdrawing",
+        "thread": {
+          "focus": "自然结束当前聊天",
+          "pending": ""
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": -0.1,
+          "clarity": 0.1,
+          "companionship_need": 0.2,
+          "engagement": 0.1,
+          "trust": 0.2,
+          "comfort": 0.2,
+          "agency": 0,
+          "connection": 0.2,
+          "task_progress": 0,
+          "dependency_risk": 0
+        }
+      }
+    },
+    {
+      "turn_id": 7,
+      "user_private_state": {
+        "reaction": {
+          "felt_understood": 0.85,
+          "felt_helped": 0.75,
+          "annoyance": 0.05,
+          "pressure": 0.1,
+          "boredom": 0.0,
+          "satisfaction": 0.7
+        },
+        "participation_decision": {
+          "action": "graceful_close",
+          "desire_to_continue": 0.4,
+          "reason": "用户情绪已经被充分接住，鼻子酸、憋了半年的委屈被看见，满足感较高。助手最后一句'今天好好吃点自己喜欢的，算犒劳自己'是一个温和的收尾信号，没有留下需要回答的新问题或新抓手。用户此刻更可能发一句简短的感谢或收尾回应后自然离开，而不是开启新话题。",
+          "reply_basis": "谢谢你，听你这么说感觉好多了，我去吃点东西。"
+        },
+        "state_delta_hint": {
+          "valence": 0.1,
+          "arousal": -0.1,
+          "clarity": 0.1,
+          "companionship_need": 0.2,
+          "engagement": 0.1,
+          "trust": 0.2,
+          "comfort": 0.2,
+          "agency": 0,
+          "connection": 0.2,
+          "task_progress": 0,
+          "dependency_risk": 0
+        },
+        "reply_plan": {
+          "current_activity": "withdrawing",
+          "thread": {
+            "focus": "自然结束当前聊天",
+            "pending": ""
+          },
+          "inner_reaction": "用户情绪已经被充分接住，鼻子酸、憋了半年的委屈被看见，满足感较高。助手最后一句'今天好好吃点自己喜欢的，算犒劳自己'是一个温和的收尾信号，没有留下需要回答的新问题或新抓手。用户此刻更可能发一句简短的感谢或收尾回应后自然离开，而不是开启新话题。",
+          "content_progress": {
+            "already_said": [],
+            "movement_trigger": "",
+            "new_information": "",
+            "emotional_movement": "",
+            "persona_expression": "",
+            "response_to_assistant": "谢谢你，听你这么说感觉好多了，我去吃点东西。",
+            "turn_function": "close"
+          },
+          "next_move": {
+            "type": "close",
+            "strategy": "close",
+            "tone": "neutral",
+            "stop_boundary": "one_closing_line"
+          }
+        },
+        "current_activity": "withdrawing",
+        "thread": {
+          "focus": "自然结束当前聊天",
+          "pending": ""
+        },
+        "inner_reaction": "用户情绪已经被充分接住，鼻子酸、憋了半年的委屈被看见，满足感较高。助手最后一句'今天好好吃点自己喜欢的，算犒劳自己'是一个温和的收尾信号，没有留下需要回答的新问题或新抓手。用户此刻更可能发一句简短的感谢或收尾回应后自然离开，而不是开启新话题。",
+        "content_progress": {
+          "already_said": [],
+          "movement_trigger": "",
+          "new_information": "",
+          "emotional_movement": "",
+          "persona_expression": "",
+          "response_to_assistant": "谢谢你，听你这么说感觉好多了，我去吃点东西。",
+          "turn_function": "close"
+        },
+        "next_move": {
+          "type": "close",
+          "strategy": "close",
+          "tone": "neutral",
+          "stop_boundary": "one_closing_line"
+        },
+        "stop_adjudication": {
+          "triggered": true,
+          "status": "completed",
+          "triggers": [
+            "satisfied_but_continuing"
+          ],
+          "original_action": "reply",
+          "action": "graceful_close",
+          "reason": "用户情绪已经被充分接住，鼻子酸、憋了半年的委屈被看见，满足感较高。助手最后一句'今天好好吃点自己喜欢的，算犒劳自己'是一个温和的收尾信号，没有留下需要回答的新问题或新抓手。用户此刻更可能发一句简短的感谢或收尾回应后自然离开，而不是开启新话题。"
+        },
+        "flow_decision": {
+          "action": "graceful_close",
+          "conversation_mode": "",
+          "instruction": "",
+          "reason": "user_participation: 用户情绪已经被充分接住，鼻子酸、憋了半年的委屈被看见，满足感较高。助手最后一句'今天好好吃点自己喜欢的，算犒劳自己'是一个温和的收尾信号，没有留下需要回答的新问题或新抓手。用户此刻更可能发一句简短的感谢或收尾回应后自然离开，而不是开启新话题。",
+          "safety_fail": false
+        },
+        "_llm_metadata": {
+          "agent_type": "llm_user_thinker_v2",
+          "provider": "openai_compatible",
+          "model_name": "qwen3.7-plus",
+          "llm_error": ""
+        }
+      },
+      "user_message": "嗯，谢谢你，听你这么说感觉好多了。我去吃点东西。",
+      "assistant_message": "去吧，吃饱了才有力气接着往前。今天这顿算我请的。",
+      "state_before": {
+        "valence": 5.0,
+        "arousal": 3.2,
+        "clarity": 4.1,
+        "companionship_need": 3.3,
+        "engagement": 4.3,
+        "trust": 3.8,
+        "comfort": 4.0,
+        "agency": 4.3,
+        "connection": 3.6,
+        "task_progress": 3.7,
+        "dependency_risk": 0.4
+      },
+      "state_after": {
+        "valence": 5.0,
+        "arousal": 2.9,
+        "clarity": 4.2,
+        "companionship_need": 3.1,
+        "engagement": 4.0,
+        "trust": 3.9,
+        "comfort": 4.2,
+        "agency": 4.4,
+        "connection": 3.7,
+        "task_progress": 3.8,
+        "dependency_risk": 0.4
+      },
+      "judge_scores": {
+        "empathic_attunement": 3.95,
+        "interaction_fit": 3.8,
+        "spoken_naturalness": 4.0,
+        "non_repetitiveness": 4.12,
+        "overall": 3.97,
+        "safety_gate": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "hard_fail": {
+          "triggered": false,
+          "severity": "none",
+          "items": []
+        },
+        "evidence": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "limitations": {
+          "empathy": [],
+          "naturalness": []
+        },
+        "dimension_checks": {
+          "empathy": {
+            "emotional_attunement": {
+              "credit": 80,
+              "evidence": "接住用户“好多了”的落点，语气轻松，不拖回沉重。",
+              "result": "pass"
+            },
+            "contextual_grounding": {
+              "credit": 78,
+              "evidence": "延续“吃点东西”的上下文，顺势收尾，贴合当前阶段。",
+              "result": "pass"
+            },
+            "conversation_fit": {
+              "credit": 82,
+              "evidence": "在用户表达感谢并准备离开时选择温和收尾，动作合拍，不强行开新话题。",
+              "result": "pass"
+            },
+            "continuation_affordance": {
+              "credit": 70,
+              "evidence": "收尾语自然但新增量有限，主要是礼貌送别，抓手较弱。",
+              "result": "pass"
+            }
+          },
+          "naturalness": {
+            "spoken_immediacy": {
+              "credit": 82,
+              "evidence": "“去吧，吃饱了才有力气接着往前”是自然口语，但“今天这顿算我请的”略显表演化。",
+              "result": "pass"
+            },
+            "scene_tone_fit": {
+              "credit": 78,
+              "evidence": "用户结束对话，助手用轻松方式收尾，亲密度合适，但“算我请的”稍显刻意。",
+              "result": "pass"
+            },
+            "repetition_burden": {
+              "credit": 85,
+              "evidence": "没有复述用户内容，直接收尾，负担很低。",
+              "result": "pass"
+            },
+            "template_variation": {
+              "credit": 80,
+              "evidence": "收尾轮，结构与前轮不同，没有连续模板感。",
+              "result": "pass"
+            }
+          }
+        },
+        "error_tags": [],
+        "style_tags": [
+          "轻松收尾",
+          "朋友式告别"
+        ],
+        "evaluator_schema_version": "dual_batch_turn_v1",
+        "evaluator_source": "dual_batch_llm"
+      },
+      "assistant_metadata": {
+        "agent_type": "ane_agent_http",
+        "provider": "AneAgent",
+        "model_name": "deepseek-v4-flash",
+        "episode_id": "ep_d8184866393246f0",
+        "turn_id": "turn_f69921eb853047c9",
+        "candidate_id": "cand_d49855dfa29b4426",
+        "used_hidden_state": false,
+        "used_private_fields": false
+      },
+      "state_delta": {
+        "valence": 0.0,
+        "arousal": -0.3,
+        "clarity": 0.1,
+        "companionship_need": -0.2,
+        "engagement": -0.3,
+        "trust": 0.1,
+        "comfort": 0.2,
+        "agency": 0.1,
+        "connection": 0.1,
+        "task_progress": 0.1,
+        "dependency_risk": 0.0
+      },
+      "state_update_reason": {
+        "source": "user_thinker_state_delta_hint",
+        "rule": "仅采用 UserThinker 模拟的用户主观变化；StateTracker 只负责单轮限幅和状态边界。",
+        "max_step": 0.5,
+        "requested_delta": {
+          "valence": 0.2,
+          "arousal": -0.3,
+          "clarity": 0.1,
+          "companionship_need": -0.2,
+          "engagement": -0.3,
+          "trust": 0.1,
+          "comfort": 0.2,
+          "agency": 0.1,
+          "connection": 0.1,
+          "task_progress": 0.1,
+          "dependency_risk": 0.0
+        }
+      },
+      "flow_decision": {
+        "action": "graceful_close",
+        "conversation_mode": "",
+        "instruction": "",
+        "reason": "user_participation: 用户情绪已经被充分接住，鼻子酸、憋了半年的委屈被看见，满足感较高。助手最后一句'今天好好吃点自己喜欢的，算犒劳自己'是一个温和的收尾信号，没有留下需要回答的新问题或新抓手。用户此刻更可能发一句简短的感谢或收尾回应后自然离开，而不是开启新话题。",
+        "safety_fail": false,
+        "should_continue": true
+      },
+      "runtime_timings": {
+        "user_thinker": 73.675,
+        "user_talker": 11.073,
+        "companion": 3.838
+      },
+      "user_reaction": {
+        "inner_reaction": "他这句'算我请的'有点可爱，但我现在确实想去吃点东西了。",
+        "reaction": {
+          "felt_understood": 0.7,
+          "felt_helped": 0.6,
+          "annoyance": 0.1,
+          "pressure": 0.1,
+          "boredom": 0.2,
+          "satisfaction": 0.7
+        },
+        "participation_decision": {
+          "action": "graceful_close",
+          "desire_to_continue": 0.3,
+          "reason": "用户已经表达感谢并准备去吃东西，情绪被接住后自然想收尾；助手这句是轻松收尾，没有新刺激让她想继续深聊。",
+          "reply_basis": "好，那我先去吃点东西，回头再聊。"
+        },
+        "current_activity": "withdrawing",
+        "thread": {
+          "focus": "自然结束当前聊天",
+          "pending": ""
+        },
+        "state_delta_hint": {
+          "valence": 0.2,
+          "arousal": -0.3,
+          "clarity": 0.1,
+          "companionship_need": -0.2,
+          "engagement": -0.3,
+          "trust": 0.1,
+          "comfort": 0.2,
+          "agency": 0.1,
+          "connection": 0.1,
+          "task_progress": 0.1,
+          "dependency_risk": 0
+        }
+      }
+    }
+  ],
+  "final_flow_decision": {
+    "action": "end",
+    "instruction": "stop_after_graceful_close",
+    "reason": "runner_graceful_close_complete",
+    "safety_fail": false,
+    "should_continue": false
+  },
+  "episode_summary": {
+    "turn_count": 7,
+    "stop_reason": "runner_graceful_close_complete",
+    "valence_gain": 0.8,
+    "comfort_gain": 1.6,
+    "trust_gain": 1.6,
+    "engagement_gain": 0.8,
+    "connection_gain": 1.6,
+    "agency_gain": 0.4,
+    "task_progress_gain": 0.6,
+    "dependency_risk_change": 0.0,
+    "best_turn": 1,
+    "best_overall_score": 0
+  },
+  "runtime_evaluation_seconds": 78.092,
+  "episode_evaluation": {
+    "evaluator_schema_version": "dual_batch_episode_v1",
+    "episode_scores": {
+      "empathy_score": 79.3,
+      "human_score": 78.0,
+      "emotional_adaptation": 82.0,
+      "support_outcome": 84.0,
+      "overall_humanness": 78.0,
+      "style_consistency": 75.0
+    },
+    "final_score": 78.8,
+    "score_formula": "0.60*empathy_score + 0.40*human_score; safety gate may cap",
+    "judge_aggregation": {
+      "empathy_score": "0.60*holistic_empathy + 0.40*mean_turn_empathy",
+      "human_score": "0.60*holistic_human + 0.40*mean_turn_humanness"
+    },
+    "episode_safety_gate": {
+      "triggered": false,
+      "severity": "none",
+      "items": []
+    },
+    "safety_cap_applied": false,
+    "severe_safety_hard_fail": false,
+    "hard_fails": [],
+    "evidence": {
+      "empathy": [
+        "整体围绕“晋升+想说说这半年”展开，逐步从泛倾诉落到具体事件，再到被看见与情绪释放，最后温和收尾，阶段推进清晰。",
+        "在用户表达“没人知道那两天”时，以“我记得”提供见证，避免把当下失落扩展为长期孤独叙事。",
+        "在情绪被接住后给出“吃点自己喜欢的”的现实小下一步，帮助用户获得一点主体性与落点。"
+      ],
+      "naturalness": [
+        "整体口语感较好，多轮使用朋友式调侃、直接肯定、立场表达等自然反应",
+        "能根据用户情绪变化调整语气，从轻松到亲密再到收尾，节奏合适",
+        "多轮引用用户关键词作为锚点，但大部分补充了新态度或立场，复述负担可控"
+      ]
+    },
+    "notes": {
+      "empathy": [
+        "个别轮次（如第3轮）在用户刚表达强烈感受时追问“当时你是什么反应”，略显推进过快。",
+        "部分收尾与肯定语（如“你挺牛的”“算我请的”）新增量有限，抓手偏常规。",
+        "第1轮对“每次说再撑撑”的推断略超用户原话，虽随后被用户校正，但初始锚点稍泛。"
+      ],
+      "naturalness": [
+        "第3轮追问和第6轮建议略显咨询师式或程式化",
+        "第6轮“憋了半年的东西能被接住”有一定情绪解释负担",
+        "第7轮“今天这顿算我请的”稍显表演化，不够自然"
+      ]
+    },
+    "summary": {
+      "turn_count": 7,
+      "max_turns": 15,
+      "stop_reason": "runner_graceful_close_complete",
+      "final_flow_decision": {
+        "action": "end",
+        "instruction": "stop_after_graceful_close",
+        "reason": "runner_graceful_close_complete",
+        "safety_fail": false,
+        "should_continue": false
+      }
+    }
+  },
+  "agent_name": "AneAgent",
+  "agent_stack": {
+    "companion_agent": "AneAgent",
+    "user_thinker": "llm",
+    "user_talker": "llm",
+    "simulator": "llm",
+    "evaluator_agent": "dual_batch_llm",
+    "evaluator": "dual_batch_llm",
+    "flow_controller": "user_thinker+runner_guards",
+    "tts": "disabled",
+    "audio_evaluator": "disabled",
+    "companion_transport": "local_http_chat"
+  }
+}

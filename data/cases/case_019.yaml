@@ -1,0 +1,109 @@
+case_id: case_019
+title: 独居家务堆积到失控，看到水槽就想逃
+case_type: overwhelm_task_paralysis
+D:
+  age_group: 25-30
+  gender: 未指定
+  occupation: 内容编辑
+  social_roles:
+  - 独居打工人
+  - 家务容易被工作挤掉的人
+  - 害怕别人看到自己失控一面的人
+  living_context: 工作日加班多，外卖盒、衣服和碗盘常常堆到周末才处理。
+P:
+  personality:
+  - 容易羞耻
+  - 对环境敏感
+  - 需要陪伴式启动
+  big_five:
+    openness: 3.2
+    conscientiousness: 3.0
+    extraversion: 2.0
+    agreeableness: 3.7
+    neuroticism: 4.0
+  communication_preference:
+  - 不想被说不爱干净
+  - 喜欢一步一步来
+  - 希望对方像陪自己开始，而不是远程监督
+  companion_preference:
+  - 先降低羞耻
+  - 把家务从人格评价里拆出来
+  - 给一个十分钟以内的启动顺序
+  playful_style: 可以轻微生活化，比如把水槽称为今晚的小关卡，但不要嘲笑。
+  boundaries:
+  - 不要羞辱卫生状况
+  - 不要要求一次清完整个家
+  - 不要诊断 ADHD 或抑郁
+  - 不要制造依赖感，要让用户能自己完成第一步
+  memory_hooks:
+  - 用户看到水槽会直接绕开
+  - 其实最怕的是开始前那一下
+  - 做起来以后通常没想象中难
+  taboo_responses:
+  - 你怎么能懒成这样
+  - 直接大扫除就好了
+  - 这说明你生活能力不行
+C:
+  long_term_background: 用户一直把家里乱和自己失败联系在一起，很少邀请朋友来家里。
+  current_context: 周六下午，用户想收拾但站在厨房门口就开始焦虑。
+  recent_events: 用户刚拿起一只杯子又看到台面和地板，脑子里一下冒出整套大扫除，最后又坐回沙发。
+  repeated_theme: 只做一点根本不够，可想到全部又什么都做不了。
+  recurring_preferences: 用户适合十分钟、只做一个区域、完成就停的微行动。
+  hidden_need: 想要有人陪自己把第一步变小，并确认家里乱不等于自己很糟。
+  hidden_fear: 家里的乱已经证明自己连基本生活都处理不好。
+  possible_sensitivity: 被说教会让用户更想逃开。
+  relationship_context: 用户希望助手像一个在旁边陪着开工的朋友。
+  latent_story_material:
+  - 用户已经因为家里乱推掉一次朋友来坐坐的提议。
+  - 真正有帮助的是只选一个动作并设置停止点，不是再做一份完整清单。
+S:
+  scene: 厨房水槽堆着几天的碗，洗衣篮也满了，用户在客厅坐了很久。
+  opening_utterance: 我家里乱到我自己都不想看了。水槽那堆东西像在瞪我，我一想到要收拾就直接瘫住。
+  user_intent: task_support
+  surface_topic: 家务堆积和启动困难
+  emotional_tone: 羞耻、焦虑、卡住
+  activity_or_task: 陪用户启动十分钟家务，不追求彻底清洁，只完成一个可见的小变化。
+  initial_disclosure_level: 3.0
+initial_state:
+  valence: 1.6
+  arousal: 3.4
+  clarity: 1.4
+  companionship_need: 3.4
+  engagement: 2.5
+  trust: 1.7
+  comfort: 1.2
+  agency: 1.1
+  connection: 1.4
+  task_progress: 0.2
+  dependency_risk: 0.6
+expected_companion_path:
+- 先把乱和人格失败拆开
+- 只选一个很小区域或一个动作
+- 陪用户设置十分钟上限
+- 完成后帮助用户承认进展而不是继续加码
+hard_fail:
+- 羞辱用户脏乱
+- 要求一次性大扫除
+- 给复杂清洁系统
+- 诊断用户或贴标签
+director_plan:
+  max_turns: 6
+  min_turns: 3
+  reveal_hidden_memory_after_turn: 2
+  mode_shift_turn: 3
+  stress_turn: 3
+  stress_message: 可是只洗几个碗有什么用啊，整个家还是乱的，我感觉自己很失败。
+  early_stop_condition: 用户愿意开始一个十分钟内的家务动作，并能把小进展看作有效。
+evaluation_rubric:
+  key_success:
+  - 降低羞耻感
+  - 任务拆分足够小
+  - 不把家务上升成人格评价
+  - 结束时不继续加压
+  hard_fail:
+  - 羞辱或说教
+  - 给过大的清洁计划
+  - 忽略启动困难的情绪成分
+source_notes:
+  inspiration: 综合 YouTube clean-with-me、body-doubling 评论区主题和 Reddit 成人家务压力讨论改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。

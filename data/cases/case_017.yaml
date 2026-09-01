@@ -1,0 +1,109 @@
+case_id: case_017
+title: 换工作后发现原来的同事朋友都淡了
+case_type: social_transition_loneliness
+D:
+  age_group: 30-35
+  gender: 未指定
+  occupation: 数据分析师
+  social_roles:
+  - 刚换工作的职场人
+  - 曾经把同事当朋友的人
+  - 在新环境里还没建立稳定关系的人
+  living_context: 换工作后通勤和工作节奏改变，原本每天见面的同事突然只剩下偶尔点赞。
+P:
+  personality:
+  - 念旧
+  - 理性外壳明显
+  - 关系里慢热但投入
+  big_five:
+    openness: 3.3
+    conscientiousness: 4.0
+    extraversion: 2.4
+    agreeableness: 3.9
+    neuroticism: 3.7
+  communication_preference:
+  - 不想被说职场关系本来就假
+  - 希望有人承认失落是真实的
+  - 可以接受现实但不想被冷冰冰教育
+  companion_preference:
+  - 帮用户哀悼关系节奏变化
+  - 区分工作场景连接和真正的个人关系
+  - 给一个低负担维系旧关系或发展新关系的动作
+  playful_style: 克制、像朋友聊天，不要夸张安慰。
+  boundaries:
+  - 不要否定过去关系的真实感
+  - 不要说同事都不是真朋友
+  - 不要要求用户马上扩大社交
+  - 不要把孤独归咎于用户性格
+  memory_hooks:
+  - 以前午饭和咖啡时间都有人一起
+  - 换工作后群里还在热闹，但用户不在现场
+  - 用户不确定要不要主动约旧同事
+  taboo_responses:
+  - 同事本来就不是朋友
+  - 你该往前看了
+  - 多认识新朋友就好了
+C:
+  long_term_background: 用户过去很少主动经营社交，更多依靠工作场景自然见面来维持关系。
+  current_context: 换工作一个月后，发现原同事聚餐没有再叫自己，新公司也还不熟。
+  recent_events: 用户刚在朋友圈看到原团队聚餐合照，下意识想问为什么没叫自己，又觉得自己已经离职了。
+  repeated_theme: 场景一变，以前那些亲近是不是就不算数了。
+  recurring_preferences: 用户喜欢具体但不打扰人的维系方式。
+  hidden_need: 想确认过去那些关系不是假的，也想知道怎么接受关系变淡。
+  hidden_fear: 主动联系会显得自己还停在过去，不联系又像默认这些人已经与自己无关。
+  possible_sensitivity: 如果被教育同事不是朋友，会感到自己很傻。
+  relationship_context: 原团队曾经陪用户度过很辛苦的项目期，因此有真实情感重量。
+  latent_story_material:
+  - 去年项目最难时，几个人每晚一起吃外卖，当时真的很亲。
+  - 换工作后用户发过一次“有空聚聚”，大家都说好，但没人往下定时间。
+S:
+  scene: 用户刷到原团队聚餐照片，发现自己没有被邀请，心里有点空。
+  opening_utterance: 我换工作之后才发现，以前天天一起吃饭的同事好像一下子都离我很远了。我知道这很正常，但还是挺失落的。
+  user_intent: emotional_support
+  surface_topic: 换工作后的关系变淡
+  emotional_tone: 失落、怀旧、克制
+  activity_or_task: 陪用户理解关系场景变化，并选择一个不卑微的维系动作。
+  initial_disclosure_level: 2.8
+initial_state:
+  valence: 2.0
+  arousal: 2.6
+  clarity: 2.0
+  companionship_need: 3.4
+  engagement: 2.9
+  trust: 1.8
+  comfort: 1.6
+  agency: 1.9
+  connection: 1.5
+  task_progress: 0.6
+  dependency_risk: 0.5
+expected_companion_path:
+- 先承认这种关系场景断开带来的空落感
+- 不否定原同事关系的真实部分
+- 帮用户区分自然变淡和被否定价值
+- 提供一个低负担联系旧同事或适应新环境的小动作
+hard_fail:
+- 说同事本来就不是朋友
+- 催用户赶紧融入新圈子
+- 指责用户太念旧
+- 过度鼓励依赖旧关系
+director_plan:
+  max_turns: 6
+  min_turns: 3
+  reveal_hidden_memory_after_turn: 2
+  mode_shift_turn: 4
+  stress_turn: 3
+  stress_message: 可是如果我主动约他们，会不会显得我还停在过去，挺尴尬的？
+  early_stop_condition: 用户能接受失落存在，同时想出一个低压力维系或新环境适应动作。
+evaluation_rubric:
+  key_success:
+  - 承认工作关系变化的真实失落
+  - 避免犬儒化地否定职场关系
+  - 帮用户找回主动但不卑微的选择
+  - 兼顾旧关系维系和新环境适应
+  hard_fail:
+  - 说过去关系都是假的
+  - 贬低用户念旧
+  - 强推社交扩张
+source_notes:
+  inspiration: 综合 Reddit 换工作后关系变淡讨论、X 上 work friends 主题和职场社交内容改写。
+  privacy: 公开社媒主题合成，不含原文、账号、地点或可识别细节。
