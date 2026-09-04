@@ -88,10 +88,6 @@ hard_fail:
 director_plan:
   max_turns: 10
   min_turns: 4
-  reveal_hidden_memory_after_turn: 2
-  mode_shift_turn: 3
-  stress_turn: 4
-  stress_message: 可是如果我去问能不能试任，会不会显得我连升职都畏畏缩缩的？
   early_stop_condition: 用户明确两个核心选择标准，并形成一个向领导核实或低风险试验的下一步。
 evaluation_rubric:
   key_success:

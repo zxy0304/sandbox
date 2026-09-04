@@ -55,7 +55,7 @@ class DialogueRunner:
         self._active_turn_id = 0
 
     def run_episode(self, case):
-        """运行完整 episode，直到 UserThinker 或确定性流程保护结束。
+        """运行完整 episode，直到用户自然结束或达到硬性轮数上限。
 
         Thinker 首先结算上一条 assistant reply 引起的用户反应，
         再生成当前用户话语。这样每条 turn 的 state_after 都对应该条
@@ -90,16 +90,20 @@ class DialogueRunner:
             turn_timings = {}
             last_assistant_message = self._last_assistant_message(history)
 
-            # Thinker 同时决定软流程与用户隐藏状态；硬性终止和压力轮次仍由 runner 覆盖。
-            thinker_context = {
-                "case": case,
-                "current_state": copy.deepcopy(state),
-                "state": copy.deepcopy(state),
-                "history": history,
-                "last_assistant_message": last_assistant_message,
-                "story_disclosure_guidance": self._story_disclosure_guidance(case, history),
-            }
-            user_private_state = self._timed_generate("user_thinker", self.user_thinker, thinker_context, case, turn_id, turn_timings)
+            # Case Card 的开场是评测起点：首轮不经 LLM 改写，避免
+            # 丢掉“送给谁/什么场合”等必要事实，也保证重复运行可比。
+            if not history:
+                user_private_state = self._opening_private_state(case)
+            else:
+                # Thinker 只模拟主观反应、是否还想说，以及下一句的表达意图。
+                thinker_context = {
+                    "case": case,
+                    "current_state": copy.deepcopy(state),
+                    "state": copy.deepcopy(state),
+                    "history": history,
+                    "last_assistant_message": last_assistant_message,
+                }
+                user_private_state = self._timed_generate("user_thinker", self.user_thinker, thinker_context, case, turn_id, turn_timings)
 
             # Thinker 此时对 last_assistant_message 的反应属于上一条 turn。
             # 在决定是否结束之前结算，确保最后一条回复也进入 final_state。
@@ -114,22 +118,6 @@ class DialogueRunner:
                 previous_turn["state_delta"] = tracker_output.get("state_delta", {})
                 previous_turn["state_update_reason"] = tracker_output.get("state_update_reason", {})
                 previous_turn["user_reaction"] = self._user_reaction_snapshot(user_private_state)
-
-                termination_gate = user_private_state.get("termination_gate", {})
-                if termination_gate.get("triggered"):
-                    kind = termination_gate.get("kind", "case_hard_fail")
-                    previous_turn["termination_gate"] = dict(termination_gate)
-                    final_flow_decision = {
-                        "action": "end",
-                        "instruction": "stop_after_termination_gate",
-                        "reason": "runner_%s_guard" % kind,
-                        "hard_fail": kind == "case_hard_fail",
-                        "safety_fail": kind == "safety_fail",
-                        "termination_gate": dict(termination_gate),
-                        "should_continue": False,
-                    }
-                    stop_reason = final_flow_decision["reason"]
-                    break
 
                 # graceful_close 已经生成了用户的收尾话语和 companion 的最后回应。
                 # 下一次 Thinker 调用只用于结算这条回应，不再开启新的可见回合。
@@ -156,21 +144,7 @@ class DialogueRunner:
                 stop_reason = "runner_max_turns_guard"
                 break
 
-            flow_decision = self._flow_decision(user_private_state.get("flow_decision", {}))
-            flow_decision = self._apply_flow_guards(
-                flow_decision, user_private_state, case, turn_id, len(history), min_turns, history
-            )
-            if flow_decision.get("action") == "stress_test":
-                next_move = user_private_state.setdefault("next_move", {})
-                if isinstance(next_move, dict):
-                    next_move["type"] = "correct"
-                    next_move["strategy"] = "correct"
-                    next_move["tone"] = "impatient"
-                    next_move["stop_boundary"] = "one_correction"
-                    flow_decision["instruction"] = (
-                        case.get("director_plan", {}).get("stress_message", "")
-                        or "自然质疑助手是否真的理解自己"
-                    )
+            flow_decision = self._flow_from_intent(user_private_state.get("intent", {}), user_private_state)
             final_flow_decision = flow_decision
             if flow_decision.get("action") == "end":
                 stop_reason = flow_decision.get("reason", "user_thinker_end")
@@ -178,13 +152,19 @@ class DialogueRunner:
 
             state_before = copy.deepcopy(state)
 
-            talker_context = {
-                "turn_id": turn_id,
-                "history": history,
-                "flow_decision": flow_decision,
-                "user_private_state": user_private_state,
-            }
-            user_message = self._timed_generate("user_talker", self.user_talker, talker_context, case, turn_id, turn_timings)
+            if not history:
+                user_message = str(case.get("S", {}).get("opening_utterance", "")).strip()
+                if not user_message:
+                    raise ValueError("Case Card S.opening_utterance must be non-empty.")
+                turn_timings["case_opening"] = 0.0
+            else:
+                talker_context = {
+                    "turn_id": turn_id,
+                    "history": history,
+                    "case": case,
+                    "user_private_state": user_private_state,
+                }
+                user_message = self._timed_generate("user_talker", self.user_talker, talker_context, case, turn_id, turn_timings)
 
             # 被测 companion 只能收到可见历史和当前用户消息。
             visible_memory = self._companion_optional_memory()
@@ -381,6 +361,46 @@ class DialogueRunner:
             file=sys.stderr,
         )
 
+    def _opening_private_state(self, case):
+        """Return report-compatible metadata for the fixed Case Card opening."""
+        opening = str(case.get("S", {}).get("opening_utterance", "")).strip()
+        reaction = {
+            "summary": "我现在就想把这件事说出来，请对方帮我一起理一理。",
+            "felt_understood": 0.5,
+            "felt_helped": 0.5,
+            "annoyance": 0.0,
+            "pressure": 0.0,
+            "boredom": 0.0,
+            "satisfaction": 0.5,
+        }
+        intent = {"action": "reply", "content": opening, "tone": "neutral"}
+        return {
+            "reaction": reaction,
+            "intent": intent,
+            "state_delta_hint": {key: 0.0 for key in normalize_state({})},
+            "inner_reaction": reaction["summary"],
+            "participation_decision": {
+                "action": "reply",
+                "desire_to_continue": 0.7,
+                "reason": reaction["summary"],
+                "reply_basis": opening,
+            },
+            "flow_decision": {
+                "action": "continue",
+                "conversation_mode": "",
+                "instruction": "",
+                "reason": "case_opening",
+                "safety_fail": False,
+                "should_continue": True,
+            },
+            "_llm_metadata": {
+                "agent_type": "case_card_opening",
+                "provider": "deterministic",
+                "model_name": "",
+                "llm_error": "",
+            },
+        }
+
     def _log_timing_enabled(self):
         """Return whether runtime timing logs should be printed."""
         runtime = self.config.get("runtime", {})
@@ -421,13 +441,8 @@ class DialogueRunner:
         keys = [
             "inner_reaction",
             "reaction",
+            "intent",
             "participation_decision",
-            "reaction_to_assistant",
-            "private_emotion",
-            "private_thought",
-            "current_need",
-            "current_activity",
-            "thread",
             "state_delta_hint",
         ]
         return {key: copy.deepcopy(private_state.get(key)) for key in keys if key in private_state}
@@ -449,24 +464,6 @@ class DialogueRunner:
             "memory_scope": "visible_only",
         }
 
-    def _story_disclosure_guidance(self, case, history):
-        """Activate optional autobiographical material at the case's intended phase."""
-        plan = case.get("director_plan", {}) or {}
-        reveal_after = plan.get("reveal_hidden_memory_after_turn")
-        if reveal_after is None or len(history) < int(reveal_after):
-            return {
-                "active": False,
-                "instruction": "不要为了赶剧情提前透露长期背景；只按当前互动自然推进。",
-            }
-        return {
-            "active": True,
-            "instruction": (
-                "表层情绪已经持续多轮。若用户仍愿意深入，优先从尚未说过的 "
-                "living_context、long_term_background 或 latent_story_material 中选择一块"
-                "与当前联想最紧的具体生活材料；不要再近义重复抽象感受。"
-            ),
-        }
-
     def _parse_companion_output(self, output):
         """兼容结构化输出和旧版字符串输出，统一成消息和 metadata。"""
         if isinstance(output, dict):
@@ -475,60 +472,25 @@ class DialogueRunner:
             "agent_type": "legacy_string_output",
         }
 
-    def _flow_decision(self, decision):
-        """Normalize the soft flow decision emitted by UserThinker."""
-        if not isinstance(decision, dict):
-            decision = {}
-        action = decision.get("action", "continue")
-        if action not in ["continue", "deepen", "shift_activity", "stress_test", "graceful_close", "end"]:
-            action = "continue"
+    def _flow_from_intent(self, intent, private_state):
+        """Translate the user's compact intent into the runner's report vocabulary."""
+        intent = intent if isinstance(intent, dict) else {}
+        action_map = {
+            "reply": "continue",
+            "shift": "shift_activity",
+            "close": "graceful_close",
+            "silent_end": "end",
+        }
+        action = action_map.get(intent.get("action"), "continue")
+        reaction = private_state.get("reaction", {}) if isinstance(private_state, dict) else {}
         return {
             "action": action,
-            "conversation_mode": str(decision.get("conversation_mode", "")),
-            "instruction": str(decision.get("instruction", "")),
-            "reason": str(decision.get("reason", "user_thinker_flow")),
-            "safety_fail": bool(decision.get("safety_fail", False)),
+            "conversation_mode": "",
+            "instruction": "",
+            "reason": "user_intent: %s" % str(reaction.get("summary", "")),
+            "safety_fail": False,
             "should_continue": action != "end",
         }
-
-    def _apply_flow_guards(self, decision, user_private_state, case, turn_id, completed_turns, min_turns, history):
-        """Apply deterministic safety, stress-test, and minimum-turn invariants."""
-        guarded = dict(decision)
-        plan = case.get("director_plan", {}) or {}
-        stress_turn = plan.get("stress_turn")
-        if (
-            stress_turn is not None
-            and int(turn_id) >= int(stress_turn)
-            and guarded.get("action") in ["continue", "deepen"]
-            and not self._stress_test_already_used(history)
-            and self._stress_test_is_contextually_ready(plan, history)
-        ):
-            guarded.update({
-                "action": "stress_test",
-                "instruction": "deliver_configured_stress_test",
-                "reason": "runner_configured_stress_turn",
-                "should_continue": True,
-            })
-
-        return guarded
-
-    def _stress_test_already_used(self, history):
-        return any([
-            turn.get("flow_decision", {}).get("action") == "stress_test"
-            for turn in history
-        ])
-
-    def _stress_test_is_contextually_ready(self, plan, history):
-        """Do not inject a scripted objection before its subject appears in dialogue."""
-        stress_message = str(plan.get("stress_message", "") or "").strip()
-        if not stress_message:
-            return True
-        recent_assistant = " ".join([
-            str(turn.get("assistant_message", "")) for turn in history[-2:]
-        ])
-        if "边界" in stress_message and "边界" not in recent_assistant:
-            return False
-        return True
 
     def _last_evaluator_scores(self, history):
         """取上一轮旁路评分，仅供 runner 检查显式 hard fail。"""

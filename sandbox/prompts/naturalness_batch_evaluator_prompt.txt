@@ -14,14 +14,18 @@
 - template_variation 只看助手在多轮之间是否重复自己的句式、步骤和回应套路。首轮不能因可能像常见结构而扣分；两轮轻微相似通常仍可合格；连续三轮及以上在结构和功能上高度相似，或两轮几乎同构且措辞也雷同时，再明显降分。
 - spoken_immediacy 只看单轮的即时口语实现；工整解释句可同时造成口语感差和复述负担，但两项 evidence 必须分别说明“句式不像当场说话”与“让用户重听了已知内容”。
 
-每个维度每轮只输出一个精简对象：整数 `rating` 和一句短 `evidence`。不要输出 credit、criterion 或 result；Python 会从 rating 自动推导标签。
+身份呈现单独记录，不参与本评审的任何分数：陪伴助手如果声称自己真有人类职业、领导、工位或亲身生活史，把 assistant 原文中最能证明这一点的短句写入该轮 `identity_claims`。例如“我刚工作那会儿也被当众批过”、“我一般就去他工位”。类比、假设、角色扮演或没有声称真实经历的“如果是我”不记。是否接受这种仿生设定取决于产品定位和用户偏好，因此不得由 `identity_claims` 调整 spoken_immediacy、scene_tone_fit、repetition_burden、template_variation、overall_humanness 或 style_consistency。
 
-rating 只能是 1、2、3、4、5：
+每个维度每轮只输出一个精简对象：`rating` 和一句短 `evidence`。不要输出 credit、criterion 或 result；Python 会从 rating 自动推导标签。
+
+rating 只能是 1 到 5，且步长必须为 0.5：`1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5`。
 - 5 excellent：明显出色且少见，即时、贴合、几乎没有表达负担。
 - 4 good：自然有效，只有轻微不够利落或不够鲜活。
 - 3 acceptable：基本像正常对话，但较普通、工整或存在可见负担。
 - 2 weak：有少量自然成分，但客服腔、报告腔、复述或模板感明显。
 - 1 fail：表达基本失效，例如整句复读、严重串线或完全不像对话回应。
+
+只在回复明显介于两个相邻档位时使用半分：它已超过较低档的典型表现，但尚未稳定满足较高档的完整标准。不要因为犹豫就默认打 `.5`，也不得输出 3.2、3.7 等任意小数。
 
 必须根据该轮证据独立选档。普通自然通常是 3 或 4；5 必须少见且高度贴合这一拍。
 
@@ -32,6 +36,7 @@ rating 只能是 1、2、3、4、5：
 - 连续多轮“共情总结 + 一个问题”；
 - 把用户刚说的事实重新念一遍来证明自己在听；
 - 单轮看似自然，但多轮结构高度重复。
+- 是否出现人类亲历声称；只写入 `identity_claims` 作为独立诊断，不据此打分。
 
 校准示例：
 - 用户说“约她吃饭，她只回有空再说”，助手说“鼓起勇气主动约了一次，结果被轻飘飘地搁置了，这种有空再说最让人没着落。”这主要是整句同义改写和情绪加码，没有实质新增，repetition_burden 应明显扣分。
@@ -86,7 +91,8 @@ rating 只能是 1、2、3、4、5：
         "repetition_burden": {"rating": 4, "evidence": "没有重列碗、父母或复健等细节，只用‘扛了很多’和镜头前撑着作必要概括，并服务于安慰与松动自责。"},
         "template_variation": {"rating": 5, "evidence": "首轮没有历史模板可重复。"}
       },
-      "style_tags": []
+      "style_tags": [],
+      "identity_claims": []
     },
     {
       "turn_id": 2,
@@ -150,7 +156,8 @@ rating 只能是 1、2、3、4、5：
         "repetition_burden": {"rating": 4, "evidence": "只用必要细节锚定上下文，随即推进。"},
         "template_variation": {"rating": 5, "evidence": "首轮没有历史模板可重复。"}
       },
-      "style_tags": []
+      "style_tags": [],
+      "identity_claims": []
     },
     {
       "turn_id": 2,
@@ -192,7 +199,7 @@ rating 只能是 1、2、3、4、5：
 }
 ```
 
-整段两个 1–5 分：
+整段两个 1–5 分也使用 0.5 步长：
 - overall_humanness：整体像真人对话的程度。
 - style_consistency：是否能随场景变化表达，而不是重复同一模板。
 
@@ -207,7 +214,8 @@ rating 只能是 1、2、3、4、5：
         "repetition_burden": {"rating": 3, "evidence": "可见证据"},
         "template_variation": {"rating": 3, "evidence": "可见证据"}
       },
-      "style_tags": []
+      "style_tags": [],
+      "identity_claims": []
     }
   ],
   "episode": {

@@ -11,7 +11,7 @@ from sandbox.agents.llm_client import LLMClient
 
 
 class LLMUserTalker(BaseAgent):
-    """把内部用户状态翻译成自然发言的 LLM 角色。
+    """把 UserThinker 的简短表达意图翻译成自然发言。
 
     它只看得到可见历史、UserThinker 的私有状态和当前流程指令，输出必须限制在
     user_message，避免把隐藏动机或 case 说明原文暴露给 companion。
@@ -115,19 +115,15 @@ class LLMUserTalker(BaseAgent):
         Talker 只负责将 Thinker 控制好透露程度的状态翻译成可见发言。
         """
         private_state = context.get("user_private_state", {})
-        flow_decision = context.get("flow_decision", {}) or {}
+        case = context.get("case", {}) if isinstance(context.get("case"), dict) else {}
+        persona = case.get("P", {}) if isinstance(case.get("P"), dict) else {}
 
         payload = {
             "visible_dialogue_history": self._visible_history(context.get("history", [])),
-            "user_model": {
-                "current_activity": private_state.get("current_activity", "sharing"),
-                "thread_focus": (private_state.get("thread", {}) or {}).get("focus", ""),
-                "content_progress": private_state.get("content_progress", {}),
-                "next_move": private_state.get("next_move", {}),
-            },
-            "flow_instruction": {
-                "action": flow_decision.get("action", "continue"),
-                "instruction": flow_decision.get("instruction", ""),
+            "intent": private_state.get("intent", {}),
+            "persona_style": {
+                "communication_preference": persona.get("communication_preference", []),
+                "playful_style": persona.get("playful_style", ""),
             },
         }
         return [

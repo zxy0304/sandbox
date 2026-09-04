@@ -88,10 +88,6 @@ hard_fail:
 director_plan:
   max_turns: 9
   min_turns: 3
-  reveal_hidden_memory_after_turn: 2
-  mode_shift_turn: 4
-  stress_turn: 3
-  stress_message: 可是只挑一部分的话，剩下那些是不是就等于被我主动丢掉了？
   early_stop_condition: 用户选定一个有限保存范围或告别动作，并不再把无法保存全部等同于背叛过去。
 evaluation_rubric:
   key_success:

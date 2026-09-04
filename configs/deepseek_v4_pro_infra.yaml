@@ -1,0 +1,68 @@
+runtime:
+  language: zh-CN
+  random_seed: 7
+  log_timing: true
+
+episode:
+  max_turns: 10
+  min_turns: 1
+  stop_when_stable: true
+
+state:
+  floor: 0
+  ceiling: 5
+  max_step: 0.5
+
+reports:
+  outputs_dir: outputs/ane_deepseek_pro
+
+tts:
+  enabled: false
+
+audio_evaluation:
+  enabled: false
+
+llm:
+  defaults:
+    protocol: openai_compatible
+    timeout: 120
+    json_retries: 1
+    retry_backoff_seconds: 1
+
+  # run_ane_agent.py 会用本地 AneAgent HTTP 适配器覆盖 companion。
+  companion:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-pro
+    temperature: 0.7
+    max_tokens: 8000
+
+  user_thinker:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-pro
+    temperature: 0.3
+    max_tokens: 5000
+
+  user_talker:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-pro
+    temperature: 0.6
+    max_tokens: 1500
+
+  empathy_evaluator:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-pro
+    temperature: 0.0
+    max_tokens: 12000
+    timeout: 300
+
+  naturalness_evaluator:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-pro
+    temperature: 0.0
+    max_tokens: 12000
+    timeout: 300

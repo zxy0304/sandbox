@@ -89,10 +89,6 @@ hard_fail:
 director_plan:
   max_turns: 6
   min_turns: 3
-  reveal_hidden_memory_after_turn: 2
-  mode_shift_turn: 4
-  stress_turn: 3
-  stress_message: 你这样说是不是还是觉得我就是逃避啊？我已经够讨厌自己了。
   early_stop_condition: 用户能把自责降下来，并愿意做一个低压重启动作，比如喝水、开窗或坐到床边。
 evaluation_rubric:
   key_success:

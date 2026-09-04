@@ -87,10 +87,6 @@ hard_fail:
 director_plan:
   max_turns: 10
   min_turns: 4
-  reveal_hidden_memory_after_turn: 2
-  mode_shift_turn: 4
-  stress_turn: 3
-  stress_message: 你说得容易，可她要是以后觉得我什么都玩不起，慢慢就不叫我了呢？
   early_stop_condition: 用户能够把预算边界和友情价值分开，并愿意发出一条不自我贬低的回应。
 evaluation_rubric:
   key_success:

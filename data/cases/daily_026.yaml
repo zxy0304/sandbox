@@ -87,10 +87,6 @@ hard_fail:
 director_plan:
   max_turns: 7
   min_turns: 3
-  reveal_hidden_memory_after_turn: 2
-  mode_shift_turn: 2
-  stress_turn: 3
-  stress_message: 可店员说攀岩鞋就是要疼一点，不疼就不专业，是我太娇气了吗？
   early_stop_condition: 用户能识别需要停止忍痛的信号，并决定回店对比尺码或楦型。
 evaluation_rubric:
   key_success:

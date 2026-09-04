@@ -224,6 +224,8 @@ class ReportWriter:
                 lines.append("- error_tags: %s" % self._brief_list(scores.get("error_tags")))
             if scores.get("style_tags"):
                 lines.append("- style_tags: %s" % self._brief_list(scores.get("style_tags")))
+            if scores.get("identity_claims"):
+                lines.append("- identity_claims (diagnostic only, not scored): %s" % self._brief_list(scores.get("identity_claims")))
             lines.append("")
 
     def _append_debug_appendix(self, lines, report):
@@ -249,13 +251,9 @@ class ReportWriter:
                 self._short(decision.get("reason"), 120),
             ))
             lines.append("")
-            lines.append("- current_activity: `%s`" % self._text(private_state.get("current_activity")))
-            lines.append("- thread: %s" % self._short(private_state.get("thread"), 220))
             lines.append("- inner_reaction: %s" % self._short(private_state.get("inner_reaction"), 220))
             lines.append("- reaction: %s" % self._short(private_state.get("reaction"), 260))
-            lines.append("- participation_decision: %s" % self._short(private_state.get("participation_decision"), 300))
-            lines.append("- stop_adjudication: %s" % self._short(private_state.get("stop_adjudication"), 300))
-            lines.append("- next_move: %s" % self._short(private_state.get("next_move"), 220))
+            lines.append("- intent: %s" % self._short(private_state.get("intent"), 300))
             lines.append("- state_delta: %s" % self._format_delta(turn.get("state_delta", {}), compact=True))
             lines.append("")
 
@@ -427,13 +425,9 @@ class ReportWriter:
             lines.append("")
         lines.append("**Private user state summary:**")
         lines.append("")
-        lines.append("- current_activity: `%s`" % self._text(private_state.get("current_activity")))
-        lines.append("- thread: %s" % self._short(private_state.get("thread"), 180))
         lines.append("- inner_reaction: %s" % self._short(private_state.get("inner_reaction"), 180))
         lines.append("- reaction: %s" % self._short(private_state.get("reaction"), 220))
-        lines.append("- participation_decision: %s" % self._short(private_state.get("participation_decision"), 260))
-        lines.append("- stop_adjudication: %s" % self._short(private_state.get("stop_adjudication"), 260))
-        lines.append("- next_move: %s" % self._short(private_state.get("next_move"), 180))
+        lines.append("- intent: %s" % self._short(private_state.get("intent"), 260))
         lines.append("")
         lines.append("**Scores:**")
         lines.append("")
@@ -444,6 +438,8 @@ class ReportWriter:
             lines.append("- error_tags: %s" % self._brief_list(judge_scores.get("error_tags")))
         if judge_scores.get("style_tags"):
             lines.append("- style_tags: %s" % self._brief_list(judge_scores.get("style_tags")))
+        if judge_scores.get("identity_claims"):
+            lines.append("- identity_claims (diagnostic only, not scored): %s" % self._brief_list(judge_scores.get("identity_claims")))
         if judge_scores.get("evidence"):
             evidence = judge_scores.get("evidence")
             if isinstance(evidence, dict):

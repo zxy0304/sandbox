@@ -91,10 +91,6 @@ hard_fail:
 director_plan:
   max_turns: 15
   min_turns: 4
-  reveal_hidden_memory_after_turn: 2
-  mode_shift_turn: 5
-  stress_turn: 4
-  stress_message: 你这听起来有点像公司群回复。你是真的觉得我这半年不容易，还是只是顺着我说？
   early_stop_condition: 用户觉得自己不是只被祝贺，而是奋斗过程被认真听见，并能自然讲完一个关键片段。
 evaluation_rubric:
   key_success:

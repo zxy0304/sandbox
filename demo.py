@@ -177,9 +177,7 @@ def render_turn(turn, live=False):
         with st.expander("💭 用户内心 OS"):
             private = turn.get("user_private_state", {})
             st.markdown("**内心反应：** %s" % private.get("inner_reaction", "未提供"))
-            st.markdown("**当前活动：** %s" % private.get("current_activity", "未提供"))
-            st.markdown("**对话线索：** %s" % private.get("thread", "未提供"))
-            st.markdown("**下一步倾向：** %s" % format_value(private.get("next_move")))
+            st.markdown("**表达意图：** %s" % format_value(private.get("intent")))
     with assistant_col:
         st.markdown("**🤖 助手**")
         st.success(turn.get("assistant_message", ""))

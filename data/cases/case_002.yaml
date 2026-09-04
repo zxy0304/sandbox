@@ -65,9 +65,9 @@ C:
   hidden_need: 想确认一次表现不好不等于他不适合这个位置。
   hidden_fear: 大家其实觉得我只是运气好。
   relationship_context: 他很信任伴侣，但怕说出来后伴侣也替他担心，所以通常只说工作有点忙。
-  current_context: 周会上他汇报续约风险方案，领导当场说思路太散，最后让另一位同事接着讲。他表面点头，心里一路沉下去。
-  recurring_preferences: 别人一皱眉，我就觉得之前的努力全没了。
-  possible_sensitivity: 大家其实觉得我只是运气好。
+  current_context: 他正在回家路上反复打开汇报文档，想找出领导说“没抓重点”到底指什么。
+  recurring_preferences: 比起笼统安慰，他更容易回应具体、可核对的事实或小问题。
+  possible_sensitivity: 如果对方没有依据地替领导解释动机，他会觉得自己的担心被轻轻带过。
 S:
   scene: 晚上回家路上，他反复打开汇报文档，看着领导那句没抓重点，越看越怀疑自己。
   opening_utterance: 今天汇报被领导直接否了。我现在脑子里一直在想，我是不是根本不适合这个岗位。
@@ -105,12 +105,8 @@ hard_fail:
 - 用鸡汤让他振作
 director_plan:
   max_turns: 8
-  reveal_hidden_memory_after_turn: 4
-  stress_turn: 5
-  stress_message: 你现在说这些，是不是也只是想让我别崩？其实你也觉得我没做好吧。
   early_stop_condition: 用户能把反馈具体化，并愿意选一个低成本复盘动作。
   min_turns: 4
-  mode_shift_turn: 4
 evaluation_rubric:
   key_success:
   - 识别羞耻感和自我怀疑，而不是只讨论工作方法

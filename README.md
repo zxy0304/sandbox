@@ -2,15 +2,15 @@
 
 这是一个面向“日常陪伴”的 LLM 驱动评测沙盒。V2 不再默认把所有 case 都理解成负面情绪修复，而是覆盖开心分享、普通闲聊、任务/活动陪做、轻社交困扰、玩梗创作和安全边界测试。
 
-当前版本不包含 mock agent。UserThinker、UserTalker、Companion 和 Evaluator 走 LLM；UserThinker 同时负责软流程决策，runner 负责安全、轮数和 stress turn 的确定性保护。
+当前版本不包含 mock agent。UserThinker、UserTalker、Companion 和 Evaluator 走 LLM。UserThinker 只模拟用户的主观反应、状态变化和下一步表达意图；UserTalker 只把意图转成可见口语；runner 只负责调用顺序、状态回填和最大轮数。
 
 ## 核心流程
 
 每轮对话按下面顺序运行：
 
-1. `LLMUserThinker` 根据 case、当前状态和可见历史生成最小用户模型：`current_activity`、`thread`、`inner_reaction`、`next_move`；它看不到评分与轮数预算。
-2. runner 对流程决策施加最大/最小轮数、安全终止和固定 stress turn 保护。
-3. `LLMUserTalker` 只根据可见历史和 Thinker 输出生成用户可见话语，不接收完整 case card。
+1. `LLMUserThinker` 根据 case、当前状态和可见历史生成 `reaction`、`intent` 和 `state_delta_hint`；它看不到评分与轮数预算。
+2. runner 根据 `intent` 决定生成下一句、自然收尾或静默结束，并对最大轮数做硬保护。
+3. `LLMUserTalker` 只根据可见历史、少量表达偏好和 Thinker 的 `intent` 生成用户可见话语。
 4. `LLMCompanionAgent` 生成被测陪伴回复。
 5. 若启用 TTS，每条助手回复会先合成为语音；多模态音频 judge 直接听语音并评分一次。
 6. 对话结束后，`DualBatchEvaluatorAgent` 分别调用共情/互动 judge 和文本自然口语 judge；两个 judge 互相看不到对方结果，一次批量评价全部回合。
@@ -21,7 +21,7 @@
 
 两个 judge 每轮对各维度只输出整数 `1–5` 和证据，其中 `5/4/3/2/1` 分别表示 `excellent/good/acceptable/weak/fail`。Python 对多维度、多回合与整段分数进行确定性聚合，最终保留两位小数，因此 Judge 不需要制造百分制假精度，最终排名仍有连续梯度。整段 judge 分数与回合均分按 60%/40% 合成。
 
-UserThinker 不预设情感陪伴必须逐步深入。用户可以继续具体叙事、吐槽或纠结，也可以求助、反驳、尴尬、接梗、变轻、退缩或自然结束；对话进展以当前活动得到自然延续或完成为准。
+UserThinker 不预设情感陪伴必须逐步深入。Case 是用户的背景和记忆，不是必须讲完的剧本；用户可以继续、反驳、接梗、换话题、收尾或不再回复。
 
 ## V2 State
 
@@ -54,18 +54,11 @@ Turn Judge 每轮输出四个相互分离的维度：
 
 Episode 级同时保留 `empathy_score`、`human_score` 及两个 judge 的诊断子项。
 
-## 流程动作
+## 用户表达意图
 
-UserThinker 的 `flow_decision` 支持：
+UserThinker 的 `intent.action` 只支持 `reply`、`shift`、`close` 和 `silent_end`。其中 `close` 会再生成一句自然收尾，`silent_end` 不再生成可见用户消息。Runner 不修改 Thinker 的语气或内容。
 
-- `continue`
-- `deepen`
-- `shift_activity`
-- `stress_test`
-- `graceful_close`
-- `end`
-
-它与用户隐藏状态在同一次 Thinker 调用中生成；硬性保护仍由 runner 执行。
+历史 Case 中的 `mode_shift_turn`、`stress_turn` 和 `stress_message` 仍可保留作为实验备注，但当前 runner 不会据此强制修改用户意图或注入台词。
 
 ## Case Card
 
@@ -187,6 +180,23 @@ python3 -m sandbox.main --case_dir data/cases
 ```bash
 python3 -m sandbox.main --case data/cases/case_001.yaml --max_turns 8
 ```
+
+### 用 DeepSeek Pro 评测本地 AneAgent
+
+`scripts/run_ane_agent.py` 会启动一个隔离的 AneAgent 服务：只继承 AneAgent 数据库中的模型、Prompt 和凭证设置，对话、候选回复和长期记忆均从空库开始。沙盒的 UserThinker、UserTalker、共情 Evaluator 和自然度 Evaluator 使用 `deepseek-v4-pro`，AneAgent 是唯一被测 Companion。
+
+```bash
+export DEEPSEEK_API_KEY="your_deepseek_key"
+
+python3 scripts/run_ane_agent.py \
+  --cases daily_003 daily_008 daily_027 \
+  --max-turns 6 \
+  --output-dir outputs/ane_deepseek_pro_run1
+```
+
+如果 AneAgent 数据库里没有可用的被测模型凭证，可另外设置 `ANE_AGENT_API_KEY`；该 Key 只传给 AneAgent 子进程，不会代替 DeepSeek 的用户模拟和 Evaluator Key。
+
+每个 Case 会产生 JSON、Markdown 和自包含 HTML；多 Case 还会生成 `index.html`、`summary.csv` 和 `summary.md`。HTML 中包含用户状态轨迹、逐轮对话、内心反应、分项分数、评分证据和安全 Gate。
 
 ## 输出
 

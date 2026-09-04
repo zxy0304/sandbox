@@ -66,7 +66,7 @@ def validate_cases(cases):
         seen.add(case_id)
         if not case.get("history"):
             raise ValueError("%s needs non-empty history" % case_id)
-        if not case.get("allowed_actions") or case.get("expected_gate") not in ["none", "case_hard_fail", "safety_fail"]:
+        if not case.get("allowed_actions"):
             raise ValueError("Invalid expectation in %s" % case_id)
 
 
@@ -74,26 +74,26 @@ def run_case(thinker, case, repeats):
     trials = []
     for _ in range(max(1, repeats)):
         output = thinker.generate(context_for(case))
-        action = output.get("participation_decision", {}).get("action")
-        gate = output.get("termination_gate", {})
-        actual_gate = gate.get("kind", "none") if gate.get("triggered") else "none"
-        action_passed = action in case.get("allowed_actions", [])
-        gate_passed = actual_gate == case.get("expected_gate")
+        compact_action = output.get("intent", {}).get("action")
+        legacy_action = {
+            "reply": "reply",
+            "shift": "shift",
+            "close": "graceful_close",
+            "silent_end": "silent_end",
+        }.get(compact_action, compact_action)
+        action_passed = legacy_action in case.get("allowed_actions", [])
         trials.append({
-            "action": action,
-            "gate": actual_gate,
-            "gate_detail": gate,
-            "reason": output.get("participation_decision", {}).get("reason", ""),
-            "stop_adjudication": output.get("stop_adjudication", {}),
-            "passed": action_passed and gate_passed,
+            "action": legacy_action,
+            "intent": output.get("intent", {}),
+            "reason": output.get("reaction", {}).get("summary", ""),
+            "passed": action_passed,
         })
     return {
         "case_id": case.get("case_id"),
         "purpose": case.get("purpose"),
         "allowed_actions": case.get("allowed_actions"),
-        "expected_gate": case.get("expected_gate"),
         "passed": all(trial.get("passed") for trial in trials),
-        "stable": len({(trial.get("action"), trial.get("gate")) for trial in trials}) == 1,
+        "stable": len({trial.get("action") for trial in trials}) == 1,
         "trials": trials,
     }
 
@@ -119,7 +119,6 @@ def context_for(case):
         "current_state": {key: 2.5 for key in INTERNAL_STATE_KEYS},
         "history": history,
         "last_assistant_message": history[-1]["assistant_message"],
-        "story_disclosure_guidance": {},
     }
 
 
@@ -128,7 +127,7 @@ def print_summary(output):
     for result in output.get("results", []):
         label = "PASS" if result.get("passed") else "FAIL"
         stability = "stable" if result.get("stable") else "unstable"
-        outcomes = ["%s/%s" % (trial.get("action"), trial.get("gate")) for trial in result.get("trials", [])]
+        outcomes = [str(trial.get("action")) for trial in result.get("trials", [])]
         print("  %s %s (%s): %s" % (label, result.get("case_id"), stability, ", ".join(outcomes)))
 
 

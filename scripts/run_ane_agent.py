@@ -25,6 +25,7 @@ if str(SANDBOX_ROOT) not in sys.path:
 from sandbox.agents.base_agent import BaseAgent
 from sandbox.case_loader import load_all_cases, load_case
 from sandbox.dialogue_runner import DialogueRunner
+from sandbox.html_report import HtmlReportWriter
 from sandbox.main import (
     agent_stack_summary,
     build_runner_agents,
@@ -158,9 +159,21 @@ class AneServer:
         runtime_db = self.runtime_dir / "ane-evaluation.db"
         if runtime_db.exists():
             runtime_db.unlink()
+        # Inherit only AneAgent's model, prompt and credential settings. Episodes,
+        # turns, candidates and memories start empty so cases cannot contaminate
+        # one another or inherit the developer's personal conversation history.
         with sqlite3.connect(str(source_db)) as source_conn:
-            with sqlite3.connect(str(runtime_db)) as target_conn:
-                source_conn.backup(target_conn)
+            settings = source_conn.execute(
+                "SELECT key, value, updated_at FROM settings"
+            ).fetchall()
+        with sqlite3.connect(str(runtime_db)) as target_conn:
+            target_conn.execute(
+                "CREATE TABLE settings (key TEXT PRIMARY KEY, value TEXT NOT NULL, updated_at TEXT NOT NULL)"
+            )
+            target_conn.executemany(
+                "INSERT INTO settings(key, value, updated_at) VALUES (?, ?, ?)",
+                settings,
+            )
         python = self.ane_dir / ".venv" / "bin" / "python"
         if not python.exists():
             python = Path(sys.executable)
@@ -218,12 +231,13 @@ def parse_args():
     selector.add_argument("--cases", nargs="+", help="Selected case ids or YAML paths.")
     selector.add_argument("--case-dir", help="Run every YAML file in this directory.")
     selector.add_argument("--all", action="store_true", help="Run all default sandbox cases.")
-    parser.add_argument("--config", default="configs/bailian_qwen_plus_companion.yaml")
-    parser.add_argument("--output-dir", default="outputs/ane_agent")
+    parser.add_argument("--config", default="configs/deepseek_v4_pro_infra.yaml")
+    parser.add_argument("--output-dir", default="outputs/ane_deepseek_pro")
     parser.add_argument("--ane-dir", default=str(DEFAULT_ANE_DIR))
     parser.add_argument("--port", type=int, default=8791)
     parser.add_argument("--max-turns", type=int)
     parser.add_argument("--no-evaluator", action="store_true")
+    parser.add_argument("--no-html", action="store_true", help="Skip self-contained HTML reports.")
     return parser.parse_args()
 
 
@@ -235,6 +249,31 @@ def selected_cases(args):
     if args.cases:
         return [load_case(case_ref) for case_ref in args.cases]
     return [load_case(args.case)]
+
+
+def load_existing_ane_report(output_dir, case):
+    """Load a completed AneAgent report so batch continuation avoids paid reruns."""
+    path = output_dir / ("report_%s.json" % case.get("case_id", "unknown"))
+    if not path.exists():
+        return None
+    try:
+        report = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        print("Existing AneAgent report is unreadable; rerunning %s: %s" % (case.get("case_id"), exc), file=sys.stderr)
+        return None
+    stack = report.get("agent_stack", {}) if isinstance(report, dict) else {}
+    companion = str(report.get("agent_name") or stack.get("companion_agent") or "").lower()
+    evaluation = report.get("episode_evaluation", {}) if isinstance(report, dict) else {}
+    if (
+        not isinstance(report, dict)
+        or report.get("case_id") != case.get("case_id")
+        or "aneagent" not in companion.replace("_", "")
+        or not report.get("turns")
+        or not evaluation.get("evaluator_schema_version")
+    ):
+        print("Existing report is incomplete or not from AneAgent; rerunning %s." % case.get("case_id"), file=sys.stderr)
+        return None
+    return report
 
 
 def main():
@@ -255,37 +294,67 @@ def main():
         output_dir = SANDBOX_ROOT / output_dir
     runtime_dir = output_dir / "_ane_runtime"
     writer = ReportWriter(config)
+    html_writer = HtmlReportWriter(output_dir)
     batch_items = []
+    pending_cases = []
 
-    with AneServer(Path(args.ane_dir), runtime_dir, args.port) as server:
-        ane_agent = AneHttpCompanionAgent(server.base_url)
-        connection = ane_agent.test_connection()
-        print("AneAgent connection ok: model=%s" % connection.get("model_name", "unknown"))
-        base_agents = build_runner_agents(config, "llm")
-        base_agents["companion_agent"] = ane_agent
-        runner = DialogueRunner(config=config, agents=base_agents)
-        for case in cases:
-            try:
-                report = runner.run_episode(case)
-                report["agent_name"] = "AneAgent"
-                stack = agent_stack_summary("llm", config)
-                stack["companion_agent"] = "AneAgent"
-                stack["companion_transport"] = "local_http_chat"
-                report["agent_stack"] = stack
-                paths = writer.write(report)
-                batch_items.append({
-                    "row": summary_row(report, "AneAgent"),
-                    "report": report,
-                    "paths": paths,
-                })
-                print_run_summary(report, paths)
-            except (OSError, ValueError) as exc:
-                print("Run failed for case %s:\n%s" % (case.get("case_id", "unknown"), exc), file=sys.stderr)
-                paths = writer.write_failure(runner.failure_report(case, exc))
-                print("failure diagnostics: %s" % paths, file=sys.stderr)
+    for case in cases:
+        existing = load_existing_ane_report(output_dir, case)
+        if not existing:
+            pending_cases.append(case)
+            continue
+        paths = {
+            "json_path": str(output_dir / ("report_%s.json" % case.get("case_id"))),
+            "markdown_path": str(output_dir / ("report_%s.md" % case.get("case_id"))),
+        }
+        if not args.no_html:
+            paths["html_path"] = str(html_writer.write_case(existing))
+        batch_items.append({
+            "row": summary_row(existing, "AneAgent"),
+            "report": existing,
+            "paths": paths,
+        })
+        print("skip existing case_id: %s" % case.get("case_id"))
+
+    if pending_cases:
+        with AneServer(Path(args.ane_dir), runtime_dir, args.port) as server:
+            ane_agent = AneHttpCompanionAgent(server.base_url)
+            connection = ane_agent.test_connection()
+            print("AneAgent connection ok: model=%s" % connection.get("model_name", "unknown"))
+            base_agents = build_runner_agents(config, "llm")
+            base_agents["companion_agent"] = ane_agent
+            runner = DialogueRunner(config=config, agents=base_agents)
+            for case in pending_cases:
+                try:
+                    report = runner.run_episode(case)
+                    report["agent_name"] = "AneAgent"
+                    stack = agent_stack_summary("llm", config)
+                    stack["companion_agent"] = "AneAgent"
+                    stack["companion_transport"] = "local_http_chat"
+                    stack["infrastructure_model"] = config.get("llm", {}).get("user_thinker", {}).get("model_name", "")
+                    report["agent_stack"] = stack
+                    paths = writer.write(report)
+                    if not args.no_html:
+                        paths["html_path"] = str(html_writer.write_case(report))
+                    batch_items.append({
+                        "row": summary_row(report, "AneAgent"),
+                        "report": report,
+                        "paths": paths,
+                    })
+                    print_run_summary(report, paths)
+                    if paths.get("html_path"):
+                        print("  html: %s" % paths.get("html_path"))
+                except (OSError, ValueError) as exc:
+                    print("Run failed for case %s:\n%s" % (case.get("case_id", "unknown"), exc), file=sys.stderr)
+                    paths = writer.write_failure(runner.failure_report(case, exc))
+                    print("failure diagnostics: %s" % paths, file=sys.stderr)
 
     if len(batch_items) > 1:
         write_batch_summary(output_dir, batch_items)
+    if batch_items and not args.no_html:
+        index_path = html_writer.write_index(batch_items)
+        print("visual report index:")
+        print("  html: %s" % index_path)
     return 0 if batch_items else 2
 
 

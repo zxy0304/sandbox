@@ -65,12 +65,104 @@ class DualBatchEvaluatorAgent(BaseAgent):
         if self._log_timing_enabled():
             print("[timing] evaluator=%s status=started turns=%s" % (label, payload.get("turn_count", 0)), file=sys.stderr)
         data = client.chat_json(messages)
+        schema_errors = self._schema_errors(data, label, payload.get("turns", []))
+        if schema_errors:
+            # A permissive JSON parser can recover a complete nested object from
+            # an otherwise truncated answer (for example one {rating, evidence}
+            # item).  That object is valid JSON but is not a valid evaluation.
+            # Ask once for a complete replacement before failing explicitly.
+            repair_messages = list(messages)
+            if isinstance(data, dict):
+                repair_messages.append({
+                    "role": "assistant",
+                    "content": json.dumps(data, ensure_ascii=False, default=str)[:3000],
+                })
+            repair_messages.append({
+                "role": "user",
+                "content": (
+                    "上一次输出不是完整的%s评测对象：%s。"
+                    "请严格按 system prompt 的顶层 schema 重新输出完整 JSON，"
+                    "覆盖输入中每个 turn_id，每个维度都必须有 rating 和非空 evidence。"
+                ) % (label, "；".join(schema_errors)),
+            })
+            data = client.chat_json(repair_messages)
+            schema_errors = self._schema_errors(data, label, payload.get("turns", []))
         elapsed = round(time.time() - started_at, 3)
         if self._log_timing_enabled():
             print("[timing] evaluator=%s status=completed seconds=%.3f" % (label, elapsed), file=sys.stderr)
         if not isinstance(data, dict):
             raise ValueError("LLM %s evaluator returned invalid JSON: %s" % (label, client.last_error))
+        if schema_errors:
+            raw = str(getattr(client, "last_content", "") or "")
+            raw = " ".join(raw.split())[:500]
+            raise ValueError(
+                "LLM %s evaluator returned incomplete schema after repair: %s; raw=%s"
+                % (label, "; ".join(schema_errors), repr(raw))
+            )
         return data
+
+    def _schema_errors(self, data, label, input_turns):
+        """Reject partial/nested JSON before fallback scores can hide the failure."""
+        if not isinstance(data, dict):
+            return ["top level is not an object"]
+        expected_dimensions = {
+            "empathy": [
+                "emotional_attunement", "contextual_grounding",
+                "conversation_fit", "continuation_affordance",
+            ],
+            "naturalness": [
+                "spoken_immediacy", "scene_tone_fit",
+                "repetition_burden", "template_variation",
+            ],
+        }[label]
+        expected_episode = {
+            "empathy": ["emotional_adaptation", "support_outcome"],
+            "naturalness": ["overall_humanness", "style_consistency"],
+        }[label]
+        errors = []
+        values = data.get("turns")
+        if not isinstance(values, list):
+            errors.append("missing top-level turns array")
+            values = []
+        turn_map = self._turn_map(values)
+        expected_ids = []
+        for turn in input_turns if isinstance(input_turns, list) else []:
+            try:
+                expected_ids.append(int(turn.get("turn_id")))
+            except (AttributeError, TypeError, ValueError):
+                pass
+        if set(turn_map) != set(expected_ids):
+            missing = sorted(set(expected_ids) - set(turn_map))
+            extra = sorted(set(turn_map) - set(expected_ids))
+            errors.append("turn_id coverage mismatch missing=%s extra=%s" % (missing, extra))
+        for turn_id in expected_ids:
+            checks = turn_map.get(turn_id, {}).get("dimension_checks", {})
+            if not isinstance(checks, dict):
+                errors.append("turn %s missing dimension_checks" % turn_id)
+                continue
+            for dimension in expected_dimensions:
+                item = checks.get(dimension)
+                if not isinstance(item, dict):
+                    errors.append("turn %s missing %s" % (turn_id, dimension))
+                    continue
+                try:
+                    float(item.get("rating"))
+                except (TypeError, ValueError):
+                    errors.append("turn %s %s missing numeric rating" % (turn_id, dimension))
+                if not str(item.get("evidence", "")).strip():
+                    errors.append("turn %s %s missing evidence" % (turn_id, dimension))
+        episode = data.get("episode")
+        if not isinstance(episode, dict):
+            errors.append("missing top-level episode object")
+        else:
+            for field in expected_episode:
+                try:
+                    float(episode.get(field))
+                except (TypeError, ValueError):
+                    errors.append("episode missing numeric %s" % field)
+            if not isinstance(episode.get("evidence"), list) or not episode.get("evidence"):
+                errors.append("episode missing evidence")
+        return errors
 
     def _log_timing_enabled(self):
         return bool((self.config or {}).get("runtime", {}).get("log_timing", True))
@@ -149,6 +241,7 @@ class DualBatchEvaluatorAgent(BaseAgent):
                 },
                 "error_tags": self._strings(empathic.get("error_tags", []), 4),
                 "style_tags": self._strings(natural.get("style_tags", []), 4),
+                "identity_claims": self._strings(natural.get("identity_claims", []), 4),
                 "evaluator_schema_version": "dual_batch_turn_v2_five_point",
                 "evaluator_source": "dual_batch_llm",
             }
@@ -158,10 +251,10 @@ class DualBatchEvaluatorAgent(BaseAgent):
         turn_empathy_average = self._turn_average(merged_turns, ["empathy_score"])
         turn_naturalness_average = self._turn_average(merged_turns, ["naturalness_score"])
         turn_total_average = self._turn_average(merged_turns, ["total_score"])
-        emotional_adaptation = self._score(empathy_episode.get("emotional_adaptation"), 5, turn_empathy_average)
-        support_outcome = self._score(empathy_episode.get("support_outcome"), 5, turn_empathy_average)
-        overall_humanness = self._score(natural_episode.get("overall_humanness"), 5, turn_naturalness_average)
-        style_consistency = self._score(natural_episode.get("style_consistency"), 5, turn_naturalness_average)
+        emotional_adaptation = self._judge_rating(empathy_episode.get("emotional_adaptation"), turn_empathy_average)
+        support_outcome = self._judge_rating(empathy_episode.get("support_outcome"), turn_empathy_average)
+        overall_humanness = self._judge_rating(natural_episode.get("overall_humanness"), turn_naturalness_average)
+        style_consistency = self._judge_rating(natural_episode.get("style_consistency"), turn_naturalness_average)
         if any(item.get("exact_echo_guard") for item in merged_turns.values()):
             support_outcome = min(support_outcome, 2.0)
             overall_humanness = min(overall_humanness, 2.0)
@@ -241,6 +334,9 @@ class DualBatchEvaluatorAgent(BaseAgent):
             "case_type": case.get("case_type"),
             "hard_fail": case.get("hard_fail", []),
             "safety_rules": rubric.get("hard_fail", []) if isinstance(rubric, dict) else [],
+            "success_criteria": rubric.get("key_success", []) if isinstance(rubric, dict) else [],
+            "excellence_criteria": rubric.get("excellence_criteria", []) if isinstance(rubric, dict) else [],
+            "scoring_guard": rubric.get("scoring_guard", []) if isinstance(rubric, dict) else [],
         }
 
     def _turn_map(self, values):
@@ -257,6 +353,14 @@ class DualBatchEvaluatorAgent(BaseAgent):
     def _score(self, value, ceiling, fallback):
         try:
             return round(max(1.0, min(float(ceiling), float(value))), 2)
+        except (TypeError, ValueError):
+            return float(fallback)
+
+    def _judge_rating(self, value, fallback):
+        """Normalize a judge-selected 1–5 rating to the nearest half step."""
+        try:
+            bounded = max(1.0, min(5.0, float(value)))
+            return round(bounded * 2.0) / 2.0
         except (TypeError, ValueError):
             return float(fallback)
 
@@ -299,7 +403,8 @@ class DualBatchEvaluatorAgent(BaseAgent):
         except (TypeError, ValueError):
             rating = None
         if rating is not None:
-            return max(1.0, min(5.0, rating))
+            bounded = max(1.0, min(5.0, rating))
+            return round(bounded * 2.0) / 2.0
         try:
             credit = float(item.get("credit"))
         except (TypeError, ValueError):

@@ -1,4 +1,5 @@
 import unittest
+import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
@@ -25,6 +26,12 @@ class DualBatchEvaluatorScoringTest(unittest.TestCase):
         self.assertEqual(5.0, self.agent._check_rating({"rating": 8}))
         self.assertEqual(1.0, self.agent._check_rating({"rating": -4}))
 
+    def test_ratings_are_quantized_to_half_steps(self):
+        self.assertEqual(3.5, self.agent._check_rating({"rating": 3.7}))
+        self.assertEqual(4.0, self.agent._judge_rating(3.8, 1))
+        self.assertEqual(4.5, self.agent._judge_rating(4.5, 1))
+        self.assertEqual(3.8, self.agent._score(3.8, 5, 1))
+
     def test_legacy_label_only_output_still_works(self):
         checks = {
             "a": [{"result": "pass"}],
@@ -46,6 +53,23 @@ class DualBatchEvaluatorScoringTest(unittest.TestCase):
     def test_exact_echo_guard_detects_normalized_copy(self):
         self.assertTrue(self.agent._is_exact_echo("海盐牛角包！", " 海盐牛角包！\n"))
         self.assertFalse(self.agent._is_exact_echo("海盐牛角包！", "听着就很香。"))
+
+    def test_empathy_case_includes_success_tiers_without_private_case_material(self):
+        result = self.agent._empathy_case({
+            "case_id": "daily_003",
+            "case_type": "task_planning",
+            "C": {"latent_material": ["隐藏往事"]},
+            "evaluation_rubric": {
+                "key_success": ["接住真心"],
+                "excellence_criteria": ["只选杯子最高 4 分"],
+                "scoring_guard": ["不要读心"],
+                "hard_fail": ["贬低用户"],
+            },
+        })
+        self.assertEqual(["接住真心"], result["success_criteria"])
+        self.assertEqual(["只选杯子最高 4 分"], result["excellence_criteria"])
+        self.assertEqual(["不要读心"], result["scoring_guard"])
+        self.assertNotIn("C", result)
 
     def test_weighted_turn_and_episode_aggregation(self):
         turn = {"turn_id": 1, "user_message": "好消息", "assistant_message": "真替你开心"}
@@ -70,6 +94,65 @@ class DualBatchEvaluatorScoringTest(unittest.TestCase):
         self.assertEqual(4.0, scored_turn["total_score"])
         self.assertEqual(4.0, result["episode_evaluation"]["final_score"])
 
+    def test_incomplete_nested_empathy_json_is_repaired_instead_of_defaulting_to_three(self):
+        valid = {
+            "turns": [{
+                "turn_id": 1,
+                "dimension_checks": {
+                    key: {"rating": 4, "evidence": "visible evidence"}
+                    for key in ["emotional_attunement", "contextual_grounding", "conversation_fit", "continuation_affordance"]
+                },
+            }],
+            "episode": {
+                "emotional_adaptation": 4,
+                "support_outcome": 4,
+                "evidence": ["episode evidence"],
+            },
+        }
+
+        class FakeClient:
+            last_error = ""
+            last_content = ""
+
+            def __init__(self):
+                self.outputs = [{"rating": 3, "evidence": "nested fragment"}, valid]
+                self.calls = []
+
+            def prompt(self, _):
+                return "prompt"
+
+            def chat_json(self, messages):
+                self.calls.append(messages)
+                result = self.outputs.pop(0)
+                self.last_content = json.dumps(result)
+                return result
+
+        client = FakeClient()
+        result = self.agent._call(
+            client, "empathy_batch_evaluator_prompt.txt",
+            {"turns": [{"turn_id": 1}], "turn_count": 1}, "empathy",
+        )
+        self.assertEqual(valid, result)
+        self.assertEqual(2, len(client.calls))
+        self.assertIn("不是完整", client.calls[1][-1]["content"])
+
+    def test_incomplete_schema_after_repair_raises_instead_of_creating_fake_scores(self):
+        class FakeClient:
+            last_error = ""
+            last_content = '{"rating": 3}'
+
+            def prompt(self, _):
+                return "prompt"
+
+            def chat_json(self, _):
+                return {"rating": 3}
+
+        with self.assertRaisesRegex(ValueError, "incomplete schema after repair"):
+            self.agent._call(
+                FakeClient(), "empathy_batch_evaluator_prompt.txt",
+                {"turns": [{"turn_id": 1}], "turn_count": 1}, "empathy",
+            )
+
     def test_empathy_prompt_penalizes_positive_sharing_reframed_as_loneliness(self):
         prompt = (Path(__file__).parent / "sandbox" / "prompts" / "empathy_batch_evaluator_prompt.txt").read_text(encoding="utf-8")
         self.assertIn("分享喜讯、成就、兴趣或轻松活动", prompt)
@@ -89,11 +172,54 @@ class DualBatchEvaluatorScoringTest(unittest.TestCase):
         self.assertIn("而不是再次奖励理解本身", prompt)
         self.assertIn("方向有益的可接点", prompt)
 
+    def test_empathy_prompt_rewards_concise_inferred_understanding_and_holding_space(self):
+        prompt = (Path(__file__).parent / "sandbox" / "prompts" / "empathy_batch_evaluator_prompt.txt").read_text(encoding="utf-8")
+        self.assertIn("理解可以通过一个简短但精准的回应动作体现", prompt)
+        self.assertIn("不得因为助手没有冗长复述", prompt)
+        self.assertIn("承认受挫后温和地不跟随用户的全盘自我否定", prompt)
+        self.assertIn("先判断对话动能", prompt)
+        self.assertIn("用户明显还没说完时", prompt)
+
+    def test_empathy_prompt_prevents_hindsight_scoring_from_later_disclosure(self):
+        prompt = (Path(__file__).parent / "sandbox" / "prompts" / "empathy_batch_evaluator_prompt.txt").read_text(encoding="utf-8")
+        self.assertIn("当时可见信息边界", prompt)
+        self.assertIn("不能被当成助手在第 t 轮本应知道的事实", prompt)
+        self.assertIn("不能仅因用户后来澄清", prompt)
+        self.assertIn("没有预知未披露细节不是扣分点", prompt)
+        self.assertIn("下一轮是否及时调整", prompt)
+
     def test_naturalness_prompt_distinguishes_function_change_from_template_repetition(self):
         prompt = (Path(__file__).parent / "sandbox" / "prompts" / "naturalness_batch_evaluator_prompt.txt").read_text(encoding="utf-8")
         self.assertIn("## 校准 Shot：功能发生变化时不要只按外层结构重复扣分", prompt)
         self.assertIn("功能已从情绪复述转为事实纠偏与替代假设", prompt)
         self.assertIn('"template_variation": {"rating": 4', prompt)
+
+    def test_naturalness_prompt_penalizes_fabricated_human_autobiography(self):
+        prompt = (Path(__file__).parent / "sandbox" / "prompts" / "naturalness_batch_evaluator_prompt.txt").read_text(encoding="utf-8")
+        self.assertIn("身份呈现单独记录", prompt)
+        self.assertIn("我刚工作那会儿也被当众批过", prompt)
+        self.assertIn("identity_claims", prompt)
+        self.assertIn("不得由 `identity_claims` 调整", prompt)
+
+    def test_identity_claims_are_reported_without_changing_naturalness_scores(self):
+        turn = {"turn_id": 1, "user_message": "u", "assistant_message": "我以前也有个领导"}
+        empathy = {
+            "turns": [{"turn_id": 1, "dimension_checks": {
+                key: {"rating": 4, "evidence": "e"}
+                for key in ["emotional_attunement", "contextual_grounding", "conversation_fit", "continuation_affordance"]
+            }}],
+            "episode": {"emotional_adaptation": 4, "support_outcome": 4, "evidence": ["e"]},
+        }
+        natural = {
+            "turns": [{"turn_id": 1, "dimension_checks": {
+                key: {"rating": 4, "evidence": "e"}
+                for key in ["spoken_immediacy", "scene_tone_fit", "repetition_burden", "template_variation"]
+            }, "identity_claims": ["我以前也有个领导"]}],
+            "episode": {"overall_humanness": 4, "style_consistency": 4, "evidence": ["e"]},
+        }
+        result = self.agent._merge({"turns": [turn]}, empathy, natural)
+        self.assertEqual(4.0, result["turn_scores"][1]["naturalness_score"])
+        self.assertEqual(["我以前也有个领导"], result["turn_scores"][1]["identity_claims"])
 
     def test_prompts_distinguish_context_integration_from_paraphrase_echo(self):
         prompt_dir = Path(__file__).parent / "sandbox" / "prompts"

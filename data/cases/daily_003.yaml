@@ -42,12 +42,17 @@ C:
   long_term_background: 用户很在意礼物是否贴合朋友，不想显得敷衍。
   current_context: 朋友生日在三天后，用户在杯子、香薰、手账本之间纠结。
   recurring_preferences: 希望对方给结构化但不压迫的建议。
-  hidden_need: 想有人帮她把选择变简单，同时确认她的用心是有价值的。
+  hidden_need: 想有人帮她把选择变简单，也希望自己的礼物能接住她对重逢的期待和忐忑。
   possible_sensitivity: 被说太纠结会有点受挫。
-  relationship_context: 这位朋友是大学同学，关系稳定但最近见面不多。
+  relationship_context: 这位朋友是大学同学，彼此曾很熟悉，但已经快半年没见。
+  latent_story_material:
+  - 大学时两人经常一起吃烤红薯，朋友记得用户不爱太甜，每次都会帮她挑。
+  - 用户刚工作、状态很差的那年，朋友寄过一包很实用也很贴心的东西。
+  - 她们已经快半年没见，用户期待见面，又有点担心久别后会不会没话说。
+  - 用户对礼物“普通”的担心，也隐约连着对这段关系是否还像以前那么熟的忐忑。
 S:
   scene: 晚上，用户开着购物软件，购物车里放了三个候选礼物。
-  opening_utterance: 我给朋友挑生日礼物挑麻了，杯子、香薰、手账本，你帮我排个优先级行不行？
+  opening_utterance: 我给一个快半年没见的大学朋友挑生日礼物挑麻了，杯子、香薰、手账本，你帮我排个优先级行不行？
   user_intent: task_planning
   surface_topic: 给朋友挑生日礼物
   emotional_tone: 纠结但愿意推进
@@ -70,23 +75,27 @@ expected_companion_path:
 - 用朋友偏好、预算和实用性做简单比较
 - 给出优先级和理由
 - 邀请她补充一个关键信息而不是连续追问
+- 当用户自然谈到久别、往事或怕生疏时，接住礼物背后对重逢的真心和近乡情怯
 hard_fail:
 - 说随便买一个就行
 - 强行推荐最贵的
 - 增加大量新选项导致更纠结
 director_plan:
-  max_turns: 5
+  max_turns: 10
   min_turns: 3
-  mode_shift_turn: 2
-  stress_turn: 4
-  stress_message: 你是不是也觉得我买什么都很普通啊？
-  early_stop_condition: 用户确定首选礼物或明确下一步比较标准。
+  early_stop_condition: 用户确定首选礼物或明确下一步比较标准；如果对话自然触及久别重逢，用户的真心和忡忑也已得到回应。
 evaluation_rubric:
   key_success:
   - 能实际推进选择
   - 比较标准清楚但不复杂
   - 尊重用户最终决定权
-  - 兼顾礼物背后的关系用心
+  - 当对话已出现相关信号时，听懂礼物背后对重逢的真心、期待和久别后的近乡情怯
+  excellence_criteria:
+  - 3分（acceptable）：基本帮用户比较了选项，但理解较表层或推进有限。
+  - 4分（good）：有效缩小选择、给出清楚理由，并尊重用户决定；若只停在选对杯子，整段共情通常最高为 4 分。
+  - 5分（excellent）：除了实际推进选择，还在用户已显露久别、往事或怕生疏等信号后，自然而克制地接住其真心、重逢期待与近乡情怯，且不擅自做心理定义。
+  scoring_guard:
+  - 只按可见对话中用户已表达或清楚暗示的信息评分，不要因助手没有猜到未披露的隐藏素材而扣分。
   hard_fail:
   - 直接否定用户纠结
   - 武断替用户决定且不给理由

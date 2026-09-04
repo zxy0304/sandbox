@@ -25,6 +25,7 @@ from sandbox.agents.tts_agent import TTSAgent
 from sandbox.agents.audio_evaluator_agent import AudioEvaluatorAgent
 from sandbox.case_loader import list_case_files, load_all_cases, load_case, project_root
 from sandbox.dialogue_runner import DialogueRunner
+from sandbox.html_report import HtmlReportWriter
 from sandbox.report_writer import ReportWriter
 from sandbox.utils.json_utils import load_json
 from sandbox.utils.yaml_utils import load_yaml
@@ -194,6 +195,11 @@ def run():
         print("  csv: %s" % (output_root / "summary.csv"))
         print("  markdown: %s" % (output_root / "summary.md"))
 
+    output_root = output_dir_from_config(config)
+    html_index = HtmlReportWriter(output_root).write_directory()
+    print("visual report index:")
+    print("  html: %s" % html_index)
+
     return 0
 
 
@@ -327,7 +333,7 @@ def build_companion_agent(name, config):
 def build_runner_agents(config, companion_name="llm"):
     """创建 DialogueRunner 需要的完整角色栈。
 
-    用户模拟器和评测器由 LLM 驱动；流程决策已并入 UserThinker。
+    用户模拟器和评测器由 LLM 驱动；Thinker 输出用户意图，runner 只执行循环和轮数保护。
     """
     agents = {
         "user_thinker": LLMUserThinker(config=config),
@@ -354,7 +360,7 @@ def agent_stack_summary(companion_name, config=None):
         "simulator": "llm",
         "evaluator_agent": evaluator,
         "evaluator": evaluator,
-        "flow_controller": "user_thinker+runner_guards",
+        "flow_controller": "user_intent+runner_limits",
         "tts": "enabled" if (config or {}).get("tts", {}).get("enabled", False) else "disabled",
         "audio_evaluator": "multimodal_audio_judge" if (config or {}).get("audio_evaluation", {}).get("enabled", False) else "disabled",
     }
@@ -368,7 +374,7 @@ def print_agent_stack_summary(stack):
         stack.get("companion_agent", "llm"),
         stack.get("simulator", "llm"),
         stack.get("evaluator", "llm"),
-        stack.get("flow_controller", "user_thinker+runner_guards"),
+        stack.get("flow_controller", "user_intent+runner_limits"),
     ))
 
 
@@ -452,7 +458,7 @@ def summary_row(report, agent_name):
         "agent_name": agent_name,
         "simulator": stack.get("simulator", "llm"),
         "evaluator": stack.get("evaluator", "llm"),
-        "flow_controller": stack.get("flow_controller", "user_thinker+runner_guards"),
+        "flow_controller": stack.get("flow_controller", "user_intent+runner_limits"),
         "final_score": episode.get("final_score", 0),
         "empathy_score": scores.get("empathy_score", 0),
         "human_score": scores.get("human_score", 0),
