@@ -145,6 +145,42 @@ def episode_diagnostics_html(evaluation):
     return "".join(chunks) or "<p class=muted>整段评审未返回证据。</p>"
 
 
+def audio_evaluation_html(turn):
+    audio = turn.get("audio", {})
+    plan = audio.get("delivery_plan", {}) if isinstance(audio, dict) else {}
+    evaluation = audio.get("evaluation", {}) if isinstance(audio, dict) else {}
+    if not plan and not evaluation:
+        return ""
+    chunks = ["<details><summary>语音表达计划与评分</summary>"]
+    if plan:
+        chunks.append(
+            "<p><b>理想表达：</b>%s（强度 %s/5，语速 %s）<br><b>交流方式：</b>%s</p>"
+            % (
+                esc(plan.get("emotion")), esc(plan.get("emotion_intensity")),
+                esc(plan.get("speaking_rate")), esc(plan.get("delivery_style")),
+            )
+        )
+    rows = []
+    labels = {
+        "naturalness": "自然度", "emotional_fit": "情感适配度",
+        "conversational_delivery": "聊天感",
+    }
+    for key, label in labels.items():
+        item = evaluation.get(key, {}) if isinstance(evaluation, dict) else {}
+        if isinstance(item, dict) and item.get("score") is not None:
+            rows.append("<tr><td>%s</td><td>%.1f / 5</td><td>%s</td></tr>" % (
+                esc(label), number(item.get("score")), esc(item.get("reason")),
+            ))
+    if rows:
+        chunks.append("<table><thead><tr><th>维度</th><th>分数</th><th>扣分原因</th></tr></thead><tbody>%s</tbody></table>" % "".join(rows))
+    elif evaluation.get("status") == "failed":
+        chunks.append("<p class=danger>语音评分失败（%s）：%s</p>" % (
+            esc(evaluation.get("stage", "judge")), esc(evaluation.get("error", "")),
+        ))
+    chunks.append("</details>")
+    return "".join(chunks)
+
+
 def turn_html(turn):
     scores = turn.get("judge_scores", {})
     private = turn.get("user_private_state", {})
@@ -162,12 +198,13 @@ def turn_html(turn):
       <details><summary>用户内心与意图</summary><p><b>反应：</b>%s</p><p><b>意图：</b>%s</p><p><b>状态变化：</b>%s</p></details>
       <details><summary>本轮维度分数</summary><div class="bars">%s</div></details>
       <details open><summary>评分证据与诊断</summary>%s</details>
+      %s
     </section>
     """ % (
         esc(turn.get("turn_id")), badge, safety_note,
         esc(turn.get("user_message")), esc(metadata.get("model_name", "configured model")), esc(turn.get("assistant_message")),
         esc(private.get("inner_reaction", "")), esc(intent), esc(turn.get("state_delta", {})),
-        dimension_bars(scores), evidence_html(scores),
+        dimension_bars(scores), evidence_html(scores), audio_evaluation_html(turn),
     )
 
 

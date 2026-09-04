@@ -415,13 +415,25 @@ class ReportWriter:
             lines.append("**Audio:**")
             lines.append("")
             lines.append("- file: `%s`" % self._text(audio.get("path")))
+            delivery_plan = audio.get("delivery_plan", {})
+            if delivery_plan:
+                lines.append("- delivery_plan: emotion=%s; intensity=%s/5; rate=%s; style=%s" % (
+                    self._text(delivery_plan.get("emotion")),
+                    self._format_number(delivery_plan.get("emotion_intensity")),
+                    self._text(delivery_plan.get("speaking_rate")),
+                    self._text(delivery_plan.get("delivery_style")),
+                ))
             audio_eval = audio.get("evaluation", {})
-            lines.append("- status: `%s`; naturalness=%s, colloquialness=%s, overall=%s" % (
+            lines.append("- status: `%s`; naturalness=%s/5; emotional_fit=%s/5; conversational_delivery=%s/5" % (
                 self._text(audio_eval.get("status")),
-                self._format_number(audio_eval.get("audio_naturalness")),
-                self._format_number(audio_eval.get("audio_colloquialness")),
-                self._format_number(audio_eval.get("overall")),
+                self._format_number(self._audio_score(audio_eval, "naturalness")),
+                self._format_number(self._audio_score(audio_eval, "emotional_fit")),
+                self._format_number(self._audio_score(audio_eval, "conversational_delivery")),
             ))
+            for key in ["naturalness", "emotional_fit", "conversational_delivery"]:
+                item = audio_eval.get(key, {})
+                if isinstance(item, dict) and item.get("reason"):
+                    lines.append("  - %s: %s" % (key, self._text(item.get("reason"))))
             lines.append("")
         lines.append("**Private user state summary:**")
         lines.append("")
@@ -671,6 +683,10 @@ class ReportWriter:
         if value >= 0:
             return "+%s" % self._format_number(value)
         return self._format_number(value)
+
+    def _audio_score(self, evaluation, key):
+        item = evaluation.get(key, {}) if isinstance(evaluation, dict) else {}
+        return item.get("score") if isinstance(item, dict) else None
 
     def _format_number(self, value):
         if value is None or value == "":

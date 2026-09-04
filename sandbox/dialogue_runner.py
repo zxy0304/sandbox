@@ -11,6 +11,7 @@ from sandbox.agents.llm_user_talker import LLMUserTalker
 from sandbox.agents.llm_user_thinker import LLMUserThinker
 from sandbox.agents.tts_agent import TTSAgent
 from sandbox.agents.audio_evaluator_agent import AudioEvaluatorAgent
+from sandbox.agents.audio_delivery_planner_agent import AudioDeliveryPlannerAgent
 from sandbox.schemas import make_turn_record, normalize_state
 from sandbox.state_tracker import StateTracker
 
@@ -43,10 +44,13 @@ class DialogueRunner:
         )
         self.tts_agent = agents.get("tts_agent")
         self.audio_evaluator_agent = agents.get("audio_evaluator_agent")
+        self.audio_delivery_planner = agents.get("audio_delivery_planner")
         if self.tts_enabled and self.tts_agent is None:
             self.tts_agent = TTSAgent(config=self.config)
         if self.audio_evaluation_enabled and self.audio_evaluator_agent is None:
             self.audio_evaluator_agent = AudioEvaluatorAgent(config=self.config)
+        if self.audio_evaluation_enabled and self.audio_delivery_planner is None:
+            self.audio_delivery_planner = AudioDeliveryPlannerAgent(config=self.config)
         self.state_tracker = agents.get("state_tracker") or StateTracker(config=self.config)
         self.last_failure = {}
         self._active_history = []
@@ -177,7 +181,7 @@ class DialogueRunner:
             assistant_message, assistant_metadata = self._parse_companion_output(companion_output)
 
             audio = self._generate_and_evaluate_audio(
-                case, turn_id, user_message, assistant_message, turn_timings
+                case, turn_id, history, user_message, assistant_message, turn_timings
             )
 
             judge_scores = {}
@@ -262,8 +266,8 @@ class DialogueRunner:
             report["episode_evaluation"] = {"status": "skipped", "reason": "evaluator_disabled"}
         return report
 
-    def _generate_and_evaluate_audio(self, case, turn_id, user_message, assistant_message, timings):
-        """Synthesize one reply and, when enabled, have a multimodal model hear it twice."""
+    def _generate_and_evaluate_audio(self, case, turn_id, history, user_message, assistant_message, timings):
+        """Synthesize a reply, plan its ideal delivery, then have Gemini hear it."""
         if not self.tts_enabled:
             return {}
         audio_format = str(self.config.get("tts", {}).get("format", "wav")).lower()
@@ -282,12 +286,29 @@ class DialogueRunner:
             audio["evaluation"] = {"status": "skipped", "reason": "audio_evaluator_disabled"}
             return audio
         try:
+            planner_started = time.time()
+            audio["delivery_plan"] = self.audio_delivery_planner.generate({
+                "visible_history": self._visible_history(history),
+                "current_user_message": user_message,
+                "assistant_message": assistant_message,
+            })
+            timings["audio_delivery_planner"] = round(time.time() - planner_started, 3)
+        except (OSError, ValueError) as exc:
+            timings["audio_delivery_planner"] = round(time.time() - planner_started, 3)
+            print("[audio-planner-error] turn=%s: %s" % (turn_id, exc), file=sys.stderr)
+            audio["evaluation"] = {
+                "status": "failed",
+                "stage": "planner",
+                "error": str(exc),
+            }
+            return audio
+        try:
             judge_started = time.time()
             audio["evaluation"] = self.audio_evaluator_agent.evaluate({
                 "audio_path": audio["path"],
                 "audio_format": audio.get("format", audio_format),
-                "user_message": user_message,
                 "assistant_message": assistant_message,
+                "delivery_plan": audio["delivery_plan"],
             })
             timings["audio_evaluator"] = round(time.time() - judge_started, 3)
         except (OSError, ValueError) as exc:

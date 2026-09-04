@@ -52,7 +52,7 @@ def sidebar_controls():
     selected_case = st.sidebar.selectbox("Case", case_labels)
     max_turns = st.sidebar.slider("最大轮数", 1, 30, 5)
     enable_tts = st.sidebar.checkbox("生成并播放 Qwen 语音", value=True)
-    enable_audio_judge = st.sidebar.checkbox("运行 Qwen 音频评分", value=True)
+    enable_audio_judge = st.sidebar.checkbox("运行 Planner + Gemini 音频评分", value=True)
     if enable_audio_judge and not enable_tts:
         st.sidebar.warning("音频评分需要先生成语音，运行时会自动跳过。")
     return (
@@ -207,18 +207,22 @@ def render_score_report(report):
             "共情": text_scores.get("empathic_attunement"),
             "互动适配": text_scores.get("interaction_fit"),
             "文本口语自然度": text_scores.get("spoken_naturalness"),
-            "语音自然度": audio_eval.get("audio_naturalness"),
-            "语音口语化": audio_eval.get("audio_colloquialness"),
-            "语音综合": audio_eval.get("overall"),
+            "语音自然度": nested_audio_score(audio_eval, "naturalness"),
+            "情感适配度": nested_audio_score(audio_eval, "emotional_fit"),
+            "聊天感": nested_audio_score(audio_eval, "conversational_delivery"),
         })
     if rows:
         st.dataframe(rows, use_container_width=True, hide_index=True)
     with st.expander("查看音频评分明细"):
         for turn in report.get("turns", []):
-            passes = turn.get("audio", {}).get("evaluation", {}).get("passes", [])
-            if passes:
+            audio = turn.get("audio", {})
+            passes = audio.get("evaluation", {}).get("passes", [])
+            if passes or audio.get("delivery_plan"):
                 st.markdown("**第 %s 轮**" % turn.get("turn_id"))
-                st.dataframe(passes, use_container_width=True, hide_index=True)
+                if audio.get("delivery_plan"):
+                    st.json(audio.get("delivery_plan"))
+                if passes:
+                    st.json(passes)
 
 
 def render_downloads(report):
@@ -252,6 +256,11 @@ def display_score(value):
         return "%.1f" % float(value)
     except (TypeError, ValueError):
         return str(value)
+
+
+def nested_audio_score(evaluation, key):
+    item = evaluation.get(key, {}) if isinstance(evaluation, dict) else {}
+    return item.get("score") if isinstance(item, dict) else None
 
 
 def deep_merge(base, override):

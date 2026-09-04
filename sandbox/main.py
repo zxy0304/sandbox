@@ -23,6 +23,7 @@ from sandbox.agents.llm_user_thinker import LLMUserThinker
 from sandbox.agents.manual_companion_agent import ManualCompanionAgent
 from sandbox.agents.tts_agent import TTSAgent
 from sandbox.agents.audio_evaluator_agent import AudioEvaluatorAgent
+from sandbox.agents.audio_delivery_planner_agent import AudioDeliveryPlannerAgent
 from sandbox.case_loader import list_case_files, load_all_cases, load_case, project_root
 from sandbox.dialogue_runner import DialogueRunner
 from sandbox.html_report import HtmlReportWriter
@@ -345,6 +346,7 @@ def build_runner_agents(config, companion_name="llm"):
     if config.get("tts", {}).get("enabled", False):
         agents["tts_agent"] = TTSAgent(config=config)
     if config.get("audio_evaluation", {}).get("enabled", False):
+        agents["audio_delivery_planner"] = AudioDeliveryPlannerAgent(config=config)
         agents["audio_evaluator_agent"] = AudioEvaluatorAgent(config=config)
     return agents
 
@@ -362,7 +364,8 @@ def agent_stack_summary(companion_name, config=None):
         "evaluator": evaluator,
         "flow_controller": "user_intent+runner_limits",
         "tts": "enabled" if (config or {}).get("tts", {}).get("enabled", False) else "disabled",
-        "audio_evaluator": "multimodal_audio_judge" if (config or {}).get("audio_evaluation", {}).get("enabled", False) else "disabled",
+        "audio_delivery_planner": "text_llm" if (config or {}).get("audio_evaluation", {}).get("enabled", False) else "disabled",
+        "audio_evaluator": "gemini_audio_judge" if (config or {}).get("audio_evaluation", {}).get("enabled", False) else "disabled",
     }
 
 

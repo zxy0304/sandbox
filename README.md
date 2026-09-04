@@ -108,7 +108,7 @@ $env:DEEPSEEK_API_KEY="your_api_key_here"
 
 ## TTS 与音频评测
 
-在配置中启用下面两个开关，并设置 `DASHSCOPE_API_KEY`：
+在配置中启用下面两个开关，并设置 `DASHSCOPE_API_KEY`、`DEEPSEEK_API_KEY` 和 `GEMINI_API_KEY`：
 
 ```yaml
 tts:
@@ -121,7 +121,7 @@ audio_evaluation:
   passes: 1
 ```
 
-默认 TTS 为百炼 `qwen-audio-3.0-tts-flash`，音频 judge 为低成本的 `qwen3-omni-flash`。前者走 DashScope SpeechSynthesizer，后者走 OpenAI-compatible Chat Completions 的流式 `input_audio`。每条回复会得到两套评价：原有文本自然口语评分，以及一次独立的音频评分 `audio.evaluation`（`audio_naturalness`、`audio_colloquialness`、`overall`）。音频写入 `outputs/audio/<case_id>/turn_NNN.wav`。
+默认 TTS 为百炼 `qwen-audio-3.0-tts-flash`。语音评测先由普通文本模型读取可见历史，生成情绪、强度、语速和 `delivery_style`，再由 Gemini 直接听音频，输出 0–5 的 `naturalness`、`emotional_fit` 和 `conversational_delivery`，每项附一句扣分原因。Planner 结果保存在 `audio.delivery_plan`，评分保存在 `audio.evaluation`。音频写入 `outputs/audio/<case_id>/turn_NNN.wav`。
 
 音频评分当前作为并列诊断项，不改写原有 `final_score`，便于分别比较“文案是否口语化”和“TTS 实际说出来是否自然”。只启用 TTS 时会生成音频但跳过音频评分。
 

@@ -24,6 +24,7 @@ class LLMClient:
         "evaluator",
         "empathy_evaluator",
         "naturalness_evaluator",
+        "audio_delivery_planner",
         "audio_evaluator",
         "tts",
         "human_presence",

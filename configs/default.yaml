@@ -31,11 +31,11 @@ tts:
   format: wav
   sample_rate: 24000
 
-# 多模态 judge 直接听生成音频；默认只调用一次。
+# 先由文本 Planner 规划理想表达，再由 Gemini 直接听音频评分；默认各调用一次。
 audio_evaluation:
   enabled: false
   passes: 1
-  protocol: qwen_omni_stream
+  planner_history_turns: 10
 
 # llm 按角色配置模型；defaults 会合并到每个角色配置中。
 llm:
@@ -100,11 +100,21 @@ llm:
     model_name: qwen-audio-3.0-tts-flash
     timeout: 120
 
-  # 低成本 Qwen 全模态 judge；Qwen-Omni 要求 SSE 流式输出。
+  # 文本 Planner 只读取可见对话，规划情绪、强度、语速和交流姿态。
+  audio_delivery_planner:
+    base_url: https://api.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    model_name: deepseek-v4-flash
+    temperature: 0.0
+    max_tokens: 1000
+    timeout: 120
+
+  # Gemini 原生音频接口，输出三个 0–5 的结构化分数。
   audio_evaluator:
-    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
-    api_key_env: DASHSCOPE_API_KEY
-    model_name: qwen3-omni-flash
+    provider: gemini
+    base_url: https://generativelanguage.googleapis.com/v1beta
+    api_key_env: GEMINI_API_KEY
+    model_name: gemini-2.5-flash
     temperature: 0.0
     max_tokens: 1200
     timeout: 180
